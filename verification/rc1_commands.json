@@ -1,0 +1,28 @@
+{
+  "status": "PASS",
+  "tests_passed": 114,
+  "tests_failed": 0,
+  "commands": [
+    {
+      "command": "python -I -S -B run_tests.py",
+      "exit_code": 0,
+      "stdout": "PUBLIC_TEST_COUNTS 114 failures 0 errors 0\n",
+      "stderr": "..................................................................................................................\n----------------------------------------------------------------------\nRan 114 tests in 21.959s\n\nOK\n"
+    },
+    {
+      "command": "python -I -S -B reproduce.py --full-robustness",
+      "exit_code": 0,
+      "stdout": "{\n  \"status\": \"PASS\",\n  \"e1\": {\n    \"weak_correct\": 236,\n    \"strong_correct\": 270,\n    \"sources\": 270,\n    \"costs\": {\n      \"cheap\": 0.0950729,\n      \"strong\": 0.36982349999999997\n    }\n  },\n  \"historical_public_hashes\": 2160,\n  \"ex1_projection_records\": 720,\n  \"ex1_stage1_to3_analytical_results_equal\": true,\n  \"ex1_separate_verifier\": {\n    \"status\": \"PASS\",\n    \"public_projection_hashes_verified\": 720,\n    \"primary_cases\": 58,\n    \"primary_renderings\": 174,\n    \"supplementary_cases\": 60,\n    \"supplementary_renderings\": 180,\n    \"independent_integer_tariff_reconstruction\": true,\n    \"route_calls_costs_accuracy_verified\": true,\n    \"exact_pairwise_boundaries_verified\": 9,\n    \"global_envelope_verified_by_affine_inequalities\": true,\n    \"unknown_charge_records\": 2,\n    \"api_calls\": 0,\n    \"independence\": \"Separate computational verifier; no independent human examination claimed.\"\n  },\n  \"independent_reconstruction\": {\n    \"status\": \"PASS\",\n    \"historical\": {\n      \"E1_weak_correct\": 236,\n      \"E1_strong_correct\": 270,\n      \"E1_denominator\": 270,\n      \"perfect_validator_estimate_usd\": 0.15597065,\n      \"oracle_routing_estimate_usd\": 0.14397755,\n      \"E2\": {\n        \"cheap_validator\": {\n          \"confusion\": {\n            \"TA\": 702,\n            \"TR\": 77,\n            \"FR\": 6,\n            \"FA\": 25\n          },\n          \"slots\": 810,\n          \"cascade_correct\": 785,\n          \"cascade_total_usd\": 0.9340769\n        },\n        \"strong_validator\": {\n          \"confusion\": {\n            \"TA\": 708,\n            \"TR\": 102\n          },\n          \"slots\": 810,\n          \"cascade_correct\": 810,\n          \"cascade_total_usd\": 1.6865262\n        }\n      }\n    },\n    \"canonical_cases\": 60,\n    \"common_cases\": 58,\n    \"common_renderings\": 174,\n    \"route_correct\": {\n      \"weak_only\": 125,\n      \"strong_only\": 174,\n      \"cheap_validator_cascade\": 150,\n      \"strong_validator_cascade\": 174\n    },\n    \"route_cost_usd\": {\n      \"weak_only\": 0.0661712,\n      \"strong_only\": 0.2550105,\n      \"cheap_validator_cascade\": 0.2224608,\n      \"strong_validator_cascade\": 0.42402395\n    },\n    \"exact_weak_strong_boundary\": \"1888393/490000000\",\n    \"known_research_usd\": 0.7291317,\n    \"unknown_charge_records\": 2\n  },\n  \"e3_profiles\": 36,\n  \"e3_grid_cells\": 5760,\n  \"e3_pairwise_equations\": 720,\n  \"full_robustness_reproduced\": true,\n  \"api_calls\": 0,\n  \"credentials_requested\": false,\n  \"scope\": \"Scientific reproduction from public projections, not original raw-byte audit or invoices.\"\n}\n",
+      "stderr": ""
+    },
+    {
+      "command": "python -I -S -B scan_release.py",
+      "exit_code": 0,
+      "stdout": "{\n  \"status\": \"PASS_BOUNDED_SCAN\",\n  \"files_scanned\": 3003,\n  \"findings\": [],\n  \"scope\": \"Text regex, observation-field and file-type allowlist checks; not security clearance or legal approval.\"\n}\n",
+      "stderr": ""
+    }
+  ],
+  "citation_schema_status": "INCOMPLETE_PENDING_CONFIRMED_AUTHOR",
+  "licence_status": "NOT_SELECTED_OR_APPLIED",
+  "paid_calls": 0
+}

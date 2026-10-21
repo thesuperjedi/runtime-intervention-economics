@@ -1,0 +1,73 @@
+{
+  "version": "1.2.0-rc.1",
+  "parent_version": "1.1.0-rc.1",
+  "parent_manifest_sha256": "bb4e5166aaf8ef627e54af5dbb6b4c37db638e43cf7c88bb9edf04ec1d3a426d",
+  "author": "Jaidev",
+  "professional_designation": "Independent Researcher",
+  "changed_before_sealing": {
+    "ATTRIBUTION.md": {
+      "parent_sha256": "1381474b27a7d8fafbf53d87c917f8e422052fa451889863b21747e1844a5368",
+      "current_sha256": "4d91a46c9c2977777ab965ef76d8050eee70c53aa1f2aa28824401506e8a595c"
+    },
+    "CITATION.cff": {
+      "parent_sha256": "47c824fc348b84e55dea5d4e6ad9048102a3ee8c6067804d3946d25e9c9a27fa",
+      "current_sha256": "00f99e70e7dfef2387053744346d62dde06fcaed5ee46c52a7146ae9c46728f1"
+    },
+    "LICENCE_OPTIONS.md": {
+      "parent_sha256": "cec18a9b97731dd157e502d089be72fde34dec2bf3cda0ca80e0337a7c22149e",
+      "current_sha256": "90ac85e9d7c3fe98b543c0590e69c81debe1bd56ba3d6c081704f98afb6defef"
+    },
+    "PUBLICATION_BLOCKERS_v1_1_rc1.md": {
+      "parent_sha256": "19679031e095b311eb2e9cef571b67ca90d25da67e558bd915f624e6f1fe2c35",
+      "current_sha256": "6df681c244fd8563acaca15ab07a90b4f2df2f587495cac22f7a9a98a1bdabe0"
+    },
+    "README.md": {
+      "parent_sha256": "2ee8e92a2f24d74973cb78500d4bd6ed35c6a18d62431e4f4208c237fc416372",
+      "current_sha256": "7df0a4a75d4a3e47d5bd97679ed391f0390c2591da7c140df2dd84d729114772"
+    },
+    "RIGHTS_AND_RELEASE_STATUS.md": {
+      "parent_sha256": "fb06e2ccc607fdf3380f13512b704ee78767cf9423db17dc04d2ef8e01a77bfc",
+      "current_sha256": "ff4de63d4c3563582f103dd913ba7437dfb81b267e80c7e5a931cc2f974852c5"
+    },
+    "docs/provenance.md": {
+      "parent_sha256": "32d1462b399ae5b865652df1b38e11f74255bedd393f4203657a9e57324a8f43",
+      "current_sha256": "b9783c7cfd3af0f188c9f83b673fa064f45f0ec75762384b0c033394d2b6cdfa"
+    },
+    "docs/reproduction.md": {
+      "parent_sha256": "ce7d0e694689898827970a6286923ace446de69c43e918e101c58eed1053dcbf",
+      "current_sha256": "aa4fca3cd947cf1c48fcecebb64dae30422ba0471fcd665b8c0b1ff6505668dd"
+    },
+    "tests/test_release_docs.py": {
+      "parent_sha256": "c4245c8e525119bf5d4bf3d5e78b14f2e7325a4937f092562e3f49768595821b",
+      "current_sha256": "b810aa99458d08483ecb69153ceef621b9f2bb0a88e897f4655bcdd4cf110bc5"
+    }
+  },
+  "added_before_sealing": [
+    "EVIDENCE_REDISTRIBUTION_NOTICE.md",
+    "FINAL_PUBLICATION_REVIEW_v1_2_rc1.md",
+    "LICENSE.md",
+    "LICENSES/CC-BY-4.0.txt",
+    "LICENSES/MIT.txt",
+    "LICENSES/README.md",
+    "LICENSE_SCOPE.md",
+    "provenance/licence_sources.json",
+    "provenance/rights_inventory.json",
+    "tests/test_final_licensing.py",
+    "verification/FINAL_RELEASE_REPORT_v1_2_rc1.md",
+    "verification/final_rc_commands.json",
+    "verification/final_rc_preservation.json",
+    "verification/final_rc_reproduction.json"
+  ],
+  "deleted_files": [],
+  "licensing": {
+    "original_software": "MIT",
+    "original_documentation_policies_eligible_data": "CC-BY-4.0",
+    "authority_limited": true,
+    "generated_responses_automatically_licensed": false,
+    "provider_telemetry_automatically_licensed": false
+  },
+  "scientific_inputs_and_results_unchanged": true,
+  "publication_authorized": false,
+  "api_calls": 0,
+  "notice": "Inventory bookkeeping and final test logs are updated at sealing; no external authenticity signature is asserted."
+}

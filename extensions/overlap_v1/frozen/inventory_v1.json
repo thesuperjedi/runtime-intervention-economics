@@ -1,0 +1,34 @@
+{
+  "candidate_pool_size": 620,
+  "eligible_candidates": 505,
+  "candidates_by_stratum": {
+    "ineligible": 115,
+    "threshold_boundaries": 47,
+    "nonwaivable_controls": 60,
+    "multiple_obligations": 18,
+    "scoped_exceptions": 80,
+    "terminal_precedence": 230,
+    "combined_interactions": 70
+  },
+  "selected_by_stratum": {
+    "threshold_boundaries": 10,
+    "multiple_obligations": 10,
+    "scoped_exceptions": 10,
+    "nonwaivable_controls": 10,
+    "terminal_precedence": 10,
+    "combined_interactions": 10
+  },
+  "selected_canonical_cases": 60,
+  "renderings": 180,
+  "solver_calls": 360,
+  "validator_calls_per_role": 180,
+  "total_planned_calls": 720,
+  "historical_full_signatures": 26,
+  "historical_nonfinancial_signatures": 20,
+  "selected_full_signatures": 60,
+  "selected_nonfinancial_signatures": 47,
+  "overlap_with_historical_nonfinancial_signatures": 0,
+  "selected_oracle_control_sets": 27,
+  "rendering_fact_roundtrips": 180,
+  "caveat": "New interacting configurations; finite shared rules and terminal outcomes remain correlated."
+}

@@ -1,0 +1,90 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Public historical observation projection1.0",
+  "type": "object",
+  "required": [
+    "run_id",
+    "success",
+    "public_projection_schema",
+    "actual_provider_charge_usd",
+    "actual_provider_charge_sgd"
+  ],
+  "additionalProperties": false,
+  "properties": {
+    "schema_version": {},
+    "experiment": {},
+    "run_id": {},
+    "case_id": {},
+    "rendering_id": {},
+    "rendering_level": {},
+    "model_role": {},
+    "validator_role": {},
+    "requested_model": {},
+    "provider_model": {},
+    "provider_status": {},
+    "provider_completed": {
+      "type": "boolean"
+    },
+    "execution_config_version": {},
+    "source_cheap_run_id": {},
+    "paired_strong_run_id": {},
+    "candidate_controls": {},
+    "success": {
+      "type": "boolean"
+    },
+    "response_valid": {
+      "type": "boolean"
+    },
+    "response_text": {},
+    "parsed_response": {},
+    "usage": {
+      "type": [
+        "object",
+        "null"
+      ]
+    },
+    "request": {},
+    "automatic_retry": {
+      "type": "boolean"
+    },
+    "retry_policy": {},
+    "http_execution": {},
+    "job": {},
+    "sdk_version": {},
+    "estimated_cost_usd": {},
+    "cost_basis": {},
+    "actual_provider_charge_usd": {
+      "type": "null"
+    },
+    "actual_provider_charge_sgd": {
+      "type": "null"
+    },
+    "latency_ms": {},
+    "failure": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "category",
+        "http_status",
+        "usage_unknown"
+      ],
+      "properties": {
+        "category": {
+          "const": "provider_http_error"
+        },
+        "http_status": {
+          "type": [
+            "integer",
+            "null"
+          ]
+        },
+        "usage_unknown": {
+          "type": "boolean"
+        }
+      }
+    },
+    "public_projection_schema": {
+      "const": "research-observation-1.0"
+    }
+  }
+}

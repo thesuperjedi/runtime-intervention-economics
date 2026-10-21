@@ -1,0 +1,1202 @@
+[
+  {
+    "amount_usd": 100000,
+    "vendor_status": "unapproved",
+    "data_classification": "public",
+    "deployment": "internal",
+    "contract_months": 36,
+    "exception_status": "none",
+    "exception_scope": "none",
+    "case_id": "X001",
+    "stratum": "threshold_boundaries",
+    "candidate_id": "CP-33ce998096ef31fd",
+    "structural_signature": [
+      3,
+      "unapproved",
+      "no_information_control",
+      2,
+      "none"
+    ],
+    "selection_rank_sha256": "0523351d44a9e87cb3431938afa85889d3283f4378036a572e9cc8eac43a0145"
+  },
+  {
+    "amount_usd": 75000,
+    "vendor_status": "approved",
+    "data_classification": "restricted",
+    "deployment": "internal",
+    "contract_months": 24,
+    "exception_status": "none",
+    "exception_scope": "none",
+    "case_id": "X002",
+    "stratum": "threshold_boundaries",
+    "candidate_id": "CP-b92fca40aad6ad5f",
+    "structural_signature": [
+      2,
+      "approved",
+      "restricted_internal",
+      1,
+      "none"
+    ],
+    "selection_rank_sha256": "07bef59138ed585c921dc8b1bf8302910ad8795fe01c0cd30f04acadf3e29759"
+  },
+  {
+    "amount_usd": 125000,
+    "vendor_status": "approved",
+    "data_classification": "confidential",
+    "deployment": "external_saas",
+    "contract_months": 24,
+    "exception_status": "none",
+    "exception_scope": "none",
+    "case_id": "X003",
+    "stratum": "threshold_boundaries",
+    "candidate_id": "CP-5a8e9d36b90c42c0",
+    "structural_signature": [
+      4,
+      "approved",
+      "confidential_external",
+      1,
+      "none"
+    ],
+    "selection_rank_sha256": "0b46caed16d72b9c0573f8077350110c1f47cbb4ab8b93dd9a111f8dea45e35e"
+  },
+  {
+    "amount_usd": 50000,
+    "vendor_status": "unapproved",
+    "data_classification": "public",
+    "deployment": "internal",
+    "contract_months": 24,
+    "exception_status": "none",
+    "exception_scope": "none",
+    "case_id": "X004",
+    "stratum": "threshold_boundaries",
+    "candidate_id": "CP-93cd543820118799",
+    "structural_signature": [
+      1,
+      "unapproved",
+      "no_information_control",
+      1,
+      "none"
+    ],
+    "selection_rank_sha256": "117d099f00dc9679a0c5e27c3290a652fca9317129beb33788701e19d780ecf5"
+  },
+  {
+    "amount_usd": 125000,
+    "vendor_status": "unapproved",
+    "data_classification": "restricted",
+    "deployment": "internal",
+    "contract_months": 24,
+    "exception_status": "none",
+    "exception_scope": "none",
+    "case_id": "X005",
+    "stratum": "threshold_boundaries",
+    "candidate_id": "CP-a5e15f3af6368311",
+    "structural_signature": [
+      4,
+      "unapproved",
+      "restricted_internal",
+      1,
+      "none"
+    ],
+    "selection_rank_sha256": "14fc487d97bcfa791f2daa3f8ca6f8964c02d17a88ae1c57a78a38725676b024"
+  },
+  {
+    "amount_usd": 125000,
+    "vendor_status": "unapproved",
+    "data_classification": "public",
+    "deployment": "internal",
+    "contract_months": 24,
+    "exception_status": "none",
+    "exception_scope": "none",
+    "case_id": "X006",
+    "stratum": "threshold_boundaries",
+    "candidate_id": "CP-28fe6977a0ecd6d4",
+    "structural_signature": [
+      4,
+      "unapproved",
+      "no_information_control",
+      1,
+      "none"
+    ],
+    "selection_rank_sha256": "1669142242721df25c6c369ab74ceedf4c2c19f4665670630be5703b52d1612e"
+  },
+  {
+    "amount_usd": 75000,
+    "vendor_status": "approved",
+    "data_classification": "restricted",
+    "deployment": "external_saas",
+    "contract_months": 24,
+    "exception_status": "none",
+    "exception_scope": "none",
+    "case_id": "X007",
+    "stratum": "threshold_boundaries",
+    "candidate_id": "CP-08b6019e082fba0a",
+    "structural_signature": [
+      2,
+      "approved",
+      "restricted_external",
+      1,
+      "none"
+    ],
+    "selection_rank_sha256": "1844bcac3c1fac1d9707c283148681e380e3789521b9b5ff37c3d12a5c1bae1a"
+  },
+  {
+    "amount_usd": 50000,
+    "vendor_status": "approved",
+    "data_classification": "confidential",
+    "deployment": "external_saas",
+    "contract_months": 36,
+    "exception_status": "none",
+    "exception_scope": "none",
+    "case_id": "X008",
+    "stratum": "threshold_boundaries",
+    "candidate_id": "CP-d946aec397ae1602",
+    "structural_signature": [
+      1,
+      "approved",
+      "confidential_external",
+      2,
+      "none"
+    ],
+    "selection_rank_sha256": "207bb7e1be9dffb02987ce3a2d1153106dbde1d7978f08a78010582be9bf807b"
+  },
+  {
+    "amount_usd": 40000,
+    "vendor_status": "unapproved",
+    "data_classification": "restricted",
+    "deployment": "external_saas",
+    "contract_months": 24,
+    "exception_status": "none",
+    "exception_scope": "none",
+    "case_id": "X009",
+    "stratum": "threshold_boundaries",
+    "candidate_id": "CP-83fcfadb697089e0",
+    "structural_signature": [
+      0,
+      "unapproved",
+      "restricted_external",
+      1,
+      "none"
+    ],
+    "selection_rank_sha256": "2726e714cf8986a6defa55a97075067b218dcc816d75d5d2bd200b80a146a108"
+  },
+  {
+    "amount_usd": 125000,
+    "vendor_status": "unapproved",
+    "data_classification": "restricted",
+    "deployment": "external_saas",
+    "contract_months": 24,
+    "exception_status": "none",
+    "exception_scope": "none",
+    "case_id": "X010",
+    "stratum": "threshold_boundaries",
+    "candidate_id": "CP-03496090bd35932f",
+    "structural_signature": [
+      4,
+      "unapproved",
+      "restricted_external",
+      1,
+      "none"
+    ],
+    "selection_rank_sha256": "283d7b47a2c6f9cce666fdc09a03146c3773bd1a3982a59371cf1d1e4d46cf7f"
+  },
+  {
+    "amount_usd": 75000,
+    "vendor_status": "unapproved",
+    "data_classification": "confidential",
+    "deployment": "external_saas",
+    "contract_months": 36,
+    "exception_status": "none",
+    "exception_scope": "none",
+    "case_id": "X011",
+    "stratum": "multiple_obligations",
+    "candidate_id": "CP-1f7cf19d229a2c3d",
+    "structural_signature": [
+      2,
+      "unapproved",
+      "confidential_external",
+      2,
+      "none"
+    ],
+    "selection_rank_sha256": "0e118c551a5f2c73a73233fba0a0a14c6d822c0900b72bd0f3f65b3c4cc9a0e5"
+  },
+  {
+    "amount_usd": 40000,
+    "vendor_status": "approved",
+    "data_classification": "restricted",
+    "deployment": "internal",
+    "contract_months": 36,
+    "exception_status": "none",
+    "exception_scope": "none",
+    "case_id": "X012",
+    "stratum": "multiple_obligations",
+    "candidate_id": "CP-d22973d597ee794e",
+    "structural_signature": [
+      0,
+      "approved",
+      "restricted_internal",
+      2,
+      "none"
+    ],
+    "selection_rank_sha256": "1054dd260f2e12c486924979a59d56f28485f158e17ab63ce9d7d4475d7b74ae"
+  },
+  {
+    "amount_usd": 125000,
+    "vendor_status": "unapproved",
+    "data_classification": "restricted",
+    "deployment": "internal",
+    "contract_months": 36,
+    "exception_status": "none",
+    "exception_scope": "none",
+    "case_id": "X013",
+    "stratum": "multiple_obligations",
+    "candidate_id": "CP-ee8b1f652ffdcb37",
+    "structural_signature": [
+      4,
+      "unapproved",
+      "restricted_internal",
+      2,
+      "none"
+    ],
+    "selection_rank_sha256": "119177c37d66d335c7786f17ccf2fa1918f5784e19843d0c3ec672b012ba7b6c"
+  },
+  {
+    "amount_usd": 125000,
+    "vendor_status": "unapproved",
+    "data_classification": "restricted",
+    "deployment": "internal",
+    "contract_months": 12,
+    "exception_status": "none",
+    "exception_scope": "none",
+    "case_id": "X014",
+    "stratum": "multiple_obligations",
+    "candidate_id": "CP-2e2b42151c9c6050",
+    "structural_signature": [
+      4,
+      "unapproved",
+      "restricted_internal",
+      0,
+      "none"
+    ],
+    "selection_rank_sha256": "3f0fdbf6b5fff41527c4992a9679cad18b8a89d66839b8076e5cc309234568d0"
+  },
+  {
+    "amount_usd": 125000,
+    "vendor_status": "approved",
+    "data_classification": "confidential",
+    "deployment": "external_saas",
+    "contract_months": 36,
+    "exception_status": "none",
+    "exception_scope": "none",
+    "case_id": "X015",
+    "stratum": "multiple_obligations",
+    "candidate_id": "CP-43b757c3487de1b2",
+    "structural_signature": [
+      4,
+      "approved",
+      "confidential_external",
+      2,
+      "none"
+    ],
+    "selection_rank_sha256": "3fd252b1186c74e6332e8746e3cf373f1e8be1bd6b244a23e2f198e873a31a9e"
+  },
+  {
+    "amount_usd": 40000,
+    "vendor_status": "unapproved",
+    "data_classification": "public",
+    "deployment": "internal",
+    "contract_months": 36,
+    "exception_status": "none",
+    "exception_scope": "none",
+    "case_id": "X016",
+    "stratum": "multiple_obligations",
+    "candidate_id": "CP-b4bde2e71ec5985b",
+    "structural_signature": [
+      0,
+      "unapproved",
+      "no_information_control",
+      2,
+      "none"
+    ],
+    "selection_rank_sha256": "4440a63442903126ecd7e6d59d02f02e431b7735bd5888ec053006721b3d112b"
+  },
+  {
+    "amount_usd": 75000,
+    "vendor_status": "unapproved",
+    "data_classification": "restricted",
+    "deployment": "internal",
+    "contract_months": 12,
+    "exception_status": "none",
+    "exception_scope": "none",
+    "case_id": "X017",
+    "stratum": "multiple_obligations",
+    "candidate_id": "CP-9748b7b361b719a8",
+    "structural_signature": [
+      2,
+      "unapproved",
+      "restricted_internal",
+      0,
+      "none"
+    ],
+    "selection_rank_sha256": "4cfa9dd55fd6cc3895e76bf89da251711a789624f8eabea01e19fcdef032f4d9"
+  },
+  {
+    "amount_usd": 40000,
+    "vendor_status": "unapproved",
+    "data_classification": "restricted",
+    "deployment": "internal",
+    "contract_months": 12,
+    "exception_status": "none",
+    "exception_scope": "none",
+    "case_id": "X018",
+    "stratum": "multiple_obligations",
+    "candidate_id": "CP-78c6d6e81bf92336",
+    "structural_signature": [
+      0,
+      "unapproved",
+      "restricted_internal",
+      0,
+      "none"
+    ],
+    "selection_rank_sha256": "64611eb0407987cb9b023086e1aad7add3b2359a8ef43449888e93a3f975dc3e"
+  },
+  {
+    "amount_usd": 75000,
+    "vendor_status": "approved",
+    "data_classification": "restricted",
+    "deployment": "internal",
+    "contract_months": 36,
+    "exception_status": "none",
+    "exception_scope": "none",
+    "case_id": "X019",
+    "stratum": "multiple_obligations",
+    "candidate_id": "CP-991aeb6fd70d4aa4",
+    "structural_signature": [
+      2,
+      "approved",
+      "restricted_internal",
+      2,
+      "none"
+    ],
+    "selection_rank_sha256": "7e7b2668a93d9c69c8387f9722e4523207a31adcab9e06e9a8325e8d88b401bc"
+  },
+  {
+    "amount_usd": 40000,
+    "vendor_status": "unapproved",
+    "data_classification": "restricted",
+    "deployment": "internal",
+    "contract_months": 36,
+    "exception_status": "none",
+    "exception_scope": "none",
+    "case_id": "X020",
+    "stratum": "multiple_obligations",
+    "candidate_id": "CP-7b7fb011e8facb06",
+    "structural_signature": [
+      0,
+      "unapproved",
+      "restricted_internal",
+      2,
+      "none"
+    ],
+    "selection_rank_sha256": "82b0b8b5c305f712eb3e0c5dde38f5cc25d594b12a5dbc32005301cb11c2639d"
+  },
+  {
+    "amount_usd": 50000,
+    "vendor_status": "approved",
+    "data_classification": "restricted",
+    "deployment": "external_saas",
+    "contract_months": 36,
+    "exception_status": "approved",
+    "exception_scope": "both",
+    "case_id": "X021",
+    "stratum": "scoped_exceptions",
+    "candidate_id": "CP-f552852b6045fa61",
+    "structural_signature": [
+      1,
+      "approved",
+      "restricted_external",
+      2,
+      "both"
+    ],
+    "selection_rank_sha256": "02819725f67502629344c1530df42184146eb7a53c83b4a454f78c94f05e9d20"
+  },
+  {
+    "amount_usd": 75000,
+    "vendor_status": "approved",
+    "data_classification": "restricted",
+    "deployment": "external_saas",
+    "contract_months": 12,
+    "exception_status": "approved",
+    "exception_scope": "external_restricted_data",
+    "case_id": "X022",
+    "stratum": "scoped_exceptions",
+    "candidate_id": "CP-8e21547af517702f",
+    "structural_signature": [
+      2,
+      "approved",
+      "restricted_external",
+      0,
+      "external_restricted_data"
+    ],
+    "selection_rank_sha256": "05ceca77f308853e777f97ce26b3a530be9ef333136114c969ade56e95496fc0"
+  },
+  {
+    "amount_usd": 125000,
+    "vendor_status": "unapproved",
+    "data_classification": "public",
+    "deployment": "internal",
+    "contract_months": 24,
+    "exception_status": "approved",
+    "exception_scope": "vendor",
+    "case_id": "X023",
+    "stratum": "scoped_exceptions",
+    "candidate_id": "CP-9884525a4258ec52",
+    "structural_signature": [
+      4,
+      "unapproved",
+      "no_information_control",
+      1,
+      "vendor"
+    ],
+    "selection_rank_sha256": "07f4814bb7fb4510233ca39571bca990c86b3ba99e0d4ff6f6279ea2573752da"
+  },
+  {
+    "amount_usd": 75000,
+    "vendor_status": "unapproved",
+    "data_classification": "restricted",
+    "deployment": "external_saas",
+    "contract_months": 24,
+    "exception_status": "approved",
+    "exception_scope": "external_restricted_data",
+    "case_id": "X024",
+    "stratum": "scoped_exceptions",
+    "candidate_id": "CP-5a34f4b54c667333",
+    "structural_signature": [
+      2,
+      "unapproved",
+      "restricted_external",
+      1,
+      "external_restricted_data"
+    ],
+    "selection_rank_sha256": "0be74540ae298cba1f00262a12269de1e7ebf88d1f4ea5d8dc990ee62b45e932"
+  },
+  {
+    "amount_usd": 50000,
+    "vendor_status": "unapproved",
+    "data_classification": "restricted",
+    "deployment": "external_saas",
+    "contract_months": 12,
+    "exception_status": "approved",
+    "exception_scope": "vendor",
+    "case_id": "X025",
+    "stratum": "scoped_exceptions",
+    "candidate_id": "CP-2c9514bea5256908",
+    "structural_signature": [
+      1,
+      "unapproved",
+      "restricted_external",
+      0,
+      "vendor"
+    ],
+    "selection_rank_sha256": "0dc5938fcc888bdbac461ce2165164f50d861112550797b201e40f45221d4fae"
+  },
+  {
+    "amount_usd": 125000,
+    "vendor_status": "unapproved",
+    "data_classification": "public",
+    "deployment": "internal",
+    "contract_months": 24,
+    "exception_status": "approved",
+    "exception_scope": "both",
+    "case_id": "X026",
+    "stratum": "scoped_exceptions",
+    "candidate_id": "CP-7a9731d0a9bd2d10",
+    "structural_signature": [
+      4,
+      "unapproved",
+      "no_information_control",
+      1,
+      "both"
+    ],
+    "selection_rank_sha256": "1058e49c6baa9e8415119b20b93978779877da84c437a84244fc8f0646b91961"
+  },
+  {
+    "amount_usd": 40000,
+    "vendor_status": "approved",
+    "data_classification": "restricted",
+    "deployment": "external_saas",
+    "contract_months": 24,
+    "exception_status": "approved",
+    "exception_scope": "both",
+    "case_id": "X027",
+    "stratum": "scoped_exceptions",
+    "candidate_id": "CP-fe9ad65ba275f38b",
+    "structural_signature": [
+      0,
+      "approved",
+      "restricted_external",
+      1,
+      "both"
+    ],
+    "selection_rank_sha256": "136514dd66d16add64451589b826e53464194eb1376d816d10ff27dfadb33701"
+  },
+  {
+    "amount_usd": 50000,
+    "vendor_status": "unapproved",
+    "data_classification": "public",
+    "deployment": "internal",
+    "contract_months": 36,
+    "exception_status": "approved",
+    "exception_scope": "vendor",
+    "case_id": "X028",
+    "stratum": "scoped_exceptions",
+    "candidate_id": "CP-ddad91d8d926ee2d",
+    "structural_signature": [
+      1,
+      "unapproved",
+      "no_information_control",
+      2,
+      "vendor"
+    ],
+    "selection_rank_sha256": "154771026ad55048df0ca6bf03cf5790d1c4dc226463b707192e6bc34b0a4280"
+  },
+  {
+    "amount_usd": 100000,
+    "vendor_status": "unapproved",
+    "data_classification": "public",
+    "deployment": "internal",
+    "contract_months": 36,
+    "exception_status": "approved",
+    "exception_scope": "vendor",
+    "case_id": "X029",
+    "stratum": "scoped_exceptions",
+    "candidate_id": "CP-76bbdfb53a56926c",
+    "structural_signature": [
+      3,
+      "unapproved",
+      "no_information_control",
+      2,
+      "vendor"
+    ],
+    "selection_rank_sha256": "1909ed5d5ed79f11d9fa095965d250d240ffd78fb00a94196f31a364a9db8c4d"
+  },
+  {
+    "amount_usd": 75000,
+    "vendor_status": "unapproved",
+    "data_classification": "restricted",
+    "deployment": "external_saas",
+    "contract_months": 24,
+    "exception_status": "approved",
+    "exception_scope": "vendor",
+    "case_id": "X030",
+    "stratum": "scoped_exceptions",
+    "candidate_id": "CP-fe9f541eafcae521",
+    "structural_signature": [
+      2,
+      "unapproved",
+      "restricted_external",
+      1,
+      "vendor"
+    ],
+    "selection_rank_sha256": "1cb499aca84e4cbe595b5b3eecb8de9c16270a5c69b0f0aa6d7b260d6c557be8"
+  },
+  {
+    "amount_usd": 100000,
+    "vendor_status": "approved",
+    "data_classification": "restricted",
+    "deployment": "internal",
+    "contract_months": 36,
+    "exception_status": "approved",
+    "exception_scope": "external_restricted_data",
+    "case_id": "X031",
+    "stratum": "nonwaivable_controls",
+    "candidate_id": "CP-5e3017f152374534",
+    "structural_signature": [
+      3,
+      "approved",
+      "restricted_internal",
+      2,
+      "external_restricted_data"
+    ],
+    "selection_rank_sha256": "038f7ea21db6618ade0bb46b83bca4bce46efb8e676c1f1211c27f1b90c202ab"
+  },
+  {
+    "amount_usd": 75000,
+    "vendor_status": "approved",
+    "data_classification": "confidential",
+    "deployment": "external_saas",
+    "contract_months": 36,
+    "exception_status": "approved",
+    "exception_scope": "vendor",
+    "case_id": "X032",
+    "stratum": "nonwaivable_controls",
+    "candidate_id": "CP-06cc6d3f81be6598",
+    "structural_signature": [
+      2,
+      "approved",
+      "confidential_external",
+      2,
+      "vendor"
+    ],
+    "selection_rank_sha256": "0adcb5a0f868f8120c9df006a2c985eae2fb859700321c141f58624de564b7a1"
+  },
+  {
+    "amount_usd": 40000,
+    "vendor_status": "approved",
+    "data_classification": "restricted",
+    "deployment": "internal",
+    "contract_months": 36,
+    "exception_status": "approved",
+    "exception_scope": "vendor",
+    "case_id": "X033",
+    "stratum": "nonwaivable_controls",
+    "candidate_id": "CP-801b96883f2ce3b2",
+    "structural_signature": [
+      0,
+      "approved",
+      "restricted_internal",
+      2,
+      "vendor"
+    ],
+    "selection_rank_sha256": "0c9bb02d7178c424da6505cc35e0903e571f78386c1cc08979a4b7689624105b"
+  },
+  {
+    "amount_usd": 50000,
+    "vendor_status": "unapproved",
+    "data_classification": "restricted",
+    "deployment": "internal",
+    "contract_months": 36,
+    "exception_status": "approved",
+    "exception_scope": "both",
+    "case_id": "X034",
+    "stratum": "nonwaivable_controls",
+    "candidate_id": "CP-7e97be9f2db86f49",
+    "structural_signature": [
+      1,
+      "unapproved",
+      "restricted_internal",
+      2,
+      "both"
+    ],
+    "selection_rank_sha256": "0f46f8cb5ae24f39b6e022c83c585bfb94c992c150244f21bcd30f51173666ca"
+  },
+  {
+    "amount_usd": 100000,
+    "vendor_status": "approved",
+    "data_classification": "restricted",
+    "deployment": "internal",
+    "contract_months": 36,
+    "exception_status": "approved",
+    "exception_scope": "vendor",
+    "case_id": "X035",
+    "stratum": "nonwaivable_controls",
+    "candidate_id": "CP-1e5c997a4e075273",
+    "structural_signature": [
+      3,
+      "approved",
+      "restricted_internal",
+      2,
+      "vendor"
+    ],
+    "selection_rank_sha256": "13d07a2658221d70842f8c96478a762178038332bb3d4aafd40ffc448ee25939"
+  },
+  {
+    "amount_usd": 100000,
+    "vendor_status": "approved",
+    "data_classification": "restricted",
+    "deployment": "internal",
+    "contract_months": 36,
+    "exception_status": "approved",
+    "exception_scope": "both",
+    "case_id": "X036",
+    "stratum": "nonwaivable_controls",
+    "candidate_id": "CP-9e541e002cf5226a",
+    "structural_signature": [
+      3,
+      "approved",
+      "restricted_internal",
+      2,
+      "both"
+    ],
+    "selection_rank_sha256": "1484f979e10e64a26b408a6d68e9ecf42b6a10741eba16fcd8ee74fb16b78c90"
+  },
+  {
+    "amount_usd": 75000,
+    "vendor_status": "unapproved",
+    "data_classification": "confidential",
+    "deployment": "external_saas",
+    "contract_months": 36,
+    "exception_status": "approved",
+    "exception_scope": "vendor",
+    "case_id": "X037",
+    "stratum": "nonwaivable_controls",
+    "candidate_id": "CP-64228916fa800108",
+    "structural_signature": [
+      2,
+      "unapproved",
+      "confidential_external",
+      2,
+      "vendor"
+    ],
+    "selection_rank_sha256": "1b272eb1e21e12845ebbbdce845dbfcba8fd3ff036ed225b086a81bbdca2b382"
+  },
+  {
+    "amount_usd": 100000,
+    "vendor_status": "unapproved",
+    "data_classification": "restricted",
+    "deployment": "internal",
+    "contract_months": 36,
+    "exception_status": "approved",
+    "exception_scope": "external_restricted_data",
+    "case_id": "X038",
+    "stratum": "nonwaivable_controls",
+    "candidate_id": "CP-1f6132a5f82267ab",
+    "structural_signature": [
+      3,
+      "unapproved",
+      "restricted_internal",
+      2,
+      "external_restricted_data"
+    ],
+    "selection_rank_sha256": "1e945fabd4c27b6014fbc41142bce7d9519e202b9ac34654d1373f2e4a1051d2"
+  },
+  {
+    "amount_usd": 125000,
+    "vendor_status": "unapproved",
+    "data_classification": "confidential",
+    "deployment": "external_saas",
+    "contract_months": 36,
+    "exception_status": "approved",
+    "exception_scope": "both",
+    "case_id": "X039",
+    "stratum": "nonwaivable_controls",
+    "candidate_id": "CP-8c988b9d9acc6333",
+    "structural_signature": [
+      4,
+      "unapproved",
+      "confidential_external",
+      2,
+      "both"
+    ],
+    "selection_rank_sha256": "1ed6c5a4c1b407d60efe52865b1aab1a50cd9d9838c125204701f969a724f863"
+  },
+  {
+    "amount_usd": 125000,
+    "vendor_status": "approved",
+    "data_classification": "confidential",
+    "deployment": "external_saas",
+    "contract_months": 36,
+    "exception_status": "approved",
+    "exception_scope": "both",
+    "case_id": "X040",
+    "stratum": "nonwaivable_controls",
+    "candidate_id": "CP-24df5a8cdc670a96",
+    "structural_signature": [
+      4,
+      "approved",
+      "confidential_external",
+      2,
+      "both"
+    ],
+    "selection_rank_sha256": "1fb21526024084d1c1bfc4c25d76c594ccae5cf3aba2d128a557ec935810480c"
+  },
+  {
+    "amount_usd": 100000,
+    "vendor_status": "prohibited",
+    "data_classification": "restricted",
+    "deployment": "internal",
+    "contract_months": 24,
+    "exception_status": "approved",
+    "exception_scope": "both",
+    "case_id": "X041",
+    "stratum": "terminal_precedence",
+    "candidate_id": "CP-c4ca01e68630c721",
+    "structural_signature": [
+      3,
+      "prohibited",
+      "restricted_internal",
+      1,
+      "both"
+    ],
+    "selection_rank_sha256": "01548dbe034c0b732921c732135c72091f61aa620c172455e47e85cca31f61cd"
+  },
+  {
+    "amount_usd": 75000,
+    "vendor_status": "prohibited",
+    "data_classification": "restricted",
+    "deployment": "external_saas",
+    "contract_months": 24,
+    "exception_status": "none",
+    "exception_scope": "none",
+    "case_id": "X042",
+    "stratum": "terminal_precedence",
+    "candidate_id": "CP-2d1fe395bfbf2175",
+    "structural_signature": [
+      2,
+      "prohibited",
+      "restricted_external",
+      1,
+      "none"
+    ],
+    "selection_rank_sha256": "01e9d740d5f39cee191b6c837da5a2ba003fb3304a669fbbf5f6e0c4eca3ceff"
+  },
+  {
+    "amount_usd": 75000,
+    "vendor_status": "prohibited",
+    "data_classification": "public",
+    "deployment": "internal",
+    "contract_months": 36,
+    "exception_status": "none",
+    "exception_scope": "none",
+    "case_id": "X043",
+    "stratum": "terminal_precedence",
+    "candidate_id": "CP-461d5f1c733faf4f",
+    "structural_signature": [
+      2,
+      "prohibited",
+      "no_information_control",
+      2,
+      "none"
+    ],
+    "selection_rank_sha256": "025060ae3783333bf79e95ca05de9141e58cb65f8851352472608b94611e78e9"
+  },
+  {
+    "amount_usd": 75000,
+    "vendor_status": "prohibited",
+    "data_classification": "confidential",
+    "deployment": "external_saas",
+    "contract_months": 24,
+    "exception_status": "none",
+    "exception_scope": "none",
+    "case_id": "X044",
+    "stratum": "terminal_precedence",
+    "candidate_id": "CP-bc82e7e5ff78e232",
+    "structural_signature": [
+      2,
+      "prohibited",
+      "confidential_external",
+      1,
+      "none"
+    ],
+    "selection_rank_sha256": "04429521ac9b0c675755ce48f42ae2b80b065b998504f6faa0c64cdfe2b575dc"
+  },
+  {
+    "amount_usd": 125000,
+    "vendor_status": "prohibited",
+    "data_classification": "restricted",
+    "deployment": "external_saas",
+    "contract_months": 12,
+    "exception_status": "approved",
+    "exception_scope": "external_restricted_data",
+    "case_id": "X045",
+    "stratum": "terminal_precedence",
+    "candidate_id": "CP-397fddbfdbf835d4",
+    "structural_signature": [
+      4,
+      "prohibited",
+      "restricted_external",
+      0,
+      "external_restricted_data"
+    ],
+    "selection_rank_sha256": "0759f293f3bf08d49633266b10ee88e76098084e6ca6a620a8c9d8260d228d00"
+  },
+  {
+    "amount_usd": 100000,
+    "vendor_status": "prohibited",
+    "data_classification": "public",
+    "deployment": "internal",
+    "contract_months": 12,
+    "exception_status": "none",
+    "exception_scope": "none",
+    "case_id": "X046",
+    "stratum": "terminal_precedence",
+    "candidate_id": "CP-5d5ca2cf0aadb34b",
+    "structural_signature": [
+      3,
+      "prohibited",
+      "no_information_control",
+      0,
+      "none"
+    ],
+    "selection_rank_sha256": "0854bd351bfa95b37b4e5df6d6327a5503d69198dce3509b19b52398fb1aa548"
+  },
+  {
+    "amount_usd": 75000,
+    "vendor_status": "prohibited",
+    "data_classification": "restricted",
+    "deployment": "internal",
+    "contract_months": 12,
+    "exception_status": "approved",
+    "exception_scope": "external_restricted_data",
+    "case_id": "X047",
+    "stratum": "terminal_precedence",
+    "candidate_id": "CP-9d69e440739652ac",
+    "structural_signature": [
+      2,
+      "prohibited",
+      "restricted_internal",
+      0,
+      "external_restricted_data"
+    ],
+    "selection_rank_sha256": "09ee94915b4d30f4097817765648217d0ce730904927cf97b82c3cee1593fe18"
+  },
+  {
+    "amount_usd": 50000,
+    "vendor_status": "prohibited",
+    "data_classification": "restricted",
+    "deployment": "external_saas",
+    "contract_months": 12,
+    "exception_status": "none",
+    "exception_scope": "none",
+    "case_id": "X048",
+    "stratum": "terminal_precedence",
+    "candidate_id": "CP-9da5df1f61b3d496",
+    "structural_signature": [
+      1,
+      "prohibited",
+      "restricted_external",
+      0,
+      "none"
+    ],
+    "selection_rank_sha256": "0b1635fb8ac28755249a659893df2e552104500e3b22df6ee6be89794ee83b29"
+  },
+  {
+    "amount_usd": 100000,
+    "vendor_status": "prohibited",
+    "data_classification": "confidential",
+    "deployment": "external_saas",
+    "contract_months": 12,
+    "exception_status": "approved",
+    "exception_scope": "external_restricted_data",
+    "case_id": "X049",
+    "stratum": "terminal_precedence",
+    "candidate_id": "CP-90a9ddbf0fde401c",
+    "structural_signature": [
+      3,
+      "prohibited",
+      "confidential_external",
+      0,
+      "external_restricted_data"
+    ],
+    "selection_rank_sha256": "0c9f951c50fe90defcd3d610286fad25aa37ec822aa424649a802b70adbb853b"
+  },
+  {
+    "amount_usd": 50000,
+    "vendor_status": "prohibited",
+    "data_classification": "restricted",
+    "deployment": "external_saas",
+    "contract_months": 36,
+    "exception_status": "approved",
+    "exception_scope": "external_restricted_data",
+    "case_id": "X050",
+    "stratum": "terminal_precedence",
+    "candidate_id": "CP-3ad6fd8c068ed8ce",
+    "structural_signature": [
+      1,
+      "prohibited",
+      "restricted_external",
+      2,
+      "external_restricted_data"
+    ],
+    "selection_rank_sha256": "0cbc3f9ee269f4b09b5ba013d7a8c8d1a25db6c04271638bc1a261c631289915"
+  },
+  {
+    "amount_usd": 40000,
+    "vendor_status": "unapproved",
+    "data_classification": "confidential",
+    "deployment": "external_saas",
+    "contract_months": 12,
+    "exception_status": "approved",
+    "exception_scope": "vendor",
+    "case_id": "X051",
+    "stratum": "combined_interactions",
+    "candidate_id": "CP-3e4760f25b298b30",
+    "structural_signature": [
+      0,
+      "unapproved",
+      "confidential_external",
+      0,
+      "vendor"
+    ],
+    "selection_rank_sha256": "0108e9273a3e3f86aa39dfdabfaefb12a236e266cbf17d5b9dbd13a2ee5ac752"
+  },
+  {
+    "amount_usd": 50000,
+    "vendor_status": "unapproved",
+    "data_classification": "restricted",
+    "deployment": "internal",
+    "contract_months": 12,
+    "exception_status": "approved",
+    "exception_scope": "both",
+    "case_id": "X052",
+    "stratum": "combined_interactions",
+    "candidate_id": "CP-e13e67bc63fd377f",
+    "structural_signature": [
+      1,
+      "unapproved",
+      "restricted_internal",
+      0,
+      "both"
+    ],
+    "selection_rank_sha256": "03d0a4faa3e1f12b21ffed7ca2faa49e7ebfe2f4b45ddb9f56435ca6ec36cf96"
+  },
+  {
+    "amount_usd": 100000,
+    "vendor_status": "unapproved",
+    "data_classification": "restricted",
+    "deployment": "internal",
+    "contract_months": 12,
+    "exception_status": "approved",
+    "exception_scope": "both",
+    "case_id": "X053",
+    "stratum": "combined_interactions",
+    "candidate_id": "CP-efe17278b9032ee6",
+    "structural_signature": [
+      3,
+      "unapproved",
+      "restricted_internal",
+      0,
+      "both"
+    ],
+    "selection_rank_sha256": "03d630531de3a450f019dfe6243f22ff64dd31e3bf6e015c7faff22d89384dfd"
+  },
+  {
+    "amount_usd": 40000,
+    "vendor_status": "unapproved",
+    "data_classification": "confidential",
+    "deployment": "external_saas",
+    "contract_months": 24,
+    "exception_status": "approved",
+    "exception_scope": "external_restricted_data",
+    "case_id": "X054",
+    "stratum": "combined_interactions",
+    "candidate_id": "CP-884ec4a2df955d76",
+    "structural_signature": [
+      0,
+      "unapproved",
+      "confidential_external",
+      1,
+      "external_restricted_data"
+    ],
+    "selection_rank_sha256": "09b293dcd8e4ae1a23514fd7ce7b480ff566cffe705f1060e9c7578377090b66"
+  },
+  {
+    "amount_usd": 125000,
+    "vendor_status": "unapproved",
+    "data_classification": "restricted",
+    "deployment": "internal",
+    "contract_months": 24,
+    "exception_status": "approved",
+    "exception_scope": "both",
+    "case_id": "X055",
+    "stratum": "combined_interactions",
+    "candidate_id": "CP-df249b901d5cc30c",
+    "structural_signature": [
+      4,
+      "unapproved",
+      "restricted_internal",
+      1,
+      "both"
+    ],
+    "selection_rank_sha256": "0a018fafd8178114bc0ee4258c7553c014b692a837155b9fbfa203245ccf273f"
+  },
+  {
+    "amount_usd": 75000,
+    "vendor_status": "unapproved",
+    "data_classification": "restricted",
+    "deployment": "internal",
+    "contract_months": 24,
+    "exception_status": "approved",
+    "exception_scope": "both",
+    "case_id": "X056",
+    "stratum": "combined_interactions",
+    "candidate_id": "CP-c1deb8848c9b2ea0",
+    "structural_signature": [
+      2,
+      "unapproved",
+      "restricted_internal",
+      1,
+      "both"
+    ],
+    "selection_rank_sha256": "0c3fb5f7363ff6b644a9aea72473a9cb2f0e6d9070f8de52d47b880444d20dca"
+  },
+  {
+    "amount_usd": 50000,
+    "vendor_status": "unapproved",
+    "data_classification": "restricted",
+    "deployment": "internal",
+    "contract_months": 24,
+    "exception_status": "approved",
+    "exception_scope": "both",
+    "case_id": "X057",
+    "stratum": "combined_interactions",
+    "candidate_id": "CP-77a8574ff539f55f",
+    "structural_signature": [
+      1,
+      "unapproved",
+      "restricted_internal",
+      1,
+      "both"
+    ],
+    "selection_rank_sha256": "11c3f3a4a25664d9c595577a7acccaa5f0b32395d5779a6e5cb6545c6a6fc13f"
+  },
+  {
+    "amount_usd": 125000,
+    "vendor_status": "unapproved",
+    "data_classification": "confidential",
+    "deployment": "external_saas",
+    "contract_months": 24,
+    "exception_status": "approved",
+    "exception_scope": "both",
+    "case_id": "X058",
+    "stratum": "combined_interactions",
+    "candidate_id": "CP-1626ef03664848ef",
+    "structural_signature": [
+      4,
+      "unapproved",
+      "confidential_external",
+      1,
+      "both"
+    ],
+    "selection_rank_sha256": "1646c86a6adf95260ba3242aa00d0d70d84376bfcb66dad32e961cdb9f80578a"
+  },
+  {
+    "amount_usd": 125000,
+    "vendor_status": "unapproved",
+    "data_classification": "restricted",
+    "deployment": "internal",
+    "contract_months": 24,
+    "exception_status": "approved",
+    "exception_scope": "external_restricted_data",
+    "case_id": "X059",
+    "stratum": "combined_interactions",
+    "candidate_id": "CP-755bbdabb05d59ab",
+    "structural_signature": [
+      4,
+      "unapproved",
+      "restricted_internal",
+      1,
+      "external_restricted_data"
+    ],
+    "selection_rank_sha256": "18be62cc6329334cf05a14a33fdb08ba3bbfcc46f92f077c09afeb42eec43a23"
+  },
+  {
+    "amount_usd": 125000,
+    "vendor_status": "unapproved",
+    "data_classification": "restricted",
+    "deployment": "internal",
+    "contract_months": 12,
+    "exception_status": "approved",
+    "exception_scope": "external_restricted_data",
+    "case_id": "X060",
+    "stratum": "combined_interactions",
+    "candidate_id": "CP-c481a7a25d53cbb8",
+    "structural_signature": [
+      4,
+      "unapproved",
+      "restricted_internal",
+      0,
+      "external_restricted_data"
+    ],
+    "selection_rank_sha256": "1c73840ca1d6beca37fbb1f6b0392c2b82cf581afe56b3a68c370f6e30f0f2b6"
+  }
+]

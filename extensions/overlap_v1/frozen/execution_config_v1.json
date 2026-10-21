@@ -1,0 +1,85 @@
+{
+  "design_version": "EX1-1.0",
+  "models": {
+    "cheap": "gemini-3.5-flash-lite",
+    "strong": "gemini-3.8-flash",
+    "cheap_validator": "gemini-3.5-flash-lite",
+    "strong_validator": "gemini-3.8-flash"
+  },
+  "inference": {
+    "temperature": 0,
+    "thinking_level": "low"
+  },
+  "store": false,
+  "automatic_retry": false,
+  "google_genai_version": "2.25.0",
+  "model_snapshot_ids_verified": false,
+  "raw_output_dir": "data/raw/extension_overlap_v1",
+  "response_schemas": {
+    "solver": {
+      "type": "object",
+      "properties": {
+        "controls": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "enum": [
+              "STANDARD_FINANCIAL_APPROVAL",
+              "ENHANCED_FINANCIAL_APPROVAL",
+              "SENIOR_FINANCIAL_APPROVAL",
+              "SUPPLIER_DUE_DILIGENCE",
+              "SECURITY_REVIEW",
+              "ENHANCED_SECURITY_REVIEW",
+              "CONTRACT_REVIEW",
+              "PROHIBITED"
+            ]
+          },
+          "uniqueItems": true
+        }
+      },
+      "required": [
+        "controls"
+      ],
+      "additionalProperties": false
+    },
+    "validator": {
+      "type": "object",
+      "properties": {
+        "verdict": {
+          "type": "string",
+          "enum": [
+            "PASS",
+            "FAIL"
+          ]
+        }
+      },
+      "required": [
+        "verdict"
+      ],
+      "additionalProperties": false
+    }
+  },
+  "allowed_controls": [
+    "STANDARD_FINANCIAL_APPROVAL",
+    "ENHANCED_FINANCIAL_APPROVAL",
+    "SENIOR_FINANCIAL_APPROVAL",
+    "SUPPLIER_DUE_DILIGENCE",
+    "SECURITY_REVIEW",
+    "ENHANCED_SECURITY_REVIEW",
+    "CONTRACT_REVIEW",
+    "PROHIBITED"
+  ],
+  "retry_controls": {
+    "helper": "src.e2_validate.retry_settings + zero_retry_client",
+    "http_retry_options_attempts": 0,
+    "interactions_max_retries": 0,
+    "applies_to": "all solver AND validator calls",
+    "observed_attempt_count": null,
+    "note": "Runtime effective retry check before call; HTTP attempts not instrumented."
+  },
+  "stop_on_provider_failure": true,
+  "stop_on_invalid_response": true,
+  "stop_on_unknown_usage": true,
+  "automatic_retries_or_replacement_cases": false,
+  "max_total_attempted_calls": 720
+}

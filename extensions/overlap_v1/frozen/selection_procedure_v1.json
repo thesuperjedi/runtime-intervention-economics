@@ -1,0 +1,47 @@
+{
+  "seed": 20261019,
+  "procedure": "SHA256(seed|stratum|candidate_id); lowest ten per stratum",
+  "pool_persisted_before_selection": true,
+  "committed_pool_sha256": "808f139fc3c8ce3de9e5847d816764fe0b91caa3c961dc325cfccc858a767a9b",
+  "domain": {
+    "amounts": [
+      40000,
+      50000,
+      75000,
+      100000,
+      125000
+    ],
+    "vendors": [
+      "approved",
+      "unapproved",
+      "prohibited"
+    ],
+    "classifications": [
+      "public",
+      "confidential",
+      "restricted"
+    ],
+    "deployments": [
+      "internal",
+      "external_saas"
+    ],
+    "months": [
+      12,
+      24,
+      36
+    ],
+    "scopes": [
+      "none",
+      "vendor",
+      "external_restricted_data",
+      "both"
+    ]
+  },
+  "novelty": "Reject all historical nonfinancial signatures; collapse equivalent no-information-control states.",
+  "stratum_assignment": "Ordered predicates in prepare.stratum; terminal, nonwaivable, combined, scoped, threshold, multiple.",
+  "case_order": "Fixed STRATA order and selection rank; execution blocks hash-randomized independently.",
+  "no_model_performance_used": true,
+  "model_blind_inputs": [
+    "historical canonical cases only; no model outputs"
+  ]
+}

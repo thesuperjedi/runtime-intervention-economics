@@ -1,0 +1,87 @@
+{
+  "status": "PASS",
+  "e1": {
+    "weak_correct": 236,
+    "strong_correct": 270,
+    "sources": 270,
+    "costs": {
+      "cheap": 0.0950729,
+      "strong": 0.36982349999999997
+    }
+  },
+  "historical_public_hashes": 2160,
+  "ex1_projection_records": 720,
+  "ex1_stage1_to3_analytical_results_equal": true,
+  "ex1_separate_verifier": {
+    "status": "PASS",
+    "public_projection_hashes_verified": 720,
+    "primary_cases": 58,
+    "primary_renderings": 174,
+    "supplementary_cases": 60,
+    "supplementary_renderings": 180,
+    "independent_integer_tariff_reconstruction": true,
+    "route_calls_costs_accuracy_verified": true,
+    "exact_pairwise_boundaries_verified": 9,
+    "global_envelope_verified_by_affine_inequalities": true,
+    "unknown_charge_records": 2,
+    "api_calls": 0,
+    "independence": "Separate computational verifier; no independent human examination claimed."
+  },
+  "independent_reconstruction": {
+    "status": "PASS",
+    "historical": {
+      "E1_weak_correct": 236,
+      "E1_strong_correct": 270,
+      "E1_denominator": 270,
+      "perfect_validator_estimate_usd": 0.15597065,
+      "oracle_routing_estimate_usd": 0.14397755,
+      "E2": {
+        "cheap_validator": {
+          "confusion": {
+            "TA": 702,
+            "TR": 77,
+            "FR": 6,
+            "FA": 25
+          },
+          "slots": 810,
+          "cascade_correct": 785,
+          "cascade_total_usd": 0.9340769
+        },
+        "strong_validator": {
+          "confusion": {
+            "TA": 708,
+            "TR": 102
+          },
+          "slots": 810,
+          "cascade_correct": 810,
+          "cascade_total_usd": 1.6865262
+        }
+      }
+    },
+    "canonical_cases": 60,
+    "common_cases": 58,
+    "common_renderings": 174,
+    "route_correct": {
+      "weak_only": 125,
+      "strong_only": 174,
+      "cheap_validator_cascade": 150,
+      "strong_validator_cascade": 174
+    },
+    "route_cost_usd": {
+      "weak_only": 0.0661712,
+      "strong_only": 0.2550105,
+      "cheap_validator_cascade": 0.2224608,
+      "strong_validator_cascade": 0.42402395
+    },
+    "exact_weak_strong_boundary": "1888393/490000000",
+    "known_research_usd": 0.7291317,
+    "unknown_charge_records": 2
+  },
+  "e3_profiles": 36,
+  "e3_grid_cells": 5760,
+  "e3_pairwise_equations": 720,
+  "full_robustness_reproduced": true,
+  "api_calls": 0,
+  "credentials_requested": false,
+  "scope": "Scientific reproduction from public projections, not original raw-byte audit or invoices."
+}

@@ -1,0 +1,16 @@
+{
+  "MIT": {
+    "file": "LICENSES/MIT.txt",
+    "source": "https://opensource.org/license/mit",
+    "notice": "Copyright (c) 2026 Jaidev",
+    "sha256": "5bbb7cc481ceb559050a924c9526f62fd409375c86e775d2412ddce5f48a4a01",
+    "scope": "Original author-controlled software/tests"
+  },
+  "CC_BY_4_0": {
+    "file": "LICENSES/CC-BY-4.0.txt",
+    "source": "https://creativecommons.org/licenses/by/4.0/legalcode.txt",
+    "sha256": "9ba9550ad48438d0836ddab3da480b3b69ffa0aac7b7878b5a0039e7ab429411",
+    "scope": "Eligible original documentation/policy/data; generated/provider content excluded"
+  },
+  "approval": "Explicit owner instruction for final publication-review candidate; no public publishing authorization."
+}

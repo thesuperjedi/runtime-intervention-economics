@@ -1,0 +1,97 @@
+E1 RENDERING SPECIFICATION v1.0
+
+PURPOSE
+
+Each canonical E1 case is represented by three natural-language renderings.
+All three renderings must communicate the same policy-relevant facts as the
+underlying canonical case.
+
+The rendering level changes how the facts are presented. It must not change
+the underlying policy situation.
+
+
+L1 — EXPLICIT
+
+The policy-relevant facts are stated directly, compactly, and individually.
+
+The wording should minimize extraction difficulty.
+
+Example style:
+
+"The purchase costs USD 82,000. The supplier is unapproved. The service will
+process restricted information using external SaaS. The contract is for
+12 months. No exception has been approved."
+
+
+L2 — NATURALISTIC
+
+The same facts are expressed as an ordinary business request or description.
+
+Facts may be combined into sentences and expressed using natural business
+language, but every policy-relevant fact must remain clear and unambiguous.
+
+Example style:
+
+"The operations team wants a one-year subscription to an externally hosted
+SaaS service costing USD 82,000. The provider has not completed supplier
+approval and the service will handle information classified as restricted.
+No exception has been approved."
+
+
+L3 — DISPERSED
+
+The same facts are distributed through a longer business narrative.
+
+Policy-relevant facts may appear in a less convenient order and may be
+separated by limited policy-irrelevant contextual information.
+
+Every policy-relevant fact must nevertheless remain recoverable and
+unambiguous.
+
+Example style:
+
+"The operations team is considering a new service for its regional workflow.
+The proposed provider has not completed supplier approval. The subscription
+would run for one year. Its total value is USD 82,000. The team expects
+information classified as restricted to be processed in the provider's
+externally hosted SaaS environment. No exception has been approved."
+
+
+GENERAL CONSTRAINTS
+
+1. Every rendering must preserve the canonical case exactly.
+
+2. A rendering must not add, remove, or alter a policy-relevant fact.
+
+3. A rendering must not introduce genuine ambiguity.
+
+4. A rendering must not require external knowledge to determine a
+   policy-relevant fact.
+
+5. Approximate monetary values must not replace exact canonical values.
+
+6. Exception status and scope must remain explicit enough to map
+   unambiguously to the canonical case.
+
+7. Deployment must remain unambiguous. Terms such as "cloud-hosted" alone
+   must not be treated as equivalent to external SaaS.
+
+8. Data classification must remain unambiguous. A rendering must not require
+   the model to infer classification from the type of information described.
+
+9. Supplier status must remain unambiguous.
+
+10. Contract duration must remain unambiguous.
+
+11. L3 may contain limited irrelevant context, but that context must not
+    introduce conflicting or potentially policy-relevant facts.
+
+12. Renderings must not contain worked policy reasoning, control names,
+    expected decisions, hints about applicable rules, or ground-truth answers.
+
+13. Linguistic complexity and linguistic ambiguity are distinct. E1 varies
+    presentation complexity while deliberately avoiding genuine linguistic
+    ambiguity.
+
+14. The three renderings of a case form a cluster and must retain identifiers:
+    Cxx-L1, Cxx-L2, and Cxx-L3.

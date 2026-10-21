@@ -1,0 +1,610 @@
+{
+  "status": "ANALYTICAL_SIMULATION_ONLY",
+  "source_observations": 270,
+  "reviewer_profiles": 36,
+  "validator_reps_per_source_role": 3,
+  "routes": {
+    "cheap_validator": {
+      "slots": 810,
+      "observed_weak_accuracy": 0.8740740740740741,
+      "observed_strong_accuracy": 1.0,
+      "reconstructed_weak_validator_strong_accuracy": 0.9691358024691358,
+      "validator_fail_count": 83,
+      "human_review_profiles": [
+        {
+          "D": 0.25,
+          "C": 0.5,
+          "F": 0.0,
+          "weak_to_human": 0.8898148148148148,
+          "strong_to_human": 1.0,
+          "weak_validator_to_human_on_fail": 0.8859567901234567
+        },
+        {
+          "D": 0.25,
+          "C": 0.5,
+          "F": 0.05,
+          "weak_to_human": 0.8461111111111111,
+          "strong_to_human": 0.95,
+          "weak_validator_to_human_on_fail": 0.8855864197530865
+        },
+        {
+          "D": 0.25,
+          "C": 0.5,
+          "F": 0.15,
+          "weak_to_human": 0.7587037037037037,
+          "strong_to_human": 0.85,
+          "weak_validator_to_human_on_fail": 0.8848456790123457
+        },
+        {
+          "D": 0.25,
+          "C": 0.75,
+          "F": 0.0,
+          "weak_to_human": 0.8976851851851851,
+          "strong_to_human": 1.0,
+          "weak_validator_to_human_on_fail": 0.8918981481481482
+        },
+        {
+          "D": 0.25,
+          "C": 0.75,
+          "F": 0.05,
+          "weak_to_human": 0.8539814814814816,
+          "strong_to_human": 0.95,
+          "weak_validator_to_human_on_fail": 0.8915277777777778
+        },
+        {
+          "D": 0.25,
+          "C": 0.75,
+          "F": 0.15,
+          "weak_to_human": 0.766574074074074,
+          "strong_to_human": 0.85,
+          "weak_validator_to_human_on_fail": 0.8907870370370371
+        },
+        {
+          "D": 0.25,
+          "C": 1.0,
+          "F": 0.0,
+          "weak_to_human": 0.9055555555555556,
+          "strong_to_human": 1.0,
+          "weak_validator_to_human_on_fail": 0.8978395061728395
+        },
+        {
+          "D": 0.25,
+          "C": 1.0,
+          "F": 0.05,
+          "weak_to_human": 0.8618518518518519,
+          "strong_to_human": 0.95,
+          "weak_validator_to_human_on_fail": 0.8974691358024692
+        },
+        {
+          "D": 0.25,
+          "C": 1.0,
+          "F": 0.15,
+          "weak_to_human": 0.7744444444444444,
+          "strong_to_human": 0.85,
+          "weak_validator_to_human_on_fail": 0.8967283950617284
+        },
+        {
+          "D": 0.5,
+          "C": 0.5,
+          "F": 0.0,
+          "weak_to_human": 0.9055555555555556,
+          "strong_to_human": 1.0,
+          "weak_validator_to_human_on_fail": 0.8978395061728395
+        },
+        {
+          "D": 0.5,
+          "C": 0.5,
+          "F": 0.05,
+          "weak_to_human": 0.8618518518518519,
+          "strong_to_human": 0.95,
+          "weak_validator_to_human_on_fail": 0.8974691358024692
+        },
+        {
+          "D": 0.5,
+          "C": 0.5,
+          "F": 0.15,
+          "weak_to_human": 0.7744444444444444,
+          "strong_to_human": 0.85,
+          "weak_validator_to_human_on_fail": 0.8967283950617284
+        },
+        {
+          "D": 0.5,
+          "C": 0.75,
+          "F": 0.0,
+          "weak_to_human": 0.9212962962962963,
+          "strong_to_human": 1.0,
+          "weak_validator_to_human_on_fail": 0.9097222222222222
+        },
+        {
+          "D": 0.5,
+          "C": 0.75,
+          "F": 0.05,
+          "weak_to_human": 0.8775925925925926,
+          "strong_to_human": 0.95,
+          "weak_validator_to_human_on_fail": 0.9093518518518519
+        },
+        {
+          "D": 0.5,
+          "C": 0.75,
+          "F": 0.15,
+          "weak_to_human": 0.7901851851851851,
+          "strong_to_human": 0.85,
+          "weak_validator_to_human_on_fail": 0.9086111111111111
+        },
+        {
+          "D": 0.5,
+          "C": 1.0,
+          "F": 0.0,
+          "weak_to_human": 0.937037037037037,
+          "strong_to_human": 1.0,
+          "weak_validator_to_human_on_fail": 0.921604938271605
+        },
+        {
+          "D": 0.5,
+          "C": 1.0,
+          "F": 0.05,
+          "weak_to_human": 0.8933333333333333,
+          "strong_to_human": 0.95,
+          "weak_validator_to_human_on_fail": 0.9212345679012346
+        },
+        {
+          "D": 0.5,
+          "C": 1.0,
+          "F": 0.15,
+          "weak_to_human": 0.8059259259259258,
+          "strong_to_human": 0.85,
+          "weak_validator_to_human_on_fail": 0.9204938271604939
+        },
+        {
+          "D": 0.75,
+          "C": 0.5,
+          "F": 0.0,
+          "weak_to_human": 0.9212962962962963,
+          "strong_to_human": 1.0,
+          "weak_validator_to_human_on_fail": 0.9097222222222222
+        },
+        {
+          "D": 0.75,
+          "C": 0.5,
+          "F": 0.05,
+          "weak_to_human": 0.8775925925925926,
+          "strong_to_human": 0.95,
+          "weak_validator_to_human_on_fail": 0.9093518518518519
+        },
+        {
+          "D": 0.75,
+          "C": 0.5,
+          "F": 0.15,
+          "weak_to_human": 0.7901851851851851,
+          "strong_to_human": 0.85,
+          "weak_validator_to_human_on_fail": 0.9086111111111111
+        },
+        {
+          "D": 0.75,
+          "C": 0.75,
+          "F": 0.0,
+          "weak_to_human": 0.9449074074074074,
+          "strong_to_human": 1.0,
+          "weak_validator_to_human_on_fail": 0.9275462962962963
+        },
+        {
+          "D": 0.75,
+          "C": 0.75,
+          "F": 0.05,
+          "weak_to_human": 0.9012037037037037,
+          "strong_to_human": 0.95,
+          "weak_validator_to_human_on_fail": 0.927175925925926
+        },
+        {
+          "D": 0.75,
+          "C": 0.75,
+          "F": 0.15,
+          "weak_to_human": 0.8137962962962962,
+          "strong_to_human": 0.85,
+          "weak_validator_to_human_on_fail": 0.9264351851851852
+        },
+        {
+          "D": 0.75,
+          "C": 1.0,
+          "F": 0.0,
+          "weak_to_human": 0.9685185185185186,
+          "strong_to_human": 1.0,
+          "weak_validator_to_human_on_fail": 0.9453703703703704
+        },
+        {
+          "D": 0.75,
+          "C": 1.0,
+          "F": 0.05,
+          "weak_to_human": 0.9248148148148149,
+          "strong_to_human": 0.95,
+          "weak_validator_to_human_on_fail": 0.9450000000000001
+        },
+        {
+          "D": 0.75,
+          "C": 1.0,
+          "F": 0.15,
+          "weak_to_human": 0.8374074074074074,
+          "strong_to_human": 0.85,
+          "weak_validator_to_human_on_fail": 0.9442592592592592
+        },
+        {
+          "D": 1.0,
+          "C": 0.5,
+          "F": 0.0,
+          "weak_to_human": 0.937037037037037,
+          "strong_to_human": 1.0,
+          "weak_validator_to_human_on_fail": 0.921604938271605
+        },
+        {
+          "D": 1.0,
+          "C": 0.5,
+          "F": 0.05,
+          "weak_to_human": 0.8933333333333333,
+          "strong_to_human": 0.95,
+          "weak_validator_to_human_on_fail": 0.9212345679012346
+        },
+        {
+          "D": 1.0,
+          "C": 0.5,
+          "F": 0.15,
+          "weak_to_human": 0.8059259259259258,
+          "strong_to_human": 0.85,
+          "weak_validator_to_human_on_fail": 0.9204938271604939
+        },
+        {
+          "D": 1.0,
+          "C": 0.75,
+          "F": 0.0,
+          "weak_to_human": 0.9685185185185186,
+          "strong_to_human": 1.0,
+          "weak_validator_to_human_on_fail": 0.9453703703703704
+        },
+        {
+          "D": 1.0,
+          "C": 0.75,
+          "F": 0.05,
+          "weak_to_human": 0.9248148148148149,
+          "strong_to_human": 0.95,
+          "weak_validator_to_human_on_fail": 0.9450000000000001
+        },
+        {
+          "D": 1.0,
+          "C": 0.75,
+          "F": 0.15,
+          "weak_to_human": 0.8374074074074074,
+          "strong_to_human": 0.85,
+          "weak_validator_to_human_on_fail": 0.9442592592592592
+        },
+        {
+          "D": 1.0,
+          "C": 1.0,
+          "F": 0.0,
+          "weak_to_human": 1.0,
+          "strong_to_human": 1.0,
+          "weak_validator_to_human_on_fail": 0.9691358024691358
+        },
+        {
+          "D": 1.0,
+          "C": 1.0,
+          "F": 0.05,
+          "weak_to_human": 0.9562962962962963,
+          "strong_to_human": 0.95,
+          "weak_validator_to_human_on_fail": 0.9687654320987655
+        },
+        {
+          "D": 1.0,
+          "C": 1.0,
+          "F": 0.15,
+          "weak_to_human": 0.8688888888888888,
+          "strong_to_human": 0.85,
+          "weak_validator_to_human_on_fail": 0.9680246913580247
+        }
+      ]
+    },
+    "strong_validator": {
+      "slots": 810,
+      "observed_weak_accuracy": 0.8740740740740741,
+      "observed_strong_accuracy": 1.0,
+      "reconstructed_weak_validator_strong_accuracy": 1.0,
+      "validator_fail_count": 102,
+      "human_review_profiles": [
+        {
+          "D": 0.25,
+          "C": 0.5,
+          "F": 0.0,
+          "weak_to_human": 0.8898148148148148,
+          "strong_to_human": 1.0,
+          "weak_validator_to_human_on_fail": 0.8898148148148148
+        },
+        {
+          "D": 0.25,
+          "C": 0.5,
+          "F": 0.05,
+          "weak_to_human": 0.8461111111111111,
+          "strong_to_human": 0.95,
+          "weak_validator_to_human_on_fail": 0.8898148148148148
+        },
+        {
+          "D": 0.25,
+          "C": 0.5,
+          "F": 0.15,
+          "weak_to_human": 0.7587037037037037,
+          "strong_to_human": 0.85,
+          "weak_validator_to_human_on_fail": 0.8898148148148148
+        },
+        {
+          "D": 0.25,
+          "C": 0.75,
+          "F": 0.0,
+          "weak_to_human": 0.8976851851851851,
+          "strong_to_human": 1.0,
+          "weak_validator_to_human_on_fail": 0.8976851851851851
+        },
+        {
+          "D": 0.25,
+          "C": 0.75,
+          "F": 0.05,
+          "weak_to_human": 0.8539814814814816,
+          "strong_to_human": 0.95,
+          "weak_validator_to_human_on_fail": 0.8976851851851851
+        },
+        {
+          "D": 0.25,
+          "C": 0.75,
+          "F": 0.15,
+          "weak_to_human": 0.766574074074074,
+          "strong_to_human": 0.85,
+          "weak_validator_to_human_on_fail": 0.8976851851851851
+        },
+        {
+          "D": 0.25,
+          "C": 1.0,
+          "F": 0.0,
+          "weak_to_human": 0.9055555555555556,
+          "strong_to_human": 1.0,
+          "weak_validator_to_human_on_fail": 0.9055555555555556
+        },
+        {
+          "D": 0.25,
+          "C": 1.0,
+          "F": 0.05,
+          "weak_to_human": 0.8618518518518519,
+          "strong_to_human": 0.95,
+          "weak_validator_to_human_on_fail": 0.9055555555555556
+        },
+        {
+          "D": 0.25,
+          "C": 1.0,
+          "F": 0.15,
+          "weak_to_human": 0.7744444444444444,
+          "strong_to_human": 0.85,
+          "weak_validator_to_human_on_fail": 0.9055555555555556
+        },
+        {
+          "D": 0.5,
+          "C": 0.5,
+          "F": 0.0,
+          "weak_to_human": 0.9055555555555556,
+          "strong_to_human": 1.0,
+          "weak_validator_to_human_on_fail": 0.9055555555555556
+        },
+        {
+          "D": 0.5,
+          "C": 0.5,
+          "F": 0.05,
+          "weak_to_human": 0.8618518518518519,
+          "strong_to_human": 0.95,
+          "weak_validator_to_human_on_fail": 0.9055555555555556
+        },
+        {
+          "D": 0.5,
+          "C": 0.5,
+          "F": 0.15,
+          "weak_to_human": 0.7744444444444444,
+          "strong_to_human": 0.85,
+          "weak_validator_to_human_on_fail": 0.9055555555555556
+        },
+        {
+          "D": 0.5,
+          "C": 0.75,
+          "F": 0.0,
+          "weak_to_human": 0.9212962962962963,
+          "strong_to_human": 1.0,
+          "weak_validator_to_human_on_fail": 0.9212962962962963
+        },
+        {
+          "D": 0.5,
+          "C": 0.75,
+          "F": 0.05,
+          "weak_to_human": 0.8775925925925926,
+          "strong_to_human": 0.95,
+          "weak_validator_to_human_on_fail": 0.9212962962962963
+        },
+        {
+          "D": 0.5,
+          "C": 0.75,
+          "F": 0.15,
+          "weak_to_human": 0.7901851851851851,
+          "strong_to_human": 0.85,
+          "weak_validator_to_human_on_fail": 0.9212962962962963
+        },
+        {
+          "D": 0.5,
+          "C": 1.0,
+          "F": 0.0,
+          "weak_to_human": 0.937037037037037,
+          "strong_to_human": 1.0,
+          "weak_validator_to_human_on_fail": 0.937037037037037
+        },
+        {
+          "D": 0.5,
+          "C": 1.0,
+          "F": 0.05,
+          "weak_to_human": 0.8933333333333333,
+          "strong_to_human": 0.95,
+          "weak_validator_to_human_on_fail": 0.937037037037037
+        },
+        {
+          "D": 0.5,
+          "C": 1.0,
+          "F": 0.15,
+          "weak_to_human": 0.8059259259259258,
+          "strong_to_human": 0.85,
+          "weak_validator_to_human_on_fail": 0.937037037037037
+        },
+        {
+          "D": 0.75,
+          "C": 0.5,
+          "F": 0.0,
+          "weak_to_human": 0.9212962962962963,
+          "strong_to_human": 1.0,
+          "weak_validator_to_human_on_fail": 0.9212962962962963
+        },
+        {
+          "D": 0.75,
+          "C": 0.5,
+          "F": 0.05,
+          "weak_to_human": 0.8775925925925926,
+          "strong_to_human": 0.95,
+          "weak_validator_to_human_on_fail": 0.9212962962962963
+        },
+        {
+          "D": 0.75,
+          "C": 0.5,
+          "F": 0.15,
+          "weak_to_human": 0.7901851851851851,
+          "strong_to_human": 0.85,
+          "weak_validator_to_human_on_fail": 0.9212962962962963
+        },
+        {
+          "D": 0.75,
+          "C": 0.75,
+          "F": 0.0,
+          "weak_to_human": 0.9449074074074074,
+          "strong_to_human": 1.0,
+          "weak_validator_to_human_on_fail": 0.9449074074074074
+        },
+        {
+          "D": 0.75,
+          "C": 0.75,
+          "F": 0.05,
+          "weak_to_human": 0.9012037037037037,
+          "strong_to_human": 0.95,
+          "weak_validator_to_human_on_fail": 0.9449074074074074
+        },
+        {
+          "D": 0.75,
+          "C": 0.75,
+          "F": 0.15,
+          "weak_to_human": 0.8137962962962962,
+          "strong_to_human": 0.85,
+          "weak_validator_to_human_on_fail": 0.9449074074074074
+        },
+        {
+          "D": 0.75,
+          "C": 1.0,
+          "F": 0.0,
+          "weak_to_human": 0.9685185185185186,
+          "strong_to_human": 1.0,
+          "weak_validator_to_human_on_fail": 0.9685185185185186
+        },
+        {
+          "D": 0.75,
+          "C": 1.0,
+          "F": 0.05,
+          "weak_to_human": 0.9248148148148149,
+          "strong_to_human": 0.95,
+          "weak_validator_to_human_on_fail": 0.9685185185185186
+        },
+        {
+          "D": 0.75,
+          "C": 1.0,
+          "F": 0.15,
+          "weak_to_human": 0.8374074074074074,
+          "strong_to_human": 0.85,
+          "weak_validator_to_human_on_fail": 0.9685185185185186
+        },
+        {
+          "D": 1.0,
+          "C": 0.5,
+          "F": 0.0,
+          "weak_to_human": 0.937037037037037,
+          "strong_to_human": 1.0,
+          "weak_validator_to_human_on_fail": 0.937037037037037
+        },
+        {
+          "D": 1.0,
+          "C": 0.5,
+          "F": 0.05,
+          "weak_to_human": 0.8933333333333333,
+          "strong_to_human": 0.95,
+          "weak_validator_to_human_on_fail": 0.937037037037037
+        },
+        {
+          "D": 1.0,
+          "C": 0.5,
+          "F": 0.15,
+          "weak_to_human": 0.8059259259259258,
+          "strong_to_human": 0.85,
+          "weak_validator_to_human_on_fail": 0.937037037037037
+        },
+        {
+          "D": 1.0,
+          "C": 0.75,
+          "F": 0.0,
+          "weak_to_human": 0.9685185185185186,
+          "strong_to_human": 1.0,
+          "weak_validator_to_human_on_fail": 0.9685185185185186
+        },
+        {
+          "D": 1.0,
+          "C": 0.75,
+          "F": 0.05,
+          "weak_to_human": 0.9248148148148149,
+          "strong_to_human": 0.95,
+          "weak_validator_to_human_on_fail": 0.9685185185185186
+        },
+        {
+          "D": 1.0,
+          "C": 0.75,
+          "F": 0.15,
+          "weak_to_human": 0.8374074074074074,
+          "strong_to_human": 0.85,
+          "weak_validator_to_human_on_fail": 0.9685185185185186
+        },
+        {
+          "D": 1.0,
+          "C": 1.0,
+          "F": 0.0,
+          "weak_to_human": 1.0,
+          "strong_to_human": 1.0,
+          "weak_validator_to_human_on_fail": 1.0
+        },
+        {
+          "D": 1.0,
+          "C": 1.0,
+          "F": 0.05,
+          "weak_to_human": 0.9562962962962963,
+          "strong_to_human": 0.95,
+          "weak_validator_to_human_on_fail": 1.0
+        },
+        {
+          "D": 1.0,
+          "C": 1.0,
+          "F": 0.15,
+          "weak_to_human": 0.8688888888888888,
+          "strong_to_human": 0.85,
+          "weak_validator_to_human_on_fail": 1.0
+        }
+      ]
+    }
+  },
+  "limits": [
+    "AI outcomes E1/E2 observed; cascade outcomes reconstructed; human outcomes hypothetical analytical expectations.",
+    "No human review or actual human decisions occurred.",
+    "Correctness-only: no replacement control sets, error-loss asymmetry, costs, delay or governance.",
+    "Repeated slots correlate; 30 canonical cases are not 810 independent tasks.",
+    "Only E2 validator verdicts route cases; the oracle is used solely by the evaluator/simulator.",
+    "Strong-to-human is an independent modeled review of saved strong results; not a tested interaction."
+  ]
+}

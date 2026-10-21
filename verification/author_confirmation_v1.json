@@ -1,0 +1,24 @@
+{
+  "status": "PASS",
+  "author": "Jaidev",
+  "complete_citation_name": true,
+  "professional_designation": "Independent Researcher",
+  "surname_inferred": false,
+  "institution_added": false,
+  "optional_identifiers_added": false,
+  "tests_passed": 114,
+  "tests_failed": 0,
+  "command": "python -I -S -B run_tests.py",
+  "exit_code": 0,
+  "scientific_files_unchanged": true,
+  "publication_authorized": false,
+  "remaining_blockers": [
+    "licensing and ownership scope",
+    "provider redistribution rights",
+    "final publication approval"
+  ],
+  "citation_check": "CFF1.2 required metadata and supported given-names-only person entry inspected against primary schema; no third-party schema-validator package run.",
+  "prior_verification_reports": "Historical author-pending reports are superseded for identity only.",
+  "preparation_note": "Initial Windows default-encoding issue caused two documentation-test errors; UTF8 handling corrected before successful rerun.",
+  "log": "..................................................................................................................\n----------------------------------------------------------------------\nRan 114 tests in 11.783s\n\nOK\nPUBLIC_TEST_COUNTS 114 failures 0 errors 0\n"
+}

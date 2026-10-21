@@ -1,0 +1,1903 @@
+{
+  "status": "ECONOMIC_SENSITIVITY_ONLY",
+  "unit": "dimensionless H/L",
+  "assumed_error_loss": "same for each incorrect final result; L > 0",
+  "human_review_cost": "H paid once per routed review, independent of result",
+  "interpretation": "positive net incremental value iff H/L < break_even_review_cost_over_error_loss; equality means break-even",
+  "validator_routes": {
+    "cheap_validator": {
+      "observed_validator_confusion": {
+        "correct_pass": 702,
+        "wrong_pass": 25,
+        "wrong_fail": 77,
+        "correct_fail": 6
+      },
+      "source_slots": 810,
+      "profiles": [
+        {
+          "D": 0.25,
+          "C": 0.5,
+          "F": 0.0,
+          "weak_all_review": {
+            "review_count": 810,
+            "review_rate": 1.0,
+            "accuracy_gain": 0.01574074074074074,
+            "break_even_review_cost_over_error_loss": 0.01574074074074074,
+            "profitable_for_positive_review_cost_possible": true
+          },
+          "strong_all_review": {
+            "review_count": 810,
+            "review_rate": 1.0,
+            "accuracy_gain": 0.0,
+            "break_even_review_cost_over_error_loss": 0.0,
+            "profitable_for_positive_review_cost_possible": false
+          },
+          "validator_fail_only_review": {
+            "review_count": 83,
+            "review_rate": 0.10246913580246914,
+            "accuracy_gain": 0.011882716049382716,
+            "break_even_review_cost_over_error_loss": 0.11596385542168675,
+            "profitable_for_positive_review_cost_possible": true
+          }
+        },
+        {
+          "D": 0.25,
+          "C": 0.5,
+          "F": 0.05,
+          "weak_all_review": {
+            "review_count": 810,
+            "review_rate": 1.0,
+            "accuracy_gain": -0.02796296296296296,
+            "break_even_review_cost_over_error_loss": -0.02796296296296296,
+            "profitable_for_positive_review_cost_possible": false
+          },
+          "strong_all_review": {
+            "review_count": 810,
+            "review_rate": 1.0,
+            "accuracy_gain": -0.05,
+            "break_even_review_cost_over_error_loss": -0.05,
+            "profitable_for_positive_review_cost_possible": false
+          },
+          "validator_fail_only_review": {
+            "review_count": 83,
+            "review_rate": 0.10246913580246914,
+            "accuracy_gain": 0.011512345679012345,
+            "break_even_review_cost_over_error_loss": 0.11234939759036144,
+            "profitable_for_positive_review_cost_possible": true
+          }
+        },
+        {
+          "D": 0.25,
+          "C": 0.5,
+          "F": 0.15,
+          "weak_all_review": {
+            "review_count": 810,
+            "review_rate": 1.0,
+            "accuracy_gain": -0.11537037037037037,
+            "break_even_review_cost_over_error_loss": -0.11537037037037037,
+            "profitable_for_positive_review_cost_possible": false
+          },
+          "strong_all_review": {
+            "review_count": 810,
+            "review_rate": 1.0,
+            "accuracy_gain": -0.15,
+            "break_even_review_cost_over_error_loss": -0.15,
+            "profitable_for_positive_review_cost_possible": false
+          },
+          "validator_fail_only_review": {
+            "review_count": 83,
+            "review_rate": 0.10246913580246914,
+            "accuracy_gain": 0.010771604938271605,
+            "break_even_review_cost_over_error_loss": 0.10512048192771084,
+            "profitable_for_positive_review_cost_possible": true
+          }
+        },
+        {
+          "D": 0.25,
+          "C": 0.75,
+          "F": 0.0,
+          "weak_all_review": {
+            "review_count": 810,
+            "review_rate": 1.0,
+            "accuracy_gain": 0.02361111111111111,
+            "break_even_review_cost_over_error_loss": 0.02361111111111111,
+            "profitable_for_positive_review_cost_possible": true
+          },
+          "strong_all_review": {
+            "review_count": 810,
+            "review_rate": 1.0,
+            "accuracy_gain": 0.0,
+            "break_even_review_cost_over_error_loss": 0.0,
+            "profitable_for_positive_review_cost_possible": false
+          },
+          "validator_fail_only_review": {
+            "review_count": 83,
+            "review_rate": 0.10246913580246914,
+            "accuracy_gain": 0.017824074074074076,
+            "break_even_review_cost_over_error_loss": 0.17394578313253015,
+            "profitable_for_positive_review_cost_possible": true
+          }
+        },
+        {
+          "D": 0.25,
+          "C": 0.75,
+          "F": 0.05,
+          "weak_all_review": {
+            "review_count": 810,
+            "review_rate": 1.0,
+            "accuracy_gain": -0.020092592592592592,
+            "break_even_review_cost_over_error_loss": -0.020092592592592592,
+            "profitable_for_positive_review_cost_possible": false
+          },
+          "strong_all_review": {
+            "review_count": 810,
+            "review_rate": 1.0,
+            "accuracy_gain": -0.05,
+            "break_even_review_cost_over_error_loss": -0.05,
+            "profitable_for_positive_review_cost_possible": false
+          },
+          "validator_fail_only_review": {
+            "review_count": 83,
+            "review_rate": 0.10246913580246914,
+            "accuracy_gain": 0.017453703703703704,
+            "break_even_review_cost_over_error_loss": 0.17033132530120482,
+            "profitable_for_positive_review_cost_possible": true
+          }
+        },
+        {
+          "D": 0.25,
+          "C": 0.75,
+          "F": 0.15,
+          "weak_all_review": {
+            "review_count": 810,
+            "review_rate": 1.0,
+            "accuracy_gain": -0.1075,
+            "break_even_review_cost_over_error_loss": -0.1075,
+            "profitable_for_positive_review_cost_possible": false
+          },
+          "strong_all_review": {
+            "review_count": 810,
+            "review_rate": 1.0,
+            "accuracy_gain": -0.15,
+            "break_even_review_cost_over_error_loss": -0.15,
+            "profitable_for_positive_review_cost_possible": false
+          },
+          "validator_fail_only_review": {
+            "review_count": 83,
+            "review_rate": 0.10246913580246914,
+            "accuracy_gain": 0.016712962962962964,
+            "break_even_review_cost_over_error_loss": 0.16310240963855424,
+            "profitable_for_positive_review_cost_possible": true
+          }
+        },
+        {
+          "D": 0.25,
+          "C": 1.0,
+          "F": 0.0,
+          "weak_all_review": {
+            "review_count": 810,
+            "review_rate": 1.0,
+            "accuracy_gain": 0.03148148148148148,
+            "break_even_review_cost_over_error_loss": 0.03148148148148148,
+            "profitable_for_positive_review_cost_possible": true
+          },
+          "strong_all_review": {
+            "review_count": 810,
+            "review_rate": 1.0,
+            "accuracy_gain": 0.0,
+            "break_even_review_cost_over_error_loss": 0.0,
+            "profitable_for_positive_review_cost_possible": false
+          },
+          "validator_fail_only_review": {
+            "review_count": 83,
+            "review_rate": 0.10246913580246914,
+            "accuracy_gain": 0.023765432098765433,
+            "break_even_review_cost_over_error_loss": 0.2319277108433735,
+            "profitable_for_positive_review_cost_possible": true
+          }
+        },
+        {
+          "D": 0.25,
+          "C": 1.0,
+          "F": 0.05,
+          "weak_all_review": {
+            "review_count": 810,
+            "review_rate": 1.0,
+            "accuracy_gain": -0.012222222222222221,
+            "break_even_review_cost_over_error_loss": -0.012222222222222221,
+            "profitable_for_positive_review_cost_possible": false
+          },
+          "strong_all_review": {
+            "review_count": 810,
+            "review_rate": 1.0,
+            "accuracy_gain": -0.05,
+            "break_even_review_cost_over_error_loss": -0.05,
+            "profitable_for_positive_review_cost_possible": false
+          },
+          "validator_fail_only_review": {
+            "review_count": 83,
+            "review_rate": 0.10246913580246914,
+            "accuracy_gain": 0.02339506172839506,
+            "break_even_review_cost_over_error_loss": 0.2283132530120482,
+            "profitable_for_positive_review_cost_possible": true
+          }
+        },
+        {
+          "D": 0.25,
+          "C": 1.0,
+          "F": 0.15,
+          "weak_all_review": {
+            "review_count": 810,
+            "review_rate": 1.0,
+            "accuracy_gain": -0.09962962962962964,
+            "break_even_review_cost_over_error_loss": -0.09962962962962964,
+            "profitable_for_positive_review_cost_possible": false
+          },
+          "strong_all_review": {
+            "review_count": 810,
+            "review_rate": 1.0,
+            "accuracy_gain": -0.15,
+            "break_even_review_cost_over_error_loss": -0.15,
+            "profitable_for_positive_review_cost_possible": false
+          },
+          "validator_fail_only_review": {
+            "review_count": 83,
+            "review_rate": 0.10246913580246914,
+            "accuracy_gain": 0.02265432098765432,
+            "break_even_review_cost_over_error_loss": 0.2210843373493976,
+            "profitable_for_positive_review_cost_possible": true
+          }
+        },
+        {
+          "D": 0.5,
+          "C": 0.5,
+          "F": 0.0,
+          "weak_all_review": {
+            "review_count": 810,
+            "review_rate": 1.0,
+            "accuracy_gain": 0.03148148148148148,
+            "break_even_review_cost_over_error_loss": 0.03148148148148148,
+            "profitable_for_positive_review_cost_possible": true
+          },
+          "strong_all_review": {
+            "review_count": 810,
+            "review_rate": 1.0,
+            "accuracy_gain": 0.0,
+            "break_even_review_cost_over_error_loss": 0.0,
+            "profitable_for_positive_review_cost_possible": false
+          },
+          "validator_fail_only_review": {
+            "review_count": 83,
+            "review_rate": 0.10246913580246914,
+            "accuracy_gain": 0.023765432098765433,
+            "break_even_review_cost_over_error_loss": 0.2319277108433735,
+            "profitable_for_positive_review_cost_possible": true
+          }
+        },
+        {
+          "D": 0.5,
+          "C": 0.5,
+          "F": 0.05,
+          "weak_all_review": {
+            "review_count": 810,
+            "review_rate": 1.0,
+            "accuracy_gain": -0.012222222222222221,
+            "break_even_review_cost_over_error_loss": -0.012222222222222221,
+            "profitable_for_positive_review_cost_possible": false
+          },
+          "strong_all_review": {
+            "review_count": 810,
+            "review_rate": 1.0,
+            "accuracy_gain": -0.05,
+            "break_even_review_cost_over_error_loss": -0.05,
+            "profitable_for_positive_review_cost_possible": false
+          },
+          "validator_fail_only_review": {
+            "review_count": 83,
+            "review_rate": 0.10246913580246914,
+            "accuracy_gain": 0.02339506172839506,
+            "break_even_review_cost_over_error_loss": 0.2283132530120482,
+            "profitable_for_positive_review_cost_possible": true
+          }
+        },
+        {
+          "D": 0.5,
+          "C": 0.5,
+          "F": 0.15,
+          "weak_all_review": {
+            "review_count": 810,
+            "review_rate": 1.0,
+            "accuracy_gain": -0.09962962962962964,
+            "break_even_review_cost_over_error_loss": -0.09962962962962964,
+            "profitable_for_positive_review_cost_possible": false
+          },
+          "strong_all_review": {
+            "review_count": 810,
+            "review_rate": 1.0,
+            "accuracy_gain": -0.15,
+            "break_even_review_cost_over_error_loss": -0.15,
+            "profitable_for_positive_review_cost_possible": false
+          },
+          "validator_fail_only_review": {
+            "review_count": 83,
+            "review_rate": 0.10246913580246914,
+            "accuracy_gain": 0.02265432098765432,
+            "break_even_review_cost_over_error_loss": 0.2210843373493976,
+            "profitable_for_positive_review_cost_possible": true
+          }
+        },
+        {
+          "D": 0.5,
+          "C": 0.75,
+          "F": 0.0,
+          "weak_all_review": {
+            "review_count": 810,
+            "review_rate": 1.0,
+            "accuracy_gain": 0.04722222222222222,
+            "break_even_review_cost_over_error_loss": 0.04722222222222222,
+            "profitable_for_positive_review_cost_possible": true
+          },
+          "strong_all_review": {
+            "review_count": 810,
+            "review_rate": 1.0,
+            "accuracy_gain": 0.0,
+            "break_even_review_cost_over_error_loss": 0.0,
+            "profitable_for_positive_review_cost_possible": false
+          },
+          "validator_fail_only_review": {
+            "review_count": 83,
+            "review_rate": 0.10246913580246914,
+            "accuracy_gain": 0.03564814814814815,
+            "break_even_review_cost_over_error_loss": 0.3478915662650603,
+            "profitable_for_positive_review_cost_possible": true
+          }
+        },
+        {
+          "D": 0.5,
+          "C": 0.75,
+          "F": 0.05,
+          "weak_all_review": {
+            "review_count": 810,
+            "review_rate": 1.0,
+            "accuracy_gain": 0.00351851851851852,
+            "break_even_review_cost_over_error_loss": 0.00351851851851852,
+            "profitable_for_positive_review_cost_possible": true
+          },
+          "strong_all_review": {
+            "review_count": 810,
+            "review_rate": 1.0,
+            "accuracy_gain": -0.05,
+            "break_even_review_cost_over_error_loss": -0.05,
+            "profitable_for_positive_review_cost_possible": false
+          },
+          "validator_fail_only_review": {
+            "review_count": 83,
+            "review_rate": 0.10246913580246914,
+            "accuracy_gain": 0.035277777777777776,
+            "break_even_review_cost_over_error_loss": 0.34427710843373494,
+            "profitable_for_positive_review_cost_possible": true
+          }
+        },
+        {
+          "D": 0.5,
+          "C": 0.75,
+          "F": 0.15,
+          "weak_all_review": {
+            "review_count": 810,
+            "review_rate": 1.0,
+            "accuracy_gain": -0.08388888888888889,
+            "break_even_review_cost_over_error_loss": -0.08388888888888889,
+            "profitable_for_positive_review_cost_possible": false
+          },
+          "strong_all_review": {
+            "review_count": 810,
+            "review_rate": 1.0,
+            "accuracy_gain": -0.15,
+            "break_even_review_cost_over_error_loss": -0.15,
+            "profitable_for_positive_review_cost_possible": false
+          },
+          "validator_fail_only_review": {
+            "review_count": 83,
+            "review_rate": 0.10246913580246914,
+            "accuracy_gain": 0.03453703703703704,
+            "break_even_review_cost_over_error_loss": 0.33704819277108433,
+            "profitable_for_positive_review_cost_possible": true
+          }
+        },
+        {
+          "D": 0.5,
+          "C": 1.0,
+          "F": 0.0,
+          "weak_all_review": {
+            "review_count": 810,
+            "review_rate": 1.0,
+            "accuracy_gain": 0.06296296296296296,
+            "break_even_review_cost_over_error_loss": 0.06296296296296296,
+            "profitable_for_positive_review_cost_possible": true
+          },
+          "strong_all_review": {
+            "review_count": 810,
+            "review_rate": 1.0,
+            "accuracy_gain": 0.0,
+            "break_even_review_cost_over_error_loss": 0.0,
+            "profitable_for_positive_review_cost_possible": false
+          },
+          "validator_fail_only_review": {
+            "review_count": 83,
+            "review_rate": 0.10246913580246914,
+            "accuracy_gain": 0.047530864197530866,
+            "break_even_review_cost_over_error_loss": 0.463855421686747,
+            "profitable_for_positive_review_cost_possible": true
+          }
+        },
+        {
+          "D": 0.5,
+          "C": 1.0,
+          "F": 0.05,
+          "weak_all_review": {
+            "review_count": 810,
+            "review_rate": 1.0,
+            "accuracy_gain": 0.01925925925925926,
+            "break_even_review_cost_over_error_loss": 0.01925925925925926,
+            "profitable_for_positive_review_cost_possible": true
+          },
+          "strong_all_review": {
+            "review_count": 810,
+            "review_rate": 1.0,
+            "accuracy_gain": -0.05,
+            "break_even_review_cost_over_error_loss": -0.05,
+            "profitable_for_positive_review_cost_possible": false
+          },
+          "validator_fail_only_review": {
+            "review_count": 83,
+            "review_rate": 0.10246913580246914,
+            "accuracy_gain": 0.0471604938271605,
+            "break_even_review_cost_over_error_loss": 0.46024096385542174,
+            "profitable_for_positive_review_cost_possible": true
+          }
+        },
+        {
+          "D": 0.5,
+          "C": 1.0,
+          "F": 0.15,
+          "weak_all_review": {
+            "review_count": 810,
+            "review_rate": 1.0,
+            "accuracy_gain": -0.06814814814814815,
+            "break_even_review_cost_over_error_loss": -0.06814814814814815,
+            "profitable_for_positive_review_cost_possible": false
+          },
+          "strong_all_review": {
+            "review_count": 810,
+            "review_rate": 1.0,
+            "accuracy_gain": -0.15,
+            "break_even_review_cost_over_error_loss": -0.15,
+            "profitable_for_positive_review_cost_possible": false
+          },
+          "validator_fail_only_review": {
+            "review_count": 83,
+            "review_rate": 0.10246913580246914,
+            "accuracy_gain": 0.046419753086419754,
+            "break_even_review_cost_over_error_loss": 0.4530120481927711,
+            "profitable_for_positive_review_cost_possible": true
+          }
+        },
+        {
+          "D": 0.75,
+          "C": 0.5,
+          "F": 0.0,
+          "weak_all_review": {
+            "review_count": 810,
+            "review_rate": 1.0,
+            "accuracy_gain": 0.04722222222222222,
+            "break_even_review_cost_over_error_loss": 0.04722222222222222,
+            "profitable_for_positive_review_cost_possible": true
+          },
+          "strong_all_review": {
+            "review_count": 810,
+            "review_rate": 1.0,
+            "accuracy_gain": 0.0,
+            "break_even_review_cost_over_error_loss": 0.0,
+            "profitable_for_positive_review_cost_possible": false
+          },
+          "validator_fail_only_review": {
+            "review_count": 83,
+            "review_rate": 0.10246913580246914,
+            "accuracy_gain": 0.03564814814814815,
+            "break_even_review_cost_over_error_loss": 0.3478915662650603,
+            "profitable_for_positive_review_cost_possible": true
+          }
+        },
+        {
+          "D": 0.75,
+          "C": 0.5,
+          "F": 0.05,
+          "weak_all_review": {
+            "review_count": 810,
+            "review_rate": 1.0,
+            "accuracy_gain": 0.00351851851851852,
+            "break_even_review_cost_over_error_loss": 0.00351851851851852,
+            "profitable_for_positive_review_cost_possible": true
+          },
+          "strong_all_review": {
+            "review_count": 810,
+            "review_rate": 1.0,
+            "accuracy_gain": -0.05,
+            "break_even_review_cost_over_error_loss": -0.05,
+            "profitable_for_positive_review_cost_possible": false
+          },
+          "validator_fail_only_review": {
+            "review_count": 83,
+            "review_rate": 0.10246913580246914,
+            "accuracy_gain": 0.035277777777777776,
+            "break_even_review_cost_over_error_loss": 0.34427710843373494,
+            "profitable_for_positive_review_cost_possible": true
+          }
+        },
+        {
+          "D": 0.75,
+          "C": 0.5,
+          "F": 0.15,
+          "weak_all_review": {
+            "review_count": 810,
+            "review_rate": 1.0,
+            "accuracy_gain": -0.08388888888888889,
+            "break_even_review_cost_over_error_loss": -0.08388888888888889,
+            "profitable_for_positive_review_cost_possible": false
+          },
+          "strong_all_review": {
+            "review_count": 810,
+            "review_rate": 1.0,
+            "accuracy_gain": -0.15,
+            "break_even_review_cost_over_error_loss": -0.15,
+            "profitable_for_positive_review_cost_possible": false
+          },
+          "validator_fail_only_review": {
+            "review_count": 83,
+            "review_rate": 0.10246913580246914,
+            "accuracy_gain": 0.03453703703703704,
+            "break_even_review_cost_over_error_loss": 0.33704819277108433,
+            "profitable_for_positive_review_cost_possible": true
+          }
+        },
+        {
+          "D": 0.75,
+          "C": 0.75,
+          "F": 0.0,
+          "weak_all_review": {
+            "review_count": 810,
+            "review_rate": 1.0,
+            "accuracy_gain": 0.07083333333333333,
+            "break_even_review_cost_over_error_loss": 0.07083333333333333,
+            "profitable_for_positive_review_cost_possible": true
+          },
+          "strong_all_review": {
+            "review_count": 810,
+            "review_rate": 1.0,
+            "accuracy_gain": 0.0,
+            "break_even_review_cost_over_error_loss": 0.0,
+            "profitable_for_positive_review_cost_possible": false
+          },
+          "validator_fail_only_review": {
+            "review_count": 83,
+            "review_rate": 0.10246913580246914,
+            "accuracy_gain": 0.05347222222222222,
+            "break_even_review_cost_over_error_loss": 0.5218373493975904,
+            "profitable_for_positive_review_cost_possible": true
+          }
+        },
+        {
+          "D": 0.75,
+          "C": 0.75,
+          "F": 0.05,
+          "weak_all_review": {
+            "review_count": 810,
+            "review_rate": 1.0,
+            "accuracy_gain": 0.027129629629629632,
+            "break_even_review_cost_over_error_loss": 0.027129629629629632,
+            "profitable_for_positive_review_cost_possible": true
+          },
+          "strong_all_review": {
+            "review_count": 810,
+            "review_rate": 1.0,
+            "accuracy_gain": -0.05,
+            "break_even_review_cost_over_error_loss": -0.05,
+            "profitable_for_positive_review_cost_possible": false
+          },
+          "validator_fail_only_review": {
+            "review_count": 83,
+            "review_rate": 0.10246913580246914,
+            "accuracy_gain": 0.05310185185185186,
+            "break_even_review_cost_over_error_loss": 0.5182228915662651,
+            "profitable_for_positive_review_cost_possible": true
+          }
+        },
+        {
+          "D": 0.75,
+          "C": 0.75,
+          "F": 0.15,
+          "weak_all_review": {
+            "review_count": 810,
+            "review_rate": 1.0,
+            "accuracy_gain": -0.060277777777777784,
+            "break_even_review_cost_over_error_loss": -0.060277777777777784,
+            "profitable_for_positive_review_cost_possible": false
+          },
+          "strong_all_review": {
+            "review_count": 810,
+            "review_rate": 1.0,
+            "accuracy_gain": -0.15,
+            "break_even_review_cost_over_error_loss": -0.15,
+            "profitable_for_positive_review_cost_possible": false
+          },
+          "validator_fail_only_review": {
+            "review_count": 83,
+            "review_rate": 0.10246913580246914,
+            "accuracy_gain": 0.052361111111111115,
+            "break_even_review_cost_over_error_loss": 0.5109939759036145,
+            "profitable_for_positive_review_cost_possible": true
+          }
+        },
+        {
+          "D": 0.75,
+          "C": 1.0,
+          "F": 0.0,
+          "weak_all_review": {
+            "review_count": 810,
+            "review_rate": 1.0,
+            "accuracy_gain": 0.09444444444444444,
+            "break_even_review_cost_over_error_loss": 0.09444444444444444,
+            "profitable_for_positive_review_cost_possible": true
+          },
+          "strong_all_review": {
+            "review_count": 810,
+            "review_rate": 1.0,
+            "accuracy_gain": 0.0,
+            "break_even_review_cost_over_error_loss": 0.0,
+            "profitable_for_positive_review_cost_possible": false
+          },
+          "validator_fail_only_review": {
+            "review_count": 83,
+            "review_rate": 0.10246913580246914,
+            "accuracy_gain": 0.0712962962962963,
+            "break_even_review_cost_over_error_loss": 0.6957831325301206,
+            "profitable_for_positive_review_cost_possible": true
+          }
+        },
+        {
+          "D": 0.75,
+          "C": 1.0,
+          "F": 0.05,
+          "weak_all_review": {
+            "review_count": 810,
+            "review_rate": 1.0,
+            "accuracy_gain": 0.05074074074074074,
+            "break_even_review_cost_over_error_loss": 0.05074074074074074,
+            "profitable_for_positive_review_cost_possible": true
+          },
+          "strong_all_review": {
+            "review_count": 810,
+            "review_rate": 1.0,
+            "accuracy_gain": -0.05,
+            "break_even_review_cost_over_error_loss": -0.05,
+            "profitable_for_positive_review_cost_possible": false
+          },
+          "validator_fail_only_review": {
+            "review_count": 83,
+            "review_rate": 0.10246913580246914,
+            "accuracy_gain": 0.07092592592592593,
+            "break_even_review_cost_over_error_loss": 0.6921686746987953,
+            "profitable_for_positive_review_cost_possible": true
+          }
+        },
+        {
+          "D": 0.75,
+          "C": 1.0,
+          "F": 0.15,
+          "weak_all_review": {
+            "review_count": 810,
+            "review_rate": 1.0,
+            "accuracy_gain": -0.03666666666666667,
+            "break_even_review_cost_over_error_loss": -0.03666666666666667,
+            "profitable_for_positive_review_cost_possible": false
+          },
+          "strong_all_review": {
+            "review_count": 810,
+            "review_rate": 1.0,
+            "accuracy_gain": -0.15,
+            "break_even_review_cost_over_error_loss": -0.15,
+            "profitable_for_positive_review_cost_possible": false
+          },
+          "validator_fail_only_review": {
+            "review_count": 83,
+            "review_rate": 0.10246913580246914,
+            "accuracy_gain": 0.07018518518518518,
+            "break_even_review_cost_over_error_loss": 0.6849397590361446,
+            "profitable_for_positive_review_cost_possible": true
+          }
+        },
+        {
+          "D": 1.0,
+          "C": 0.5,
+          "F": 0.0,
+          "weak_all_review": {
+            "review_count": 810,
+            "review_rate": 1.0,
+            "accuracy_gain": 0.06296296296296296,
+            "break_even_review_cost_over_error_loss": 0.06296296296296296,
+            "profitable_for_positive_review_cost_possible": true
+          },
+          "strong_all_review": {
+            "review_count": 810,
+            "review_rate": 1.0,
+            "accuracy_gain": 0.0,
+            "break_even_review_cost_over_error_loss": 0.0,
+            "profitable_for_positive_review_cost_possible": false
+          },
+          "validator_fail_only_review": {
+            "review_count": 83,
+            "review_rate": 0.10246913580246914,
+            "accuracy_gain": 0.047530864197530866,
+            "break_even_review_cost_over_error_loss": 0.463855421686747,
+            "profitable_for_positive_review_cost_possible": true
+          }
+        },
+        {
+          "D": 1.0,
+          "C": 0.5,
+          "F": 0.05,
+          "weak_all_review": {
+            "review_count": 810,
+            "review_rate": 1.0,
+            "accuracy_gain": 0.01925925925925926,
+            "break_even_review_cost_over_error_loss": 0.01925925925925926,
+            "profitable_for_positive_review_cost_possible": true
+          },
+          "strong_all_review": {
+            "review_count": 810,
+            "review_rate": 1.0,
+            "accuracy_gain": -0.05,
+            "break_even_review_cost_over_error_loss": -0.05,
+            "profitable_for_positive_review_cost_possible": false
+          },
+          "validator_fail_only_review": {
+            "review_count": 83,
+            "review_rate": 0.10246913580246914,
+            "accuracy_gain": 0.0471604938271605,
+            "break_even_review_cost_over_error_loss": 0.46024096385542174,
+            "profitable_for_positive_review_cost_possible": true
+          }
+        },
+        {
+          "D": 1.0,
+          "C": 0.5,
+          "F": 0.15,
+          "weak_all_review": {
+            "review_count": 810,
+            "review_rate": 1.0,
+            "accuracy_gain": -0.06814814814814815,
+            "break_even_review_cost_over_error_loss": -0.06814814814814815,
+            "profitable_for_positive_review_cost_possible": false
+          },
+          "strong_all_review": {
+            "review_count": 810,
+            "review_rate": 1.0,
+            "accuracy_gain": -0.15,
+            "break_even_review_cost_over_error_loss": -0.15,
+            "profitable_for_positive_review_cost_possible": false
+          },
+          "validator_fail_only_review": {
+            "review_count": 83,
+            "review_rate": 0.10246913580246914,
+            "accuracy_gain": 0.046419753086419754,
+            "break_even_review_cost_over_error_loss": 0.4530120481927711,
+            "profitable_for_positive_review_cost_possible": true
+          }
+        },
+        {
+          "D": 1.0,
+          "C": 0.75,
+          "F": 0.0,
+          "weak_all_review": {
+            "review_count": 810,
+            "review_rate": 1.0,
+            "accuracy_gain": 0.09444444444444444,
+            "break_even_review_cost_over_error_loss": 0.09444444444444444,
+            "profitable_for_positive_review_cost_possible": true
+          },
+          "strong_all_review": {
+            "review_count": 810,
+            "review_rate": 1.0,
+            "accuracy_gain": 0.0,
+            "break_even_review_cost_over_error_loss": 0.0,
+            "profitable_for_positive_review_cost_possible": false
+          },
+          "validator_fail_only_review": {
+            "review_count": 83,
+            "review_rate": 0.10246913580246914,
+            "accuracy_gain": 0.0712962962962963,
+            "break_even_review_cost_over_error_loss": 0.6957831325301206,
+            "profitable_for_positive_review_cost_possible": true
+          }
+        },
+        {
+          "D": 1.0,
+          "C": 0.75,
+          "F": 0.05,
+          "weak_all_review": {
+            "review_count": 810,
+            "review_rate": 1.0,
+            "accuracy_gain": 0.05074074074074074,
+            "break_even_review_cost_over_error_loss": 0.05074074074074074,
+            "profitable_for_positive_review_cost_possible": true
+          },
+          "strong_all_review": {
+            "review_count": 810,
+            "review_rate": 1.0,
+            "accuracy_gain": -0.05,
+            "break_even_review_cost_over_error_loss": -0.05,
+            "profitable_for_positive_review_cost_possible": false
+          },
+          "validator_fail_only_review": {
+            "review_count": 83,
+            "review_rate": 0.10246913580246914,
+            "accuracy_gain": 0.07092592592592593,
+            "break_even_review_cost_over_error_loss": 0.6921686746987953,
+            "profitable_for_positive_review_cost_possible": true
+          }
+        },
+        {
+          "D": 1.0,
+          "C": 0.75,
+          "F": 0.15,
+          "weak_all_review": {
+            "review_count": 810,
+            "review_rate": 1.0,
+            "accuracy_gain": -0.03666666666666667,
+            "break_even_review_cost_over_error_loss": -0.03666666666666667,
+            "profitable_for_positive_review_cost_possible": false
+          },
+          "strong_all_review": {
+            "review_count": 810,
+            "review_rate": 1.0,
+            "accuracy_gain": -0.15,
+            "break_even_review_cost_over_error_loss": -0.15,
+            "profitable_for_positive_review_cost_possible": false
+          },
+          "validator_fail_only_review": {
+            "review_count": 83,
+            "review_rate": 0.10246913580246914,
+            "accuracy_gain": 0.07018518518518518,
+            "break_even_review_cost_over_error_loss": 0.6849397590361446,
+            "profitable_for_positive_review_cost_possible": true
+          }
+        },
+        {
+          "D": 1.0,
+          "C": 1.0,
+          "F": 0.0,
+          "weak_all_review": {
+            "review_count": 810,
+            "review_rate": 1.0,
+            "accuracy_gain": 0.1259259259259259,
+            "break_even_review_cost_over_error_loss": 0.1259259259259259,
+            "profitable_for_positive_review_cost_possible": true
+          },
+          "strong_all_review": {
+            "review_count": 810,
+            "review_rate": 1.0,
+            "accuracy_gain": 0.0,
+            "break_even_review_cost_over_error_loss": 0.0,
+            "profitable_for_positive_review_cost_possible": false
+          },
+          "validator_fail_only_review": {
+            "review_count": 83,
+            "review_rate": 0.10246913580246914,
+            "accuracy_gain": 0.09506172839506173,
+            "break_even_review_cost_over_error_loss": 0.927710843373494,
+            "profitable_for_positive_review_cost_possible": true
+          }
+        },
+        {
+          "D": 1.0,
+          "C": 1.0,
+          "F": 0.05,
+          "weak_all_review": {
+            "review_count": 810,
+            "review_rate": 1.0,
+            "accuracy_gain": 0.08222222222222221,
+            "break_even_review_cost_over_error_loss": 0.08222222222222221,
+            "profitable_for_positive_review_cost_possible": true
+          },
+          "strong_all_review": {
+            "review_count": 810,
+            "review_rate": 1.0,
+            "accuracy_gain": -0.05,
+            "break_even_review_cost_over_error_loss": -0.05,
+            "profitable_for_positive_review_cost_possible": false
+          },
+          "validator_fail_only_review": {
+            "review_count": 83,
+            "review_rate": 0.10246913580246914,
+            "accuracy_gain": 0.09469135802469136,
+            "break_even_review_cost_over_error_loss": 0.9240963855421687,
+            "profitable_for_positive_review_cost_possible": true
+          }
+        },
+        {
+          "D": 1.0,
+          "C": 1.0,
+          "F": 0.15,
+          "weak_all_review": {
+            "review_count": 810,
+            "review_rate": 1.0,
+            "accuracy_gain": -0.0051851851851851885,
+            "break_even_review_cost_over_error_loss": -0.0051851851851851885,
+            "profitable_for_positive_review_cost_possible": false
+          },
+          "strong_all_review": {
+            "review_count": 810,
+            "review_rate": 1.0,
+            "accuracy_gain": -0.15,
+            "break_even_review_cost_over_error_loss": -0.15,
+            "profitable_for_positive_review_cost_possible": false
+          },
+          "validator_fail_only_review": {
+            "review_count": 83,
+            "review_rate": 0.10246913580246914,
+            "accuracy_gain": 0.09395061728395061,
+            "break_even_review_cost_over_error_loss": 0.916867469879518,
+            "profitable_for_positive_review_cost_possible": true
+          }
+        }
+      ]
+    },
+    "strong_validator": {
+      "observed_validator_confusion": {
+        "correct_pass": 708,
+        "wrong_pass": 0,
+        "wrong_fail": 102,
+        "correct_fail": 0
+      },
+      "source_slots": 810,
+      "profiles": [
+        {
+          "D": 0.25,
+          "C": 0.5,
+          "F": 0.0,
+          "weak_all_review": {
+            "review_count": 810,
+            "review_rate": 1.0,
+            "accuracy_gain": 0.01574074074074074,
+            "break_even_review_cost_over_error_loss": 0.01574074074074074,
+            "profitable_for_positive_review_cost_possible": true
+          },
+          "strong_all_review": {
+            "review_count": 810,
+            "review_rate": 1.0,
+            "accuracy_gain": 0.0,
+            "break_even_review_cost_over_error_loss": 0.0,
+            "profitable_for_positive_review_cost_possible": false
+          },
+          "validator_fail_only_review": {
+            "review_count": 102,
+            "review_rate": 0.1259259259259259,
+            "accuracy_gain": 0.01574074074074074,
+            "break_even_review_cost_over_error_loss": 0.12499999999999999,
+            "profitable_for_positive_review_cost_possible": true
+          }
+        },
+        {
+          "D": 0.25,
+          "C": 0.5,
+          "F": 0.05,
+          "weak_all_review": {
+            "review_count": 810,
+            "review_rate": 1.0,
+            "accuracy_gain": -0.02796296296296296,
+            "break_even_review_cost_over_error_loss": -0.02796296296296296,
+            "profitable_for_positive_review_cost_possible": false
+          },
+          "strong_all_review": {
+            "review_count": 810,
+            "review_rate": 1.0,
+            "accuracy_gain": -0.05,
+            "break_even_review_cost_over_error_loss": -0.05,
+            "profitable_for_positive_review_cost_possible": false
+          },
+          "validator_fail_only_review": {
+            "review_count": 102,
+            "review_rate": 0.1259259259259259,
+            "accuracy_gain": 0.01574074074074074,
+            "break_even_review_cost_over_error_loss": 0.12499999999999999,
+            "profitable_for_positive_review_cost_possible": true
+          }
+        },
+        {
+          "D": 0.25,
+          "C": 0.5,
+          "F": 0.15,
+          "weak_all_review": {
+            "review_count": 810,
+            "review_rate": 1.0,
+            "accuracy_gain": -0.11537037037037037,
+            "break_even_review_cost_over_error_loss": -0.11537037037037037,
+            "profitable_for_positive_review_cost_possible": false
+          },
+          "strong_all_review": {
+            "review_count": 810,
+            "review_rate": 1.0,
+            "accuracy_gain": -0.15,
+            "break_even_review_cost_over_error_loss": -0.15,
+            "profitable_for_positive_review_cost_possible": false
+          },
+          "validator_fail_only_review": {
+            "review_count": 102,
+            "review_rate": 0.1259259259259259,
+            "accuracy_gain": 0.01574074074074074,
+            "break_even_review_cost_over_error_loss": 0.12499999999999999,
+            "profitable_for_positive_review_cost_possible": true
+          }
+        },
+        {
+          "D": 0.25,
+          "C": 0.75,
+          "F": 0.0,
+          "weak_all_review": {
+            "review_count": 810,
+            "review_rate": 1.0,
+            "accuracy_gain": 0.02361111111111111,
+            "break_even_review_cost_over_error_loss": 0.02361111111111111,
+            "profitable_for_positive_review_cost_possible": true
+          },
+          "strong_all_review": {
+            "review_count": 810,
+            "review_rate": 1.0,
+            "accuracy_gain": 0.0,
+            "break_even_review_cost_over_error_loss": 0.0,
+            "profitable_for_positive_review_cost_possible": false
+          },
+          "validator_fail_only_review": {
+            "review_count": 102,
+            "review_rate": 0.1259259259259259,
+            "accuracy_gain": 0.02361111111111111,
+            "break_even_review_cost_over_error_loss": 0.1875,
+            "profitable_for_positive_review_cost_possible": true
+          }
+        },
+        {
+          "D": 0.25,
+          "C": 0.75,
+          "F": 0.05,
+          "weak_all_review": {
+            "review_count": 810,
+            "review_rate": 1.0,
+            "accuracy_gain": -0.020092592592592592,
+            "break_even_review_cost_over_error_loss": -0.020092592592592592,
+            "profitable_for_positive_review_cost_possible": false
+          },
+          "strong_all_review": {
+            "review_count": 810,
+            "review_rate": 1.0,
+            "accuracy_gain": -0.05,
+            "break_even_review_cost_over_error_loss": -0.05,
+            "profitable_for_positive_review_cost_possible": false
+          },
+          "validator_fail_only_review": {
+            "review_count": 102,
+            "review_rate": 0.1259259259259259,
+            "accuracy_gain": 0.02361111111111111,
+            "break_even_review_cost_over_error_loss": 0.1875,
+            "profitable_for_positive_review_cost_possible": true
+          }
+        },
+        {
+          "D": 0.25,
+          "C": 0.75,
+          "F": 0.15,
+          "weak_all_review": {
+            "review_count": 810,
+            "review_rate": 1.0,
+            "accuracy_gain": -0.1075,
+            "break_even_review_cost_over_error_loss": -0.1075,
+            "profitable_for_positive_review_cost_possible": false
+          },
+          "strong_all_review": {
+            "review_count": 810,
+            "review_rate": 1.0,
+            "accuracy_gain": -0.15,
+            "break_even_review_cost_over_error_loss": -0.15,
+            "profitable_for_positive_review_cost_possible": false
+          },
+          "validator_fail_only_review": {
+            "review_count": 102,
+            "review_rate": 0.1259259259259259,
+            "accuracy_gain": 0.02361111111111111,
+            "break_even_review_cost_over_error_loss": 0.1875,
+            "profitable_for_positive_review_cost_possible": true
+          }
+        },
+        {
+          "D": 0.25,
+          "C": 1.0,
+          "F": 0.0,
+          "weak_all_review": {
+            "review_count": 810,
+            "review_rate": 1.0,
+            "accuracy_gain": 0.03148148148148148,
+            "break_even_review_cost_over_error_loss": 0.03148148148148148,
+            "profitable_for_positive_review_cost_possible": true
+          },
+          "strong_all_review": {
+            "review_count": 810,
+            "review_rate": 1.0,
+            "accuracy_gain": 0.0,
+            "break_even_review_cost_over_error_loss": 0.0,
+            "profitable_for_positive_review_cost_possible": false
+          },
+          "validator_fail_only_review": {
+            "review_count": 102,
+            "review_rate": 0.1259259259259259,
+            "accuracy_gain": 0.03148148148148148,
+            "break_even_review_cost_over_error_loss": 0.24999999999999997,
+            "profitable_for_positive_review_cost_possible": true
+          }
+        },
+        {
+          "D": 0.25,
+          "C": 1.0,
+          "F": 0.05,
+          "weak_all_review": {
+            "review_count": 810,
+            "review_rate": 1.0,
+            "accuracy_gain": -0.012222222222222221,
+            "break_even_review_cost_over_error_loss": -0.012222222222222221,
+            "profitable_for_positive_review_cost_possible": false
+          },
+          "strong_all_review": {
+            "review_count": 810,
+            "review_rate": 1.0,
+            "accuracy_gain": -0.05,
+            "break_even_review_cost_over_error_loss": -0.05,
+            "profitable_for_positive_review_cost_possible": false
+          },
+          "validator_fail_only_review": {
+            "review_count": 102,
+            "review_rate": 0.1259259259259259,
+            "accuracy_gain": 0.03148148148148148,
+            "break_even_review_cost_over_error_loss": 0.24999999999999997,
+            "profitable_for_positive_review_cost_possible": true
+          }
+        },
+        {
+          "D": 0.25,
+          "C": 1.0,
+          "F": 0.15,
+          "weak_all_review": {
+            "review_count": 810,
+            "review_rate": 1.0,
+            "accuracy_gain": -0.09962962962962964,
+            "break_even_review_cost_over_error_loss": -0.09962962962962964,
+            "profitable_for_positive_review_cost_possible": false
+          },
+          "strong_all_review": {
+            "review_count": 810,
+            "review_rate": 1.0,
+            "accuracy_gain": -0.15,
+            "break_even_review_cost_over_error_loss": -0.15,
+            "profitable_for_positive_review_cost_possible": false
+          },
+          "validator_fail_only_review": {
+            "review_count": 102,
+            "review_rate": 0.1259259259259259,
+            "accuracy_gain": 0.03148148148148148,
+            "break_even_review_cost_over_error_loss": 0.24999999999999997,
+            "profitable_for_positive_review_cost_possible": true
+          }
+        },
+        {
+          "D": 0.5,
+          "C": 0.5,
+          "F": 0.0,
+          "weak_all_review": {
+            "review_count": 810,
+            "review_rate": 1.0,
+            "accuracy_gain": 0.03148148148148148,
+            "break_even_review_cost_over_error_loss": 0.03148148148148148,
+            "profitable_for_positive_review_cost_possible": true
+          },
+          "strong_all_review": {
+            "review_count": 810,
+            "review_rate": 1.0,
+            "accuracy_gain": 0.0,
+            "break_even_review_cost_over_error_loss": 0.0,
+            "profitable_for_positive_review_cost_possible": false
+          },
+          "validator_fail_only_review": {
+            "review_count": 102,
+            "review_rate": 0.1259259259259259,
+            "accuracy_gain": 0.03148148148148148,
+            "break_even_review_cost_over_error_loss": 0.24999999999999997,
+            "profitable_for_positive_review_cost_possible": true
+          }
+        },
+        {
+          "D": 0.5,
+          "C": 0.5,
+          "F": 0.05,
+          "weak_all_review": {
+            "review_count": 810,
+            "review_rate": 1.0,
+            "accuracy_gain": -0.012222222222222221,
+            "break_even_review_cost_over_error_loss": -0.012222222222222221,
+            "profitable_for_positive_review_cost_possible": false
+          },
+          "strong_all_review": {
+            "review_count": 810,
+            "review_rate": 1.0,
+            "accuracy_gain": -0.05,
+            "break_even_review_cost_over_error_loss": -0.05,
+            "profitable_for_positive_review_cost_possible": false
+          },
+          "validator_fail_only_review": {
+            "review_count": 102,
+            "review_rate": 0.1259259259259259,
+            "accuracy_gain": 0.03148148148148148,
+            "break_even_review_cost_over_error_loss": 0.24999999999999997,
+            "profitable_for_positive_review_cost_possible": true
+          }
+        },
+        {
+          "D": 0.5,
+          "C": 0.5,
+          "F": 0.15,
+          "weak_all_review": {
+            "review_count": 810,
+            "review_rate": 1.0,
+            "accuracy_gain": -0.09962962962962964,
+            "break_even_review_cost_over_error_loss": -0.09962962962962964,
+            "profitable_for_positive_review_cost_possible": false
+          },
+          "strong_all_review": {
+            "review_count": 810,
+            "review_rate": 1.0,
+            "accuracy_gain": -0.15,
+            "break_even_review_cost_over_error_loss": -0.15,
+            "profitable_for_positive_review_cost_possible": false
+          },
+          "validator_fail_only_review": {
+            "review_count": 102,
+            "review_rate": 0.1259259259259259,
+            "accuracy_gain": 0.03148148148148148,
+            "break_even_review_cost_over_error_loss": 0.24999999999999997,
+            "profitable_for_positive_review_cost_possible": true
+          }
+        },
+        {
+          "D": 0.5,
+          "C": 0.75,
+          "F": 0.0,
+          "weak_all_review": {
+            "review_count": 810,
+            "review_rate": 1.0,
+            "accuracy_gain": 0.04722222222222222,
+            "break_even_review_cost_over_error_loss": 0.04722222222222222,
+            "profitable_for_positive_review_cost_possible": true
+          },
+          "strong_all_review": {
+            "review_count": 810,
+            "review_rate": 1.0,
+            "accuracy_gain": 0.0,
+            "break_even_review_cost_over_error_loss": 0.0,
+            "profitable_for_positive_review_cost_possible": false
+          },
+          "validator_fail_only_review": {
+            "review_count": 102,
+            "review_rate": 0.1259259259259259,
+            "accuracy_gain": 0.04722222222222222,
+            "break_even_review_cost_over_error_loss": 0.375,
+            "profitable_for_positive_review_cost_possible": true
+          }
+        },
+        {
+          "D": 0.5,
+          "C": 0.75,
+          "F": 0.05,
+          "weak_all_review": {
+            "review_count": 810,
+            "review_rate": 1.0,
+            "accuracy_gain": 0.00351851851851852,
+            "break_even_review_cost_over_error_loss": 0.00351851851851852,
+            "profitable_for_positive_review_cost_possible": true
+          },
+          "strong_all_review": {
+            "review_count": 810,
+            "review_rate": 1.0,
+            "accuracy_gain": -0.05,
+            "break_even_review_cost_over_error_loss": -0.05,
+            "profitable_for_positive_review_cost_possible": false
+          },
+          "validator_fail_only_review": {
+            "review_count": 102,
+            "review_rate": 0.1259259259259259,
+            "accuracy_gain": 0.04722222222222222,
+            "break_even_review_cost_over_error_loss": 0.375,
+            "profitable_for_positive_review_cost_possible": true
+          }
+        },
+        {
+          "D": 0.5,
+          "C": 0.75,
+          "F": 0.15,
+          "weak_all_review": {
+            "review_count": 810,
+            "review_rate": 1.0,
+            "accuracy_gain": -0.08388888888888889,
+            "break_even_review_cost_over_error_loss": -0.08388888888888889,
+            "profitable_for_positive_review_cost_possible": false
+          },
+          "strong_all_review": {
+            "review_count": 810,
+            "review_rate": 1.0,
+            "accuracy_gain": -0.15,
+            "break_even_review_cost_over_error_loss": -0.15,
+            "profitable_for_positive_review_cost_possible": false
+          },
+          "validator_fail_only_review": {
+            "review_count": 102,
+            "review_rate": 0.1259259259259259,
+            "accuracy_gain": 0.04722222222222222,
+            "break_even_review_cost_over_error_loss": 0.375,
+            "profitable_for_positive_review_cost_possible": true
+          }
+        },
+        {
+          "D": 0.5,
+          "C": 1.0,
+          "F": 0.0,
+          "weak_all_review": {
+            "review_count": 810,
+            "review_rate": 1.0,
+            "accuracy_gain": 0.06296296296296296,
+            "break_even_review_cost_over_error_loss": 0.06296296296296296,
+            "profitable_for_positive_review_cost_possible": true
+          },
+          "strong_all_review": {
+            "review_count": 810,
+            "review_rate": 1.0,
+            "accuracy_gain": 0.0,
+            "break_even_review_cost_over_error_loss": 0.0,
+            "profitable_for_positive_review_cost_possible": false
+          },
+          "validator_fail_only_review": {
+            "review_count": 102,
+            "review_rate": 0.1259259259259259,
+            "accuracy_gain": 0.06296296296296296,
+            "break_even_review_cost_over_error_loss": 0.49999999999999994,
+            "profitable_for_positive_review_cost_possible": true
+          }
+        },
+        {
+          "D": 0.5,
+          "C": 1.0,
+          "F": 0.05,
+          "weak_all_review": {
+            "review_count": 810,
+            "review_rate": 1.0,
+            "accuracy_gain": 0.01925925925925926,
+            "break_even_review_cost_over_error_loss": 0.01925925925925926,
+            "profitable_for_positive_review_cost_possible": true
+          },
+          "strong_all_review": {
+            "review_count": 810,
+            "review_rate": 1.0,
+            "accuracy_gain": -0.05,
+            "break_even_review_cost_over_error_loss": -0.05,
+            "profitable_for_positive_review_cost_possible": false
+          },
+          "validator_fail_only_review": {
+            "review_count": 102,
+            "review_rate": 0.1259259259259259,
+            "accuracy_gain": 0.06296296296296296,
+            "break_even_review_cost_over_error_loss": 0.49999999999999994,
+            "profitable_for_positive_review_cost_possible": true
+          }
+        },
+        {
+          "D": 0.5,
+          "C": 1.0,
+          "F": 0.15,
+          "weak_all_review": {
+            "review_count": 810,
+            "review_rate": 1.0,
+            "accuracy_gain": -0.06814814814814815,
+            "break_even_review_cost_over_error_loss": -0.06814814814814815,
+            "profitable_for_positive_review_cost_possible": false
+          },
+          "strong_all_review": {
+            "review_count": 810,
+            "review_rate": 1.0,
+            "accuracy_gain": -0.15,
+            "break_even_review_cost_over_error_loss": -0.15,
+            "profitable_for_positive_review_cost_possible": false
+          },
+          "validator_fail_only_review": {
+            "review_count": 102,
+            "review_rate": 0.1259259259259259,
+            "accuracy_gain": 0.06296296296296296,
+            "break_even_review_cost_over_error_loss": 0.49999999999999994,
+            "profitable_for_positive_review_cost_possible": true
+          }
+        },
+        {
+          "D": 0.75,
+          "C": 0.5,
+          "F": 0.0,
+          "weak_all_review": {
+            "review_count": 810,
+            "review_rate": 1.0,
+            "accuracy_gain": 0.04722222222222222,
+            "break_even_review_cost_over_error_loss": 0.04722222222222222,
+            "profitable_for_positive_review_cost_possible": true
+          },
+          "strong_all_review": {
+            "review_count": 810,
+            "review_rate": 1.0,
+            "accuracy_gain": 0.0,
+            "break_even_review_cost_over_error_loss": 0.0,
+            "profitable_for_positive_review_cost_possible": false
+          },
+          "validator_fail_only_review": {
+            "review_count": 102,
+            "review_rate": 0.1259259259259259,
+            "accuracy_gain": 0.04722222222222222,
+            "break_even_review_cost_over_error_loss": 0.375,
+            "profitable_for_positive_review_cost_possible": true
+          }
+        },
+        {
+          "D": 0.75,
+          "C": 0.5,
+          "F": 0.05,
+          "weak_all_review": {
+            "review_count": 810,
+            "review_rate": 1.0,
+            "accuracy_gain": 0.00351851851851852,
+            "break_even_review_cost_over_error_loss": 0.00351851851851852,
+            "profitable_for_positive_review_cost_possible": true
+          },
+          "strong_all_review": {
+            "review_count": 810,
+            "review_rate": 1.0,
+            "accuracy_gain": -0.05,
+            "break_even_review_cost_over_error_loss": -0.05,
+            "profitable_for_positive_review_cost_possible": false
+          },
+          "validator_fail_only_review": {
+            "review_count": 102,
+            "review_rate": 0.1259259259259259,
+            "accuracy_gain": 0.04722222222222222,
+            "break_even_review_cost_over_error_loss": 0.375,
+            "profitable_for_positive_review_cost_possible": true
+          }
+        },
+        {
+          "D": 0.75,
+          "C": 0.5,
+          "F": 0.15,
+          "weak_all_review": {
+            "review_count": 810,
+            "review_rate": 1.0,
+            "accuracy_gain": -0.08388888888888889,
+            "break_even_review_cost_over_error_loss": -0.08388888888888889,
+            "profitable_for_positive_review_cost_possible": false
+          },
+          "strong_all_review": {
+            "review_count": 810,
+            "review_rate": 1.0,
+            "accuracy_gain": -0.15,
+            "break_even_review_cost_over_error_loss": -0.15,
+            "profitable_for_positive_review_cost_possible": false
+          },
+          "validator_fail_only_review": {
+            "review_count": 102,
+            "review_rate": 0.1259259259259259,
+            "accuracy_gain": 0.04722222222222222,
+            "break_even_review_cost_over_error_loss": 0.375,
+            "profitable_for_positive_review_cost_possible": true
+          }
+        },
+        {
+          "D": 0.75,
+          "C": 0.75,
+          "F": 0.0,
+          "weak_all_review": {
+            "review_count": 810,
+            "review_rate": 1.0,
+            "accuracy_gain": 0.07083333333333333,
+            "break_even_review_cost_over_error_loss": 0.07083333333333333,
+            "profitable_for_positive_review_cost_possible": true
+          },
+          "strong_all_review": {
+            "review_count": 810,
+            "review_rate": 1.0,
+            "accuracy_gain": 0.0,
+            "break_even_review_cost_over_error_loss": 0.0,
+            "profitable_for_positive_review_cost_possible": false
+          },
+          "validator_fail_only_review": {
+            "review_count": 102,
+            "review_rate": 0.1259259259259259,
+            "accuracy_gain": 0.07083333333333333,
+            "break_even_review_cost_over_error_loss": 0.5625,
+            "profitable_for_positive_review_cost_possible": true
+          }
+        },
+        {
+          "D": 0.75,
+          "C": 0.75,
+          "F": 0.05,
+          "weak_all_review": {
+            "review_count": 810,
+            "review_rate": 1.0,
+            "accuracy_gain": 0.027129629629629632,
+            "break_even_review_cost_over_error_loss": 0.027129629629629632,
+            "profitable_for_positive_review_cost_possible": true
+          },
+          "strong_all_review": {
+            "review_count": 810,
+            "review_rate": 1.0,
+            "accuracy_gain": -0.05,
+            "break_even_review_cost_over_error_loss": -0.05,
+            "profitable_for_positive_review_cost_possible": false
+          },
+          "validator_fail_only_review": {
+            "review_count": 102,
+            "review_rate": 0.1259259259259259,
+            "accuracy_gain": 0.07083333333333333,
+            "break_even_review_cost_over_error_loss": 0.5625,
+            "profitable_for_positive_review_cost_possible": true
+          }
+        },
+        {
+          "D": 0.75,
+          "C": 0.75,
+          "F": 0.15,
+          "weak_all_review": {
+            "review_count": 810,
+            "review_rate": 1.0,
+            "accuracy_gain": -0.060277777777777784,
+            "break_even_review_cost_over_error_loss": -0.060277777777777784,
+            "profitable_for_positive_review_cost_possible": false
+          },
+          "strong_all_review": {
+            "review_count": 810,
+            "review_rate": 1.0,
+            "accuracy_gain": -0.15,
+            "break_even_review_cost_over_error_loss": -0.15,
+            "profitable_for_positive_review_cost_possible": false
+          },
+          "validator_fail_only_review": {
+            "review_count": 102,
+            "review_rate": 0.1259259259259259,
+            "accuracy_gain": 0.07083333333333333,
+            "break_even_review_cost_over_error_loss": 0.5625,
+            "profitable_for_positive_review_cost_possible": true
+          }
+        },
+        {
+          "D": 0.75,
+          "C": 1.0,
+          "F": 0.0,
+          "weak_all_review": {
+            "review_count": 810,
+            "review_rate": 1.0,
+            "accuracy_gain": 0.09444444444444444,
+            "break_even_review_cost_over_error_loss": 0.09444444444444444,
+            "profitable_for_positive_review_cost_possible": true
+          },
+          "strong_all_review": {
+            "review_count": 810,
+            "review_rate": 1.0,
+            "accuracy_gain": 0.0,
+            "break_even_review_cost_over_error_loss": 0.0,
+            "profitable_for_positive_review_cost_possible": false
+          },
+          "validator_fail_only_review": {
+            "review_count": 102,
+            "review_rate": 0.1259259259259259,
+            "accuracy_gain": 0.09444444444444444,
+            "break_even_review_cost_over_error_loss": 0.75,
+            "profitable_for_positive_review_cost_possible": true
+          }
+        },
+        {
+          "D": 0.75,
+          "C": 1.0,
+          "F": 0.05,
+          "weak_all_review": {
+            "review_count": 810,
+            "review_rate": 1.0,
+            "accuracy_gain": 0.05074074074074074,
+            "break_even_review_cost_over_error_loss": 0.05074074074074074,
+            "profitable_for_positive_review_cost_possible": true
+          },
+          "strong_all_review": {
+            "review_count": 810,
+            "review_rate": 1.0,
+            "accuracy_gain": -0.05,
+            "break_even_review_cost_over_error_loss": -0.05,
+            "profitable_for_positive_review_cost_possible": false
+          },
+          "validator_fail_only_review": {
+            "review_count": 102,
+            "review_rate": 0.1259259259259259,
+            "accuracy_gain": 0.09444444444444444,
+            "break_even_review_cost_over_error_loss": 0.75,
+            "profitable_for_positive_review_cost_possible": true
+          }
+        },
+        {
+          "D": 0.75,
+          "C": 1.0,
+          "F": 0.15,
+          "weak_all_review": {
+            "review_count": 810,
+            "review_rate": 1.0,
+            "accuracy_gain": -0.03666666666666667,
+            "break_even_review_cost_over_error_loss": -0.03666666666666667,
+            "profitable_for_positive_review_cost_possible": false
+          },
+          "strong_all_review": {
+            "review_count": 810,
+            "review_rate": 1.0,
+            "accuracy_gain": -0.15,
+            "break_even_review_cost_over_error_loss": -0.15,
+            "profitable_for_positive_review_cost_possible": false
+          },
+          "validator_fail_only_review": {
+            "review_count": 102,
+            "review_rate": 0.1259259259259259,
+            "accuracy_gain": 0.09444444444444444,
+            "break_even_review_cost_over_error_loss": 0.75,
+            "profitable_for_positive_review_cost_possible": true
+          }
+        },
+        {
+          "D": 1.0,
+          "C": 0.5,
+          "F": 0.0,
+          "weak_all_review": {
+            "review_count": 810,
+            "review_rate": 1.0,
+            "accuracy_gain": 0.06296296296296296,
+            "break_even_review_cost_over_error_loss": 0.06296296296296296,
+            "profitable_for_positive_review_cost_possible": true
+          },
+          "strong_all_review": {
+            "review_count": 810,
+            "review_rate": 1.0,
+            "accuracy_gain": 0.0,
+            "break_even_review_cost_over_error_loss": 0.0,
+            "profitable_for_positive_review_cost_possible": false
+          },
+          "validator_fail_only_review": {
+            "review_count": 102,
+            "review_rate": 0.1259259259259259,
+            "accuracy_gain": 0.06296296296296296,
+            "break_even_review_cost_over_error_loss": 0.49999999999999994,
+            "profitable_for_positive_review_cost_possible": true
+          }
+        },
+        {
+          "D": 1.0,
+          "C": 0.5,
+          "F": 0.05,
+          "weak_all_review": {
+            "review_count": 810,
+            "review_rate": 1.0,
+            "accuracy_gain": 0.01925925925925926,
+            "break_even_review_cost_over_error_loss": 0.01925925925925926,
+            "profitable_for_positive_review_cost_possible": true
+          },
+          "strong_all_review": {
+            "review_count": 810,
+            "review_rate": 1.0,
+            "accuracy_gain": -0.05,
+            "break_even_review_cost_over_error_loss": -0.05,
+            "profitable_for_positive_review_cost_possible": false
+          },
+          "validator_fail_only_review": {
+            "review_count": 102,
+            "review_rate": 0.1259259259259259,
+            "accuracy_gain": 0.06296296296296296,
+            "break_even_review_cost_over_error_loss": 0.49999999999999994,
+            "profitable_for_positive_review_cost_possible": true
+          }
+        },
+        {
+          "D": 1.0,
+          "C": 0.5,
+          "F": 0.15,
+          "weak_all_review": {
+            "review_count": 810,
+            "review_rate": 1.0,
+            "accuracy_gain": -0.06814814814814815,
+            "break_even_review_cost_over_error_loss": -0.06814814814814815,
+            "profitable_for_positive_review_cost_possible": false
+          },
+          "strong_all_review": {
+            "review_count": 810,
+            "review_rate": 1.0,
+            "accuracy_gain": -0.15,
+            "break_even_review_cost_over_error_loss": -0.15,
+            "profitable_for_positive_review_cost_possible": false
+          },
+          "validator_fail_only_review": {
+            "review_count": 102,
+            "review_rate": 0.1259259259259259,
+            "accuracy_gain": 0.06296296296296296,
+            "break_even_review_cost_over_error_loss": 0.49999999999999994,
+            "profitable_for_positive_review_cost_possible": true
+          }
+        },
+        {
+          "D": 1.0,
+          "C": 0.75,
+          "F": 0.0,
+          "weak_all_review": {
+            "review_count": 810,
+            "review_rate": 1.0,
+            "accuracy_gain": 0.09444444444444444,
+            "break_even_review_cost_over_error_loss": 0.09444444444444444,
+            "profitable_for_positive_review_cost_possible": true
+          },
+          "strong_all_review": {
+            "review_count": 810,
+            "review_rate": 1.0,
+            "accuracy_gain": 0.0,
+            "break_even_review_cost_over_error_loss": 0.0,
+            "profitable_for_positive_review_cost_possible": false
+          },
+          "validator_fail_only_review": {
+            "review_count": 102,
+            "review_rate": 0.1259259259259259,
+            "accuracy_gain": 0.09444444444444444,
+            "break_even_review_cost_over_error_loss": 0.75,
+            "profitable_for_positive_review_cost_possible": true
+          }
+        },
+        {
+          "D": 1.0,
+          "C": 0.75,
+          "F": 0.05,
+          "weak_all_review": {
+            "review_count": 810,
+            "review_rate": 1.0,
+            "accuracy_gain": 0.05074074074074074,
+            "break_even_review_cost_over_error_loss": 0.05074074074074074,
+            "profitable_for_positive_review_cost_possible": true
+          },
+          "strong_all_review": {
+            "review_count": 810,
+            "review_rate": 1.0,
+            "accuracy_gain": -0.05,
+            "break_even_review_cost_over_error_loss": -0.05,
+            "profitable_for_positive_review_cost_possible": false
+          },
+          "validator_fail_only_review": {
+            "review_count": 102,
+            "review_rate": 0.1259259259259259,
+            "accuracy_gain": 0.09444444444444444,
+            "break_even_review_cost_over_error_loss": 0.75,
+            "profitable_for_positive_review_cost_possible": true
+          }
+        },
+        {
+          "D": 1.0,
+          "C": 0.75,
+          "F": 0.15,
+          "weak_all_review": {
+            "review_count": 810,
+            "review_rate": 1.0,
+            "accuracy_gain": -0.03666666666666667,
+            "break_even_review_cost_over_error_loss": -0.03666666666666667,
+            "profitable_for_positive_review_cost_possible": false
+          },
+          "strong_all_review": {
+            "review_count": 810,
+            "review_rate": 1.0,
+            "accuracy_gain": -0.15,
+            "break_even_review_cost_over_error_loss": -0.15,
+            "profitable_for_positive_review_cost_possible": false
+          },
+          "validator_fail_only_review": {
+            "review_count": 102,
+            "review_rate": 0.1259259259259259,
+            "accuracy_gain": 0.09444444444444444,
+            "break_even_review_cost_over_error_loss": 0.75,
+            "profitable_for_positive_review_cost_possible": true
+          }
+        },
+        {
+          "D": 1.0,
+          "C": 1.0,
+          "F": 0.0,
+          "weak_all_review": {
+            "review_count": 810,
+            "review_rate": 1.0,
+            "accuracy_gain": 0.1259259259259259,
+            "break_even_review_cost_over_error_loss": 0.1259259259259259,
+            "profitable_for_positive_review_cost_possible": true
+          },
+          "strong_all_review": {
+            "review_count": 810,
+            "review_rate": 1.0,
+            "accuracy_gain": 0.0,
+            "break_even_review_cost_over_error_loss": 0.0,
+            "profitable_for_positive_review_cost_possible": false
+          },
+          "validator_fail_only_review": {
+            "review_count": 102,
+            "review_rate": 0.1259259259259259,
+            "accuracy_gain": 0.1259259259259259,
+            "break_even_review_cost_over_error_loss": 0.9999999999999999,
+            "profitable_for_positive_review_cost_possible": true
+          }
+        },
+        {
+          "D": 1.0,
+          "C": 1.0,
+          "F": 0.05,
+          "weak_all_review": {
+            "review_count": 810,
+            "review_rate": 1.0,
+            "accuracy_gain": 0.08222222222222221,
+            "break_even_review_cost_over_error_loss": 0.08222222222222221,
+            "profitable_for_positive_review_cost_possible": true
+          },
+          "strong_all_review": {
+            "review_count": 810,
+            "review_rate": 1.0,
+            "accuracy_gain": -0.05,
+            "break_even_review_cost_over_error_loss": -0.05,
+            "profitable_for_positive_review_cost_possible": false
+          },
+          "validator_fail_only_review": {
+            "review_count": 102,
+            "review_rate": 0.1259259259259259,
+            "accuracy_gain": 0.1259259259259259,
+            "break_even_review_cost_over_error_loss": 0.9999999999999999,
+            "profitable_for_positive_review_cost_possible": true
+          }
+        },
+        {
+          "D": 1.0,
+          "C": 1.0,
+          "F": 0.15,
+          "weak_all_review": {
+            "review_count": 810,
+            "review_rate": 1.0,
+            "accuracy_gain": -0.0051851851851851885,
+            "break_even_review_cost_over_error_loss": -0.0051851851851851885,
+            "profitable_for_positive_review_cost_possible": false
+          },
+          "strong_all_review": {
+            "review_count": 810,
+            "review_rate": 1.0,
+            "accuracy_gain": -0.15,
+            "break_even_review_cost_over_error_loss": -0.15,
+            "profitable_for_positive_review_cost_possible": false
+          },
+          "validator_fail_only_review": {
+            "review_count": 102,
+            "review_rate": 0.1259259259259259,
+            "accuracy_gain": 0.1259259259259259,
+            "break_even_review_cost_over_error_loss": 0.9999999999999999,
+            "profitable_for_positive_review_cost_possible": true
+          }
+        }
+      ]
+    }
+  }
+}

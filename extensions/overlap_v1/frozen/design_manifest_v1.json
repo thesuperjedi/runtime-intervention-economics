@@ -1,0 +1,72 @@
+{
+  "schema_version": "1.0",
+  "design_id": "EX1-1.0",
+  "status": "FROZEN_PREPARATION_NOT_AUTHORIZED",
+  "files_sha256": {
+    "budget_v1.json": "6976394cafc3f358b86087a477112b628152a85d7f88469260b11ea06b9568ad",
+    "candidate_pool_v1.json": "808f139fc3c8ce3de9e5847d816764fe0b91caa3c961dc325cfccc858a767a9b",
+    "canonical_cases_v1.json": "989d6ce516167f548a3961e3df34efe3ea3afd7aa5fff32d01e27db2984c06d4",
+    "cheap_validator_manifest_v1.json": "ab0e043598b5c5e2025244959b0cc5c528c443c5a5864c3281fc53ac7a168c63",
+    "execution_approval_template_v1.json": "914426c6153781b376ae2d1f0c2b1e398ac575276e34d0ae2380133704c1645b",
+    "execution_config_v1.json": "b38c3102d9b9200220773f5377e0768b0e29926d57456600492132dd171e50c5",
+    "execution_manifest_v1.json": "cf05da351b7bcd13ee06c3f3313da62d2f6af5bdc5d62b4a909b0d4015dd18c1",
+    "historical_inventory_v1.json": "1087f3dbb398705137a45cd7ba5ae3416bd0b0bdd715b12cd559cdde10b56d44",
+    "inventory_v1.json": "5aebac3e75b6554e2e8b2b524946f304d38b094629e0f403bec2ff4e7ab16271",
+    "oracle_outputs_v1.json": "bcc2925a3027e6084c95c4cf80b541323b2bf4c7e2a64d3fa9081b2af4d55399",
+    "oracle_verification_v1.json": "7154af948990dbf6770bbfc68af1dcb49ba4ec3cfbdee366b70636bdfd1d2c69",
+    "policy_v1.txt": "8b2a226ec9ad3970e79d357bda81a0e559056204420448e9eaba71d20d6c6c98",
+    "prompt_templates_v1.json": "f005124e5cbfd101d67afa2fccc5d44772514ea1fe511bbeb2110e27e7610406",
+    "renderings_v1.json": "1b62421430a8ea2f90517ed0d2b8e92de2bf3d28f4b0774731fcb34c180976c7",
+    "selection_procedure_v1.json": "1e5a0b72ecf9bfa6f1fcae33e98e7dcf64ae9c27fd1c504ee774e5b7298b2444",
+    "solver_manifest_v1.json": "a7ab7bed7d11eeb61b95bb3f884f8d75bd3e07c4b4d002c359a3bdf642832b53",
+    "strong_validator_manifest_v1.json": "d37b66b1a3251299a0b6eb02079d001c50682a90d0af09807cd2ddca5347ccb4"
+  },
+  "code_and_protocol_sha256": {
+    "extensions/overlap_v1/policy_checks.py": "cf5ba24ed3db80c90f5a7e29701252a42f010c33f3ea32eadd8d1fe4e3cedd80",
+    "extensions/overlap_v1/prepare.py": "5127fe7b2151176b4ed82e9a7af88d608109ad352c02a4d8d4ee72ab6bb89d3c",
+    "extensions/overlap_v1/run_manifest.py": "bf2ee948ba425344d3c07a55eedaaca8fe392c7c834675bcd63be83600a5e5d7",
+    "extensions/overlap_v1/test_preparation.py": "fbd9b7f3cb4d8c37bde13c46e68cb083905f27e56fbba519425c5f8c4aca2db3",
+    "extensions/overlap_v1/PROTOCOL_v1.md": "5a8b6cb8d4da47e978eb7825d07c52b0a24f6b87955ddf7002493e5ae804663e"
+  },
+  "installed_google_genai_version": "2.25.0",
+  "sdk_retry_source": {
+    "path": ".\\.venv\\Lib\\site-packages\\google\\genai\\_gaos\\google_genai.py",
+    "sha256": "c3fa07c7b3b28d6da5c3adbb056bcc9453e3c0837934cd44baca2ef9d8aab054"
+  },
+  "retry_translation_offline": {
+    "max_retries": 0
+  },
+  "historical_evidence_unchanged": true,
+  "historical_file_count": 2293,
+  "primary_outcomes": [
+    "joint weak/strong exact correctness among valid paired outputs",
+    "P(strong_wrong | weak_wrong) and P(strong_wrong | weak_correct)",
+    "P(strong_correct | validator_FAIL), separately for each validator"
+  ],
+  "secondary_outcomes": [
+    "validator confusion/FAR/FRR with explicit denominators",
+    "reconstructed cascade accuracy and corrections minus corruptions",
+    "normalized token-derived USD costs and expected cost differences",
+    "loss sensitivity grid L=[0,.001,.005,.008,.01,.02,.05,.1,.5,1]"
+  ],
+  "aggregation": "Equal canonical-case weight; average three renderings within case. Renderings are NOT independent cases.",
+  "missing_data": "No replacement/rerun. Report all planned/attempted/valid denominators; no invented routes or unknown costs.",
+  "comparisons": "Separate prospective corpus; never silently pool with E1/E2. Human routes remain hypothetical D/C/F.",
+  "acceptance_criteria": [
+    "Explicit approval linked to this design SHA before any paid call.",
+    "Independent semantic review of templates/cases and prospective model/price confirmation.",
+    "Offline inventory, oracle, request-equivalence and zero-retry tests passed.",
+    "No records/reservations before first batch; verify identity/integrity for resumption.",
+    "Zero effective SDK retries checked at runtime for all roles.",
+    "Max 720 planned attempted calls; no outcome-dependent stopping.",
+    "US$10 conservative estimate guard, NOT a billing ceiling; no automatic retries.",
+    "Technical failure/invalid response/unknown usage/ambiguous persistence pauses execution."
+  ],
+  "unresolved": [
+    "Model identifiers are provider aliases; snapshot immutability/availability not verified locally.",
+    "Prospective provider prices not verified; frozen USD convention is comparative only.",
+    "HTTP attempt counts uninstrumented; SDK policy is configured evidence, not observed transport count.",
+    "Independent human semantic review and explicit paid approval are pending.",
+    "60 selected canonical cases do not establish sub-1% error rates or production validity."
+  ]
+}

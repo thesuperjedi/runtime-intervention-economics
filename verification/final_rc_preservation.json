@@ -1,0 +1,12 @@
+{
+  "status": "PASS",
+  "version": "1.2.0-rc.1",
+  "scientific_files_byte_identical_to_parent": 2957,
+  "sanitized_projections_preserved": 2880,
+  "terminal_provider_failures_preserved": 2,
+  "parent_files_unchanged": 3008,
+  "original_research_files_unchanged": 3149,
+  "paid_calls": 0,
+  "remote_publication": false,
+  "scientific_reference_equivalence": true
+}

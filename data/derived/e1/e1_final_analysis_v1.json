@@ -1,0 +1,365 @@
+{
+  "experiment": "E1",
+  "analysis": "final_validator_and_failure_analysis",
+  "validator_sensitivity": {
+    "base_model_costs": {
+      "cascade_usd": 0.15597064999999996,
+      "strong_only_usd": 0.36982349999999986,
+      "cascade_model_saving_usd": 0.2138528499999999
+    },
+    "counts": {
+      "realizations": 270,
+      "escalations": 34,
+      "cascade_validator_checks": 304,
+      "strong_only_validator_checks_if_universal": 270,
+      "extra_cascade_checks_under_universal_validation": 34
+    },
+    "scenario_a": {
+      "definition": "Validator cost charged only to the cascade.",
+      "break_even_validator_cost_per_check_usd": 0.0007034633223684207
+    },
+    "scenario_b": {
+      "definition": "Every accepted result must be validated; both cascade and strong-only incur validator cost.",
+      "break_even_validator_cost_per_check_usd": 0.00628978970588235
+    },
+    "sensitivity_rows": [
+      {
+        "validator_cost_per_check_usd": 0.0,
+        "scenario_a": {
+          "cascade_total_usd": 0.15597064999999996,
+          "strong_total_usd": 0.36982349999999986,
+          "cascade_saving_usd": 0.2138528499999999,
+          "cascade_cheaper": true
+        },
+        "scenario_b": {
+          "cascade_total_usd": 0.15597064999999996,
+          "strong_total_usd": 0.36982349999999986,
+          "cascade_saving_usd": 0.2138528499999999,
+          "cascade_cheaper": true
+        }
+      },
+      {
+        "validator_cost_per_check_usd": 0.0001,
+        "scenario_a": {
+          "cascade_total_usd": 0.18637064999999997,
+          "strong_total_usd": 0.36982349999999986,
+          "cascade_saving_usd": 0.1834528499999999,
+          "cascade_cheaper": true
+        },
+        "scenario_b": {
+          "cascade_total_usd": 0.18637064999999997,
+          "strong_total_usd": 0.3968234999999999,
+          "cascade_saving_usd": 0.2104528499999999,
+          "cascade_cheaper": true
+        }
+      },
+      {
+        "validator_cost_per_check_usd": 0.00025,
+        "scenario_a": {
+          "cascade_total_usd": 0.23197064999999994,
+          "strong_total_usd": 0.36982349999999986,
+          "cascade_saving_usd": 0.13785284999999992,
+          "cascade_cheaper": true
+        },
+        "scenario_b": {
+          "cascade_total_usd": 0.23197064999999994,
+          "strong_total_usd": 0.43732349999999987,
+          "cascade_saving_usd": 0.20535284999999992,
+          "cascade_cheaper": true
+        }
+      },
+      {
+        "validator_cost_per_check_usd": 0.0005,
+        "scenario_a": {
+          "cascade_total_usd": 0.30797064999999996,
+          "strong_total_usd": 0.36982349999999986,
+          "cascade_saving_usd": 0.061852849999999904,
+          "cascade_cheaper": true
+        },
+        "scenario_b": {
+          "cascade_total_usd": 0.30797064999999996,
+          "strong_total_usd": 0.5048234999999999,
+          "cascade_saving_usd": 0.1968528499999999,
+          "cascade_cheaper": true
+        }
+      },
+      {
+        "validator_cost_per_check_usd": 0.00070346,
+        "scenario_a": {
+          "cascade_total_usd": 0.36982249,
+          "strong_total_usd": 0.36982349999999986,
+          "cascade_saving_usd": 1.0099999998569587e-06,
+          "cascade_cheaper": true
+        },
+        "scenario_b": {
+          "cascade_total_usd": 0.36982249,
+          "strong_total_usd": 0.5597576999999999,
+          "cascade_saving_usd": 0.1899352099999999,
+          "cascade_cheaper": true
+        }
+      },
+      {
+        "validator_cost_per_check_usd": 0.001,
+        "scenario_a": {
+          "cascade_total_usd": 0.4599706499999999,
+          "strong_total_usd": 0.36982349999999986,
+          "cascade_saving_usd": -0.09014715000000006,
+          "cascade_cheaper": false
+        },
+        "scenario_b": {
+          "cascade_total_usd": 0.4599706499999999,
+          "strong_total_usd": 0.6398234999999999,
+          "cascade_saving_usd": 0.17985284999999995,
+          "cascade_cheaper": true
+        }
+      },
+      {
+        "validator_cost_per_check_usd": 0.002,
+        "scenario_a": {
+          "cascade_total_usd": 0.76397065,
+          "strong_total_usd": 0.36982349999999986,
+          "cascade_saving_usd": -0.3941471500000001,
+          "cascade_cheaper": false
+        },
+        "scenario_b": {
+          "cascade_total_usd": 0.76397065,
+          "strong_total_usd": 0.9098234999999999,
+          "cascade_saving_usd": 0.14585284999999992,
+          "cascade_cheaper": true
+        }
+      },
+      {
+        "validator_cost_per_check_usd": 0.005,
+        "scenario_a": {
+          "cascade_total_usd": 1.67597065,
+          "strong_total_usd": 0.36982349999999986,
+          "cascade_saving_usd": -1.3061471500000001,
+          "cascade_cheaper": false
+        },
+        "scenario_b": {
+          "cascade_total_usd": 1.67597065,
+          "strong_total_usd": 1.7198235,
+          "cascade_saving_usd": 0.04385284999999994,
+          "cascade_cheaper": true
+        }
+      },
+      {
+        "validator_cost_per_check_usd": 0.006,
+        "scenario_a": {
+          "cascade_total_usd": 1.97997065,
+          "strong_total_usd": 0.36982349999999986,
+          "cascade_saving_usd": -1.6101471500000002,
+          "cascade_cheaper": false
+        },
+        "scenario_b": {
+          "cascade_total_usd": 1.97997065,
+          "strong_total_usd": 1.9898235,
+          "cascade_saving_usd": 0.009852849999999913,
+          "cascade_cheaper": true
+        }
+      },
+      {
+        "validator_cost_per_check_usd": 0.0063,
+        "scenario_a": {
+          "cascade_total_usd": 2.07117065,
+          "strong_total_usd": 0.36982349999999986,
+          "cascade_saving_usd": -1.7013471500000001,
+          "cascade_cheaper": false
+        },
+        "scenario_b": {
+          "cascade_total_usd": 2.07117065,
+          "strong_total_usd": 2.0708235,
+          "cascade_saving_usd": -0.0003471500000000738,
+          "cascade_cheaper": false
+        }
+      },
+      {
+        "validator_cost_per_check_usd": 0.007,
+        "scenario_a": {
+          "cascade_total_usd": 2.28397065,
+          "strong_total_usd": 0.36982349999999986,
+          "cascade_saving_usd": -1.9141471500000002,
+          "cascade_cheaper": false
+        },
+        "scenario_b": {
+          "cascade_total_usd": 2.28397065,
+          "strong_total_usd": 2.2598235,
+          "cascade_saving_usd": -0.024147150000000117,
+          "cascade_cheaper": false
+        }
+      }
+    ]
+  },
+  "cheap_failure_structure": {
+    "total_cheap_observations": 270,
+    "total_failures": 34,
+    "cases_with_any_failure": 6,
+    "top_three_failure_cases": [
+      "C21",
+      "C22",
+      "C20"
+    ],
+    "top_three_failure_count": 26,
+    "top_three_failure_share_pct": 76.47058823529412,
+    "cases": {
+      "C06": {
+        "total_realizations": 9,
+        "failures": 2,
+        "failure_rate_pct": 22.22222222222222,
+        "by_level": {
+          "L1": {
+            "total": 3,
+            "failures": 0
+          },
+          "L2": {
+            "total": 3,
+            "failures": 2
+          },
+          "L3": {
+            "total": 3,
+            "failures": 0
+          }
+        },
+        "failure_patterns": [
+          {
+            "pattern": "expected=('ENHANCED_SECURITY_REVIEW', 'STANDARD_FINANCIAL_APPROVAL') actual=('SECURITY_REVIEW', 'STANDARD_FINANCIAL_APPROVAL')",
+            "count": 2
+          }
+        ]
+      },
+      "C20": {
+        "total_realizations": 9,
+        "failures": 8,
+        "failure_rate_pct": 88.88888888888889,
+        "by_level": {
+          "L1": {
+            "total": 3,
+            "failures": 3
+          },
+          "L2": {
+            "total": 3,
+            "failures": 3
+          },
+          "L3": {
+            "total": 3,
+            "failures": 2
+          }
+        },
+        "failure_patterns": [
+          {
+            "pattern": "expected=('CONTRACT_REVIEW', 'ENHANCED_FINANCIAL_APPROVAL', 'ENHANCED_SECURITY_REVIEW') actual=('CONTRACT_REVIEW', 'ENHANCED_FINANCIAL_APPROVAL', 'ENHANCED_SECURITY_REVIEW', 'SUPPLIER_DUE_DILIGENCE')",
+            "count": 6
+          },
+          {
+            "pattern": "expected=('CONTRACT_REVIEW', 'ENHANCED_FINANCIAL_APPROVAL', 'ENHANCED_SECURITY_REVIEW') actual=('CONTRACT_REVIEW', 'ENHANCED_FINANCIAL_APPROVAL', 'SECURITY_REVIEW')",
+            "count": 2
+          }
+        ]
+      },
+      "C21": {
+        "total_realizations": 9,
+        "failures": 9,
+        "failure_rate_pct": 100.0,
+        "by_level": {
+          "L1": {
+            "total": 3,
+            "failures": 3
+          },
+          "L2": {
+            "total": 3,
+            "failures": 3
+          },
+          "L3": {
+            "total": 3,
+            "failures": 3
+          }
+        },
+        "failure_patterns": [
+          {
+            "pattern": "expected=('CONTRACT_REVIEW', 'ENHANCED_FINANCIAL_APPROVAL', 'SUPPLIER_DUE_DILIGENCE') actual=('CONTRACT_REVIEW', 'ENHANCED_FINANCIAL_APPROVAL', 'SECURITY_REVIEW', 'SUPPLIER_DUE_DILIGENCE')",
+            "count": 8
+          },
+          {
+            "pattern": "expected=('CONTRACT_REVIEW', 'ENHANCED_FINANCIAL_APPROVAL', 'SUPPLIER_DUE_DILIGENCE') actual=('CONTRACT_REVIEW', 'ENHANCED_FINANCIAL_APPROVAL', 'SECURITY_REVIEW')",
+            "count": 1
+          }
+        ]
+      },
+      "C22": {
+        "total_realizations": 9,
+        "failures": 9,
+        "failure_rate_pct": 100.0,
+        "by_level": {
+          "L1": {
+            "total": 3,
+            "failures": 3
+          },
+          "L2": {
+            "total": 3,
+            "failures": 3
+          },
+          "L3": {
+            "total": 3,
+            "failures": 3
+          }
+        },
+        "failure_patterns": [
+          {
+            "pattern": "expected=('CONTRACT_REVIEW', 'ENHANCED_FINANCIAL_APPROVAL') actual=('CONTRACT_REVIEW', 'ENHANCED_FINANCIAL_APPROVAL', 'SECURITY_REVIEW')",
+            "count": 9
+          }
+        ]
+      },
+      "C27": {
+        "total_realizations": 9,
+        "failures": 3,
+        "failure_rate_pct": 33.333333333333336,
+        "by_level": {
+          "L1": {
+            "total": 3,
+            "failures": 0
+          },
+          "L2": {
+            "total": 3,
+            "failures": 1
+          },
+          "L3": {
+            "total": 3,
+            "failures": 2
+          }
+        },
+        "failure_patterns": [
+          {
+            "pattern": "expected=('ENHANCED_FINANCIAL_APPROVAL', 'SECURITY_REVIEW') actual=('ENHANCED_FINANCIAL_APPROVAL',)",
+            "count": 3
+          }
+        ]
+      },
+      "C29": {
+        "total_realizations": 9,
+        "failures": 3,
+        "failure_rate_pct": 33.333333333333336,
+        "by_level": {
+          "L1": {
+            "total": 3,
+            "failures": 0
+          },
+          "L2": {
+            "total": 3,
+            "failures": 0
+          },
+          "L3": {
+            "total": 3,
+            "failures": 3
+          }
+        },
+        "failure_patterns": [
+          {
+            "pattern": "expected=('ENHANCED_FINANCIAL_APPROVAL', 'ENHANCED_SECURITY_REVIEW') actual=('CONTRACT_REVIEW', 'ENHANCED_FINANCIAL_APPROVAL', 'ENHANCED_SECURITY_REVIEW')",
+            "count": 3
+          }
+        ]
+      }
+    }
+  }
+}

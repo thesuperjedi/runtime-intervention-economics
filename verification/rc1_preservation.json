@@ -1,0 +1,11 @@
+{
+  "status": "PASS",
+  "prior_package_files_unchanged": 2996,
+  "scientific_files_byte_identical_to_previous_package": 2957,
+  "frozen_original_files_unchanged": 3149,
+  "new_rc_version": "1.1.0-rc.1",
+  "parent_package_manifest_sha256": "37842520cafa7593d8c2e0dbec7496d153467e8539f23e2a65de9a39455cc02a",
+  "citation_schema_status": "INCOMPLETE_PENDING_CONFIRMED_AUTHOR",
+  "publication_authorized": false,
+  "api_calls": 0
+}

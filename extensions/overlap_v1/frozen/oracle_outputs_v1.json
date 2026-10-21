@@ -1,0 +1,500 @@
+[
+  {
+    "case_id": "X001",
+    "disposition": "CONTROLLED",
+    "controls": [
+      "CONTRACT_REVIEW",
+      "ENHANCED_FINANCIAL_APPROVAL",
+      "SUPPLIER_DUE_DILIGENCE"
+    ]
+  },
+  {
+    "case_id": "X002",
+    "disposition": "CONTROLLED",
+    "controls": [
+      "ENHANCED_FINANCIAL_APPROVAL",
+      "SECURITY_REVIEW"
+    ]
+  },
+  {
+    "case_id": "X003",
+    "disposition": "CONTROLLED",
+    "controls": [
+      "SECURITY_REVIEW",
+      "SENIOR_FINANCIAL_APPROVAL"
+    ]
+  },
+  {
+    "case_id": "X004",
+    "disposition": "CONTROLLED",
+    "controls": [
+      "STANDARD_FINANCIAL_APPROVAL",
+      "SUPPLIER_DUE_DILIGENCE"
+    ]
+  },
+  {
+    "case_id": "X005",
+    "disposition": "CONTROLLED",
+    "controls": [
+      "SECURITY_REVIEW",
+      "SENIOR_FINANCIAL_APPROVAL",
+      "SUPPLIER_DUE_DILIGENCE"
+    ]
+  },
+  {
+    "case_id": "X006",
+    "disposition": "CONTROLLED",
+    "controls": [
+      "SENIOR_FINANCIAL_APPROVAL",
+      "SUPPLIER_DUE_DILIGENCE"
+    ]
+  },
+  {
+    "case_id": "X007",
+    "disposition": "CONTROLLED",
+    "controls": [
+      "ENHANCED_FINANCIAL_APPROVAL",
+      "ENHANCED_SECURITY_REVIEW"
+    ]
+  },
+  {
+    "case_id": "X008",
+    "disposition": "CONTROLLED",
+    "controls": [
+      "CONTRACT_REVIEW",
+      "SECURITY_REVIEW",
+      "STANDARD_FINANCIAL_APPROVAL"
+    ]
+  },
+  {
+    "case_id": "X009",
+    "disposition": "CONTROLLED",
+    "controls": [
+      "ENHANCED_SECURITY_REVIEW",
+      "STANDARD_FINANCIAL_APPROVAL",
+      "SUPPLIER_DUE_DILIGENCE"
+    ]
+  },
+  {
+    "case_id": "X010",
+    "disposition": "CONTROLLED",
+    "controls": [
+      "ENHANCED_SECURITY_REVIEW",
+      "SENIOR_FINANCIAL_APPROVAL",
+      "SUPPLIER_DUE_DILIGENCE"
+    ]
+  },
+  {
+    "case_id": "X011",
+    "disposition": "CONTROLLED",
+    "controls": [
+      "CONTRACT_REVIEW",
+      "ENHANCED_FINANCIAL_APPROVAL",
+      "SECURITY_REVIEW",
+      "SUPPLIER_DUE_DILIGENCE"
+    ]
+  },
+  {
+    "case_id": "X012",
+    "disposition": "CONTROLLED",
+    "controls": [
+      "CONTRACT_REVIEW",
+      "SECURITY_REVIEW",
+      "STANDARD_FINANCIAL_APPROVAL"
+    ]
+  },
+  {
+    "case_id": "X013",
+    "disposition": "CONTROLLED",
+    "controls": [
+      "CONTRACT_REVIEW",
+      "SECURITY_REVIEW",
+      "SENIOR_FINANCIAL_APPROVAL",
+      "SUPPLIER_DUE_DILIGENCE"
+    ]
+  },
+  {
+    "case_id": "X014",
+    "disposition": "CONTROLLED",
+    "controls": [
+      "SECURITY_REVIEW",
+      "SENIOR_FINANCIAL_APPROVAL",
+      "SUPPLIER_DUE_DILIGENCE"
+    ]
+  },
+  {
+    "case_id": "X015",
+    "disposition": "CONTROLLED",
+    "controls": [
+      "CONTRACT_REVIEW",
+      "SECURITY_REVIEW",
+      "SENIOR_FINANCIAL_APPROVAL"
+    ]
+  },
+  {
+    "case_id": "X016",
+    "disposition": "CONTROLLED",
+    "controls": [
+      "CONTRACT_REVIEW",
+      "STANDARD_FINANCIAL_APPROVAL",
+      "SUPPLIER_DUE_DILIGENCE"
+    ]
+  },
+  {
+    "case_id": "X017",
+    "disposition": "CONTROLLED",
+    "controls": [
+      "ENHANCED_FINANCIAL_APPROVAL",
+      "SECURITY_REVIEW",
+      "SUPPLIER_DUE_DILIGENCE"
+    ]
+  },
+  {
+    "case_id": "X018",
+    "disposition": "CONTROLLED",
+    "controls": [
+      "SECURITY_REVIEW",
+      "STANDARD_FINANCIAL_APPROVAL",
+      "SUPPLIER_DUE_DILIGENCE"
+    ]
+  },
+  {
+    "case_id": "X019",
+    "disposition": "CONTROLLED",
+    "controls": [
+      "CONTRACT_REVIEW",
+      "ENHANCED_FINANCIAL_APPROVAL",
+      "SECURITY_REVIEW"
+    ]
+  },
+  {
+    "case_id": "X020",
+    "disposition": "CONTROLLED",
+    "controls": [
+      "CONTRACT_REVIEW",
+      "SECURITY_REVIEW",
+      "STANDARD_FINANCIAL_APPROVAL",
+      "SUPPLIER_DUE_DILIGENCE"
+    ]
+  },
+  {
+    "case_id": "X021",
+    "disposition": "CONTROLLED",
+    "controls": [
+      "CONTRACT_REVIEW",
+      "STANDARD_FINANCIAL_APPROVAL"
+    ]
+  },
+  {
+    "case_id": "X022",
+    "disposition": "CONTROLLED",
+    "controls": [
+      "ENHANCED_FINANCIAL_APPROVAL"
+    ]
+  },
+  {
+    "case_id": "X023",
+    "disposition": "CONTROLLED",
+    "controls": [
+      "SENIOR_FINANCIAL_APPROVAL"
+    ]
+  },
+  {
+    "case_id": "X024",
+    "disposition": "CONTROLLED",
+    "controls": [
+      "ENHANCED_FINANCIAL_APPROVAL",
+      "SUPPLIER_DUE_DILIGENCE"
+    ]
+  },
+  {
+    "case_id": "X025",
+    "disposition": "CONTROLLED",
+    "controls": [
+      "ENHANCED_SECURITY_REVIEW",
+      "STANDARD_FINANCIAL_APPROVAL"
+    ]
+  },
+  {
+    "case_id": "X026",
+    "disposition": "CONTROLLED",
+    "controls": [
+      "SENIOR_FINANCIAL_APPROVAL"
+    ]
+  },
+  {
+    "case_id": "X027",
+    "disposition": "CONTROLLED",
+    "controls": [
+      "STANDARD_FINANCIAL_APPROVAL"
+    ]
+  },
+  {
+    "case_id": "X028",
+    "disposition": "CONTROLLED",
+    "controls": [
+      "CONTRACT_REVIEW",
+      "STANDARD_FINANCIAL_APPROVAL"
+    ]
+  },
+  {
+    "case_id": "X029",
+    "disposition": "CONTROLLED",
+    "controls": [
+      "CONTRACT_REVIEW",
+      "ENHANCED_FINANCIAL_APPROVAL"
+    ]
+  },
+  {
+    "case_id": "X030",
+    "disposition": "CONTROLLED",
+    "controls": [
+      "ENHANCED_FINANCIAL_APPROVAL",
+      "ENHANCED_SECURITY_REVIEW"
+    ]
+  },
+  {
+    "case_id": "X031",
+    "disposition": "CONTROLLED",
+    "controls": [
+      "CONTRACT_REVIEW",
+      "ENHANCED_FINANCIAL_APPROVAL",
+      "SECURITY_REVIEW"
+    ]
+  },
+  {
+    "case_id": "X032",
+    "disposition": "CONTROLLED",
+    "controls": [
+      "CONTRACT_REVIEW",
+      "ENHANCED_FINANCIAL_APPROVAL",
+      "SECURITY_REVIEW"
+    ]
+  },
+  {
+    "case_id": "X033",
+    "disposition": "CONTROLLED",
+    "controls": [
+      "CONTRACT_REVIEW",
+      "SECURITY_REVIEW",
+      "STANDARD_FINANCIAL_APPROVAL"
+    ]
+  },
+  {
+    "case_id": "X034",
+    "disposition": "CONTROLLED",
+    "controls": [
+      "CONTRACT_REVIEW",
+      "SECURITY_REVIEW",
+      "STANDARD_FINANCIAL_APPROVAL"
+    ]
+  },
+  {
+    "case_id": "X035",
+    "disposition": "CONTROLLED",
+    "controls": [
+      "CONTRACT_REVIEW",
+      "ENHANCED_FINANCIAL_APPROVAL",
+      "SECURITY_REVIEW"
+    ]
+  },
+  {
+    "case_id": "X036",
+    "disposition": "CONTROLLED",
+    "controls": [
+      "CONTRACT_REVIEW",
+      "ENHANCED_FINANCIAL_APPROVAL",
+      "SECURITY_REVIEW"
+    ]
+  },
+  {
+    "case_id": "X037",
+    "disposition": "CONTROLLED",
+    "controls": [
+      "CONTRACT_REVIEW",
+      "ENHANCED_FINANCIAL_APPROVAL",
+      "SECURITY_REVIEW"
+    ]
+  },
+  {
+    "case_id": "X038",
+    "disposition": "CONTROLLED",
+    "controls": [
+      "CONTRACT_REVIEW",
+      "ENHANCED_FINANCIAL_APPROVAL",
+      "SECURITY_REVIEW",
+      "SUPPLIER_DUE_DILIGENCE"
+    ]
+  },
+  {
+    "case_id": "X039",
+    "disposition": "CONTROLLED",
+    "controls": [
+      "CONTRACT_REVIEW",
+      "SECURITY_REVIEW",
+      "SENIOR_FINANCIAL_APPROVAL"
+    ]
+  },
+  {
+    "case_id": "X040",
+    "disposition": "CONTROLLED",
+    "controls": [
+      "CONTRACT_REVIEW",
+      "SECURITY_REVIEW",
+      "SENIOR_FINANCIAL_APPROVAL"
+    ]
+  },
+  {
+    "case_id": "X041",
+    "disposition": "PROHIBITED",
+    "controls": [
+      "PROHIBITED"
+    ]
+  },
+  {
+    "case_id": "X042",
+    "disposition": "PROHIBITED",
+    "controls": [
+      "PROHIBITED"
+    ]
+  },
+  {
+    "case_id": "X043",
+    "disposition": "PROHIBITED",
+    "controls": [
+      "PROHIBITED"
+    ]
+  },
+  {
+    "case_id": "X044",
+    "disposition": "PROHIBITED",
+    "controls": [
+      "PROHIBITED"
+    ]
+  },
+  {
+    "case_id": "X045",
+    "disposition": "PROHIBITED",
+    "controls": [
+      "PROHIBITED"
+    ]
+  },
+  {
+    "case_id": "X046",
+    "disposition": "PROHIBITED",
+    "controls": [
+      "PROHIBITED"
+    ]
+  },
+  {
+    "case_id": "X047",
+    "disposition": "PROHIBITED",
+    "controls": [
+      "PROHIBITED"
+    ]
+  },
+  {
+    "case_id": "X048",
+    "disposition": "PROHIBITED",
+    "controls": [
+      "PROHIBITED"
+    ]
+  },
+  {
+    "case_id": "X049",
+    "disposition": "PROHIBITED",
+    "controls": [
+      "PROHIBITED"
+    ]
+  },
+  {
+    "case_id": "X050",
+    "disposition": "PROHIBITED",
+    "controls": [
+      "PROHIBITED"
+    ]
+  },
+  {
+    "case_id": "X051",
+    "disposition": "CONTROLLED",
+    "controls": [
+      "SECURITY_REVIEW",
+      "STANDARD_FINANCIAL_APPROVAL"
+    ]
+  },
+  {
+    "case_id": "X052",
+    "disposition": "CONTROLLED",
+    "controls": [
+      "SECURITY_REVIEW",
+      "STANDARD_FINANCIAL_APPROVAL"
+    ]
+  },
+  {
+    "case_id": "X053",
+    "disposition": "CONTROLLED",
+    "controls": [
+      "ENHANCED_FINANCIAL_APPROVAL",
+      "SECURITY_REVIEW"
+    ]
+  },
+  {
+    "case_id": "X054",
+    "disposition": "CONTROLLED",
+    "controls": [
+      "SECURITY_REVIEW",
+      "STANDARD_FINANCIAL_APPROVAL",
+      "SUPPLIER_DUE_DILIGENCE"
+    ]
+  },
+  {
+    "case_id": "X055",
+    "disposition": "CONTROLLED",
+    "controls": [
+      "SECURITY_REVIEW",
+      "SENIOR_FINANCIAL_APPROVAL"
+    ]
+  },
+  {
+    "case_id": "X056",
+    "disposition": "CONTROLLED",
+    "controls": [
+      "ENHANCED_FINANCIAL_APPROVAL",
+      "SECURITY_REVIEW"
+    ]
+  },
+  {
+    "case_id": "X057",
+    "disposition": "CONTROLLED",
+    "controls": [
+      "SECURITY_REVIEW",
+      "STANDARD_FINANCIAL_APPROVAL"
+    ]
+  },
+  {
+    "case_id": "X058",
+    "disposition": "CONTROLLED",
+    "controls": [
+      "SECURITY_REVIEW",
+      "SENIOR_FINANCIAL_APPROVAL"
+    ]
+  },
+  {
+    "case_id": "X059",
+    "disposition": "CONTROLLED",
+    "controls": [
+      "SECURITY_REVIEW",
+      "SENIOR_FINANCIAL_APPROVAL",
+      "SUPPLIER_DUE_DILIGENCE"
+    ]
+  },
+  {
+    "case_id": "X060",
+    "disposition": "CONTROLLED",
+    "controls": [
+      "SECURITY_REVIEW",
+      "SENIOR_FINANCIAL_APPROVAL",
+      "SUPPLIER_DUE_DILIGENCE"
+    ]
+  }
+]

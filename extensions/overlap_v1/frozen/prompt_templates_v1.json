@@ -1,0 +1,4 @@
+{
+  "solver": "AUTHORITATIVE POLICY\n\n{policy}\n\nCASE\n\n{rendering_text}\n\nTASK\n\nDetermine all controls required by the authoritative policy for this case.\nReturn only the required controls using the supplied response schema.\n",
+  "validator": "AUTHORITATIVE POLICY\n\n{policy}\n\nPROCUREMENT REQUEST\n\n{rendering_text}\n\nCANDIDATE CONTROL SET\n\n{candidate_controls_json}\n\nALLOWED CONTROL NAMES\n\n{allowed_controls_json}\n\nVALIDATION TASK\n\nDetermine whether the candidate control set is exactly compliant with the supplied procurement policy for the supplied request.\nReturn PASS only if the candidate contains every control required by the policy and no control that is not required. Otherwise return FAIL.\nEvaluate the candidate independently from the policy and request. Do not assume that the candidate is correct.\nReturn only the verdict using the supplied response schema.\n"
+}

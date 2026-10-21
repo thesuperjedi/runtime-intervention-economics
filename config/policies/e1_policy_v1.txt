@@ -1,0 +1,131 @@
+E1 SYNTHETIC PROCUREMENT AND INFORMATION-RISK POLICY
+Version 1.0
+
+PURPOSE
+
+This policy defines the controls that apply to procurement requests based on
+purchase value, supplier status, information classification, deployment model,
+contract duration, and approved exceptions.
+
+All applicable controls must be identified unless the request is prohibited.
+
+
+1. FINANCIAL AUTHORITY
+
+Every non-prohibited procurement request requires exactly one financial
+approval.
+
+1.1 A purchase with a value of USD 50,000 or less requires:
+
+STANDARD_FINANCIAL_APPROVAL
+
+1.2 A purchase with a value greater than USD 50,000 and less than or equal to
+USD 100,000 requires:
+
+ENHANCED_FINANCIAL_APPROVAL
+
+1.3 A purchase with a value greater than USD 100,000 requires:
+
+SENIOR_FINANCIAL_APPROVAL
+
+
+2. SUPPLIER CONTROLS
+
+2.1 An approved supplier requires no additional supplier control.
+
+2.2 An unapproved supplier requires:
+
+SUPPLIER_DUE_DILIGENCE
+
+This requirement does not apply if there is an approved exception whose scope
+covers the vendor requirement.
+
+2.3 A prohibited supplier results in:
+
+PROHIBITED
+
+A prohibited-supplier determination is terminal. If the supplier is prohibited,
+the request is prohibited and no other controls are returned.
+
+A normal approved exception cannot override a prohibited-supplier
+determination.
+
+
+3. INFORMATION-RISK CONTROLS
+
+3.1 Public or internal information requires no additional information-security
+control under this policy.
+
+3.2 Confidential information processed using an external SaaS deployment
+requires:
+
+SECURITY_REVIEW
+
+3.3 Restricted information processed using an external SaaS deployment
+requires:
+
+ENHANCED_SECURITY_REVIEW
+
+This requirement does not apply if there is an approved exception whose scope
+covers external processing of restricted information.
+
+3.4 Restricted information processed using an internal deployment requires:
+
+SECURITY_REVIEW
+
+
+4. CONTRACT-DURATION CONTROL
+
+A contract with a duration greater than 24 months requires:
+
+CONTRACT_REVIEW
+
+A contract of exactly 24 months does not require CONTRACT_REVIEW under this
+rule.
+
+
+5. EXCEPTIONS
+
+For purposes of this policy, an exception is either absent or approved.
+
+An approved exception must have an explicit scope. The permitted scopes are:
+
+vendor
+external_restricted_data
+both
+
+An exception has effect only when it is approved and only within its stated
+scope.
+
+5.1 An approved exception with scope "vendor" suppresses only:
+
+SUPPLIER_DUE_DILIGENCE
+
+5.2 An approved exception with scope "external_restricted_data" suppresses
+only:
+
+ENHANCED_SECURITY_REVIEW
+
+when that control arises from restricted information being processed using an
+external SaaS deployment.
+
+5.3 An approved exception with scope "both" suppresses both of the controls
+described in sections 5.1 and 5.2 when they would otherwise apply.
+
+5.4 No exception defined by this policy suppresses:
+
+STANDARD_FINANCIAL_APPROVAL
+ENHANCED_FINANCIAL_APPROVAL
+SENIOR_FINANCIAL_APPROVAL
+SECURITY_REVIEW
+CONTRACT_REVIEW
+PROHIBITED
+
+
+6. OUTPUT REQUIREMENT
+
+For a permitted request, identify all controls required by this policy.
+
+For a prohibited request, return only:
+
+PROHIBITED

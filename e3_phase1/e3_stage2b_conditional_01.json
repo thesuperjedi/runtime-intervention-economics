@@ -1,0 +1,2353 @@
+{
+  "status": "STAGE2B_CONDITIONAL_ONLY",
+  "currency": "USD",
+  "pricing_basis": {
+    "cheap_input_per_million": 0.3,
+    "cheap_output_plus_thought_per_million": 2.5,
+    "strong_input_per_million": 0.75,
+    "strong_output_plus_thought_per_million": 3.75,
+    "source": "frozen E1 list-price convention, NOT independently invoice-verified"
+  },
+  "assumptions": {
+    "error_loss_usd_per_incorrect_result": 0.1,
+    "human_review_usd_per_routed_case": 0.01,
+    "error_loss_equal_for_all_wrong_final_sets": true,
+    "human_parameters": "hypothetical D,C,F; unchanged per case and queue"
+  },
+  "routes": {
+    "cheap_validator": {
+      "source_slots": 810,
+      "distinct_e1_sources": 270,
+      "observed_confusion": {
+        "PASS": 727,
+        "FAIL": 83,
+        "correct_pass": 702,
+        "wrong_pass": 25,
+        "correct_fail": 6,
+        "wrong_fail": 77
+      },
+      "automated_baselines": {
+        "weak_only": {
+          "accuracy": 0.8740740740740741,
+          "api_cost_usd_per_slot": 0.0003521218518518513,
+          "review_rate": 0.0,
+          "human_cost_usd_per_slot": 0.0,
+          "error_loss_usd_per_slot": 0.01259259259259259,
+          "total_expected_usd_per_slot": 0.01294471444444444,
+          "basis": "frozen E1 solver observations"
+        },
+        "strong_only": {
+          "accuracy": 1.0,
+          "api_cost_usd_per_slot": 0.0013697166666666667,
+          "review_rate": 0.0,
+          "human_cost_usd_per_slot": 0.0,
+          "error_loss_usd_per_slot": 0.0,
+          "total_expected_usd_per_slot": 0.0013697166666666667,
+          "basis": "frozen E1 solver observations"
+        },
+        "weak_validator_strong_on_fail": {
+          "accuracy": 0.9691358024691358,
+          "api_cost_usd_per_slot": 0.001153181358024691,
+          "review_rate": 0.0,
+          "human_cost_usd_per_slot": 0.0,
+          "error_loss_usd_per_slot": 0.0030864197530864226,
+          "total_expected_usd_per_slot": 0.004239601111111113,
+          "basis": "observed solver correctness; reconstructed cascade"
+        }
+      },
+      "best_automated_at_assumptions": "strong_only",
+      "profiles": [
+        {
+          "D": 0.25,
+          "C": 0.5,
+          "F": 0.0,
+          "comparison": {
+            "weak_human_all": {
+              "accuracy": 0.8898148148148148,
+              "api_cost_usd_per_slot": 0.0003521218518518513,
+              "review_rate": 1.0,
+              "human_cost_usd_per_slot": 0.01,
+              "error_loss_usd_per_slot": 0.011018518518518518,
+              "total_expected_usd_per_slot": 0.02137064037037037,
+              "break_even_review_usd_vs_best_automated": -0.010000923703703703,
+              "cheaper_than_best_automated_at_assumptions": false,
+              "basis": "hypothetical human analytical expectation"
+            },
+            "weak_validator_human_on_fail": {
+              "accuracy": 0.8859567901234567,
+              "api_cost_usd_per_slot": 0.000970822098765432,
+              "review_rate": 0.10246913580246914,
+              "human_cost_usd_per_slot": 0.0010246913580246914,
+              "error_loss_usd_per_slot": 0.011404320987654327,
+              "total_expected_usd_per_slot": 0.01339983444444445,
+              "break_even_review_usd_vs_best_automated": -0.10740235421686753,
+              "cheaper_than_best_automated_at_assumptions": false,
+              "basis": "hypothetical human analytical expectation"
+            }
+          },
+          "minimum_expected_cost_route_at_assumptions": "strong_only",
+          "minimum_expected_cost_usd_per_slot": 0.0013697166666666667
+        },
+        {
+          "D": 0.25,
+          "C": 0.5,
+          "F": 0.05,
+          "comparison": {
+            "weak_human_all": {
+              "accuracy": 0.8461111111111111,
+              "api_cost_usd_per_slot": 0.0003521218518518513,
+              "review_rate": 1.0,
+              "human_cost_usd_per_slot": 0.01,
+              "error_loss_usd_per_slot": 0.015388888888888886,
+              "total_expected_usd_per_slot": 0.025741010740740734,
+              "break_even_review_usd_vs_best_automated": -0.01437129407407407,
+              "cheaper_than_best_automated_at_assumptions": false,
+              "basis": "hypothetical human analytical expectation"
+            },
+            "weak_validator_human_on_fail": {
+              "accuracy": 0.8855864197530865,
+              "api_cost_usd_per_slot": 0.000970822098765432,
+              "review_rate": 0.10246913580246914,
+              "human_cost_usd_per_slot": 0.0010246913580246914,
+              "error_loss_usd_per_slot": 0.011441358024691352,
+              "total_expected_usd_per_slot": 0.013436871481481474,
+              "break_even_review_usd_vs_best_automated": -0.10776379999999994,
+              "cheaper_than_best_automated_at_assumptions": false,
+              "basis": "hypothetical human analytical expectation"
+            }
+          },
+          "minimum_expected_cost_route_at_assumptions": "strong_only",
+          "minimum_expected_cost_usd_per_slot": 0.0013697166666666667
+        },
+        {
+          "D": 0.25,
+          "C": 0.5,
+          "F": 0.15,
+          "comparison": {
+            "weak_human_all": {
+              "accuracy": 0.7587037037037037,
+              "api_cost_usd_per_slot": 0.0003521218518518513,
+              "review_rate": 1.0,
+              "human_cost_usd_per_slot": 0.01,
+              "error_loss_usd_per_slot": 0.024129629629629636,
+              "total_expected_usd_per_slot": 0.034481751481481485,
+              "break_even_review_usd_vs_best_automated": -0.02311203481481482,
+              "cheaper_than_best_automated_at_assumptions": false,
+              "basis": "hypothetical human analytical expectation"
+            },
+            "weak_validator_human_on_fail": {
+              "accuracy": 0.8848456790123457,
+              "api_cost_usd_per_slot": 0.000970822098765432,
+              "review_rate": 0.10246913580246914,
+              "human_cost_usd_per_slot": 0.0010246913580246914,
+              "error_loss_usd_per_slot": 0.011515432098765432,
+              "total_expected_usd_per_slot": 0.013510945555555555,
+              "break_even_review_usd_vs_best_automated": -0.10848669156626506,
+              "cheaper_than_best_automated_at_assumptions": false,
+              "basis": "hypothetical human analytical expectation"
+            }
+          },
+          "minimum_expected_cost_route_at_assumptions": "strong_only",
+          "minimum_expected_cost_usd_per_slot": 0.0013697166666666667
+        },
+        {
+          "D": 0.25,
+          "C": 0.75,
+          "F": 0.0,
+          "comparison": {
+            "weak_human_all": {
+              "accuracy": 0.8976851851851851,
+              "api_cost_usd_per_slot": 0.0003521218518518513,
+              "review_rate": 1.0,
+              "human_cost_usd_per_slot": 0.01,
+              "error_loss_usd_per_slot": 0.010231481481481487,
+              "total_expected_usd_per_slot": 0.02058360333333334,
+              "break_even_review_usd_vs_best_automated": -0.009213886666666673,
+              "cheaper_than_best_automated_at_assumptions": false,
+              "basis": "hypothetical human analytical expectation"
+            },
+            "weak_validator_human_on_fail": {
+              "accuracy": 0.8918981481481482,
+              "api_cost_usd_per_slot": 0.000970822098765432,
+              "review_rate": 0.10246913580246914,
+              "human_cost_usd_per_slot": 0.0010246913580246914,
+              "error_loss_usd_per_slot": 0.010810185185185185,
+              "total_expected_usd_per_slot": 0.012805698641975307,
+              "break_even_review_usd_vs_best_automated": -0.10160416144578313,
+              "cheaper_than_best_automated_at_assumptions": false,
+              "basis": "hypothetical human analytical expectation"
+            }
+          },
+          "minimum_expected_cost_route_at_assumptions": "strong_only",
+          "minimum_expected_cost_usd_per_slot": 0.0013697166666666667
+        },
+        {
+          "D": 0.25,
+          "C": 0.75,
+          "F": 0.05,
+          "comparison": {
+            "weak_human_all": {
+              "accuracy": 0.8539814814814816,
+              "api_cost_usd_per_slot": 0.0003521218518518513,
+              "review_rate": 1.0,
+              "human_cost_usd_per_slot": 0.01,
+              "error_loss_usd_per_slot": 0.014601851851851845,
+              "total_expected_usd_per_slot": 0.024953973703703697,
+              "break_even_review_usd_vs_best_automated": -0.01358425703703703,
+              "cheaper_than_best_automated_at_assumptions": false,
+              "basis": "hypothetical human analytical expectation"
+            },
+            "weak_validator_human_on_fail": {
+              "accuracy": 0.8915277777777778,
+              "api_cost_usd_per_slot": 0.000970822098765432,
+              "review_rate": 0.10246913580246914,
+              "human_cost_usd_per_slot": 0.0010246913580246914,
+              "error_loss_usd_per_slot": 0.01084722222222222,
+              "total_expected_usd_per_slot": 0.012842735679012342,
+              "break_even_review_usd_vs_best_automated": -0.10196560722891564,
+              "cheaper_than_best_automated_at_assumptions": false,
+              "basis": "hypothetical human analytical expectation"
+            }
+          },
+          "minimum_expected_cost_route_at_assumptions": "strong_only",
+          "minimum_expected_cost_usd_per_slot": 0.0013697166666666667
+        },
+        {
+          "D": 0.25,
+          "C": 0.75,
+          "F": 0.15,
+          "comparison": {
+            "weak_human_all": {
+              "accuracy": 0.766574074074074,
+              "api_cost_usd_per_slot": 0.0003521218518518513,
+              "review_rate": 1.0,
+              "human_cost_usd_per_slot": 0.01,
+              "error_loss_usd_per_slot": 0.023342592592592606,
+              "total_expected_usd_per_slot": 0.033694714444444454,
+              "break_even_review_usd_vs_best_automated": -0.02232499777777779,
+              "cheaper_than_best_automated_at_assumptions": false,
+              "basis": "hypothetical human analytical expectation"
+            },
+            "weak_validator_human_on_fail": {
+              "accuracy": 0.8907870370370371,
+              "api_cost_usd_per_slot": 0.000970822098765432,
+              "review_rate": 0.10246913580246914,
+              "human_cost_usd_per_slot": 0.0010246913580246914,
+              "error_loss_usd_per_slot": 0.01092129629629629,
+              "total_expected_usd_per_slot": 0.012916809753086412,
+              "break_even_review_usd_vs_best_automated": -0.10268849879518066,
+              "cheaper_than_best_automated_at_assumptions": false,
+              "basis": "hypothetical human analytical expectation"
+            }
+          },
+          "minimum_expected_cost_route_at_assumptions": "strong_only",
+          "minimum_expected_cost_usd_per_slot": 0.0013697166666666667
+        },
+        {
+          "D": 0.25,
+          "C": 1.0,
+          "F": 0.0,
+          "comparison": {
+            "weak_human_all": {
+              "accuracy": 0.9055555555555556,
+              "api_cost_usd_per_slot": 0.0003521218518518513,
+              "review_rate": 1.0,
+              "human_cost_usd_per_slot": 0.01,
+              "error_loss_usd_per_slot": 0.009444444444444445,
+              "total_expected_usd_per_slot": 0.019796566296296295,
+              "break_even_review_usd_vs_best_automated": -0.00842684962962963,
+              "cheaper_than_best_automated_at_assumptions": false,
+              "basis": "hypothetical human analytical expectation"
+            },
+            "weak_validator_human_on_fail": {
+              "accuracy": 0.8978395061728395,
+              "api_cost_usd_per_slot": 0.000970822098765432,
+              "review_rate": 0.10246913580246914,
+              "human_cost_usd_per_slot": 0.0010246913580246914,
+              "error_loss_usd_per_slot": 0.010216049382716053,
+              "total_expected_usd_per_slot": 0.012211562839506175,
+              "break_even_review_usd_vs_best_automated": -0.09580596867469883,
+              "cheaper_than_best_automated_at_assumptions": false,
+              "basis": "hypothetical human analytical expectation"
+            }
+          },
+          "minimum_expected_cost_route_at_assumptions": "strong_only",
+          "minimum_expected_cost_usd_per_slot": 0.0013697166666666667
+        },
+        {
+          "D": 0.25,
+          "C": 1.0,
+          "F": 0.05,
+          "comparison": {
+            "weak_human_all": {
+              "accuracy": 0.8618518518518519,
+              "api_cost_usd_per_slot": 0.0003521218518518513,
+              "review_rate": 1.0,
+              "human_cost_usd_per_slot": 0.01,
+              "error_loss_usd_per_slot": 0.013814814814814814,
+              "total_expected_usd_per_slot": 0.024166936666666666,
+              "break_even_review_usd_vs_best_automated": -0.01279722,
+              "cheaper_than_best_automated_at_assumptions": false,
+              "basis": "hypothetical human analytical expectation"
+            },
+            "weak_validator_human_on_fail": {
+              "accuracy": 0.8974691358024692,
+              "api_cost_usd_per_slot": 0.000970822098765432,
+              "review_rate": 0.10246913580246914,
+              "human_cost_usd_per_slot": 0.0010246913580246914,
+              "error_loss_usd_per_slot": 0.010253086419753078,
+              "total_expected_usd_per_slot": 0.0122485998765432,
+              "break_even_review_usd_vs_best_automated": -0.09616741445783124,
+              "cheaper_than_best_automated_at_assumptions": false,
+              "basis": "hypothetical human analytical expectation"
+            }
+          },
+          "minimum_expected_cost_route_at_assumptions": "strong_only",
+          "minimum_expected_cost_usd_per_slot": 0.0013697166666666667
+        },
+        {
+          "D": 0.25,
+          "C": 1.0,
+          "F": 0.15,
+          "comparison": {
+            "weak_human_all": {
+              "accuracy": 0.7744444444444444,
+              "api_cost_usd_per_slot": 0.0003521218518518513,
+              "review_rate": 1.0,
+              "human_cost_usd_per_slot": 0.01,
+              "error_loss_usd_per_slot": 0.022555555555555565,
+              "total_expected_usd_per_slot": 0.03290767740740742,
+              "break_even_review_usd_vs_best_automated": -0.02153796074074075,
+              "cheaper_than_best_automated_at_assumptions": false,
+              "basis": "hypothetical human analytical expectation"
+            },
+            "weak_validator_human_on_fail": {
+              "accuracy": 0.8967283950617284,
+              "api_cost_usd_per_slot": 0.000970822098765432,
+              "review_rate": 0.10246913580246914,
+              "human_cost_usd_per_slot": 0.0010246913580246914,
+              "error_loss_usd_per_slot": 0.01032716049382716,
+              "total_expected_usd_per_slot": 0.012322673950617282,
+              "break_even_review_usd_vs_best_automated": -0.09689030602409637,
+              "cheaper_than_best_automated_at_assumptions": false,
+              "basis": "hypothetical human analytical expectation"
+            }
+          },
+          "minimum_expected_cost_route_at_assumptions": "strong_only",
+          "minimum_expected_cost_usd_per_slot": 0.0013697166666666667
+        },
+        {
+          "D": 0.5,
+          "C": 0.5,
+          "F": 0.0,
+          "comparison": {
+            "weak_human_all": {
+              "accuracy": 0.9055555555555556,
+              "api_cost_usd_per_slot": 0.0003521218518518513,
+              "review_rate": 1.0,
+              "human_cost_usd_per_slot": 0.01,
+              "error_loss_usd_per_slot": 0.009444444444444445,
+              "total_expected_usd_per_slot": 0.019796566296296295,
+              "break_even_review_usd_vs_best_automated": -0.00842684962962963,
+              "cheaper_than_best_automated_at_assumptions": false,
+              "basis": "hypothetical human analytical expectation"
+            },
+            "weak_validator_human_on_fail": {
+              "accuracy": 0.8978395061728395,
+              "api_cost_usd_per_slot": 0.000970822098765432,
+              "review_rate": 0.10246913580246914,
+              "human_cost_usd_per_slot": 0.0010246913580246914,
+              "error_loss_usd_per_slot": 0.010216049382716053,
+              "total_expected_usd_per_slot": 0.012211562839506175,
+              "break_even_review_usd_vs_best_automated": -0.09580596867469883,
+              "cheaper_than_best_automated_at_assumptions": false,
+              "basis": "hypothetical human analytical expectation"
+            }
+          },
+          "minimum_expected_cost_route_at_assumptions": "strong_only",
+          "minimum_expected_cost_usd_per_slot": 0.0013697166666666667
+        },
+        {
+          "D": 0.5,
+          "C": 0.5,
+          "F": 0.05,
+          "comparison": {
+            "weak_human_all": {
+              "accuracy": 0.8618518518518519,
+              "api_cost_usd_per_slot": 0.0003521218518518513,
+              "review_rate": 1.0,
+              "human_cost_usd_per_slot": 0.01,
+              "error_loss_usd_per_slot": 0.013814814814814814,
+              "total_expected_usd_per_slot": 0.024166936666666666,
+              "break_even_review_usd_vs_best_automated": -0.01279722,
+              "cheaper_than_best_automated_at_assumptions": false,
+              "basis": "hypothetical human analytical expectation"
+            },
+            "weak_validator_human_on_fail": {
+              "accuracy": 0.8974691358024692,
+              "api_cost_usd_per_slot": 0.000970822098765432,
+              "review_rate": 0.10246913580246914,
+              "human_cost_usd_per_slot": 0.0010246913580246914,
+              "error_loss_usd_per_slot": 0.010253086419753078,
+              "total_expected_usd_per_slot": 0.0122485998765432,
+              "break_even_review_usd_vs_best_automated": -0.09616741445783124,
+              "cheaper_than_best_automated_at_assumptions": false,
+              "basis": "hypothetical human analytical expectation"
+            }
+          },
+          "minimum_expected_cost_route_at_assumptions": "strong_only",
+          "minimum_expected_cost_usd_per_slot": 0.0013697166666666667
+        },
+        {
+          "D": 0.5,
+          "C": 0.5,
+          "F": 0.15,
+          "comparison": {
+            "weak_human_all": {
+              "accuracy": 0.7744444444444444,
+              "api_cost_usd_per_slot": 0.0003521218518518513,
+              "review_rate": 1.0,
+              "human_cost_usd_per_slot": 0.01,
+              "error_loss_usd_per_slot": 0.022555555555555565,
+              "total_expected_usd_per_slot": 0.03290767740740742,
+              "break_even_review_usd_vs_best_automated": -0.02153796074074075,
+              "cheaper_than_best_automated_at_assumptions": false,
+              "basis": "hypothetical human analytical expectation"
+            },
+            "weak_validator_human_on_fail": {
+              "accuracy": 0.8967283950617284,
+              "api_cost_usd_per_slot": 0.000970822098765432,
+              "review_rate": 0.10246913580246914,
+              "human_cost_usd_per_slot": 0.0010246913580246914,
+              "error_loss_usd_per_slot": 0.01032716049382716,
+              "total_expected_usd_per_slot": 0.012322673950617282,
+              "break_even_review_usd_vs_best_automated": -0.09689030602409637,
+              "cheaper_than_best_automated_at_assumptions": false,
+              "basis": "hypothetical human analytical expectation"
+            }
+          },
+          "minimum_expected_cost_route_at_assumptions": "strong_only",
+          "minimum_expected_cost_usd_per_slot": 0.0013697166666666667
+        },
+        {
+          "D": 0.5,
+          "C": 0.75,
+          "F": 0.0,
+          "comparison": {
+            "weak_human_all": {
+              "accuracy": 0.9212962962962963,
+              "api_cost_usd_per_slot": 0.0003521218518518513,
+              "review_rate": 1.0,
+              "human_cost_usd_per_slot": 0.01,
+              "error_loss_usd_per_slot": 0.007870370370370373,
+              "total_expected_usd_per_slot": 0.018222492222222227,
+              "break_even_review_usd_vs_best_automated": -0.006852775555555558,
+              "cheaper_than_best_automated_at_assumptions": false,
+              "basis": "hypothetical human analytical expectation"
+            },
+            "weak_validator_human_on_fail": {
+              "accuracy": 0.9097222222222222,
+              "api_cost_usd_per_slot": 0.000970822098765432,
+              "review_rate": 0.10246913580246914,
+              "human_cost_usd_per_slot": 0.0010246913580246914,
+              "error_loss_usd_per_slot": 0.009027777777777779,
+              "total_expected_usd_per_slot": 0.0110232912345679,
+              "break_even_review_usd_vs_best_automated": -0.08420958313253013,
+              "cheaper_than_best_automated_at_assumptions": false,
+              "basis": "hypothetical human analytical expectation"
+            }
+          },
+          "minimum_expected_cost_route_at_assumptions": "strong_only",
+          "minimum_expected_cost_usd_per_slot": 0.0013697166666666667
+        },
+        {
+          "D": 0.5,
+          "C": 0.75,
+          "F": 0.05,
+          "comparison": {
+            "weak_human_all": {
+              "accuracy": 0.8775925925925926,
+              "api_cost_usd_per_slot": 0.0003521218518518513,
+              "review_rate": 1.0,
+              "human_cost_usd_per_slot": 0.01,
+              "error_loss_usd_per_slot": 0.012240740740740741,
+              "total_expected_usd_per_slot": 0.02259286259259259,
+              "break_even_review_usd_vs_best_automated": -0.011223145925925927,
+              "cheaper_than_best_automated_at_assumptions": false,
+              "basis": "hypothetical human analytical expectation"
+            },
+            "weak_validator_human_on_fail": {
+              "accuracy": 0.9093518518518519,
+              "api_cost_usd_per_slot": 0.000970822098765432,
+              "review_rate": 0.10246913580246914,
+              "human_cost_usd_per_slot": 0.0010246913580246914,
+              "error_loss_usd_per_slot": 0.009064814814814815,
+              "total_expected_usd_per_slot": 0.011060328271604938,
+              "break_even_review_usd_vs_best_automated": -0.08457102891566265,
+              "cheaper_than_best_automated_at_assumptions": false,
+              "basis": "hypothetical human analytical expectation"
+            }
+          },
+          "minimum_expected_cost_route_at_assumptions": "strong_only",
+          "minimum_expected_cost_usd_per_slot": 0.0013697166666666667
+        },
+        {
+          "D": 0.5,
+          "C": 0.75,
+          "F": 0.15,
+          "comparison": {
+            "weak_human_all": {
+              "accuracy": 0.7901851851851851,
+              "api_cost_usd_per_slot": 0.0003521218518518513,
+              "review_rate": 1.0,
+              "human_cost_usd_per_slot": 0.01,
+              "error_loss_usd_per_slot": 0.02098148148148149,
+              "total_expected_usd_per_slot": 0.03133360333333334,
+              "break_even_review_usd_vs_best_automated": -0.019963886666666673,
+              "cheaper_than_best_automated_at_assumptions": false,
+              "basis": "hypothetical human analytical expectation"
+            },
+            "weak_validator_human_on_fail": {
+              "accuracy": 0.9086111111111111,
+              "api_cost_usd_per_slot": 0.000970822098765432,
+              "review_rate": 0.10246913580246914,
+              "human_cost_usd_per_slot": 0.0010246913580246914,
+              "error_loss_usd_per_slot": 0.009138888888888886,
+              "total_expected_usd_per_slot": 0.011134402345679008,
+              "break_even_review_usd_vs_best_automated": -0.08529392048192767,
+              "cheaper_than_best_automated_at_assumptions": false,
+              "basis": "hypothetical human analytical expectation"
+            }
+          },
+          "minimum_expected_cost_route_at_assumptions": "strong_only",
+          "minimum_expected_cost_usd_per_slot": 0.0013697166666666667
+        },
+        {
+          "D": 0.5,
+          "C": 1.0,
+          "F": 0.0,
+          "comparison": {
+            "weak_human_all": {
+              "accuracy": 0.937037037037037,
+              "api_cost_usd_per_slot": 0.0003521218518518513,
+              "review_rate": 1.0,
+              "human_cost_usd_per_slot": 0.01,
+              "error_loss_usd_per_slot": 0.0062962962962963,
+              "total_expected_usd_per_slot": 0.01664841814814815,
+              "break_even_review_usd_vs_best_automated": -0.005278701481481485,
+              "cheaper_than_best_automated_at_assumptions": false,
+              "basis": "hypothetical human analytical expectation"
+            },
+            "weak_validator_human_on_fail": {
+              "accuracy": 0.921604938271605,
+              "api_cost_usd_per_slot": 0.000970822098765432,
+              "review_rate": 0.10246913580246914,
+              "human_cost_usd_per_slot": 0.0010246913580246914,
+              "error_loss_usd_per_slot": 0.007839506172839506,
+              "total_expected_usd_per_slot": 0.009835019629629628,
+              "break_even_review_usd_vs_best_automated": -0.07261319759036144,
+              "cheaper_than_best_automated_at_assumptions": false,
+              "basis": "hypothetical human analytical expectation"
+            }
+          },
+          "minimum_expected_cost_route_at_assumptions": "strong_only",
+          "minimum_expected_cost_usd_per_slot": 0.0013697166666666667
+        },
+        {
+          "D": 0.5,
+          "C": 1.0,
+          "F": 0.05,
+          "comparison": {
+            "weak_human_all": {
+              "accuracy": 0.8933333333333333,
+              "api_cost_usd_per_slot": 0.0003521218518518513,
+              "review_rate": 1.0,
+              "human_cost_usd_per_slot": 0.01,
+              "error_loss_usd_per_slot": 0.01066666666666667,
+              "total_expected_usd_per_slot": 0.021018788518518523,
+              "break_even_review_usd_vs_best_automated": -0.009649071851851855,
+              "cheaper_than_best_automated_at_assumptions": false,
+              "basis": "hypothetical human analytical expectation"
+            },
+            "weak_validator_human_on_fail": {
+              "accuracy": 0.9212345679012346,
+              "api_cost_usd_per_slot": 0.000970822098765432,
+              "review_rate": 0.10246913580246914,
+              "human_cost_usd_per_slot": 0.0010246913580246914,
+              "error_loss_usd_per_slot": 0.007876543209876541,
+              "total_expected_usd_per_slot": 0.009872056666666663,
+              "break_even_review_usd_vs_best_automated": -0.07297464337349395,
+              "cheaper_than_best_automated_at_assumptions": false,
+              "basis": "hypothetical human analytical expectation"
+            }
+          },
+          "minimum_expected_cost_route_at_assumptions": "strong_only",
+          "minimum_expected_cost_usd_per_slot": 0.0013697166666666667
+        },
+        {
+          "D": 0.5,
+          "C": 1.0,
+          "F": 0.15,
+          "comparison": {
+            "weak_human_all": {
+              "accuracy": 0.8059259259259258,
+              "api_cost_usd_per_slot": 0.0003521218518518513,
+              "review_rate": 1.0,
+              "human_cost_usd_per_slot": 0.01,
+              "error_loss_usd_per_slot": 0.01940740740740742,
+              "total_expected_usd_per_slot": 0.029759529259259267,
+              "break_even_review_usd_vs_best_automated": -0.018389812592592602,
+              "cheaper_than_best_automated_at_assumptions": false,
+              "basis": "hypothetical human analytical expectation"
+            },
+            "weak_validator_human_on_fail": {
+              "accuracy": 0.9204938271604939,
+              "api_cost_usd_per_slot": 0.000970822098765432,
+              "review_rate": 0.10246913580246914,
+              "human_cost_usd_per_slot": 0.0010246913580246914,
+              "error_loss_usd_per_slot": 0.007950617283950611,
+              "total_expected_usd_per_slot": 0.009946130740740734,
+              "break_even_review_usd_vs_best_automated": -0.07369753493975897,
+              "cheaper_than_best_automated_at_assumptions": false,
+              "basis": "hypothetical human analytical expectation"
+            }
+          },
+          "minimum_expected_cost_route_at_assumptions": "strong_only",
+          "minimum_expected_cost_usd_per_slot": 0.0013697166666666667
+        },
+        {
+          "D": 0.75,
+          "C": 0.5,
+          "F": 0.0,
+          "comparison": {
+            "weak_human_all": {
+              "accuracy": 0.9212962962962963,
+              "api_cost_usd_per_slot": 0.0003521218518518513,
+              "review_rate": 1.0,
+              "human_cost_usd_per_slot": 0.01,
+              "error_loss_usd_per_slot": 0.007870370370370373,
+              "total_expected_usd_per_slot": 0.018222492222222227,
+              "break_even_review_usd_vs_best_automated": -0.006852775555555558,
+              "cheaper_than_best_automated_at_assumptions": false,
+              "basis": "hypothetical human analytical expectation"
+            },
+            "weak_validator_human_on_fail": {
+              "accuracy": 0.9097222222222222,
+              "api_cost_usd_per_slot": 0.000970822098765432,
+              "review_rate": 0.10246913580246914,
+              "human_cost_usd_per_slot": 0.0010246913580246914,
+              "error_loss_usd_per_slot": 0.009027777777777779,
+              "total_expected_usd_per_slot": 0.0110232912345679,
+              "break_even_review_usd_vs_best_automated": -0.08420958313253013,
+              "cheaper_than_best_automated_at_assumptions": false,
+              "basis": "hypothetical human analytical expectation"
+            }
+          },
+          "minimum_expected_cost_route_at_assumptions": "strong_only",
+          "minimum_expected_cost_usd_per_slot": 0.0013697166666666667
+        },
+        {
+          "D": 0.75,
+          "C": 0.5,
+          "F": 0.05,
+          "comparison": {
+            "weak_human_all": {
+              "accuracy": 0.8775925925925926,
+              "api_cost_usd_per_slot": 0.0003521218518518513,
+              "review_rate": 1.0,
+              "human_cost_usd_per_slot": 0.01,
+              "error_loss_usd_per_slot": 0.012240740740740741,
+              "total_expected_usd_per_slot": 0.02259286259259259,
+              "break_even_review_usd_vs_best_automated": -0.011223145925925927,
+              "cheaper_than_best_automated_at_assumptions": false,
+              "basis": "hypothetical human analytical expectation"
+            },
+            "weak_validator_human_on_fail": {
+              "accuracy": 0.9093518518518519,
+              "api_cost_usd_per_slot": 0.000970822098765432,
+              "review_rate": 0.10246913580246914,
+              "human_cost_usd_per_slot": 0.0010246913580246914,
+              "error_loss_usd_per_slot": 0.009064814814814815,
+              "total_expected_usd_per_slot": 0.011060328271604938,
+              "break_even_review_usd_vs_best_automated": -0.08457102891566265,
+              "cheaper_than_best_automated_at_assumptions": false,
+              "basis": "hypothetical human analytical expectation"
+            }
+          },
+          "minimum_expected_cost_route_at_assumptions": "strong_only",
+          "minimum_expected_cost_usd_per_slot": 0.0013697166666666667
+        },
+        {
+          "D": 0.75,
+          "C": 0.5,
+          "F": 0.15,
+          "comparison": {
+            "weak_human_all": {
+              "accuracy": 0.7901851851851851,
+              "api_cost_usd_per_slot": 0.0003521218518518513,
+              "review_rate": 1.0,
+              "human_cost_usd_per_slot": 0.01,
+              "error_loss_usd_per_slot": 0.02098148148148149,
+              "total_expected_usd_per_slot": 0.03133360333333334,
+              "break_even_review_usd_vs_best_automated": -0.019963886666666673,
+              "cheaper_than_best_automated_at_assumptions": false,
+              "basis": "hypothetical human analytical expectation"
+            },
+            "weak_validator_human_on_fail": {
+              "accuracy": 0.9086111111111111,
+              "api_cost_usd_per_slot": 0.000970822098765432,
+              "review_rate": 0.10246913580246914,
+              "human_cost_usd_per_slot": 0.0010246913580246914,
+              "error_loss_usd_per_slot": 0.009138888888888886,
+              "total_expected_usd_per_slot": 0.011134402345679008,
+              "break_even_review_usd_vs_best_automated": -0.08529392048192767,
+              "cheaper_than_best_automated_at_assumptions": false,
+              "basis": "hypothetical human analytical expectation"
+            }
+          },
+          "minimum_expected_cost_route_at_assumptions": "strong_only",
+          "minimum_expected_cost_usd_per_slot": 0.0013697166666666667
+        },
+        {
+          "D": 0.75,
+          "C": 0.75,
+          "F": 0.0,
+          "comparison": {
+            "weak_human_all": {
+              "accuracy": 0.9449074074074074,
+              "api_cost_usd_per_slot": 0.0003521218518518513,
+              "review_rate": 1.0,
+              "human_cost_usd_per_slot": 0.01,
+              "error_loss_usd_per_slot": 0.005509259259259259,
+              "total_expected_usd_per_slot": 0.01586138111111111,
+              "break_even_review_usd_vs_best_automated": -0.004491664444444444,
+              "cheaper_than_best_automated_at_assumptions": false,
+              "basis": "hypothetical human analytical expectation"
+            },
+            "weak_validator_human_on_fail": {
+              "accuracy": 0.9275462962962963,
+              "api_cost_usd_per_slot": 0.000970822098765432,
+              "review_rate": 0.10246913580246914,
+              "human_cost_usd_per_slot": 0.0010246913580246914,
+              "error_loss_usd_per_slot": 0.007245370370370374,
+              "total_expected_usd_per_slot": 0.009240883827160496,
+              "break_even_review_usd_vs_best_automated": -0.06681500481927714,
+              "cheaper_than_best_automated_at_assumptions": false,
+              "basis": "hypothetical human analytical expectation"
+            }
+          },
+          "minimum_expected_cost_route_at_assumptions": "strong_only",
+          "minimum_expected_cost_usd_per_slot": 0.0013697166666666667
+        },
+        {
+          "D": 0.75,
+          "C": 0.75,
+          "F": 0.05,
+          "comparison": {
+            "weak_human_all": {
+              "accuracy": 0.9012037037037037,
+              "api_cost_usd_per_slot": 0.0003521218518518513,
+              "review_rate": 1.0,
+              "human_cost_usd_per_slot": 0.01,
+              "error_loss_usd_per_slot": 0.009879629629629627,
+              "total_expected_usd_per_slot": 0.02023175148148148,
+              "break_even_review_usd_vs_best_automated": -0.008862034814814812,
+              "cheaper_than_best_automated_at_assumptions": false,
+              "basis": "hypothetical human analytical expectation"
+            },
+            "weak_validator_human_on_fail": {
+              "accuracy": 0.927175925925926,
+              "api_cost_usd_per_slot": 0.000970822098765432,
+              "review_rate": 0.10246913580246914,
+              "human_cost_usd_per_slot": 0.0010246913580246914,
+              "error_loss_usd_per_slot": 0.007282407407407399,
+              "total_expected_usd_per_slot": 0.009277920864197521,
+              "break_even_review_usd_vs_best_automated": -0.06717645060240955,
+              "cheaper_than_best_automated_at_assumptions": false,
+              "basis": "hypothetical human analytical expectation"
+            }
+          },
+          "minimum_expected_cost_route_at_assumptions": "strong_only",
+          "minimum_expected_cost_usd_per_slot": 0.0013697166666666667
+        },
+        {
+          "D": 0.75,
+          "C": 0.75,
+          "F": 0.15,
+          "comparison": {
+            "weak_human_all": {
+              "accuracy": 0.8137962962962962,
+              "api_cost_usd_per_slot": 0.0003521218518518513,
+              "review_rate": 1.0,
+              "human_cost_usd_per_slot": 0.01,
+              "error_loss_usd_per_slot": 0.018620370370370377,
+              "total_expected_usd_per_slot": 0.02897249222222223,
+              "break_even_review_usd_vs_best_automated": -0.01760277555555556,
+              "cheaper_than_best_automated_at_assumptions": false,
+              "basis": "hypothetical human analytical expectation"
+            },
+            "weak_validator_human_on_fail": {
+              "accuracy": 0.9264351851851852,
+              "api_cost_usd_per_slot": 0.000970822098765432,
+              "review_rate": 0.10246913580246914,
+              "human_cost_usd_per_slot": 0.0010246913580246914,
+              "error_loss_usd_per_slot": 0.007356481481481481,
+              "total_expected_usd_per_slot": 0.009351994938271603,
+              "break_even_review_usd_vs_best_automated": -0.06789934216867469,
+              "cheaper_than_best_automated_at_assumptions": false,
+              "basis": "hypothetical human analytical expectation"
+            }
+          },
+          "minimum_expected_cost_route_at_assumptions": "strong_only",
+          "minimum_expected_cost_usd_per_slot": 0.0013697166666666667
+        },
+        {
+          "D": 0.75,
+          "C": 1.0,
+          "F": 0.0,
+          "comparison": {
+            "weak_human_all": {
+              "accuracy": 0.9685185185185186,
+              "api_cost_usd_per_slot": 0.0003521218518518513,
+              "review_rate": 1.0,
+              "human_cost_usd_per_slot": 0.01,
+              "error_loss_usd_per_slot": 0.0031481481481481447,
+              "total_expected_usd_per_slot": 0.013500269999999997,
+              "break_even_review_usd_vs_best_automated": -0.002130553333333329,
+              "cheaper_than_best_automated_at_assumptions": false,
+              "basis": "hypothetical human analytical expectation"
+            },
+            "weak_validator_human_on_fail": {
+              "accuracy": 0.9453703703703704,
+              "api_cost_usd_per_slot": 0.000970822098765432,
+              "review_rate": 0.10246913580246914,
+              "human_cost_usd_per_slot": 0.0010246913580246914,
+              "error_loss_usd_per_slot": 0.0054629629629629585,
+              "total_expected_usd_per_slot": 0.007458476419753082,
+              "break_even_review_usd_vs_best_automated": -0.04942042650602406,
+              "cheaper_than_best_automated_at_assumptions": false,
+              "basis": "hypothetical human analytical expectation"
+            }
+          },
+          "minimum_expected_cost_route_at_assumptions": "strong_only",
+          "minimum_expected_cost_usd_per_slot": 0.0013697166666666667
+        },
+        {
+          "D": 0.75,
+          "C": 1.0,
+          "F": 0.05,
+          "comparison": {
+            "weak_human_all": {
+              "accuracy": 0.9248148148148149,
+              "api_cost_usd_per_slot": 0.0003521218518518513,
+              "review_rate": 1.0,
+              "human_cost_usd_per_slot": 0.01,
+              "error_loss_usd_per_slot": 0.007518518518518514,
+              "total_expected_usd_per_slot": 0.017870640370370366,
+              "break_even_review_usd_vs_best_automated": -0.006500923703703698,
+              "cheaper_than_best_automated_at_assumptions": false,
+              "basis": "hypothetical human analytical expectation"
+            },
+            "weak_validator_human_on_fail": {
+              "accuracy": 0.9450000000000001,
+              "api_cost_usd_per_slot": 0.000970822098765432,
+              "review_rate": 0.10246913580246914,
+              "human_cost_usd_per_slot": 0.0010246913580246914,
+              "error_loss_usd_per_slot": 0.0054999999999999945,
+              "total_expected_usd_per_slot": 0.007495513456790118,
+              "break_even_review_usd_vs_best_automated": -0.049781872289156565,
+              "cheaper_than_best_automated_at_assumptions": false,
+              "basis": "hypothetical human analytical expectation"
+            }
+          },
+          "minimum_expected_cost_route_at_assumptions": "strong_only",
+          "minimum_expected_cost_usd_per_slot": 0.0013697166666666667
+        },
+        {
+          "D": 0.75,
+          "C": 1.0,
+          "F": 0.15,
+          "comparison": {
+            "weak_human_all": {
+              "accuracy": 0.8374074074074074,
+              "api_cost_usd_per_slot": 0.0003521218518518513,
+              "review_rate": 1.0,
+              "human_cost_usd_per_slot": 0.01,
+              "error_loss_usd_per_slot": 0.01625925925925926,
+              "total_expected_usd_per_slot": 0.02661138111111111,
+              "break_even_review_usd_vs_best_automated": -0.015241664444444445,
+              "cheaper_than_best_automated_at_assumptions": false,
+              "basis": "hypothetical human analytical expectation"
+            },
+            "weak_validator_human_on_fail": {
+              "accuracy": 0.9442592592592592,
+              "api_cost_usd_per_slot": 0.000970822098765432,
+              "review_rate": 0.10246913580246914,
+              "human_cost_usd_per_slot": 0.0010246913580246914,
+              "error_loss_usd_per_slot": 0.005574074074074076,
+              "total_expected_usd_per_slot": 0.007569587530864199,
+              "break_even_review_usd_vs_best_automated": -0.05050476385542171,
+              "cheaper_than_best_automated_at_assumptions": false,
+              "basis": "hypothetical human analytical expectation"
+            }
+          },
+          "minimum_expected_cost_route_at_assumptions": "strong_only",
+          "minimum_expected_cost_usd_per_slot": 0.0013697166666666667
+        },
+        {
+          "D": 1.0,
+          "C": 0.5,
+          "F": 0.0,
+          "comparison": {
+            "weak_human_all": {
+              "accuracy": 0.937037037037037,
+              "api_cost_usd_per_slot": 0.0003521218518518513,
+              "review_rate": 1.0,
+              "human_cost_usd_per_slot": 0.01,
+              "error_loss_usd_per_slot": 0.0062962962962963,
+              "total_expected_usd_per_slot": 0.01664841814814815,
+              "break_even_review_usd_vs_best_automated": -0.005278701481481485,
+              "cheaper_than_best_automated_at_assumptions": false,
+              "basis": "hypothetical human analytical expectation"
+            },
+            "weak_validator_human_on_fail": {
+              "accuracy": 0.921604938271605,
+              "api_cost_usd_per_slot": 0.000970822098765432,
+              "review_rate": 0.10246913580246914,
+              "human_cost_usd_per_slot": 0.0010246913580246914,
+              "error_loss_usd_per_slot": 0.007839506172839506,
+              "total_expected_usd_per_slot": 0.009835019629629628,
+              "break_even_review_usd_vs_best_automated": -0.07261319759036144,
+              "cheaper_than_best_automated_at_assumptions": false,
+              "basis": "hypothetical human analytical expectation"
+            }
+          },
+          "minimum_expected_cost_route_at_assumptions": "strong_only",
+          "minimum_expected_cost_usd_per_slot": 0.0013697166666666667
+        },
+        {
+          "D": 1.0,
+          "C": 0.5,
+          "F": 0.05,
+          "comparison": {
+            "weak_human_all": {
+              "accuracy": 0.8933333333333333,
+              "api_cost_usd_per_slot": 0.0003521218518518513,
+              "review_rate": 1.0,
+              "human_cost_usd_per_slot": 0.01,
+              "error_loss_usd_per_slot": 0.01066666666666667,
+              "total_expected_usd_per_slot": 0.021018788518518523,
+              "break_even_review_usd_vs_best_automated": -0.009649071851851855,
+              "cheaper_than_best_automated_at_assumptions": false,
+              "basis": "hypothetical human analytical expectation"
+            },
+            "weak_validator_human_on_fail": {
+              "accuracy": 0.9212345679012346,
+              "api_cost_usd_per_slot": 0.000970822098765432,
+              "review_rate": 0.10246913580246914,
+              "human_cost_usd_per_slot": 0.0010246913580246914,
+              "error_loss_usd_per_slot": 0.007876543209876541,
+              "total_expected_usd_per_slot": 0.009872056666666663,
+              "break_even_review_usd_vs_best_automated": -0.07297464337349395,
+              "cheaper_than_best_automated_at_assumptions": false,
+              "basis": "hypothetical human analytical expectation"
+            }
+          },
+          "minimum_expected_cost_route_at_assumptions": "strong_only",
+          "minimum_expected_cost_usd_per_slot": 0.0013697166666666667
+        },
+        {
+          "D": 1.0,
+          "C": 0.5,
+          "F": 0.15,
+          "comparison": {
+            "weak_human_all": {
+              "accuracy": 0.8059259259259258,
+              "api_cost_usd_per_slot": 0.0003521218518518513,
+              "review_rate": 1.0,
+              "human_cost_usd_per_slot": 0.01,
+              "error_loss_usd_per_slot": 0.01940740740740742,
+              "total_expected_usd_per_slot": 0.029759529259259267,
+              "break_even_review_usd_vs_best_automated": -0.018389812592592602,
+              "cheaper_than_best_automated_at_assumptions": false,
+              "basis": "hypothetical human analytical expectation"
+            },
+            "weak_validator_human_on_fail": {
+              "accuracy": 0.9204938271604939,
+              "api_cost_usd_per_slot": 0.000970822098765432,
+              "review_rate": 0.10246913580246914,
+              "human_cost_usd_per_slot": 0.0010246913580246914,
+              "error_loss_usd_per_slot": 0.007950617283950611,
+              "total_expected_usd_per_slot": 0.009946130740740734,
+              "break_even_review_usd_vs_best_automated": -0.07369753493975897,
+              "cheaper_than_best_automated_at_assumptions": false,
+              "basis": "hypothetical human analytical expectation"
+            }
+          },
+          "minimum_expected_cost_route_at_assumptions": "strong_only",
+          "minimum_expected_cost_usd_per_slot": 0.0013697166666666667
+        },
+        {
+          "D": 1.0,
+          "C": 0.75,
+          "F": 0.0,
+          "comparison": {
+            "weak_human_all": {
+              "accuracy": 0.9685185185185186,
+              "api_cost_usd_per_slot": 0.0003521218518518513,
+              "review_rate": 1.0,
+              "human_cost_usd_per_slot": 0.01,
+              "error_loss_usd_per_slot": 0.0031481481481481447,
+              "total_expected_usd_per_slot": 0.013500269999999997,
+              "break_even_review_usd_vs_best_automated": -0.002130553333333329,
+              "cheaper_than_best_automated_at_assumptions": false,
+              "basis": "hypothetical human analytical expectation"
+            },
+            "weak_validator_human_on_fail": {
+              "accuracy": 0.9453703703703704,
+              "api_cost_usd_per_slot": 0.000970822098765432,
+              "review_rate": 0.10246913580246914,
+              "human_cost_usd_per_slot": 0.0010246913580246914,
+              "error_loss_usd_per_slot": 0.0054629629629629585,
+              "total_expected_usd_per_slot": 0.007458476419753082,
+              "break_even_review_usd_vs_best_automated": -0.04942042650602406,
+              "cheaper_than_best_automated_at_assumptions": false,
+              "basis": "hypothetical human analytical expectation"
+            }
+          },
+          "minimum_expected_cost_route_at_assumptions": "strong_only",
+          "minimum_expected_cost_usd_per_slot": 0.0013697166666666667
+        },
+        {
+          "D": 1.0,
+          "C": 0.75,
+          "F": 0.05,
+          "comparison": {
+            "weak_human_all": {
+              "accuracy": 0.9248148148148149,
+              "api_cost_usd_per_slot": 0.0003521218518518513,
+              "review_rate": 1.0,
+              "human_cost_usd_per_slot": 0.01,
+              "error_loss_usd_per_slot": 0.007518518518518514,
+              "total_expected_usd_per_slot": 0.017870640370370366,
+              "break_even_review_usd_vs_best_automated": -0.006500923703703698,
+              "cheaper_than_best_automated_at_assumptions": false,
+              "basis": "hypothetical human analytical expectation"
+            },
+            "weak_validator_human_on_fail": {
+              "accuracy": 0.9450000000000001,
+              "api_cost_usd_per_slot": 0.000970822098765432,
+              "review_rate": 0.10246913580246914,
+              "human_cost_usd_per_slot": 0.0010246913580246914,
+              "error_loss_usd_per_slot": 0.0054999999999999945,
+              "total_expected_usd_per_slot": 0.007495513456790118,
+              "break_even_review_usd_vs_best_automated": -0.049781872289156565,
+              "cheaper_than_best_automated_at_assumptions": false,
+              "basis": "hypothetical human analytical expectation"
+            }
+          },
+          "minimum_expected_cost_route_at_assumptions": "strong_only",
+          "minimum_expected_cost_usd_per_slot": 0.0013697166666666667
+        },
+        {
+          "D": 1.0,
+          "C": 0.75,
+          "F": 0.15,
+          "comparison": {
+            "weak_human_all": {
+              "accuracy": 0.8374074074074074,
+              "api_cost_usd_per_slot": 0.0003521218518518513,
+              "review_rate": 1.0,
+              "human_cost_usd_per_slot": 0.01,
+              "error_loss_usd_per_slot": 0.01625925925925926,
+              "total_expected_usd_per_slot": 0.02661138111111111,
+              "break_even_review_usd_vs_best_automated": -0.015241664444444445,
+              "cheaper_than_best_automated_at_assumptions": false,
+              "basis": "hypothetical human analytical expectation"
+            },
+            "weak_validator_human_on_fail": {
+              "accuracy": 0.9442592592592592,
+              "api_cost_usd_per_slot": 0.000970822098765432,
+              "review_rate": 0.10246913580246914,
+              "human_cost_usd_per_slot": 0.0010246913580246914,
+              "error_loss_usd_per_slot": 0.005574074074074076,
+              "total_expected_usd_per_slot": 0.007569587530864199,
+              "break_even_review_usd_vs_best_automated": -0.05050476385542171,
+              "cheaper_than_best_automated_at_assumptions": false,
+              "basis": "hypothetical human analytical expectation"
+            }
+          },
+          "minimum_expected_cost_route_at_assumptions": "strong_only",
+          "minimum_expected_cost_usd_per_slot": 0.0013697166666666667
+        },
+        {
+          "D": 1.0,
+          "C": 1.0,
+          "F": 0.0,
+          "comparison": {
+            "weak_human_all": {
+              "accuracy": 1.0,
+              "api_cost_usd_per_slot": 0.0003521218518518513,
+              "review_rate": 1.0,
+              "human_cost_usd_per_slot": 0.01,
+              "error_loss_usd_per_slot": 0.0,
+              "total_expected_usd_per_slot": 0.010352121851851852,
+              "break_even_review_usd_vs_best_automated": 0.0010175948148148154,
+              "cheaper_than_best_automated_at_assumptions": false,
+              "basis": "hypothetical human analytical expectation"
+            },
+            "weak_validator_human_on_fail": {
+              "accuracy": 0.9691358024691358,
+              "api_cost_usd_per_slot": 0.000970822098765432,
+              "review_rate": 0.10246913580246914,
+              "human_cost_usd_per_slot": 0.0010246913580246914,
+              "error_loss_usd_per_slot": 0.0030864197530864226,
+              "total_expected_usd_per_slot": 0.005081933209876545,
+              "break_even_review_usd_vs_best_automated": -0.02622765542168677,
+              "cheaper_than_best_automated_at_assumptions": false,
+              "basis": "hypothetical human analytical expectation"
+            }
+          },
+          "minimum_expected_cost_route_at_assumptions": "strong_only",
+          "minimum_expected_cost_usd_per_slot": 0.0013697166666666667
+        },
+        {
+          "D": 1.0,
+          "C": 1.0,
+          "F": 0.05,
+          "comparison": {
+            "weak_human_all": {
+              "accuracy": 0.9562962962962963,
+              "api_cost_usd_per_slot": 0.0003521218518518513,
+              "review_rate": 1.0,
+              "human_cost_usd_per_slot": 0.01,
+              "error_loss_usd_per_slot": 0.004370370370370369,
+              "total_expected_usd_per_slot": 0.01472249222222222,
+              "break_even_review_usd_vs_best_automated": -0.003352775555555554,
+              "cheaper_than_best_automated_at_assumptions": false,
+              "basis": "hypothetical human analytical expectation"
+            },
+            "weak_validator_human_on_fail": {
+              "accuracy": 0.9687654320987655,
+              "api_cost_usd_per_slot": 0.000970822098765432,
+              "review_rate": 0.10246913580246914,
+              "human_cost_usd_per_slot": 0.0010246913580246914,
+              "error_loss_usd_per_slot": 0.003123456790123447,
+              "total_expected_usd_per_slot": 0.00511897024691357,
+              "break_even_review_usd_vs_best_automated": -0.02658910120481918,
+              "cheaper_than_best_automated_at_assumptions": false,
+              "basis": "hypothetical human analytical expectation"
+            }
+          },
+          "minimum_expected_cost_route_at_assumptions": "strong_only",
+          "minimum_expected_cost_usd_per_slot": 0.0013697166666666667
+        },
+        {
+          "D": 1.0,
+          "C": 1.0,
+          "F": 0.15,
+          "comparison": {
+            "weak_human_all": {
+              "accuracy": 0.8688888888888888,
+              "api_cost_usd_per_slot": 0.0003521218518518513,
+              "review_rate": 1.0,
+              "human_cost_usd_per_slot": 0.01,
+              "error_loss_usd_per_slot": 0.013111111111111119,
+              "total_expected_usd_per_slot": 0.02346323296296297,
+              "break_even_review_usd_vs_best_automated": -0.012093516296296304,
+              "cheaper_than_best_automated_at_assumptions": false,
+              "basis": "hypothetical human analytical expectation"
+            },
+            "weak_validator_human_on_fail": {
+              "accuracy": 0.9680246913580247,
+              "api_cost_usd_per_slot": 0.000970822098765432,
+              "review_rate": 0.10246913580246914,
+              "human_cost_usd_per_slot": 0.0010246913580246914,
+              "error_loss_usd_per_slot": 0.0031975308641975287,
+              "total_expected_usd_per_slot": 0.005193044320987652,
+              "break_even_review_usd_vs_best_automated": -0.02731199277108431,
+              "cheaper_than_best_automated_at_assumptions": false,
+              "basis": "hypothetical human analytical expectation"
+            }
+          },
+          "minimum_expected_cost_route_at_assumptions": "strong_only",
+          "minimum_expected_cost_usd_per_slot": 0.0013697166666666667
+        }
+      ]
+    },
+    "strong_validator": {
+      "source_slots": 810,
+      "distinct_e1_sources": 270,
+      "observed_confusion": {
+        "PASS": 708,
+        "FAIL": 102,
+        "correct_pass": 708,
+        "wrong_pass": 0,
+        "correct_fail": 0,
+        "wrong_fail": 102
+      },
+      "automated_baselines": {
+        "weak_only": {
+          "accuracy": 0.8740740740740741,
+          "api_cost_usd_per_slot": 0.0003521218518518513,
+          "review_rate": 0.0,
+          "human_cost_usd_per_slot": 0.0,
+          "error_loss_usd_per_slot": 0.01259259259259259,
+          "total_expected_usd_per_slot": 0.01294471444444444,
+          "basis": "frozen E1 solver observations"
+        },
+        "strong_only": {
+          "accuracy": 1.0,
+          "api_cost_usd_per_slot": 0.0013697166666666667,
+          "review_rate": 0.0,
+          "human_cost_usd_per_slot": 0.0,
+          "error_loss_usd_per_slot": 0.0,
+          "total_expected_usd_per_slot": 0.0013697166666666667,
+          "basis": "frozen E1 solver observations"
+        },
+        "weak_validator_strong_on_fail": {
+          "accuracy": 1.0,
+          "api_cost_usd_per_slot": 0.002082131111111111,
+          "review_rate": 0.0,
+          "human_cost_usd_per_slot": 0.0,
+          "error_loss_usd_per_slot": 0.0,
+          "total_expected_usd_per_slot": 0.002082131111111111,
+          "basis": "observed solver correctness; reconstructed cascade"
+        }
+      },
+      "best_automated_at_assumptions": "strong_only",
+      "profiles": [
+        {
+          "D": 0.25,
+          "C": 0.5,
+          "F": 0.0,
+          "comparison": {
+            "weak_human_all": {
+              "accuracy": 0.8898148148148148,
+              "api_cost_usd_per_slot": 0.0003521218518518513,
+              "review_rate": 1.0,
+              "human_cost_usd_per_slot": 0.01,
+              "error_loss_usd_per_slot": 0.011018518518518518,
+              "total_expected_usd_per_slot": 0.02137064037037037,
+              "break_even_review_usd_vs_best_automated": -0.010000923703703703,
+              "cheaper_than_best_automated_at_assumptions": false,
+              "basis": "hypothetical human analytical expectation"
+            },
+            "weak_validator_human_on_fail": {
+              "accuracy": 0.8898148148148148,
+              "api_cost_usd_per_slot": 0.001856583888888889,
+              "review_rate": 0.1259259259259259,
+              "human_cost_usd_per_slot": 0.0012592592592592592,
+              "error_loss_usd_per_slot": 0.011018518518518518,
+              "total_expected_usd_per_slot": 0.014134361666666664,
+              "break_even_review_usd_vs_best_automated": -0.09136629852941176,
+              "cheaper_than_best_automated_at_assumptions": false,
+              "basis": "hypothetical human analytical expectation"
+            }
+          },
+          "minimum_expected_cost_route_at_assumptions": "strong_only",
+          "minimum_expected_cost_usd_per_slot": 0.0013697166666666667
+        },
+        {
+          "D": 0.25,
+          "C": 0.5,
+          "F": 0.05,
+          "comparison": {
+            "weak_human_all": {
+              "accuracy": 0.8461111111111111,
+              "api_cost_usd_per_slot": 0.0003521218518518513,
+              "review_rate": 1.0,
+              "human_cost_usd_per_slot": 0.01,
+              "error_loss_usd_per_slot": 0.015388888888888886,
+              "total_expected_usd_per_slot": 0.025741010740740734,
+              "break_even_review_usd_vs_best_automated": -0.01437129407407407,
+              "cheaper_than_best_automated_at_assumptions": false,
+              "basis": "hypothetical human analytical expectation"
+            },
+            "weak_validator_human_on_fail": {
+              "accuracy": 0.8898148148148148,
+              "api_cost_usd_per_slot": 0.001856583888888889,
+              "review_rate": 0.1259259259259259,
+              "human_cost_usd_per_slot": 0.0012592592592592592,
+              "error_loss_usd_per_slot": 0.011018518518518518,
+              "total_expected_usd_per_slot": 0.014134361666666664,
+              "break_even_review_usd_vs_best_automated": -0.09136629852941176,
+              "cheaper_than_best_automated_at_assumptions": false,
+              "basis": "hypothetical human analytical expectation"
+            }
+          },
+          "minimum_expected_cost_route_at_assumptions": "strong_only",
+          "minimum_expected_cost_usd_per_slot": 0.0013697166666666667
+        },
+        {
+          "D": 0.25,
+          "C": 0.5,
+          "F": 0.15,
+          "comparison": {
+            "weak_human_all": {
+              "accuracy": 0.7587037037037037,
+              "api_cost_usd_per_slot": 0.0003521218518518513,
+              "review_rate": 1.0,
+              "human_cost_usd_per_slot": 0.01,
+              "error_loss_usd_per_slot": 0.024129629629629636,
+              "total_expected_usd_per_slot": 0.034481751481481485,
+              "break_even_review_usd_vs_best_automated": -0.02311203481481482,
+              "cheaper_than_best_automated_at_assumptions": false,
+              "basis": "hypothetical human analytical expectation"
+            },
+            "weak_validator_human_on_fail": {
+              "accuracy": 0.8898148148148148,
+              "api_cost_usd_per_slot": 0.001856583888888889,
+              "review_rate": 0.1259259259259259,
+              "human_cost_usd_per_slot": 0.0012592592592592592,
+              "error_loss_usd_per_slot": 0.011018518518518518,
+              "total_expected_usd_per_slot": 0.014134361666666664,
+              "break_even_review_usd_vs_best_automated": -0.09136629852941176,
+              "cheaper_than_best_automated_at_assumptions": false,
+              "basis": "hypothetical human analytical expectation"
+            }
+          },
+          "minimum_expected_cost_route_at_assumptions": "strong_only",
+          "minimum_expected_cost_usd_per_slot": 0.0013697166666666667
+        },
+        {
+          "D": 0.25,
+          "C": 0.75,
+          "F": 0.0,
+          "comparison": {
+            "weak_human_all": {
+              "accuracy": 0.8976851851851851,
+              "api_cost_usd_per_slot": 0.0003521218518518513,
+              "review_rate": 1.0,
+              "human_cost_usd_per_slot": 0.01,
+              "error_loss_usd_per_slot": 0.010231481481481487,
+              "total_expected_usd_per_slot": 0.02058360333333334,
+              "break_even_review_usd_vs_best_automated": -0.009213886666666673,
+              "cheaper_than_best_automated_at_assumptions": false,
+              "basis": "hypothetical human analytical expectation"
+            },
+            "weak_validator_human_on_fail": {
+              "accuracy": 0.8976851851851851,
+              "api_cost_usd_per_slot": 0.001856583888888889,
+              "review_rate": 0.1259259259259259,
+              "human_cost_usd_per_slot": 0.0012592592592592592,
+              "error_loss_usd_per_slot": 0.010231481481481487,
+              "total_expected_usd_per_slot": 0.013347324629629634,
+              "break_even_review_usd_vs_best_automated": -0.08511629852941181,
+              "cheaper_than_best_automated_at_assumptions": false,
+              "basis": "hypothetical human analytical expectation"
+            }
+          },
+          "minimum_expected_cost_route_at_assumptions": "strong_only",
+          "minimum_expected_cost_usd_per_slot": 0.0013697166666666667
+        },
+        {
+          "D": 0.25,
+          "C": 0.75,
+          "F": 0.05,
+          "comparison": {
+            "weak_human_all": {
+              "accuracy": 0.8539814814814816,
+              "api_cost_usd_per_slot": 0.0003521218518518513,
+              "review_rate": 1.0,
+              "human_cost_usd_per_slot": 0.01,
+              "error_loss_usd_per_slot": 0.014601851851851845,
+              "total_expected_usd_per_slot": 0.024953973703703697,
+              "break_even_review_usd_vs_best_automated": -0.01358425703703703,
+              "cheaper_than_best_automated_at_assumptions": false,
+              "basis": "hypothetical human analytical expectation"
+            },
+            "weak_validator_human_on_fail": {
+              "accuracy": 0.8976851851851851,
+              "api_cost_usd_per_slot": 0.001856583888888889,
+              "review_rate": 0.1259259259259259,
+              "human_cost_usd_per_slot": 0.0012592592592592592,
+              "error_loss_usd_per_slot": 0.010231481481481487,
+              "total_expected_usd_per_slot": 0.013347324629629634,
+              "break_even_review_usd_vs_best_automated": -0.08511629852941181,
+              "cheaper_than_best_automated_at_assumptions": false,
+              "basis": "hypothetical human analytical expectation"
+            }
+          },
+          "minimum_expected_cost_route_at_assumptions": "strong_only",
+          "minimum_expected_cost_usd_per_slot": 0.0013697166666666667
+        },
+        {
+          "D": 0.25,
+          "C": 0.75,
+          "F": 0.15,
+          "comparison": {
+            "weak_human_all": {
+              "accuracy": 0.766574074074074,
+              "api_cost_usd_per_slot": 0.0003521218518518513,
+              "review_rate": 1.0,
+              "human_cost_usd_per_slot": 0.01,
+              "error_loss_usd_per_slot": 0.023342592592592606,
+              "total_expected_usd_per_slot": 0.033694714444444454,
+              "break_even_review_usd_vs_best_automated": -0.02232499777777779,
+              "cheaper_than_best_automated_at_assumptions": false,
+              "basis": "hypothetical human analytical expectation"
+            },
+            "weak_validator_human_on_fail": {
+              "accuracy": 0.8976851851851851,
+              "api_cost_usd_per_slot": 0.001856583888888889,
+              "review_rate": 0.1259259259259259,
+              "human_cost_usd_per_slot": 0.0012592592592592592,
+              "error_loss_usd_per_slot": 0.010231481481481487,
+              "total_expected_usd_per_slot": 0.013347324629629634,
+              "break_even_review_usd_vs_best_automated": -0.08511629852941181,
+              "cheaper_than_best_automated_at_assumptions": false,
+              "basis": "hypothetical human analytical expectation"
+            }
+          },
+          "minimum_expected_cost_route_at_assumptions": "strong_only",
+          "minimum_expected_cost_usd_per_slot": 0.0013697166666666667
+        },
+        {
+          "D": 0.25,
+          "C": 1.0,
+          "F": 0.0,
+          "comparison": {
+            "weak_human_all": {
+              "accuracy": 0.9055555555555556,
+              "api_cost_usd_per_slot": 0.0003521218518518513,
+              "review_rate": 1.0,
+              "human_cost_usd_per_slot": 0.01,
+              "error_loss_usd_per_slot": 0.009444444444444445,
+              "total_expected_usd_per_slot": 0.019796566296296295,
+              "break_even_review_usd_vs_best_automated": -0.00842684962962963,
+              "cheaper_than_best_automated_at_assumptions": false,
+              "basis": "hypothetical human analytical expectation"
+            },
+            "weak_validator_human_on_fail": {
+              "accuracy": 0.9055555555555556,
+              "api_cost_usd_per_slot": 0.001856583888888889,
+              "review_rate": 0.1259259259259259,
+              "human_cost_usd_per_slot": 0.0012592592592592592,
+              "error_loss_usd_per_slot": 0.009444444444444445,
+              "total_expected_usd_per_slot": 0.012560287592592593,
+              "break_even_review_usd_vs_best_automated": -0.07886629852941178,
+              "cheaper_than_best_automated_at_assumptions": false,
+              "basis": "hypothetical human analytical expectation"
+            }
+          },
+          "minimum_expected_cost_route_at_assumptions": "strong_only",
+          "minimum_expected_cost_usd_per_slot": 0.0013697166666666667
+        },
+        {
+          "D": 0.25,
+          "C": 1.0,
+          "F": 0.05,
+          "comparison": {
+            "weak_human_all": {
+              "accuracy": 0.8618518518518519,
+              "api_cost_usd_per_slot": 0.0003521218518518513,
+              "review_rate": 1.0,
+              "human_cost_usd_per_slot": 0.01,
+              "error_loss_usd_per_slot": 0.013814814814814814,
+              "total_expected_usd_per_slot": 0.024166936666666666,
+              "break_even_review_usd_vs_best_automated": -0.01279722,
+              "cheaper_than_best_automated_at_assumptions": false,
+              "basis": "hypothetical human analytical expectation"
+            },
+            "weak_validator_human_on_fail": {
+              "accuracy": 0.9055555555555556,
+              "api_cost_usd_per_slot": 0.001856583888888889,
+              "review_rate": 0.1259259259259259,
+              "human_cost_usd_per_slot": 0.0012592592592592592,
+              "error_loss_usd_per_slot": 0.009444444444444445,
+              "total_expected_usd_per_slot": 0.012560287592592593,
+              "break_even_review_usd_vs_best_automated": -0.07886629852941178,
+              "cheaper_than_best_automated_at_assumptions": false,
+              "basis": "hypothetical human analytical expectation"
+            }
+          },
+          "minimum_expected_cost_route_at_assumptions": "strong_only",
+          "minimum_expected_cost_usd_per_slot": 0.0013697166666666667
+        },
+        {
+          "D": 0.25,
+          "C": 1.0,
+          "F": 0.15,
+          "comparison": {
+            "weak_human_all": {
+              "accuracy": 0.7744444444444444,
+              "api_cost_usd_per_slot": 0.0003521218518518513,
+              "review_rate": 1.0,
+              "human_cost_usd_per_slot": 0.01,
+              "error_loss_usd_per_slot": 0.022555555555555565,
+              "total_expected_usd_per_slot": 0.03290767740740742,
+              "break_even_review_usd_vs_best_automated": -0.02153796074074075,
+              "cheaper_than_best_automated_at_assumptions": false,
+              "basis": "hypothetical human analytical expectation"
+            },
+            "weak_validator_human_on_fail": {
+              "accuracy": 0.9055555555555556,
+              "api_cost_usd_per_slot": 0.001856583888888889,
+              "review_rate": 0.1259259259259259,
+              "human_cost_usd_per_slot": 0.0012592592592592592,
+              "error_loss_usd_per_slot": 0.009444444444444445,
+              "total_expected_usd_per_slot": 0.012560287592592593,
+              "break_even_review_usd_vs_best_automated": -0.07886629852941178,
+              "cheaper_than_best_automated_at_assumptions": false,
+              "basis": "hypothetical human analytical expectation"
+            }
+          },
+          "minimum_expected_cost_route_at_assumptions": "strong_only",
+          "minimum_expected_cost_usd_per_slot": 0.0013697166666666667
+        },
+        {
+          "D": 0.5,
+          "C": 0.5,
+          "F": 0.0,
+          "comparison": {
+            "weak_human_all": {
+              "accuracy": 0.9055555555555556,
+              "api_cost_usd_per_slot": 0.0003521218518518513,
+              "review_rate": 1.0,
+              "human_cost_usd_per_slot": 0.01,
+              "error_loss_usd_per_slot": 0.009444444444444445,
+              "total_expected_usd_per_slot": 0.019796566296296295,
+              "break_even_review_usd_vs_best_automated": -0.00842684962962963,
+              "cheaper_than_best_automated_at_assumptions": false,
+              "basis": "hypothetical human analytical expectation"
+            },
+            "weak_validator_human_on_fail": {
+              "accuracy": 0.9055555555555556,
+              "api_cost_usd_per_slot": 0.001856583888888889,
+              "review_rate": 0.1259259259259259,
+              "human_cost_usd_per_slot": 0.0012592592592592592,
+              "error_loss_usd_per_slot": 0.009444444444444445,
+              "total_expected_usd_per_slot": 0.012560287592592593,
+              "break_even_review_usd_vs_best_automated": -0.07886629852941178,
+              "cheaper_than_best_automated_at_assumptions": false,
+              "basis": "hypothetical human analytical expectation"
+            }
+          },
+          "minimum_expected_cost_route_at_assumptions": "strong_only",
+          "minimum_expected_cost_usd_per_slot": 0.0013697166666666667
+        },
+        {
+          "D": 0.5,
+          "C": 0.5,
+          "F": 0.05,
+          "comparison": {
+            "weak_human_all": {
+              "accuracy": 0.8618518518518519,
+              "api_cost_usd_per_slot": 0.0003521218518518513,
+              "review_rate": 1.0,
+              "human_cost_usd_per_slot": 0.01,
+              "error_loss_usd_per_slot": 0.013814814814814814,
+              "total_expected_usd_per_slot": 0.024166936666666666,
+              "break_even_review_usd_vs_best_automated": -0.01279722,
+              "cheaper_than_best_automated_at_assumptions": false,
+              "basis": "hypothetical human analytical expectation"
+            },
+            "weak_validator_human_on_fail": {
+              "accuracy": 0.9055555555555556,
+              "api_cost_usd_per_slot": 0.001856583888888889,
+              "review_rate": 0.1259259259259259,
+              "human_cost_usd_per_slot": 0.0012592592592592592,
+              "error_loss_usd_per_slot": 0.009444444444444445,
+              "total_expected_usd_per_slot": 0.012560287592592593,
+              "break_even_review_usd_vs_best_automated": -0.07886629852941178,
+              "cheaper_than_best_automated_at_assumptions": false,
+              "basis": "hypothetical human analytical expectation"
+            }
+          },
+          "minimum_expected_cost_route_at_assumptions": "strong_only",
+          "minimum_expected_cost_usd_per_slot": 0.0013697166666666667
+        },
+        {
+          "D": 0.5,
+          "C": 0.5,
+          "F": 0.15,
+          "comparison": {
+            "weak_human_all": {
+              "accuracy": 0.7744444444444444,
+              "api_cost_usd_per_slot": 0.0003521218518518513,
+              "review_rate": 1.0,
+              "human_cost_usd_per_slot": 0.01,
+              "error_loss_usd_per_slot": 0.022555555555555565,
+              "total_expected_usd_per_slot": 0.03290767740740742,
+              "break_even_review_usd_vs_best_automated": -0.02153796074074075,
+              "cheaper_than_best_automated_at_assumptions": false,
+              "basis": "hypothetical human analytical expectation"
+            },
+            "weak_validator_human_on_fail": {
+              "accuracy": 0.9055555555555556,
+              "api_cost_usd_per_slot": 0.001856583888888889,
+              "review_rate": 0.1259259259259259,
+              "human_cost_usd_per_slot": 0.0012592592592592592,
+              "error_loss_usd_per_slot": 0.009444444444444445,
+              "total_expected_usd_per_slot": 0.012560287592592593,
+              "break_even_review_usd_vs_best_automated": -0.07886629852941178,
+              "cheaper_than_best_automated_at_assumptions": false,
+              "basis": "hypothetical human analytical expectation"
+            }
+          },
+          "minimum_expected_cost_route_at_assumptions": "strong_only",
+          "minimum_expected_cost_usd_per_slot": 0.0013697166666666667
+        },
+        {
+          "D": 0.5,
+          "C": 0.75,
+          "F": 0.0,
+          "comparison": {
+            "weak_human_all": {
+              "accuracy": 0.9212962962962963,
+              "api_cost_usd_per_slot": 0.0003521218518518513,
+              "review_rate": 1.0,
+              "human_cost_usd_per_slot": 0.01,
+              "error_loss_usd_per_slot": 0.007870370370370373,
+              "total_expected_usd_per_slot": 0.018222492222222227,
+              "break_even_review_usd_vs_best_automated": -0.006852775555555558,
+              "cheaper_than_best_automated_at_assumptions": false,
+              "basis": "hypothetical human analytical expectation"
+            },
+            "weak_validator_human_on_fail": {
+              "accuracy": 0.9212962962962963,
+              "api_cost_usd_per_slot": 0.001856583888888889,
+              "review_rate": 0.1259259259259259,
+              "human_cost_usd_per_slot": 0.0012592592592592592,
+              "error_loss_usd_per_slot": 0.007870370370370373,
+              "total_expected_usd_per_slot": 0.010986213518518521,
+              "break_even_review_usd_vs_best_automated": -0.0663662985294118,
+              "cheaper_than_best_automated_at_assumptions": false,
+              "basis": "hypothetical human analytical expectation"
+            }
+          },
+          "minimum_expected_cost_route_at_assumptions": "strong_only",
+          "minimum_expected_cost_usd_per_slot": 0.0013697166666666667
+        },
+        {
+          "D": 0.5,
+          "C": 0.75,
+          "F": 0.05,
+          "comparison": {
+            "weak_human_all": {
+              "accuracy": 0.8775925925925926,
+              "api_cost_usd_per_slot": 0.0003521218518518513,
+              "review_rate": 1.0,
+              "human_cost_usd_per_slot": 0.01,
+              "error_loss_usd_per_slot": 0.012240740740740741,
+              "total_expected_usd_per_slot": 0.02259286259259259,
+              "break_even_review_usd_vs_best_automated": -0.011223145925925927,
+              "cheaper_than_best_automated_at_assumptions": false,
+              "basis": "hypothetical human analytical expectation"
+            },
+            "weak_validator_human_on_fail": {
+              "accuracy": 0.9212962962962963,
+              "api_cost_usd_per_slot": 0.001856583888888889,
+              "review_rate": 0.1259259259259259,
+              "human_cost_usd_per_slot": 0.0012592592592592592,
+              "error_loss_usd_per_slot": 0.007870370370370373,
+              "total_expected_usd_per_slot": 0.010986213518518521,
+              "break_even_review_usd_vs_best_automated": -0.0663662985294118,
+              "cheaper_than_best_automated_at_assumptions": false,
+              "basis": "hypothetical human analytical expectation"
+            }
+          },
+          "minimum_expected_cost_route_at_assumptions": "strong_only",
+          "minimum_expected_cost_usd_per_slot": 0.0013697166666666667
+        },
+        {
+          "D": 0.5,
+          "C": 0.75,
+          "F": 0.15,
+          "comparison": {
+            "weak_human_all": {
+              "accuracy": 0.7901851851851851,
+              "api_cost_usd_per_slot": 0.0003521218518518513,
+              "review_rate": 1.0,
+              "human_cost_usd_per_slot": 0.01,
+              "error_loss_usd_per_slot": 0.02098148148148149,
+              "total_expected_usd_per_slot": 0.03133360333333334,
+              "break_even_review_usd_vs_best_automated": -0.019963886666666673,
+              "cheaper_than_best_automated_at_assumptions": false,
+              "basis": "hypothetical human analytical expectation"
+            },
+            "weak_validator_human_on_fail": {
+              "accuracy": 0.9212962962962963,
+              "api_cost_usd_per_slot": 0.001856583888888889,
+              "review_rate": 0.1259259259259259,
+              "human_cost_usd_per_slot": 0.0012592592592592592,
+              "error_loss_usd_per_slot": 0.007870370370370373,
+              "total_expected_usd_per_slot": 0.010986213518518521,
+              "break_even_review_usd_vs_best_automated": -0.0663662985294118,
+              "cheaper_than_best_automated_at_assumptions": false,
+              "basis": "hypothetical human analytical expectation"
+            }
+          },
+          "minimum_expected_cost_route_at_assumptions": "strong_only",
+          "minimum_expected_cost_usd_per_slot": 0.0013697166666666667
+        },
+        {
+          "D": 0.5,
+          "C": 1.0,
+          "F": 0.0,
+          "comparison": {
+            "weak_human_all": {
+              "accuracy": 0.937037037037037,
+              "api_cost_usd_per_slot": 0.0003521218518518513,
+              "review_rate": 1.0,
+              "human_cost_usd_per_slot": 0.01,
+              "error_loss_usd_per_slot": 0.0062962962962963,
+              "total_expected_usd_per_slot": 0.01664841814814815,
+              "break_even_review_usd_vs_best_automated": -0.005278701481481485,
+              "cheaper_than_best_automated_at_assumptions": false,
+              "basis": "hypothetical human analytical expectation"
+            },
+            "weak_validator_human_on_fail": {
+              "accuracy": 0.937037037037037,
+              "api_cost_usd_per_slot": 0.001856583888888889,
+              "review_rate": 0.1259259259259259,
+              "human_cost_usd_per_slot": 0.0012592592592592592,
+              "error_loss_usd_per_slot": 0.0062962962962963,
+              "total_expected_usd_per_slot": 0.009412139444444446,
+              "break_even_review_usd_vs_best_automated": -0.05386629852941179,
+              "cheaper_than_best_automated_at_assumptions": false,
+              "basis": "hypothetical human analytical expectation"
+            }
+          },
+          "minimum_expected_cost_route_at_assumptions": "strong_only",
+          "minimum_expected_cost_usd_per_slot": 0.0013697166666666667
+        },
+        {
+          "D": 0.5,
+          "C": 1.0,
+          "F": 0.05,
+          "comparison": {
+            "weak_human_all": {
+              "accuracy": 0.8933333333333333,
+              "api_cost_usd_per_slot": 0.0003521218518518513,
+              "review_rate": 1.0,
+              "human_cost_usd_per_slot": 0.01,
+              "error_loss_usd_per_slot": 0.01066666666666667,
+              "total_expected_usd_per_slot": 0.021018788518518523,
+              "break_even_review_usd_vs_best_automated": -0.009649071851851855,
+              "cheaper_than_best_automated_at_assumptions": false,
+              "basis": "hypothetical human analytical expectation"
+            },
+            "weak_validator_human_on_fail": {
+              "accuracy": 0.937037037037037,
+              "api_cost_usd_per_slot": 0.001856583888888889,
+              "review_rate": 0.1259259259259259,
+              "human_cost_usd_per_slot": 0.0012592592592592592,
+              "error_loss_usd_per_slot": 0.0062962962962963,
+              "total_expected_usd_per_slot": 0.009412139444444446,
+              "break_even_review_usd_vs_best_automated": -0.05386629852941179,
+              "cheaper_than_best_automated_at_assumptions": false,
+              "basis": "hypothetical human analytical expectation"
+            }
+          },
+          "minimum_expected_cost_route_at_assumptions": "strong_only",
+          "minimum_expected_cost_usd_per_slot": 0.0013697166666666667
+        },
+        {
+          "D": 0.5,
+          "C": 1.0,
+          "F": 0.15,
+          "comparison": {
+            "weak_human_all": {
+              "accuracy": 0.8059259259259258,
+              "api_cost_usd_per_slot": 0.0003521218518518513,
+              "review_rate": 1.0,
+              "human_cost_usd_per_slot": 0.01,
+              "error_loss_usd_per_slot": 0.01940740740740742,
+              "total_expected_usd_per_slot": 0.029759529259259267,
+              "break_even_review_usd_vs_best_automated": -0.018389812592592602,
+              "cheaper_than_best_automated_at_assumptions": false,
+              "basis": "hypothetical human analytical expectation"
+            },
+            "weak_validator_human_on_fail": {
+              "accuracy": 0.937037037037037,
+              "api_cost_usd_per_slot": 0.001856583888888889,
+              "review_rate": 0.1259259259259259,
+              "human_cost_usd_per_slot": 0.0012592592592592592,
+              "error_loss_usd_per_slot": 0.0062962962962963,
+              "total_expected_usd_per_slot": 0.009412139444444446,
+              "break_even_review_usd_vs_best_automated": -0.05386629852941179,
+              "cheaper_than_best_automated_at_assumptions": false,
+              "basis": "hypothetical human analytical expectation"
+            }
+          },
+          "minimum_expected_cost_route_at_assumptions": "strong_only",
+          "minimum_expected_cost_usd_per_slot": 0.0013697166666666667
+        },
+        {
+          "D": 0.75,
+          "C": 0.5,
+          "F": 0.0,
+          "comparison": {
+            "weak_human_all": {
+              "accuracy": 0.9212962962962963,
+              "api_cost_usd_per_slot": 0.0003521218518518513,
+              "review_rate": 1.0,
+              "human_cost_usd_per_slot": 0.01,
+              "error_loss_usd_per_slot": 0.007870370370370373,
+              "total_expected_usd_per_slot": 0.018222492222222227,
+              "break_even_review_usd_vs_best_automated": -0.006852775555555558,
+              "cheaper_than_best_automated_at_assumptions": false,
+              "basis": "hypothetical human analytical expectation"
+            },
+            "weak_validator_human_on_fail": {
+              "accuracy": 0.9212962962962963,
+              "api_cost_usd_per_slot": 0.001856583888888889,
+              "review_rate": 0.1259259259259259,
+              "human_cost_usd_per_slot": 0.0012592592592592592,
+              "error_loss_usd_per_slot": 0.007870370370370373,
+              "total_expected_usd_per_slot": 0.010986213518518521,
+              "break_even_review_usd_vs_best_automated": -0.0663662985294118,
+              "cheaper_than_best_automated_at_assumptions": false,
+              "basis": "hypothetical human analytical expectation"
+            }
+          },
+          "minimum_expected_cost_route_at_assumptions": "strong_only",
+          "minimum_expected_cost_usd_per_slot": 0.0013697166666666667
+        },
+        {
+          "D": 0.75,
+          "C": 0.5,
+          "F": 0.05,
+          "comparison": {
+            "weak_human_all": {
+              "accuracy": 0.8775925925925926,
+              "api_cost_usd_per_slot": 0.0003521218518518513,
+              "review_rate": 1.0,
+              "human_cost_usd_per_slot": 0.01,
+              "error_loss_usd_per_slot": 0.012240740740740741,
+              "total_expected_usd_per_slot": 0.02259286259259259,
+              "break_even_review_usd_vs_best_automated": -0.011223145925925927,
+              "cheaper_than_best_automated_at_assumptions": false,
+              "basis": "hypothetical human analytical expectation"
+            },
+            "weak_validator_human_on_fail": {
+              "accuracy": 0.9212962962962963,
+              "api_cost_usd_per_slot": 0.001856583888888889,
+              "review_rate": 0.1259259259259259,
+              "human_cost_usd_per_slot": 0.0012592592592592592,
+              "error_loss_usd_per_slot": 0.007870370370370373,
+              "total_expected_usd_per_slot": 0.010986213518518521,
+              "break_even_review_usd_vs_best_automated": -0.0663662985294118,
+              "cheaper_than_best_automated_at_assumptions": false,
+              "basis": "hypothetical human analytical expectation"
+            }
+          },
+          "minimum_expected_cost_route_at_assumptions": "strong_only",
+          "minimum_expected_cost_usd_per_slot": 0.0013697166666666667
+        },
+        {
+          "D": 0.75,
+          "C": 0.5,
+          "F": 0.15,
+          "comparison": {
+            "weak_human_all": {
+              "accuracy": 0.7901851851851851,
+              "api_cost_usd_per_slot": 0.0003521218518518513,
+              "review_rate": 1.0,
+              "human_cost_usd_per_slot": 0.01,
+              "error_loss_usd_per_slot": 0.02098148148148149,
+              "total_expected_usd_per_slot": 0.03133360333333334,
+              "break_even_review_usd_vs_best_automated": -0.019963886666666673,
+              "cheaper_than_best_automated_at_assumptions": false,
+              "basis": "hypothetical human analytical expectation"
+            },
+            "weak_validator_human_on_fail": {
+              "accuracy": 0.9212962962962963,
+              "api_cost_usd_per_slot": 0.001856583888888889,
+              "review_rate": 0.1259259259259259,
+              "human_cost_usd_per_slot": 0.0012592592592592592,
+              "error_loss_usd_per_slot": 0.007870370370370373,
+              "total_expected_usd_per_slot": 0.010986213518518521,
+              "break_even_review_usd_vs_best_automated": -0.0663662985294118,
+              "cheaper_than_best_automated_at_assumptions": false,
+              "basis": "hypothetical human analytical expectation"
+            }
+          },
+          "minimum_expected_cost_route_at_assumptions": "strong_only",
+          "minimum_expected_cost_usd_per_slot": 0.0013697166666666667
+        },
+        {
+          "D": 0.75,
+          "C": 0.75,
+          "F": 0.0,
+          "comparison": {
+            "weak_human_all": {
+              "accuracy": 0.9449074074074074,
+              "api_cost_usd_per_slot": 0.0003521218518518513,
+              "review_rate": 1.0,
+              "human_cost_usd_per_slot": 0.01,
+              "error_loss_usd_per_slot": 0.005509259259259259,
+              "total_expected_usd_per_slot": 0.01586138111111111,
+              "break_even_review_usd_vs_best_automated": -0.004491664444444444,
+              "cheaper_than_best_automated_at_assumptions": false,
+              "basis": "hypothetical human analytical expectation"
+            },
+            "weak_validator_human_on_fail": {
+              "accuracy": 0.9449074074074074,
+              "api_cost_usd_per_slot": 0.001856583888888889,
+              "review_rate": 0.1259259259259259,
+              "human_cost_usd_per_slot": 0.0012592592592592592,
+              "error_loss_usd_per_slot": 0.005509259259259259,
+              "total_expected_usd_per_slot": 0.008625102407407407,
+              "break_even_review_usd_vs_best_automated": -0.047616298529411766,
+              "cheaper_than_best_automated_at_assumptions": false,
+              "basis": "hypothetical human analytical expectation"
+            }
+          },
+          "minimum_expected_cost_route_at_assumptions": "strong_only",
+          "minimum_expected_cost_usd_per_slot": 0.0013697166666666667
+        },
+        {
+          "D": 0.75,
+          "C": 0.75,
+          "F": 0.05,
+          "comparison": {
+            "weak_human_all": {
+              "accuracy": 0.9012037037037037,
+              "api_cost_usd_per_slot": 0.0003521218518518513,
+              "review_rate": 1.0,
+              "human_cost_usd_per_slot": 0.01,
+              "error_loss_usd_per_slot": 0.009879629629629627,
+              "total_expected_usd_per_slot": 0.02023175148148148,
+              "break_even_review_usd_vs_best_automated": -0.008862034814814812,
+              "cheaper_than_best_automated_at_assumptions": false,
+              "basis": "hypothetical human analytical expectation"
+            },
+            "weak_validator_human_on_fail": {
+              "accuracy": 0.9449074074074074,
+              "api_cost_usd_per_slot": 0.001856583888888889,
+              "review_rate": 0.1259259259259259,
+              "human_cost_usd_per_slot": 0.0012592592592592592,
+              "error_loss_usd_per_slot": 0.005509259259259259,
+              "total_expected_usd_per_slot": 0.008625102407407407,
+              "break_even_review_usd_vs_best_automated": -0.047616298529411766,
+              "cheaper_than_best_automated_at_assumptions": false,
+              "basis": "hypothetical human analytical expectation"
+            }
+          },
+          "minimum_expected_cost_route_at_assumptions": "strong_only",
+          "minimum_expected_cost_usd_per_slot": 0.0013697166666666667
+        },
+        {
+          "D": 0.75,
+          "C": 0.75,
+          "F": 0.15,
+          "comparison": {
+            "weak_human_all": {
+              "accuracy": 0.8137962962962962,
+              "api_cost_usd_per_slot": 0.0003521218518518513,
+              "review_rate": 1.0,
+              "human_cost_usd_per_slot": 0.01,
+              "error_loss_usd_per_slot": 0.018620370370370377,
+              "total_expected_usd_per_slot": 0.02897249222222223,
+              "break_even_review_usd_vs_best_automated": -0.01760277555555556,
+              "cheaper_than_best_automated_at_assumptions": false,
+              "basis": "hypothetical human analytical expectation"
+            },
+            "weak_validator_human_on_fail": {
+              "accuracy": 0.9449074074074074,
+              "api_cost_usd_per_slot": 0.001856583888888889,
+              "review_rate": 0.1259259259259259,
+              "human_cost_usd_per_slot": 0.0012592592592592592,
+              "error_loss_usd_per_slot": 0.005509259259259259,
+              "total_expected_usd_per_slot": 0.008625102407407407,
+              "break_even_review_usd_vs_best_automated": -0.047616298529411766,
+              "cheaper_than_best_automated_at_assumptions": false,
+              "basis": "hypothetical human analytical expectation"
+            }
+          },
+          "minimum_expected_cost_route_at_assumptions": "strong_only",
+          "minimum_expected_cost_usd_per_slot": 0.0013697166666666667
+        },
+        {
+          "D": 0.75,
+          "C": 1.0,
+          "F": 0.0,
+          "comparison": {
+            "weak_human_all": {
+              "accuracy": 0.9685185185185186,
+              "api_cost_usd_per_slot": 0.0003521218518518513,
+              "review_rate": 1.0,
+              "human_cost_usd_per_slot": 0.01,
+              "error_loss_usd_per_slot": 0.0031481481481481447,
+              "total_expected_usd_per_slot": 0.013500269999999997,
+              "break_even_review_usd_vs_best_automated": -0.002130553333333329,
+              "cheaper_than_best_automated_at_assumptions": false,
+              "basis": "hypothetical human analytical expectation"
+            },
+            "weak_validator_human_on_fail": {
+              "accuracy": 0.9685185185185186,
+              "api_cost_usd_per_slot": 0.001856583888888889,
+              "review_rate": 0.1259259259259259,
+              "human_cost_usd_per_slot": 0.0012592592592592592,
+              "error_loss_usd_per_slot": 0.0031481481481481447,
+              "total_expected_usd_per_slot": 0.006263991296296293,
+              "break_even_review_usd_vs_best_automated": -0.02886629852941174,
+              "cheaper_than_best_automated_at_assumptions": false,
+              "basis": "hypothetical human analytical expectation"
+            }
+          },
+          "minimum_expected_cost_route_at_assumptions": "strong_only",
+          "minimum_expected_cost_usd_per_slot": 0.0013697166666666667
+        },
+        {
+          "D": 0.75,
+          "C": 1.0,
+          "F": 0.05,
+          "comparison": {
+            "weak_human_all": {
+              "accuracy": 0.9248148148148149,
+              "api_cost_usd_per_slot": 0.0003521218518518513,
+              "review_rate": 1.0,
+              "human_cost_usd_per_slot": 0.01,
+              "error_loss_usd_per_slot": 0.007518518518518514,
+              "total_expected_usd_per_slot": 0.017870640370370366,
+              "break_even_review_usd_vs_best_automated": -0.006500923703703698,
+              "cheaper_than_best_automated_at_assumptions": false,
+              "basis": "hypothetical human analytical expectation"
+            },
+            "weak_validator_human_on_fail": {
+              "accuracy": 0.9685185185185186,
+              "api_cost_usd_per_slot": 0.001856583888888889,
+              "review_rate": 0.1259259259259259,
+              "human_cost_usd_per_slot": 0.0012592592592592592,
+              "error_loss_usd_per_slot": 0.0031481481481481447,
+              "total_expected_usd_per_slot": 0.006263991296296293,
+              "break_even_review_usd_vs_best_automated": -0.02886629852941174,
+              "cheaper_than_best_automated_at_assumptions": false,
+              "basis": "hypothetical human analytical expectation"
+            }
+          },
+          "minimum_expected_cost_route_at_assumptions": "strong_only",
+          "minimum_expected_cost_usd_per_slot": 0.0013697166666666667
+        },
+        {
+          "D": 0.75,
+          "C": 1.0,
+          "F": 0.15,
+          "comparison": {
+            "weak_human_all": {
+              "accuracy": 0.8374074074074074,
+              "api_cost_usd_per_slot": 0.0003521218518518513,
+              "review_rate": 1.0,
+              "human_cost_usd_per_slot": 0.01,
+              "error_loss_usd_per_slot": 0.01625925925925926,
+              "total_expected_usd_per_slot": 0.02661138111111111,
+              "break_even_review_usd_vs_best_automated": -0.015241664444444445,
+              "cheaper_than_best_automated_at_assumptions": false,
+              "basis": "hypothetical human analytical expectation"
+            },
+            "weak_validator_human_on_fail": {
+              "accuracy": 0.9685185185185186,
+              "api_cost_usd_per_slot": 0.001856583888888889,
+              "review_rate": 0.1259259259259259,
+              "human_cost_usd_per_slot": 0.0012592592592592592,
+              "error_loss_usd_per_slot": 0.0031481481481481447,
+              "total_expected_usd_per_slot": 0.006263991296296293,
+              "break_even_review_usd_vs_best_automated": -0.02886629852941174,
+              "cheaper_than_best_automated_at_assumptions": false,
+              "basis": "hypothetical human analytical expectation"
+            }
+          },
+          "minimum_expected_cost_route_at_assumptions": "strong_only",
+          "minimum_expected_cost_usd_per_slot": 0.0013697166666666667
+        },
+        {
+          "D": 1.0,
+          "C": 0.5,
+          "F": 0.0,
+          "comparison": {
+            "weak_human_all": {
+              "accuracy": 0.937037037037037,
+              "api_cost_usd_per_slot": 0.0003521218518518513,
+              "review_rate": 1.0,
+              "human_cost_usd_per_slot": 0.01,
+              "error_loss_usd_per_slot": 0.0062962962962963,
+              "total_expected_usd_per_slot": 0.01664841814814815,
+              "break_even_review_usd_vs_best_automated": -0.005278701481481485,
+              "cheaper_than_best_automated_at_assumptions": false,
+              "basis": "hypothetical human analytical expectation"
+            },
+            "weak_validator_human_on_fail": {
+              "accuracy": 0.937037037037037,
+              "api_cost_usd_per_slot": 0.001856583888888889,
+              "review_rate": 0.1259259259259259,
+              "human_cost_usd_per_slot": 0.0012592592592592592,
+              "error_loss_usd_per_slot": 0.0062962962962963,
+              "total_expected_usd_per_slot": 0.009412139444444446,
+              "break_even_review_usd_vs_best_automated": -0.05386629852941179,
+              "cheaper_than_best_automated_at_assumptions": false,
+              "basis": "hypothetical human analytical expectation"
+            }
+          },
+          "minimum_expected_cost_route_at_assumptions": "strong_only",
+          "minimum_expected_cost_usd_per_slot": 0.0013697166666666667
+        },
+        {
+          "D": 1.0,
+          "C": 0.5,
+          "F": 0.05,
+          "comparison": {
+            "weak_human_all": {
+              "accuracy": 0.8933333333333333,
+              "api_cost_usd_per_slot": 0.0003521218518518513,
+              "review_rate": 1.0,
+              "human_cost_usd_per_slot": 0.01,
+              "error_loss_usd_per_slot": 0.01066666666666667,
+              "total_expected_usd_per_slot": 0.021018788518518523,
+              "break_even_review_usd_vs_best_automated": -0.009649071851851855,
+              "cheaper_than_best_automated_at_assumptions": false,
+              "basis": "hypothetical human analytical expectation"
+            },
+            "weak_validator_human_on_fail": {
+              "accuracy": 0.937037037037037,
+              "api_cost_usd_per_slot": 0.001856583888888889,
+              "review_rate": 0.1259259259259259,
+              "human_cost_usd_per_slot": 0.0012592592592592592,
+              "error_loss_usd_per_slot": 0.0062962962962963,
+              "total_expected_usd_per_slot": 0.009412139444444446,
+              "break_even_review_usd_vs_best_automated": -0.05386629852941179,
+              "cheaper_than_best_automated_at_assumptions": false,
+              "basis": "hypothetical human analytical expectation"
+            }
+          },
+          "minimum_expected_cost_route_at_assumptions": "strong_only",
+          "minimum_expected_cost_usd_per_slot": 0.0013697166666666667
+        },
+        {
+          "D": 1.0,
+          "C": 0.5,
+          "F": 0.15,
+          "comparison": {
+            "weak_human_all": {
+              "accuracy": 0.8059259259259258,
+              "api_cost_usd_per_slot": 0.0003521218518518513,
+              "review_rate": 1.0,
+              "human_cost_usd_per_slot": 0.01,
+              "error_loss_usd_per_slot": 0.01940740740740742,
+              "total_expected_usd_per_slot": 0.029759529259259267,
+              "break_even_review_usd_vs_best_automated": -0.018389812592592602,
+              "cheaper_than_best_automated_at_assumptions": false,
+              "basis": "hypothetical human analytical expectation"
+            },
+            "weak_validator_human_on_fail": {
+              "accuracy": 0.937037037037037,
+              "api_cost_usd_per_slot": 0.001856583888888889,
+              "review_rate": 0.1259259259259259,
+              "human_cost_usd_per_slot": 0.0012592592592592592,
+              "error_loss_usd_per_slot": 0.0062962962962963,
+              "total_expected_usd_per_slot": 0.009412139444444446,
+              "break_even_review_usd_vs_best_automated": -0.05386629852941179,
+              "cheaper_than_best_automated_at_assumptions": false,
+              "basis": "hypothetical human analytical expectation"
+            }
+          },
+          "minimum_expected_cost_route_at_assumptions": "strong_only",
+          "minimum_expected_cost_usd_per_slot": 0.0013697166666666667
+        },
+        {
+          "D": 1.0,
+          "C": 0.75,
+          "F": 0.0,
+          "comparison": {
+            "weak_human_all": {
+              "accuracy": 0.9685185185185186,
+              "api_cost_usd_per_slot": 0.0003521218518518513,
+              "review_rate": 1.0,
+              "human_cost_usd_per_slot": 0.01,
+              "error_loss_usd_per_slot": 0.0031481481481481447,
+              "total_expected_usd_per_slot": 0.013500269999999997,
+              "break_even_review_usd_vs_best_automated": -0.002130553333333329,
+              "cheaper_than_best_automated_at_assumptions": false,
+              "basis": "hypothetical human analytical expectation"
+            },
+            "weak_validator_human_on_fail": {
+              "accuracy": 0.9685185185185186,
+              "api_cost_usd_per_slot": 0.001856583888888889,
+              "review_rate": 0.1259259259259259,
+              "human_cost_usd_per_slot": 0.0012592592592592592,
+              "error_loss_usd_per_slot": 0.0031481481481481447,
+              "total_expected_usd_per_slot": 0.006263991296296293,
+              "break_even_review_usd_vs_best_automated": -0.02886629852941174,
+              "cheaper_than_best_automated_at_assumptions": false,
+              "basis": "hypothetical human analytical expectation"
+            }
+          },
+          "minimum_expected_cost_route_at_assumptions": "strong_only",
+          "minimum_expected_cost_usd_per_slot": 0.0013697166666666667
+        },
+        {
+          "D": 1.0,
+          "C": 0.75,
+          "F": 0.05,
+          "comparison": {
+            "weak_human_all": {
+              "accuracy": 0.9248148148148149,
+              "api_cost_usd_per_slot": 0.0003521218518518513,
+              "review_rate": 1.0,
+              "human_cost_usd_per_slot": 0.01,
+              "error_loss_usd_per_slot": 0.007518518518518514,
+              "total_expected_usd_per_slot": 0.017870640370370366,
+              "break_even_review_usd_vs_best_automated": -0.006500923703703698,
+              "cheaper_than_best_automated_at_assumptions": false,
+              "basis": "hypothetical human analytical expectation"
+            },
+            "weak_validator_human_on_fail": {
+              "accuracy": 0.9685185185185186,
+              "api_cost_usd_per_slot": 0.001856583888888889,
+              "review_rate": 0.1259259259259259,
+              "human_cost_usd_per_slot": 0.0012592592592592592,
+              "error_loss_usd_per_slot": 0.0031481481481481447,
+              "total_expected_usd_per_slot": 0.006263991296296293,
+              "break_even_review_usd_vs_best_automated": -0.02886629852941174,
+              "cheaper_than_best_automated_at_assumptions": false,
+              "basis": "hypothetical human analytical expectation"
+            }
+          },
+          "minimum_expected_cost_route_at_assumptions": "strong_only",
+          "minimum_expected_cost_usd_per_slot": 0.0013697166666666667
+        },
+        {
+          "D": 1.0,
+          "C": 0.75,
+          "F": 0.15,
+          "comparison": {
+            "weak_human_all": {
+              "accuracy": 0.8374074074074074,
+              "api_cost_usd_per_slot": 0.0003521218518518513,
+              "review_rate": 1.0,
+              "human_cost_usd_per_slot": 0.01,
+              "error_loss_usd_per_slot": 0.01625925925925926,
+              "total_expected_usd_per_slot": 0.02661138111111111,
+              "break_even_review_usd_vs_best_automated": -0.015241664444444445,
+              "cheaper_than_best_automated_at_assumptions": false,
+              "basis": "hypothetical human analytical expectation"
+            },
+            "weak_validator_human_on_fail": {
+              "accuracy": 0.9685185185185186,
+              "api_cost_usd_per_slot": 0.001856583888888889,
+              "review_rate": 0.1259259259259259,
+              "human_cost_usd_per_slot": 0.0012592592592592592,
+              "error_loss_usd_per_slot": 0.0031481481481481447,
+              "total_expected_usd_per_slot": 0.006263991296296293,
+              "break_even_review_usd_vs_best_automated": -0.02886629852941174,
+              "cheaper_than_best_automated_at_assumptions": false,
+              "basis": "hypothetical human analytical expectation"
+            }
+          },
+          "minimum_expected_cost_route_at_assumptions": "strong_only",
+          "minimum_expected_cost_usd_per_slot": 0.0013697166666666667
+        },
+        {
+          "D": 1.0,
+          "C": 1.0,
+          "F": 0.0,
+          "comparison": {
+            "weak_human_all": {
+              "accuracy": 1.0,
+              "api_cost_usd_per_slot": 0.0003521218518518513,
+              "review_rate": 1.0,
+              "human_cost_usd_per_slot": 0.01,
+              "error_loss_usd_per_slot": 0.0,
+              "total_expected_usd_per_slot": 0.010352121851851852,
+              "break_even_review_usd_vs_best_automated": 0.0010175948148148154,
+              "cheaper_than_best_automated_at_assumptions": false,
+              "basis": "hypothetical human analytical expectation"
+            },
+            "weak_validator_human_on_fail": {
+              "accuracy": 1.0,
+              "api_cost_usd_per_slot": 0.001856583888888889,
+              "review_rate": 0.1259259259259259,
+              "human_cost_usd_per_slot": 0.0012592592592592592,
+              "error_loss_usd_per_slot": 0.0,
+              "total_expected_usd_per_slot": 0.0031158431481481483,
+              "break_even_review_usd_vs_best_automated": -0.0038662985294117646,
+              "cheaper_than_best_automated_at_assumptions": false,
+              "basis": "hypothetical human analytical expectation"
+            }
+          },
+          "minimum_expected_cost_route_at_assumptions": "strong_only",
+          "minimum_expected_cost_usd_per_slot": 0.0013697166666666667
+        },
+        {
+          "D": 1.0,
+          "C": 1.0,
+          "F": 0.05,
+          "comparison": {
+            "weak_human_all": {
+              "accuracy": 0.9562962962962963,
+              "api_cost_usd_per_slot": 0.0003521218518518513,
+              "review_rate": 1.0,
+              "human_cost_usd_per_slot": 0.01,
+              "error_loss_usd_per_slot": 0.004370370370370369,
+              "total_expected_usd_per_slot": 0.01472249222222222,
+              "break_even_review_usd_vs_best_automated": -0.003352775555555554,
+              "cheaper_than_best_automated_at_assumptions": false,
+              "basis": "hypothetical human analytical expectation"
+            },
+            "weak_validator_human_on_fail": {
+              "accuracy": 1.0,
+              "api_cost_usd_per_slot": 0.001856583888888889,
+              "review_rate": 0.1259259259259259,
+              "human_cost_usd_per_slot": 0.0012592592592592592,
+              "error_loss_usd_per_slot": 0.0,
+              "total_expected_usd_per_slot": 0.0031158431481481483,
+              "break_even_review_usd_vs_best_automated": -0.0038662985294117646,
+              "cheaper_than_best_automated_at_assumptions": false,
+              "basis": "hypothetical human analytical expectation"
+            }
+          },
+          "minimum_expected_cost_route_at_assumptions": "strong_only",
+          "minimum_expected_cost_usd_per_slot": 0.0013697166666666667
+        },
+        {
+          "D": 1.0,
+          "C": 1.0,
+          "F": 0.15,
+          "comparison": {
+            "weak_human_all": {
+              "accuracy": 0.8688888888888888,
+              "api_cost_usd_per_slot": 0.0003521218518518513,
+              "review_rate": 1.0,
+              "human_cost_usd_per_slot": 0.01,
+              "error_loss_usd_per_slot": 0.013111111111111119,
+              "total_expected_usd_per_slot": 0.02346323296296297,
+              "break_even_review_usd_vs_best_automated": -0.012093516296296304,
+              "cheaper_than_best_automated_at_assumptions": false,
+              "basis": "hypothetical human analytical expectation"
+            },
+            "weak_validator_human_on_fail": {
+              "accuracy": 1.0,
+              "api_cost_usd_per_slot": 0.001856583888888889,
+              "review_rate": 0.1259259259259259,
+              "human_cost_usd_per_slot": 0.0012592592592592592,
+              "error_loss_usd_per_slot": 0.0,
+              "total_expected_usd_per_slot": 0.0031158431481481483,
+              "break_even_review_usd_vs_best_automated": -0.0038662985294117646,
+              "cheaper_than_best_automated_at_assumptions": false,
+              "basis": "hypothetical human analytical expectation"
+            }
+          },
+          "minimum_expected_cost_route_at_assumptions": "strong_only",
+          "minimum_expected_cost_usd_per_slot": 0.0013697166666666667
+        }
+      ]
+    }
+  },
+  "limitations": [
+    "Billing SGD totals are external corroboration only; not assigned to individual historical calls.",
+    "E1 strong outputs reused counterfactually; live cascades and human decisions were NOT executed.",
+    "810 slots per validator role repeat 270 frozen solver realizations; only 30 canonical cases.",
+    "Costs are estimated from normalized tokens using frozen USD rates, not actual invoices.",
+    "No human measurements, asymmetric losses, delays, human approval authority or deployment validity.",
+    "Frozen raw SHA checks require trusted Audit 03; scorer and policy dependencies are not cryptographically bound.",
+    "Routing acts only on saved PASS/FAIL verdict, not oracle truth.",
+    "Existing stronger preflight remains an independent prerequisite."
+  ],
+  "inputs": {
+    "audit_report_sha256": "599bea42e56d1e44e40b76c29af8da481467e41fbeaa5792f5fd139c2b8cf600",
+    "stage1_report_sha256": "4d84c3175db583be5bcc33bc31d0dac29a2b1fa31f98755db5f42a1c2d84c5ef"
+  }
+}

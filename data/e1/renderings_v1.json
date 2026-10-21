@@ -1,0 +1,542 @@
+[
+  {
+    "rendering_id": "C01-L1",
+    "case_id": "C01",
+    "rendering_level": "L1",
+    "text": "The purchase costs USD 25,000. The supplier is approved. The information is classified as public. The service will be deployed internally. The contract is for 12 months. No exception has been approved."
+  },
+  {
+    "rendering_id": "C01-L2",
+    "case_id": "C01",
+    "rendering_level": "L2",
+    "text": "The operations team proposes a 12-month agreement for an internally deployed service, with a total value of USD 25,000, using an approved supplier. The service will handle information classified as public. No exception has been approved."
+  },
+  {
+    "rendering_id": "C01-L3",
+    "case_id": "C01",
+    "rendering_level": "L3",
+    "text": "The operations team is preparing a service to support its regional workflow. It would be deployed internally using a supplier that is already approved, and the information involved is classified as public. The proposed agreement runs for 12 months, with a total purchase value of USD 25,000. No exception has been approved."
+  },
+  {
+    "rendering_id": "C02-L1",
+    "case_id": "C02",
+    "rendering_level": "L1",
+    "text": "The purchase costs USD 75,000. The supplier is approved. The information is classified as internal. The service will be deployed internally. The contract is for 12 months. No exception has been approved."
+  },
+  {
+    "rendering_id": "C02-L2",
+    "case_id": "C02",
+    "rendering_level": "L2",
+    "text": "The business unit proposes a 12-month agreement for an internally deployed service, with a total value of USD 75,000, using an approved supplier. The service will handle information classified as internal. No exception has been approved."
+  },
+  {
+    "rendering_id": "C02-L3",
+    "case_id": "C02",
+    "rendering_level": "L3",
+    "text": "A business unit is preparing an internally deployed service for an upcoming operational need, using a supplier that is already approved. The agreement would run for 12 months and has a total value of USD 75,000. The information the service will handle is classified as internal. No exception has been approved."
+  },
+  {
+    "rendering_id": "C03-L1",
+    "case_id": "C03",
+    "rendering_level": "L1",
+    "text": "The purchase costs USD 125,000. The supplier is approved. The information is classified as public. The service will be deployed internally. The contract is for 12 months. No exception has been approved."
+  },
+  {
+    "rendering_id": "C03-L2",
+    "case_id": "C03",
+    "rendering_level": "L2",
+    "text": "The programme team proposes a 12-month agreement for an internally deployed service, with a total value of USD 125,000, using an approved supplier. The service will handle information classified as public. No exception has been approved."
+  },
+  {
+    "rendering_id": "C03-L3",
+    "case_id": "C03",
+    "rendering_level": "L3",
+    "text": "As part of normal programme planning, the team proposes to use an approved supplier for a service deployed internally within the organisation. The information involved is classified as public. Commercially, the proposed 12-month agreement has a total purchase value of USD 125,000, and no exception has been approved."
+  },
+  {
+    "rendering_id": "C04-L1",
+    "case_id": "C04",
+    "rendering_level": "L1",
+    "text": "The purchase costs USD 25,000. The supplier is unapproved. The information is classified as public. The service will be deployed internally. The contract is for 12 months. No exception has been approved."
+  },
+  {
+    "rendering_id": "C04-L2",
+    "case_id": "C04",
+    "rendering_level": "L2",
+    "text": "The service team proposes a 12-month agreement for an internally deployed service, with a total value of USD 25,000, using a supplier that is currently unapproved. The service will handle information classified as public. No exception has been approved."
+  },
+  {
+    "rendering_id": "C04-L3",
+    "case_id": "C04",
+    "rendering_level": "L3",
+    "text": "The service team is planning an internally deployed service to support an existing process. Its preferred supplier is currently unapproved, while the information to be handled is classified as public. The proposal is for 12 months at a total purchase value of USD 25,000. No exception has been approved."
+  },
+  {
+    "rendering_id": "C05-L1",
+    "case_id": "C05",
+    "rendering_level": "L1",
+    "text": "The purchase costs USD 25,000. The supplier is approved. The information is classified as confidential. The service will use external SaaS. The contract is for 12 months. No exception has been approved."
+  },
+  {
+    "rendering_id": "C05-L2",
+    "case_id": "C05",
+    "rendering_level": "L2",
+    "text": "The regional team proposes a 12-month agreement for an externally hosted SaaS service, with a total value of USD 25,000, using an approved supplier. The service will handle information classified as confidential. No exception has been approved."
+  },
+  {
+    "rendering_id": "C05-L3",
+    "case_id": "C05",
+    "rendering_level": "L3",
+    "text": "A regional team is considering a service that would process information classified as confidential in the supplier's externally hosted SaaS environment. The supplier is already approved. The proposed agreement would run for 12 months with a total purchase value of USD 25,000, and no exception has been approved."
+  },
+  {
+    "rendering_id": "C06-L1",
+    "case_id": "C06",
+    "rendering_level": "L1",
+    "text": "The purchase costs USD 25,000. The supplier is approved. The information is classified as restricted. The service will use external SaaS. The contract is for 12 months. No exception has been approved."
+  },
+  {
+    "rendering_id": "C06-L2",
+    "case_id": "C06",
+    "rendering_level": "L2",
+    "text": "The project team proposes a 12-month agreement for an externally hosted SaaS service, with a total value of USD 25,000, using an approved supplier. The service will handle information classified as restricted. No exception has been approved."
+  },
+  {
+    "rendering_id": "C06-L3",
+    "case_id": "C06",
+    "rendering_level": "L3",
+    "text": "For an upcoming operational requirement, the project team proposes to use an approved supplier whose externally hosted SaaS environment would process information classified as restricted. The agreement is planned for 12 months at a total value of USD 25,000. No exception has been approved."
+  },
+  {
+    "rendering_id": "C07-L1",
+    "case_id": "C07",
+    "rendering_level": "L1",
+    "text": "The purchase costs USD 25,000. The supplier is approved. The information is classified as restricted. The service will be deployed internally. The contract is for 12 months. No exception has been approved."
+  },
+  {
+    "rendering_id": "C07-L2",
+    "case_id": "C07",
+    "rendering_level": "L2",
+    "text": "The operations team proposes a 12-month agreement for an internally deployed service, with a total value of USD 25,000, using an approved supplier. The service will handle information classified as restricted. No exception has been approved."
+  },
+  {
+    "rendering_id": "C07-L3",
+    "case_id": "C07",
+    "rendering_level": "L3",
+    "text": "The proposed service would remain deployed internally within the organisation and would handle information classified as restricted. The supplier selected for the work is already approved. The commercial proposal covers 12 months with a total purchase value of USD 25,000, and no exception has been approved."
+  },
+  {
+    "rendering_id": "C08-L1",
+    "case_id": "C08",
+    "rendering_level": "L1",
+    "text": "The purchase costs USD 25,000. The supplier is approved. The information is classified as public. The service will be deployed internally. The contract is for 30 months. No exception has been approved."
+  },
+  {
+    "rendering_id": "C08-L2",
+    "case_id": "C08",
+    "rendering_level": "L2",
+    "text": "The business unit proposes a 30-month agreement for an internally deployed service, with a total value of USD 25,000, using an approved supplier. The service will handle information classified as public. No exception has been approved."
+  },
+  {
+    "rendering_id": "C08-L3",
+    "case_id": "C08",
+    "rendering_level": "L3",
+    "text": "An existing operational process would be supported by a service deployed internally using an approved supplier. The information involved is classified as public. The proposed agreement has a total value of USD 25,000 and would run for 30 months. No exception has been approved."
+  },
+  {
+    "rendering_id": "C09-L1",
+    "case_id": "C09",
+    "rendering_level": "L1",
+    "text": "The purchase costs USD 49,999. The supplier is approved. The information is classified as public. The service will be deployed internally. The contract is for 24 months. No exception has been approved."
+  },
+  {
+    "rendering_id": "C09-L2",
+    "case_id": "C09",
+    "rendering_level": "L2",
+    "text": "The programme team proposes a 24-month agreement for an internally deployed service, with a total value of USD 49,999, using an approved supplier. The service will handle information classified as public. No exception has been approved."
+  },
+  {
+    "rendering_id": "C09-L3",
+    "case_id": "C09",
+    "rendering_level": "L3",
+    "text": "The initiative would use an approved supplier for a service deployed internally within the organisation, handling information classified as public. Its proposed term is 24 months. The total purchase value is USD 49,999, and no exception has been approved."
+  },
+  {
+    "rendering_id": "C10-L1",
+    "case_id": "C10",
+    "rendering_level": "L1",
+    "text": "The purchase costs USD 50,000. The supplier is approved. The information is classified as public. The service will be deployed internally. The contract is for 24 months. No exception has been approved."
+  },
+  {
+    "rendering_id": "C10-L2",
+    "case_id": "C10",
+    "rendering_level": "L2",
+    "text": "The service team proposes a 24-month agreement for an internally deployed service, with a total value of USD 50,000, using an approved supplier. The service will handle information classified as public. No exception has been approved."
+  },
+  {
+    "rendering_id": "C10-L3",
+    "case_id": "C10",
+    "rendering_level": "L3",
+    "text": "A service is being prepared for internal deployment using a supplier that is already approved. It will handle information classified as public. The proposed agreement runs for 24 months at a total purchase value of USD 50,000. No exception has been approved."
+  },
+  {
+    "rendering_id": "C11-L1",
+    "case_id": "C11",
+    "rendering_level": "L1",
+    "text": "The purchase costs USD 50,001. The supplier is approved. The information is classified as public. The service will be deployed internally. The contract is for 24 months. No exception has been approved."
+  },
+  {
+    "rendering_id": "C11-L2",
+    "case_id": "C11",
+    "rendering_level": "L2",
+    "text": "The regional team proposes a 24-month agreement for an internally deployed service, with a total value of USD 50,001, using an approved supplier. The service will handle information classified as public. No exception has been approved."
+  },
+  {
+    "rendering_id": "C11-L3",
+    "case_id": "C11",
+    "rendering_level": "L3",
+    "text": "The business proposal concerns an internally deployed service that will handle information classified as public. An approved supplier would provide the service under a 24-month agreement. The total purchase value is USD 50,001, and no exception has been approved."
+  },
+  {
+    "rendering_id": "C12-L1",
+    "case_id": "C12",
+    "rendering_level": "L1",
+    "text": "The purchase costs USD 99,999. The supplier is approved. The information is classified as public. The service will be deployed internally. The contract is for 24 months. No exception has been approved."
+  },
+  {
+    "rendering_id": "C12-L2",
+    "case_id": "C12",
+    "rendering_level": "L2",
+    "text": "The project team proposes a 24-month agreement for an internally deployed service, with a total value of USD 99,999, using an approved supplier. The service will handle information classified as public. No exception has been approved."
+  },
+  {
+    "rendering_id": "C12-L3",
+    "case_id": "C12",
+    "rendering_level": "L3",
+    "text": "For a routine operational requirement, the team plans an internally deployed service with an approved supplier. The service will handle information classified as public, while the proposed contract term is 24 months. Its total purchase value is USD 99,999. No exception has been approved."
+  },
+  {
+    "rendering_id": "C13-L1",
+    "case_id": "C13",
+    "rendering_level": "L1",
+    "text": "The purchase costs USD 100,000. The supplier is approved. The information is classified as public. The service will be deployed internally. The contract is for 24 months. No exception has been approved."
+  },
+  {
+    "rendering_id": "C13-L2",
+    "case_id": "C13",
+    "rendering_level": "L2",
+    "text": "The operations team proposes a 24-month agreement for an internally deployed service, with a total value of USD 100,000, using an approved supplier. The service will handle information classified as public. No exception has been approved."
+  },
+  {
+    "rendering_id": "C13-L3",
+    "case_id": "C13",
+    "rendering_level": "L3",
+    "text": "The programme team proposes to deploy the service internally and use a supplier that is already approved. Information handled by the service is classified as public. The agreement would run for 24 months with a total purchase value of USD 100,000, and no exception has been approved."
+  },
+  {
+    "rendering_id": "C14-L1",
+    "case_id": "C14",
+    "rendering_level": "L1",
+    "text": "The purchase costs USD 100,001. The supplier is approved. The information is classified as public. The service will be deployed internally. The contract is for 24 months. No exception has been approved."
+  },
+  {
+    "rendering_id": "C14-L2",
+    "case_id": "C14",
+    "rendering_level": "L2",
+    "text": "The business unit proposes a 24-month agreement for an internally deployed service, with a total value of USD 100,001, using an approved supplier. The service will handle information classified as public. No exception has been approved."
+  },
+  {
+    "rendering_id": "C14-L3",
+    "case_id": "C14",
+    "rendering_level": "L3",
+    "text": "An approved supplier has been selected for a service that would be deployed internally within the organisation. The service will handle information classified as public. Commercial terms call for a 24-month agreement with a total purchase value of USD 100,001. No exception has been approved."
+  },
+  {
+    "rendering_id": "C15-L1",
+    "case_id": "C15",
+    "rendering_level": "L1",
+    "text": "The purchase costs USD 25,000. The supplier is approved. The information is classified as public. The service will be deployed internally. The contract is for 25 months. No exception has been approved."
+  },
+  {
+    "rendering_id": "C15-L2",
+    "case_id": "C15",
+    "rendering_level": "L2",
+    "text": "The programme team proposes a 25-month agreement for an internally deployed service, with a total value of USD 25,000, using an approved supplier. The service will handle information classified as public. No exception has been approved."
+  },
+  {
+    "rendering_id": "C15-L3",
+    "case_id": "C15",
+    "rendering_level": "L3",
+    "text": "The service would support an existing business process and remain deployed internally within the organisation. Its supplier is already approved, and the information involved is classified as public. The proposed agreement has a total value of USD 25,000 and a term of 25 months. No exception has been approved."
+  },
+  {
+    "rendering_id": "C16-L1",
+    "case_id": "C16",
+    "rendering_level": "L1",
+    "text": "The purchase costs USD 80,000. The supplier is unapproved. The information is classified as confidential. The service will use external SaaS. The contract is for 12 months. No exception has been approved."
+  },
+  {
+    "rendering_id": "C16-L2",
+    "case_id": "C16",
+    "rendering_level": "L2",
+    "text": "The service team proposes a 12-month agreement for an externally hosted SaaS service, with a total value of USD 80,000, using a supplier that is currently unapproved. The service will handle information classified as confidential. No exception has been approved."
+  },
+  {
+    "rendering_id": "C16-L3",
+    "case_id": "C16",
+    "rendering_level": "L3",
+    "text": "The service team proposes to process information classified as confidential in a supplier's externally hosted SaaS environment. The supplier is currently unapproved. The commercial proposal is for 12 months at a total purchase value of USD 80,000, and no exception has been approved."
+  },
+  {
+    "rendering_id": "C17-L1",
+    "case_id": "C17",
+    "rendering_level": "L1",
+    "text": "The purchase costs USD 120,000. The supplier is unapproved. The information is classified as restricted. The service will use external SaaS. The contract is for 12 months. No exception has been approved."
+  },
+  {
+    "rendering_id": "C17-L2",
+    "case_id": "C17",
+    "rendering_level": "L2",
+    "text": "The regional team proposes a 12-month agreement for an externally hosted SaaS service, with a total value of USD 120,000, using a supplier that is currently unapproved. The service will handle information classified as restricted. No exception has been approved."
+  },
+  {
+    "rendering_id": "C17-L3",
+    "case_id": "C17",
+    "rendering_level": "L3",
+    "text": "A regional initiative is considering an externally hosted SaaS service that would process information classified as restricted. The proposed supplier is currently unapproved. The agreement would run for 12 months and has a total purchase value of USD 120,000. No exception has been approved."
+  },
+  {
+    "rendering_id": "C18-L1",
+    "case_id": "C18",
+    "rendering_level": "L1",
+    "text": "The purchase costs USD 120,000. The supplier is approved. The information is classified as restricted. The service will use external SaaS. The contract is for 30 months. No exception has been approved."
+  },
+  {
+    "rendering_id": "C18-L2",
+    "case_id": "C18",
+    "rendering_level": "L2",
+    "text": "The project team proposes a 30-month agreement for an externally hosted SaaS service, with a total value of USD 120,000, using an approved supplier. The service will handle information classified as restricted. No exception has been approved."
+  },
+  {
+    "rendering_id": "C18-L3",
+    "case_id": "C18",
+    "rendering_level": "L3",
+    "text": "The proposed service would process information classified as restricted in the supplier's externally hosted SaaS environment. The supplier is already approved. The commercial arrangement has a total purchase value of USD 120,000 and would run for 30 months. No exception has been approved."
+  },
+  {
+    "rendering_id": "C19-L1",
+    "case_id": "C19",
+    "rendering_level": "L1",
+    "text": "The purchase costs USD 120,000. The supplier is unapproved. The information is classified as restricted. The service will use external SaaS. The contract is for 30 months. No exception has been approved."
+  },
+  {
+    "rendering_id": "C19-L2",
+    "case_id": "C19",
+    "rendering_level": "L2",
+    "text": "The operations team proposes a 30-month agreement for an externally hosted SaaS service, with a total value of USD 120,000, using a supplier that is currently unapproved. The service will handle information classified as restricted. No exception has been approved."
+  },
+  {
+    "rendering_id": "C19-L3",
+    "case_id": "C19",
+    "rendering_level": "L3",
+    "text": "As part of normal business planning, the team is considering a supplier that is currently unapproved for an externally hosted SaaS service. The service would process information classified as restricted. The proposed agreement runs for 30 months at a total purchase value of USD 120,000. No exception has been approved."
+  },
+  {
+    "rendering_id": "C20-L1",
+    "case_id": "C20",
+    "rendering_level": "L1",
+    "text": "The purchase costs USD 80,000. The supplier is unapproved. The information is classified as restricted. The service will use external SaaS. The contract is for 30 months. An approved exception applies only to the vendor approval requirement."
+  },
+  {
+    "rendering_id": "C20-L2",
+    "case_id": "C20",
+    "rendering_level": "L2",
+    "text": "The business unit proposes a 30-month agreement for an externally hosted SaaS service, with a total value of USD 80,000, using a supplier that is currently unapproved. The service will handle information classified as restricted. An approved exception applies only to the vendor approval requirement."
+  },
+  {
+    "rendering_id": "C20-L3",
+    "case_id": "C20",
+    "rendering_level": "L3",
+    "text": "The operations group is preparing to introduce the service as part of an existing business process. The preferred supplier is currently unapproved, although an approved exception has been recorded specifically for the vendor approval requirement. Commercially, the proposal is for 30 months at a total value of USD 80,000. The service itself would operate in the supplier's externally hosted SaaS environment, and the information it will process is classified as restricted."
+  },
+  {
+    "rendering_id": "C21-L1",
+    "case_id": "C21",
+    "rendering_level": "L1",
+    "text": "The purchase costs USD 80,000. The supplier is unapproved. The information is classified as restricted. The service will use external SaaS. The contract is for 30 months. An approved exception applies only to external processing of restricted information."
+  },
+  {
+    "rendering_id": "C21-L2",
+    "case_id": "C21",
+    "rendering_level": "L2",
+    "text": "The programme team proposes a 30-month agreement for an externally hosted SaaS service, with a total value of USD 80,000, using a supplier that is currently unapproved. The service will handle information classified as restricted. An approved exception applies only to external processing of restricted information."
+  },
+  {
+    "rendering_id": "C21-L3",
+    "case_id": "C21",
+    "rendering_level": "L3",
+    "text": "The proposed 30-month service would use a supplier that is currently unapproved and has a total purchase value of USD 80,000. It would process information classified as restricted in the supplier's externally hosted SaaS environment. An approved exception is on record specifically for external processing of restricted information."
+  },
+  {
+    "rendering_id": "C22-L1",
+    "case_id": "C22",
+    "rendering_level": "L1",
+    "text": "The purchase costs USD 80,000. The supplier is unapproved. The information is classified as restricted. The service will use external SaaS. The contract is for 30 months. An approved exception covers both the vendor approval requirement and external processing of restricted information."
+  },
+  {
+    "rendering_id": "C22-L2",
+    "case_id": "C22",
+    "rendering_level": "L2",
+    "text": "The service team proposes a 30-month agreement for an externally hosted SaaS service, with a total value of USD 80,000, using a supplier that is currently unapproved. The service will handle information classified as restricted. An approved exception covers both the vendor approval requirement and external processing of restricted information."
+  },
+  {
+    "rendering_id": "C22-L3",
+    "case_id": "C22",
+    "rendering_level": "L3",
+    "text": "A business unit proposes an externally hosted SaaS service using a supplier that is currently unapproved. The information to be processed is classified as restricted, and the commercial proposal covers 30 months at a total value of USD 80,000. An approved exception is on record whose scope covers both the vendor approval requirement and external processing of restricted information."
+  },
+  {
+    "rendering_id": "C23-L1",
+    "case_id": "C23",
+    "rendering_level": "L1",
+    "text": "The purchase costs USD 120,000. The supplier is prohibited. The information is classified as restricted. The service will use external SaaS. The contract is for 30 months. No exception has been approved."
+  },
+  {
+    "rendering_id": "C23-L2",
+    "case_id": "C23",
+    "rendering_level": "L2",
+    "text": "The regional team proposes a 30-month agreement for an externally hosted SaaS service, with a total value of USD 120,000, using a supplier whose status is prohibited. The service will handle information classified as restricted. No exception has been approved."
+  },
+  {
+    "rendering_id": "C23-L3",
+    "case_id": "C23",
+    "rendering_level": "L3",
+    "text": "A 30-month service proposal is being prepared with a total purchase value of USD 120,000. The information involved is classified as restricted and would be processed in the supplier's externally hosted SaaS environment. The proposed supplier is explicitly recorded as prohibited. No exception has been approved, and the service is intended to support an existing operational process."
+  },
+  {
+    "rendering_id": "C24-L1",
+    "case_id": "C24",
+    "rendering_level": "L1",
+    "text": "The purchase costs USD 120,000. The supplier is prohibited. The information is classified as restricted. The service will use external SaaS. The contract is for 30 months. An approved exception covers both the vendor approval requirement and external processing of restricted information."
+  },
+  {
+    "rendering_id": "C24-L2",
+    "case_id": "C24",
+    "rendering_level": "L2",
+    "text": "The project team proposes a 30-month agreement for an externally hosted SaaS service, with a total value of USD 120,000, using a supplier whose status is prohibited. The service will handle information classified as restricted. An approved exception covers both the vendor approval requirement and external processing of restricted information."
+  },
+  {
+    "rendering_id": "C24-L3",
+    "case_id": "C24",
+    "rendering_level": "L3",
+    "text": "The proposed service would process information classified as restricted in the supplier's externally hosted SaaS environment under a 30-month agreement valued at USD 120,000. The supplier is explicitly recorded as prohibited. An approved exception is also on record, with a scope covering both the vendor approval requirement and external processing of restricted information."
+  },
+  {
+    "rendering_id": "C25-L1",
+    "case_id": "C25",
+    "rendering_level": "L1",
+    "text": "The purchase costs USD 25,000. The supplier is approved. The information is classified as public. The service will use external SaaS. The contract is for 12 months. No exception has been approved."
+  },
+  {
+    "rendering_id": "C25-L2",
+    "case_id": "C25",
+    "rendering_level": "L2",
+    "text": "The operations team proposes a 12-month agreement for an externally hosted SaaS service, with a total value of USD 25,000, using an approved supplier. The service will handle information classified as public. No exception has been approved."
+  },
+  {
+    "rendering_id": "C25-L3",
+    "case_id": "C25",
+    "rendering_level": "L3",
+    "text": "For a routine regional requirement, the team is considering an externally hosted SaaS service from a supplier that is already approved. The service would handle information classified as public. The proposed agreement runs for 12 months at a total purchase value of USD 25,000, and no exception has been approved."
+  },
+  {
+    "rendering_id": "C26-L1",
+    "case_id": "C26",
+    "rendering_level": "L1",
+    "text": "The purchase costs USD 25,000. The supplier is approved. The information is classified as internal. The service will use external SaaS. The contract is for 12 months. No exception has been approved."
+  },
+  {
+    "rendering_id": "C26-L2",
+    "case_id": "C26",
+    "rendering_level": "L2",
+    "text": "The business unit proposes a 12-month agreement for an externally hosted SaaS service, with a total value of USD 25,000, using an approved supplier. The service will handle information classified as internal. No exception has been approved."
+  },
+  {
+    "rendering_id": "C26-L3",
+    "case_id": "C26",
+    "rendering_level": "L3",
+    "text": "An approved supplier would provide the proposed service through its externally hosted SaaS environment. The information to be handled is classified as internal. Commercially, the proposal is for 12 months with a total purchase value of USD 25,000. No exception has been approved."
+  },
+  {
+    "rendering_id": "C27-L1",
+    "case_id": "C27",
+    "rendering_level": "L1",
+    "text": "The purchase costs USD 80,000. The supplier is approved. The information is classified as confidential. The service will use external SaaS. The contract is for 12 months. An approved exception applies only to external processing of restricted information."
+  },
+  {
+    "rendering_id": "C27-L2",
+    "case_id": "C27",
+    "rendering_level": "L2",
+    "text": "The programme team proposes a 12-month agreement for an externally hosted SaaS service, with a total value of USD 80,000, using an approved supplier. The service will handle information classified as confidential. An approved exception applies only to external processing of restricted information."
+  },
+  {
+    "rendering_id": "C27-L3",
+    "case_id": "C27",
+    "rendering_level": "L3",
+    "text": "The programme team is considering an externally hosted SaaS service for an upcoming business requirement. The supplier is already approved, and the proposed agreement would run for 12 months at a value of USD 80,000. An approved exception is on record, but its scope is limited specifically to external processing of restricted information. The information this service will actually process is classified as confidential."
+  },
+  {
+    "rendering_id": "C28-L1",
+    "case_id": "C28",
+    "rendering_level": "L1",
+    "text": "The purchase costs USD 80,000. The supplier is unapproved. The information is classified as public. The service will be deployed internally. The contract is for 12 months. An approved exception applies only to external processing of restricted information."
+  },
+  {
+    "rendering_id": "C28-L2",
+    "case_id": "C28",
+    "rendering_level": "L2",
+    "text": "The service team proposes a 12-month agreement for an internally deployed service, with a total value of USD 80,000, using a supplier that is currently unapproved. The service will handle information classified as public. An approved exception applies only to external processing of restricted information."
+  },
+  {
+    "rendering_id": "C28-L3",
+    "case_id": "C28",
+    "rendering_level": "L3",
+    "text": "The proposed service would be deployed internally within the organisation and would handle information classified as public. Its supplier is currently unapproved, while the commercial proposal is for 12 months at a total purchase value of USD 80,000. An approved exception is on record specifically for external processing of restricted information."
+  },
+  {
+    "rendering_id": "C29-L1",
+    "case_id": "C29",
+    "rendering_level": "L1",
+    "text": "The purchase costs USD 80,000. The supplier is approved. The information is classified as restricted. The service will use external SaaS. The contract is for 12 months. An approved exception applies only to the vendor approval requirement."
+  },
+  {
+    "rendering_id": "C29-L2",
+    "case_id": "C29",
+    "rendering_level": "L2",
+    "text": "The regional team proposes a 12-month agreement for an externally hosted SaaS service, with a total value of USD 80,000, using an approved supplier. The service will handle information classified as restricted. An approved exception applies only to the vendor approval requirement."
+  },
+  {
+    "rendering_id": "C29-L3",
+    "case_id": "C29",
+    "rendering_level": "L3",
+    "text": "The regional team proposes an externally hosted SaaS service that will process information classified as restricted. The supplier is already approved, and the proposed agreement is for 12 months at a total value of USD 80,000. An approved exception has been recorded specifically for the vendor approval requirement."
+  },
+  {
+    "rendering_id": "C30-L1",
+    "case_id": "C30",
+    "rendering_level": "L1",
+    "text": "The purchase costs USD 80,000. The supplier is approved. The information is classified as public. The service will be deployed internally. The contract is for 30 months. An approved exception covers both the vendor approval requirement and external processing of restricted information."
+  },
+  {
+    "rendering_id": "C30-L2",
+    "case_id": "C30",
+    "rendering_level": "L2",
+    "text": "The project team proposes a 30-month agreement for an internally deployed service, with a total value of USD 80,000, using an approved supplier. The service will handle information classified as public. An approved exception covers both the vendor approval requirement and external processing of restricted information."
+  },
+  {
+    "rendering_id": "C30-L3",
+    "case_id": "C30",
+    "rendering_level": "L3",
+    "text": "An internally deployed service is being proposed using a supplier that is already approved, with information classified as public. The commercial arrangement would run for 30 months and has a total purchase value of USD 80,000. An approved exception is on record whose scope covers both the vendor approval requirement and external processing of restricted information."
+  }
+]

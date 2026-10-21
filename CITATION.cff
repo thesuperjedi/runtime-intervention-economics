@@ -1,0 +1,13 @@
+{
+  "cff-version": "1.2.0",
+  "message": "If you use this research software, please cite Jaidev using this metadata. See LICENSE.md for material-specific licence scopes; public release requires separate approval.",
+  "title": "Runtime intervention economics",
+  "type": "software",
+  "version": "1.2.0-rc.1",
+  "abstract": "Offline research calculations for E0-E3 and EX1 by Jaidev, Independent Researcher. AI-assisted development and verification are acknowledged; generated experimental responses, original research material and hypothetical analyses are distinguished.",
+  "authors": [
+    {
+      "given-names": "Jaidev"
+    }
+  ]
+}

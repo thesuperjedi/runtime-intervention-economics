@@ -1,0 +1,49 @@
+{
+  "version": "1.1.0-rc.1",
+  "parent_version": "PUBLIC-1.0",
+  "parent_manifest_sha256": "37842520cafa7593d8c2e0dbec7496d153467e8539f23e2a65de9a39455cc02a",
+  "changed_before_sealing": {
+    "README.md": {
+      "previous_sha256": "6c5743338d4900e2913bdc601437f7c40006e2c2413abe21a541d3b3c924292f",
+      "candidate_sha256": "1db50a74f267dd712f97480bbb36ac8edd71132704d5ca83720bd4a4e8b0eafc"
+    },
+    "RIGHTS_AND_RELEASE_STATUS.md": {
+      "previous_sha256": "b319b1ab422f45c0b8010d9e79f9df2ad9ebb69886e834c7d47b1e2f45e3ae43",
+      "candidate_sha256": "bbea81f9fb43a139eaeefd85b4346b3e1f9b0e2b1d37def068be06fa0c9ce7f6"
+    },
+    "scan_release.py": {
+      "previous_sha256": "64fe81f6b23014d7050c2ca018b267c1207f99f06fa56c4fe5c0d2966f73a7f6",
+      "candidate_sha256": "a8ab8b084482df8f3234828dbe3814cab854cd311995f10e32590a7d35921252"
+    },
+    "docs/adapting-a-domain.md": {
+      "previous_sha256": "ab87052a473a1b4fc1e91638d22593ec3c8f08fe6b2b689fa997ebb950bb846d",
+      "candidate_sha256": "9a1decf03c8262c84484344b91bcd5a97ff436721e0c140820dabcfef45ad26a"
+    },
+    "docs/reproduction.md": {
+      "previous_sha256": "f27aabb9412990b02f79257b4cd65dda78274117714513eadf05ad05825b1515",
+      "candidate_sha256": "1aadc359e2ee7a617d36272942baa0a70e91d55e14516b6d5e8e21aabf166cbe"
+    }
+  },
+  "added_before_sealing": [
+    "ATTRIBUTION.md",
+    "CITATION.cff",
+    "LICENCE_OPTIONS.md",
+    "PUBLICATION_BLOCKERS_v1_1_rc1.md",
+    "docs/findings.md",
+    "tests/test_release_docs.py",
+    "verification/RELEASE_CANDIDATE_REPORT_v1_1_rc1.md",
+    "verification/rc1_commands.json",
+    "verification/rc1_preservation.json",
+    "verification/rc1_reproduction.json"
+  ],
+  "deleted_files": [],
+  "scientific_files_unchanged": 2957,
+  "tests_passed": 114,
+  "tests_failed": 0,
+  "full_scientific_reproduction": true,
+  "attribution_confirmed": "Independent Researcher role only",
+  "citation_status": "DRAFT_INCOMPLETE_AUTHOR_UNCONFIRMED",
+  "licences_selected": false,
+  "publication_authorized": false,
+  "note": "PACKAGED_FILES and package_inventory are updated as sealing bookkeeping; this manifest is not an external signature."
+}

@@ -1,0 +1,112 @@
+{
+  "schema_version": "0.3-instrumented",
+  "experiment": "E2",
+  "run_id": "E2F-E1F-C03-L1-cheap-R001-cheap_validator-R001",
+  "case_id": "C03",
+  "rendering_id": "C03-L1",
+  "rendering_level": "L1",
+  "validator_role": "cheap_validator",
+  "requested_model": "gemini-3.5-flash-lite",
+  "provider_model": "gemini-3.5-flash-lite",
+  "provider_status": "completed",
+  "execution_config_version": "1.0-pilot",
+  "source_cheap_run_id": "E1F-C03-L1-cheap-R001",
+  "paired_strong_run_id": "E1F-C03-L1-strong-R001",
+  "candidate_controls": [
+    "SENIOR_FINANCIAL_APPROVAL"
+  ],
+  "success": true,
+  "response_valid": true,
+  "response_text": "{\n  \"verdict\": \"PASS\"\n}",
+  "parsed_response": {
+    "verdict": "PASS"
+  },
+  "usage": {
+    "input_tokens_by_modality": [
+      {
+        "modality": "text",
+        "tokens": 942
+      }
+    ],
+    "total_cached_tokens": 0,
+    "total_input_tokens": 942,
+    "total_output_tokens": 12,
+    "total_thought_tokens": 106,
+    "total_tokens": 1060,
+    "total_tool_use_tokens": 0,
+    "raw_prompt_token": 1044,
+    "model_invocation_token_counts": [
+      {
+        "prompt_tokens_details": [
+          {
+            "modality": "text",
+            "tokens": 1044
+          }
+        ],
+        "candidates_tokens_details": [
+          {
+            "modality": "text",
+            "tokens": 31
+          }
+        ],
+        "thoughts_tokens_details": [
+          {
+            "modality": "text",
+            "tokens": 106
+          }
+        ]
+      }
+    ],
+    "non_grounding_model_invocation_token_counts": [
+      {
+        "prompt_tokens_details": [
+          {
+            "modality": "text",
+            "tokens": 1044
+          }
+        ],
+        "candidates_tokens_details": [
+          {
+            "modality": "text",
+            "tokens": 31
+          }
+        ],
+        "thoughts_tokens_details": [
+          {
+            "modality": "text",
+            "tokens": 106
+          }
+        ]
+      }
+    ]
+  },
+  "request": {
+    "temperature": 0,
+    "thinking_level": "low",
+    "store": false,
+    "prompt": "AUTHORITATIVE POLICY\n\nE1 SYNTHETIC PROCUREMENT AND INFORMATION-RISK POLICY\nVersion 1.0\n\nPURPOSE\n\nThis policy defines the controls that apply to procurement requests based on\npurchase value, supplier status, information classification, deployment model,\ncontract duration, and approved exceptions.\n\nAll applicable controls must be identified unless the request is prohibited.\n\n\n1. FINANCIAL AUTHORITY\n\nEvery non-prohibited procurement request requires exactly one financial\napproval.\n\n1.1 A purchase with a value of USD 50,000 or less requires:\n\nSTANDARD_FINANCIAL_APPROVAL\n\n1.2 A purchase with a value greater than USD 50,000 and less than or equal to\nUSD 100,000 requires:\n\nENHANCED_FINANCIAL_APPROVAL\n\n1.3 A purchase with a value greater than USD 100,000 requires:\n\nSENIOR_FINANCIAL_APPROVAL\n\n\n2. SUPPLIER CONTROLS\n\n2.1 An approved supplier requires no additional supplier control.\n\n2.2 An unapproved supplier requires:\n\nSUPPLIER_DUE_DILIGENCE\n\nThis requirement does not apply if there is an approved exception whose scope\ncovers the vendor requirement.\n\n2.3 A prohibited supplier results in:\n\nPROHIBITED\n\nA prohibited-supplier determination is terminal. If the supplier is prohibited,\nthe request is prohibited and no other controls are returned.\n\nA normal approved exception cannot override a prohibited-supplier\ndetermination.\n\n\n3. INFORMATION-RISK CONTROLS\n\n3.1 Public or internal information requires no additional information-security\ncontrol under this policy.\n\n3.2 Confidential information processed using an external SaaS deployment\nrequires:\n\nSECURITY_REVIEW\n\n3.3 Restricted information processed using an external SaaS deployment\nrequires:\n\nENHANCED_SECURITY_REVIEW\n\nThis requirement does not apply if there is an approved exception whose scope\ncovers external processing of restricted information.\n\n3.4 Restricted information processed using an internal deployment requires:\n\nSECURITY_REVIEW\n\n\n4. CONTRACT-DURATION CONTROL\n\nA contract with a duration greater than 24 months requires:\n\nCONTRACT_REVIEW\n\nA contract of exactly 24 months does not require CONTRACT_REVIEW under this\nrule.\n\n\n5. EXCEPTIONS\n\nFor purposes of this policy, an exception is either absent or approved.\n\nAn approved exception must have an explicit scope. The permitted scopes are:\n\nvendor\nexternal_restricted_data\nboth\n\nAn exception has effect only when it is approved and only within its stated\nscope.\n\n5.1 An approved exception with scope \"vendor\" suppresses only:\n\nSUPPLIER_DUE_DILIGENCE\n\n5.2 An approved exception with scope \"external_restricted_data\" suppresses\nonly:\n\nENHANCED_SECURITY_REVIEW\n\nwhen that control arises from restricted information being processed using an\nexternal SaaS deployment.\n\n5.3 An approved exception with scope \"both\" suppresses both of the controls\ndescribed in sections 5.1 and 5.2 when they would otherwise apply.\n\n5.4 No exception defined by this policy suppresses:\n\nSTANDARD_FINANCIAL_APPROVAL\nENHANCED_FINANCIAL_APPROVAL\nSENIOR_FINANCIAL_APPROVAL\nSECURITY_REVIEW\nCONTRACT_REVIEW\nPROHIBITED\n\n\n6. OUTPUT REQUIREMENT\n\nFor a permitted request, identify all controls required by this policy.\n\nFor a prohibited request, return only:\n\nPROHIBITED\n\nPROCUREMENT REQUEST\n\nThe purchase costs USD 125,000. The supplier is approved. The information is classified as public. The service will be deployed internally. The contract is for 12 months. No exception has been approved.\n\nCANDIDATE CONTROL SET\n\n[\"SENIOR_FINANCIAL_APPROVAL\"]\n\nALLOWED CONTROL NAMES\n\n[\"STANDARD_FINANCIAL_APPROVAL\", \"ENHANCED_FINANCIAL_APPROVAL\", \"SENIOR_FINANCIAL_APPROVAL\", \"SUPPLIER_DUE_DILIGENCE\", \"SECURITY_REVIEW\", \"ENHANCED_SECURITY_REVIEW\", \"CONTRACT_REVIEW\", \"PROHIBITED\"]\n\nVALIDATION TASK\n\nDetermine whether the candidate control set is exactly compliant with the supplied procurement policy for the supplied request.\nReturn PASS only if the candidate contains every control required by the policy and no control that is not required. Otherwise return FAIL.\nEvaluate the candidate independently from the policy and request. Do not assume that the candidate is correct.\nReturn only the verdict using the supplied response schema.\n"
+  },
+  "retry_policy": {
+    "intended": {
+      "automatic_retry": false
+    },
+    "effective_sdk": {
+      "google_genai_version": "2.25.0",
+      "http_retry_options": {
+        "attempts": 0
+      },
+      "interactions_max_retries": 0,
+      "basis": "SDK 2.25.0 constructor normalization corrected before Interactions initialization; effective resource configuration checked",
+      "constructor_normalized_attempts": 1
+    }
+  },
+  "http_execution": {
+    "attempt_count": null,
+    "attempt_count_instrumented": false
+  },
+  "latency_ms": 1620.6596996635199,
+  "sdk_version": "2.25.0",
+  "public_projection_schema": "research-observation-1.0",
+  "actual_provider_charge_usd": null,
+  "actual_provider_charge_sgd": null
+}

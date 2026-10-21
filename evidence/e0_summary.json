@@ -1,0 +1,61 @@
+[
+  {
+    "run_id": "E0B-R001",
+    "success": true,
+    "response_text": "EVAL0_GEMINI_OK",
+    "usage": {
+      "prompt_token_count": 16,
+      "candidates_token_count": 8,
+      "total_token_count": 24,
+      "cached_content_token_count": null,
+      "thoughts_token_count": null
+    },
+    "original_sha256": "949aa934a3875376710c60c474ef95db880a06305cb96f0713b3c3aec0f3e6b1"
+  },
+  {
+    "run_id": "E0B-R002",
+    "success": true,
+    "response_text": "EVAL0_GEMINI_OK",
+    "usage": {
+      "prompt_token_count": 16,
+      "candidates_token_count": 8,
+      "total_token_count": 24,
+      "cached_content_token_count": null,
+      "thoughts_token_count": null
+    },
+    "original_sha256": "89aec186aba3af45dd09382cec94a5d305e2002fbb27fee51847eef5315a5292"
+  },
+  {
+    "run_id": "E0B-R003",
+    "success": true,
+    "response_text": "EVAL0_GEMINI_OK",
+    "usage": {
+      "prompt_token_count": 16,
+      "candidates_token_count": 8,
+      "total_token_count": 24,
+      "cached_content_token_count": null,
+      "thoughts_token_count": null
+    },
+    "original_sha256": "8129ea3ab2cb391327f8249909c0ec7bd13deb0578793ca6e62405342b299da3"
+  },
+  {
+    "run_id": "E0B-R004",
+    "success": true,
+    "response_text": "EVAL0_GEMINI_OK",
+    "usage": {
+      "prompt_token_count": 16,
+      "candidates_token_count": 8,
+      "total_token_count": 24,
+      "cached_content_token_count": null,
+      "thoughts_token_count": null
+    },
+    "original_sha256": "b7e79f82bdda877229bec2867c1559a0723de6c9e6ad6f866ebf1f92fc7177fa"
+  },
+  {
+    "run_id": "E0B-R005",
+    "success": false,
+    "response_text": null,
+    "usage": null,
+    "original_sha256": "f4b5dbb2bd0fae6eb0bcd9fba70c66f9dffb185d81473d47a2eb38d7e16b9c86"
+  }
+]

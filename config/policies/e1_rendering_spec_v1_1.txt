@@ -1,0 +1,56 @@
+E1 Rendering Specification v1.1
+Status: CANDIDATE — not frozen
+
+Purpose
+Create controlled natural-language renderings of each canonical E1 case while preserving the authoritative policy-relevant facts exactly.
+
+General requirements
+1. Every rendering must remain semantically equivalent to its corresponding canonical case.
+2. Do not add, remove, alter, infer, or contradict any policy-relevant fact.
+3. Do not introduce genuine ambiguity or require external knowledge.
+4. Exact threshold-sensitive quantities must remain exact.
+5. Supplier status, data classification, deployment, contract duration, exception approval status, and exception scope must remain unambiguous.
+6. Do not state, imply, or explain the policy controls or answer.
+7. Rendering IDs use Cxx-L1, Cxx-L2, and Cxx-L3.
+
+L1 — EXPLICIT
+Present the canonical facts directly and compactly. L1 may be highly standardized and field-like in prose form. Its purpose is primarily to test policy application with minimal linguistic extraction burden.
+
+L2 — NATURALISTIC
+Express the same canonical facts in ordinary, compact business-request language. Facts may be combined into natural sentences, but must remain clear and unambiguous. Do not add worked reasoning, policy hints, or conclusions.
+
+L3 — DISPERSED NATURALISTIC
+Purpose:
+Test extraction and integration of the same authoritative policy-relevant facts when those facts are distributed through a realistic business narrative rather than presented in a compact or field-like form.
+
+Requirements:
+1. Every policy-relevant fact must remain semantically equivalent to the corresponding canonical case.
+2. All policy-relevant facts must remain definite and unambiguous.
+3. Policy-relevant facts should be distributed across the narrative rather than presented as a sequence of one-fact-per-sentence statements.
+4. Facts may appear in a less convenient order than L1 or L2.
+5. Limited policy-irrelevant business context may occur between relevant facts when it makes the request more natural.
+6. Some sentences may contain more than one policy-relevant fact, while related facts may occur in different parts of the narrative.
+7. L3 should normally require information to be integrated from multiple parts of the text.
+8. Additional context must not introduce new policy-relevant facts, contradict canonical facts, imply missing facts, or require external knowledge.
+9. L3 must not become genuinely ambiguous. Increased extraction effort is not permission to obscure whether a canonical fact is true.
+10. L3 must not state, imply, or explain which policy controls follow from the facts.
+11. L3 must not be created merely by taking L1 and:
+    - adding an introductory sentence;
+    - expanding individual noun phrases;
+    - rearranging otherwise isolated fact sentences;
+    - increasing word count without changing information distribution.
+12. L3 need not be syntactically complex. Difficulty should arise primarily from information distribution and integration, not convoluted grammar.
+13. Exact threshold-sensitive quantities must remain exact. For example, USD 50,000 must not become "about USD 50,000", and 24 months must not become "roughly two years".
+14. Categorical policy facts must remain explicit enough to map unambiguously to the canonical state, particularly supplier status, data classification, internal versus external SaaS deployment, exception approval status, and exception scope.
+15. Exception scope may be expressed using different natural-language formulations across levels, but the rendering must describe the scope of the exception rather than state the resulting policy consequence.
+16. Linguistic variation should be controlled. L3 renderings should not all share a single fixed sentence skeleton, but diversity must not be added merely for stylistic novelty.
+
+Design principle
+Facts(L1) = Facts(L2) = Facts(L3)
+
+Presentation conditions:
+L1 = explicit fact presentation
+L2 = compact natural business request
+L3 = dispersed natural business narrative
+
+L3 is not defined as "harder" by assumption. Whether models actually find L3 harder is an empirical result.

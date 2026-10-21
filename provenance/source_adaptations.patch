@@ -1,0 +1,262 @@
+--- original/src/e2_analyse_full.py
++++ public/src/e2_analyse_full.py
+@@ -16,7 +16,7 @@
+ from pathlib import Path
+ from src.e1_score import score_run
+ from src.e1_analyse_economics import extract_usage, estimate_cost
+-from src.e2_validate import paired_strong_run_id
++from src.offline_join import paired_strong_run_id
+ 
+ ROOT = Path(__file__).resolve().parent.parent
+ 
+--- original/tests/test_e2_full_analysis.py
++++ public/tests/test_e2_full_analysis.py
+@@ -160,16 +160,16 @@
+         rows = result["observations"]
+         self.assertEqual(len(rows),1620)
+         self.assertEqual(len({r["run_id"] for r in rows}),1620)
+-        self.assertEqual({r["status"] for r in rows},{"missing"})
++        self.assertEqual({r["status"] for r in rows},{"valid"})
+         for role in ("cheap_validator","strong_validator"):
+             summary = result["per_model"][role]
+             self.assertEqual(summary["canonical_cases"],30)
+             self.assertEqual(summary["observations"],810)
+-            self.assertEqual(summary["unresolved_final_results"],810)
++            self.assertEqual(summary["unresolved_final_results"],0)
+         first = result["per_model_repetition"]["cheap_validator/R001"]
+         self.assertEqual(first["correct_cheap_valid_coverage"]["denominator"],236)
+         self.assertEqual(first["incorrect_cheap_valid_coverage"]["denominator"],34)
+-        self.assertIsNone(first["costs"]["total"]["complete_total_usd"])
++        self.assertIsNotNone(first["costs"]["total"]["complete_total_usd"])
+ 
+ 
+ if __name__=="__main__":
+--- original/extensions/overlap_v1/prepare.py
++++ public/extensions/overlap_v1/prepare.py
+@@ -139,23 +139,8 @@
+ 
+ 
+ def historical_prompt_templates():
+-    result = {}
+-    for kind, filename in (('solver', 'e1_execute.py'), ('validator', 'e2_validate.py')):
+-        tree = ast.parse((ROOT/'src'/filename).read_text(encoding='utf-8'))
+-        node = next(n.value for n in ast.walk(tree) if isinstance(n, ast.Assign)
+-                    and any(isinstance(t, ast.Name) and t.id == 'prompt' for t in n.targets))
+-        chunks = []
+-        for piece in node.values:
+-            if isinstance(piece, ast.Constant): chunks.append(piece.value); continue
+-            value = ast.unparse(piece.value)
+-            if value == 'policy': key = 'policy'
+-            elif value == "rendering['text']": key = 'rendering_text'
+-            elif 'candidate_controls' in value: key = 'candidate_controls_json'
+-            elif 'allowed_controls' in value: key = 'allowed_controls_json'
+-            else: raise ValueError('unrecognized historical prompt expression')
+-            chunks.append('{'+key+'}')
+-        result[kind] = ''.join(chunks)
+-    return result
++    """PUBLIC ADAPTER: frozen literal templates; execution modules intentionally absent."""
++    return load(DEFAULT_FROZEN/'prompt_templates_v1.json')
+ 
+ 
+ def schemas(allowed):
+@@ -307,21 +292,15 @@
+     policy = (ROOT/'config/policies/e1_policy_v1.txt').read_bytes()
+     with (out/'policy_v1.txt').open('xb') as stream: stream.write(policy)
+     if historical_inventory() != before: raise ValueError('historical evidence changed')
+-    from src.e2_validate import retry_settings
+-    options, retry_policy = retry_settings({'automatic_retry':False})
+-    from google.genai._gaos.google_genai import _translate_retry_config
+-    translated = _translate_retry_config(options)
+-    # SDK helper signature/semantics are checked offline; never instantiate a Client here.
+-    if translated.max_retries != 0: raise ValueError('zero-retry SDK translation failed')
+-    sdk_source = Path(__import__('inspect').getfile(_translate_retry_config))
++    # PUBLIC ADAPTER: no installed-SDK validation; paid execution is absent.
+     hashes = {p.name:sha(p) for p in sorted(out.iterdir()) if p.is_file()}
+     code_hashes = {p.relative_to(ROOT).as_posix():sha(p) for p in sorted(BASE.glob('*.py'))}
+     code_hashes[(BASE/'PROTOCOL_v1.md').relative_to(ROOT).as_posix()] = sha(BASE/'PROTOCOL_v1.md')
+     design = dict(schema_version='1.0', design_id='EX1-1.0', status='FROZEN_PREPARATION_NOT_AUTHORIZED',
+                   files_sha256=hashes, code_and_protocol_sha256=code_hashes,
+-                  installed_google_genai_version=version('google-genai'),
+-                  sdk_retry_source=dict(path=str(sdk_source), sha256=sha(sdk_source)),
+-                  retry_translation_offline=dict(max_retries=translated.max_retries),
++                  installed_google_genai_version=None,
++                  sdk_retry_source=None,
++                  retry_translation_offline=None,
+                   historical_evidence_unchanged=True, historical_file_count=len(before),
+                   primary_outcomes=['joint weak/strong exact correctness among valid paired outputs',
+                     'P(strong_wrong | weak_wrong) and P(strong_wrong | weak_correct)',
+--- original/extensions/overlap_v1/analysis/stage1_v1.py
++++ public/extensions/overlap_v1/analysis/stage1_v1.py
+@@ -3,7 +3,7 @@
+ from collections import Counter,defaultdict
+ import json
+ from pathlib import Path
+-from extensions.overlap_v1 import recovery_v2 as controls
++from extensions.overlap_v1 import offline_controls as controls
+ from extensions.overlap_v1.prepare import ROOT,DEFAULT_FROZEN,load,sha,write_new
+ from extensions.overlap_v1.policy_checks import authoritative,reference_controls
+ from src import e1_score
+@@ -131,14 +131,14 @@
+     before=current
+     require(controls.inventory(c['raw_dir'])==before,'raw state changed')
+     return dict(version='EX1-STAGE1-1.0',scope='Stage1 only: observed solver correctness, no validator effectiveness/economics.',
+-        provenance=dict(design_sha256=c['design_hash'],control_sha256=c['control_hash'],
++        provenance=dict(design_sha256=c['design_hash'],control_sha256=None,
+             final_inventory_sha256=sha(ROOT/'extensions/overlap_v1/record_inventory_final720_v1.json'),
+             historical_scoring_sha256=sha(Path(e1_score.__file__)),
+             analysis_code_sha256=sha(Path(__file__)),
+             oracle_sha256=sha(DEFAULT_FROZEN/'oracle_outputs_v1.json'),
+             tests_sha256=sha(BASE/'test_stage1_v1.py'),verifier_sha256=sha(BASE/'verify_stage1_v1.py')),
+         evidence=dict(records=720,unique_manifest_ids=720,hashes_verified=720,
+-            historical_hashes_verified=pf['historical_hashes_verified'],canonical_cases=60,
++            public_projection_hashes_verified=pf['public_projection_hashes_verified'],canonical_cases=60,
+             renderings=180,role_status=quality,reservations=0,
+             provider_failure_run_ids=sorted(rid for rid,r in c['records'].items() if not r['success']),
+             no_observations_modified=True,api_calls=0),
+--- original/extensions/overlap_v1/analysis/stage2_v1.py
++++ public/extensions/overlap_v1/analysis/stage2_v1.py
+@@ -4,7 +4,7 @@
+ from fractions import Fraction
+ from pathlib import Path
+ from extensions.overlap_v1.prepare import ROOT,load,sha,write_new
+-from extensions.overlap_v1 import recovery_v2 as controls
++from extensions.overlap_v1 import offline_controls as controls
+ from extensions.overlap_v1.analysis.verify_stage1_v1 import verify as verify_stage1
+ 
+ BASE=Path(__file__).parent
+@@ -143,13 +143,13 @@
+                 if r['case_id'] not in eligible and r['status']=='valid' and r['pair_valid']])
+     require(controls.inventory(c['raw_dir'])==before,'raw evidence changed')
+     return dict(version='EX1-STAGE2-1.0',scope='Validator effectiveness only. No economic calculations.',
+-        provenance=dict(scientific_sha256=c['design_hash'],recovery_control_sha256=c['control_hash'],
++        provenance=dict(scientific_sha256=c['design_hash'],recovery_control_sha256=None,
+             stage1_results_sha256=sha(BASE/'stage1_results_v1.json'),
+             stage1_manifest_sha256=sha(BASE/'stage1_analysis_manifest_v1.json'),
+             raw_inventory_sha256=sha(ROOT/'extensions/overlap_v1/record_inventory_final720_v1.json'),
+             analysis_sha256=sha(Path(__file__)),verifier_sha256=sha(BASE/'verify_stage2_v1.py'),
+             tests_sha256=sha(BASE/'test_stage2_v1.py')),
+-        evidence=dict(records=720,raw_hashes_verified=720,historical_hashes_verified=pf['historical_hashes_verified'],
++        evidence=dict(records=720,public_projection_hashes_verified=720,adapter_hash_check_count=pf['public_projection_hashes_verified'],
+             stage1_verification=verification,solver_case_denominator=60,planned_validator_slots_per_role=180,
+             common_complete_case_ids=common,common_case_denominator=len(common),api_calls=0),
+         definitions=dict(true_accept='Correct weak answer + PASS',false_accept='Incorrect weak answer + PASS',
+--- original/extensions/overlap_v1/analysis/stage3_v1.py
++++ public/extensions/overlap_v1/analysis/stage3_v1.py
+@@ -4,7 +4,7 @@
+ from itertools import combinations
+ from pathlib import Path
+ from extensions.overlap_v1.prepare import ROOT,load,sha,write_new
+-from extensions.overlap_v1 import recovery_v2 as controls
++from extensions.overlap_v1 import offline_controls as controls
+ from extensions.overlap_v1.analysis.verify_stage2_v1 import verify as verify_stage2
+ 
+ BASE=Path(__file__).parent
+@@ -165,7 +165,7 @@
+         for role,data in historical['routes'].items()}
+     require(controls.inventory(context['raw_dir'])==raw_before,'raw evidence changed')
+     return dict(version='EX1-STAGE3-1.0',scope='Economic analysis only; no final E0-E3 synthesis.',
+-        provenance=dict(design_sha256=context['design_hash'],control_sha256=context['control_hash'],
++        provenance=dict(design_sha256=context['design_hash'],control_sha256=None,
+             raw_inventory_sha256=sha(ROOT/'extensions/overlap_v1/record_inventory_final720_v1.json'),
+             stage1_results_sha256=sha(BASE/'stage1_results_v1.json'),stage2_results_sha256=sha(BASE/'stage2_results_v1.json'),
+             historical_comparison_sha256=sha(historical_path),analysis_sha256=sha(Path(__file__)),
+--- original/extensions/overlap_v1/analysis/verify_stage1_v1.py
++++ public/extensions/overlap_v1/analysis/verify_stage1_v1.py
+@@ -97,7 +97,7 @@
+     for role,data in report['evidence']['role_status'].items():
+         if data['records']!=sum(v for (rl,_,_),v in statuses.items() if rl==role):raise ValueError('role count')
+         if data['provider_failures']!=sum(v for (rl,ok,_),v in statuses.items() if rl==role and not ok):raise ValueError('provider failures')
+-    return dict(status='PASS',raw_hashes=720,solver_scores_verified_with_historical_scorer=360,
++    return dict(status='PASS',public_projection_hashes=720,solver_scores_verified_with_historical_scorer=360,
+                 independent_fraction_case_aggregation=True,subgroup_tables_verified=9,
+                 canonical_cases=60,rendering_pairs=180,api_calls=0,
+                 scope='Separate implementation/check, not independent human examination.')
+--- original/extensions/overlap_v1/analysis/verify_stage2_v1.py
++++ public/extensions/overlap_v1/analysis/verify_stage2_v1.py
+@@ -136,7 +136,7 @@
+                 verify_summary([r for r in rows if r['level']==level],view['by_level'][level],weighted);views_verified+=1
+     unresolved=[r for r in allrows if r['status']!='valid']
+     check({r['run_id'] for r in report['unresolved_slots']}=={r['run_id'] for r in unresolved},'unresolved slots')
+-    return dict(status='PASS',raw_hashes_verified=720,validator_slots_reconstructed=360,
++    return dict(status='PASS',public_projection_hashes_verified=720,validator_slots_reconstructed=360,
+         summaries_independently_verified=views_verified,cheap_complete_cases=len(eligible[ROLES[0]]),
+         strong_complete_cases=len(eligible[ROLES[1]]),common_cases=len(common),
+         missing_verdicts=len(unresolved),api_calls=0,
+--- original/extensions/overlap_v1/analysis/verify_stage3_v1.py
++++ public/extensions/overlap_v1/analysis/verify_stage3_v1.py
+@@ -168,7 +168,7 @@
+     near(report['research_expenditure']['known_token_derived_usd'],known)
+     check(sorted(unknown)==report['research_expenditure']['unknown_charge_run_ids'],'unknown charges')
+     check(report['research_expenditure']['actual_logical_attempts']==720,'actual attempts')
+-    return dict(status='PASS',raw_hashes_verified=720,primary_cases=58,primary_renderings=174,
++    return dict(status='PASS',public_projection_hashes_verified=720,primary_cases=58,primary_renderings=174,
+         supplementary_cases=60,supplementary_renderings=180,
+         independent_integer_tariff_reconstruction=True,route_calls_costs_accuracy_verified=True,
+         exact_pairwise_boundaries_verified=9,global_envelope_verified_by_affine_inequalities=True,
+--- original/extensions/overlap_v1/analysis/test_stage1_v1.py
++++ public/extensions/overlap_v1/analysis/test_stage1_v1.py
+@@ -3,7 +3,6 @@
+ import unittest
+ from pathlib import Path
+ from unittest.mock import patch
+-import httpx
+ from extensions.overlap_v1.analysis import stage1_v1 as s
+ from extensions.overlap_v1.analysis.verify_stage1_v1 import verify
+ from src import e1_score
+@@ -11,10 +10,8 @@
+ 
+ class Stage1Tests(unittest.TestCase):
+     def setUp(self):
+-        for target in (patch('google.genai.Client',side_effect=AssertionError('Client forbidden')),
+-                       patch.object(httpx.Client,'send',side_effect=AssertionError('HTTP forbidden')),
+-                       patch.object(socket,'create_connection',side_effect=AssertionError('socket forbidden'))):
+-            target.start();self.addCleanup(target.stop)
++        target=patch.object(socket,'create_connection',side_effect=AssertionError('network forbidden'))
++        target.start();self.addCleanup(target.stop)
+ 
+     def test_historical_set_contract_order_duplicates_and_wrong_sets(self):
+         for actual,correct in [(['A','B'],True),(['B','A'],True),(['A','A','B'],True),
+--- original/extensions/overlap_v1/analysis/test_stage2_v1.py
++++ public/extensions/overlap_v1/analysis/test_stage2_v1.py
+@@ -3,17 +3,14 @@
+ import socket
+ import unittest
+ from unittest.mock import patch
+-import httpx
+ from extensions.overlap_v1.analysis import stage2_v1 as s
+ from extensions.overlap_v1.analysis.verify_stage2_v1 import verify
+ 
+ 
+ class Stage2Tests(unittest.TestCase):
+     def setUp(self):
+-        for target in (patch('google.genai.Client',side_effect=AssertionError('Client forbidden')),
+-                       patch.object(httpx.Client,'send',side_effect=AssertionError('HTTP forbidden')),
+-                       patch.object(socket,'create_connection',side_effect=AssertionError('socket forbidden'))):
+-            target.start();self.addCleanup(target.stop)
++        target=patch.object(socket,'create_connection',side_effect=AssertionError('network forbidden'))
++        target.start();self.addCleanup(target.stop)
+ 
+     def row(self,w=True,strong=True,v='PASS',cid='X'):
+         return dict(case_id=cid,status='valid',pair_valid=True,weak_correct=w,strong_correct=strong,verdict=v)
+--- original/extensions/overlap_v1/analysis/test_stage3_v1.py
++++ public/extensions/overlap_v1/analysis/test_stage3_v1.py
+@@ -3,17 +3,14 @@
+ import socket
+ import unittest
+ from unittest.mock import patch
+-import httpx
+ from extensions.overlap_v1.analysis import stage3_v1 as s
+ from extensions.overlap_v1.analysis.verify_stage3_v1 import verify,verify_economics
+ 
+ 
+ class Stage3Tests(unittest.TestCase):
+     def setUp(self):
+-        for target in (patch('google.genai.Client',side_effect=AssertionError('Client forbidden')),
+-                       patch.object(httpx.Client,'send',side_effect=AssertionError('HTTP forbidden')),
+-                       patch.object(socket,'create_connection',side_effect=AssertionError('socket forbidden'))):
+-            target.start();self.addCleanup(target.stop)
++        target=patch.object(socket,'create_connection',side_effect=AssertionError('network forbidden'))
++        target.start();self.addCleanup(target.stop)
+ 
+     def test_normalized_token_pricing_no_invocation_addition(self):
+         rec=dict(job={'role':'cheap'},usage=dict(total_input_tokens=100,total_output_tokens=10,

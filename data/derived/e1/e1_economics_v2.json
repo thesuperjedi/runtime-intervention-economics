@@ -1,0 +1,2822 @@
+{
+  "experiment": "E1",
+  "analysis_version": "2.0",
+  "supersedes": "e1_economics_v1.json",
+  "supersession_reason": "v1 used incorrect usage-field names and therefore reported zero tokens and zero cost.",
+  "pricing_basis": {
+    "type": "frozen_list_price_estimate",
+    "currency": "USD",
+    "per_million_tokens": {
+      "cheap": {
+        "input": 0.3,
+        "output": 2.5
+      },
+      "strong": {
+        "input": 0.75,
+        "output": 3.75
+      }
+    },
+    "usage_basis": "normalized total_input_tokens, total_output_tokens, and total_thought_tokens from raw E1F evidence",
+    "validator_primary_monetary_cost_usd": 0.0,
+    "note": "List-price estimate, not invoiced provider charge."
+  },
+  "paired_realizations": 270,
+  "underlying_model_stats": {
+    "cheap": {
+      "calls": 270,
+      "correct": 236,
+      "accuracy_pct": 87.4074074074074,
+      "input_tokens": 218568,
+      "output_tokens": 8433,
+      "thought_tokens": 3368,
+      "total_tokens": 230369,
+      "total_list_price_cost_usd": 0.0950729,
+      "mean_call_cost_usd": 0.00035212185185185186,
+      "median_call_cost_usd": 0.0003158,
+      "min_call_cost_usd": 0.0002878,
+      "max_call_cost_usd": 0.0013621
+    },
+    "strong": {
+      "calls": 270,
+      "correct": 270,
+      "accuracy_pct": 100.0,
+      "input_tokens": 218568,
+      "output_tokens": 8253,
+      "thought_tokens": 46653,
+      "total_tokens": 273474,
+      "total_list_price_cost_usd": 0.36982349999999997,
+      "mean_call_cost_usd": 0.0013697166666666667,
+      "median_call_cost_usd": 0.0013046249999999998,
+      "min_call_cost_usd": 0.0009307499999999999,
+      "max_call_cost_usd": 0.0025245000000000003
+    }
+  },
+  "strategies": {
+    "cheap_only": {
+      "calls": 270,
+      "cheap_calls": 270,
+      "strong_calls": 0,
+      "correct_final": 236,
+      "cost_usd": 0.09507290000000007,
+      "final_accuracy_pct": 87.4074074074074,
+      "cost_per_correct_result_usd": 0.000402851271186441
+    },
+    "strong_only": {
+      "calls": 270,
+      "cheap_calls": 0,
+      "strong_calls": 270,
+      "correct_final": 270,
+      "cost_usd": 0.36982349999999986,
+      "final_accuracy_pct": 100.0,
+      "cost_per_correct_result_usd": 0.001369716666666666
+    },
+    "cascade": {
+      "calls": 304,
+      "cheap_calls": 270,
+      "strong_calls": 34,
+      "correct_final": 270,
+      "cost_usd": 0.15597064999999996,
+      "escalations": 34,
+      "final_accuracy_pct": 100.0,
+      "cost_per_correct_result_usd": 0.000577669074074074,
+      "escalation_rate_pct": 12.592592592592593
+    },
+    "oracle_routing": {
+      "calls": 270,
+      "cheap_calls": 236,
+      "strong_calls": 34,
+      "correct_final": 270,
+      "cost_usd": 0.14397755,
+      "final_accuracy_pct": 100.0,
+      "cost_per_correct_result_usd": 0.0005332501851851852
+    }
+  },
+  "cascade_by_rendering_level": {
+    "L1": {
+      "realizations": 90,
+      "escalations": 9,
+      "cost_usd": 0.046873099999999994,
+      "escalation_rate_pct": 10.0
+    },
+    "L2": {
+      "realizations": 90,
+      "escalations": 12,
+      "cost_usd": 0.05360860000000002,
+      "escalation_rate_pct": 13.333333333333334
+    },
+    "L3": {
+      "realizations": 90,
+      "escalations": 13,
+      "cost_usd": 0.05548894999999999,
+      "escalation_rate_pct": 14.444444444444445
+    }
+  },
+  "comparison": {
+    "cascade_savings_vs_strong_usd": 0.2138528499999999,
+    "cascade_savings_pct_vs_strong": 57.825651966410994,
+    "validator_invocations": 304,
+    "validator_break_even_mean_cost_per_check_usd": 0.0007034633223684207
+  },
+  "pair_details": [
+    {
+      "rendering_id": "C01-L1",
+      "rep": 1,
+      "level": "L1",
+      "cheap_correct": true,
+      "strong_correct": true,
+      "escalated": false,
+      "cheap_cost_usd": 0.000295,
+      "strong_cost_usd": 0.0011175
+    },
+    {
+      "rendering_id": "C01-L1",
+      "rep": 2,
+      "level": "L1",
+      "cheap_correct": true,
+      "strong_correct": true,
+      "escalated": false,
+      "cheap_cost_usd": 0.000295,
+      "strong_cost_usd": 0.0010725
+    },
+    {
+      "rendering_id": "C01-L1",
+      "rep": 3,
+      "level": "L1",
+      "cheap_correct": true,
+      "strong_correct": true,
+      "escalated": false,
+      "cheap_cost_usd": 0.000295,
+      "strong_cost_usd": 0.00111
+    },
+    {
+      "rendering_id": "C01-L2",
+      "rep": 1,
+      "level": "L2",
+      "cheap_correct": true,
+      "strong_correct": true,
+      "escalated": false,
+      "cheap_cost_usd": 0.0002965,
+      "strong_cost_usd": 0.00134625
+    },
+    {
+      "rendering_id": "C01-L2",
+      "rep": 2,
+      "level": "L2",
+      "cheap_correct": true,
+      "strong_correct": true,
+      "escalated": false,
+      "cheap_cost_usd": 0.0002965,
+      "strong_cost_usd": 0.00126
+    },
+    {
+      "rendering_id": "C01-L2",
+      "rep": 3,
+      "level": "L2",
+      "cheap_correct": true,
+      "strong_correct": true,
+      "escalated": false,
+      "cheap_cost_usd": 0.0002965,
+      "strong_cost_usd": 0.00129375
+    },
+    {
+      "rendering_id": "C01-L3",
+      "rep": 1,
+      "level": "L3",
+      "cheap_correct": true,
+      "strong_correct": true,
+      "escalated": false,
+      "cheap_cost_usd": 0.00030099999999999994,
+      "strong_cost_usd": 0.0011887500000000001
+    },
+    {
+      "rendering_id": "C01-L3",
+      "rep": 2,
+      "level": "L3",
+      "cheap_correct": true,
+      "strong_correct": true,
+      "escalated": false,
+      "cheap_cost_usd": 0.00030099999999999994,
+      "strong_cost_usd": 0.0011737499999999999
+    },
+    {
+      "rendering_id": "C01-L3",
+      "rep": 3,
+      "level": "L3",
+      "cheap_correct": true,
+      "strong_correct": true,
+      "escalated": false,
+      "cheap_cost_usd": 0.00030099999999999994,
+      "strong_cost_usd": 0.00117
+    },
+    {
+      "rendering_id": "C02-L1",
+      "rep": 1,
+      "level": "L1",
+      "cheap_correct": true,
+      "strong_correct": true,
+      "escalated": false,
+      "cheap_cost_usd": 0.00030000000000000003,
+      "strong_cost_usd": 0.00129
+    },
+    {
+      "rendering_id": "C02-L1",
+      "rep": 2,
+      "level": "L1",
+      "cheap_correct": true,
+      "strong_correct": true,
+      "escalated": false,
+      "cheap_cost_usd": 0.00030000000000000003,
+      "strong_cost_usd": 0.00124875
+    },
+    {
+      "rendering_id": "C02-L1",
+      "rep": 3,
+      "level": "L1",
+      "cheap_correct": true,
+      "strong_correct": true,
+      "escalated": false,
+      "cheap_cost_usd": 0.00030000000000000003,
+      "strong_cost_usd": 0.00130875
+    },
+    {
+      "rendering_id": "C02-L2",
+      "rep": 1,
+      "level": "L2",
+      "cheap_correct": true,
+      "strong_correct": true,
+      "escalated": false,
+      "cheap_cost_usd": 0.0003015,
+      "strong_cost_usd": 0.001155
+    },
+    {
+      "rendering_id": "C02-L2",
+      "rep": 2,
+      "level": "L2",
+      "cheap_correct": true,
+      "strong_correct": true,
+      "escalated": false,
+      "cheap_cost_usd": 0.0003015,
+      "strong_cost_usd": 0.00116625
+    },
+    {
+      "rendering_id": "C02-L2",
+      "rep": 3,
+      "level": "L2",
+      "cheap_correct": true,
+      "strong_correct": true,
+      "escalated": false,
+      "cheap_cost_usd": 0.0003015,
+      "strong_cost_usd": 0.0011849999999999999
+    },
+    {
+      "rendering_id": "C02-L3",
+      "rep": 1,
+      "level": "L3",
+      "cheap_correct": true,
+      "strong_correct": true,
+      "escalated": false,
+      "cheap_cost_usd": 0.0003054,
+      "strong_cost_usd": 0.0014122499999999999
+    },
+    {
+      "rendering_id": "C02-L3",
+      "rep": 2,
+      "level": "L3",
+      "cheap_correct": true,
+      "strong_correct": true,
+      "escalated": false,
+      "cheap_cost_usd": 0.0003054,
+      "strong_cost_usd": 0.0011985
+    },
+    {
+      "rendering_id": "C02-L3",
+      "rep": 3,
+      "level": "L3",
+      "cheap_correct": true,
+      "strong_correct": true,
+      "escalated": false,
+      "cheap_cost_usd": 0.0003054,
+      "strong_cost_usd": 0.0014085
+    },
+    {
+      "rendering_id": "C03-L1",
+      "rep": 1,
+      "level": "L1",
+      "cheap_correct": true,
+      "strong_correct": true,
+      "escalated": false,
+      "cheap_cost_usd": 0.0002978,
+      "strong_cost_usd": 0.00107325
+    },
+    {
+      "rendering_id": "C03-L1",
+      "rep": 2,
+      "level": "L1",
+      "cheap_correct": true,
+      "strong_correct": true,
+      "escalated": false,
+      "cheap_cost_usd": 0.0002978,
+      "strong_cost_usd": 0.0011294999999999999
+    },
+    {
+      "rendering_id": "C03-L1",
+      "rep": 3,
+      "level": "L1",
+      "cheap_correct": true,
+      "strong_correct": true,
+      "escalated": false,
+      "cheap_cost_usd": 0.0002978,
+      "strong_cost_usd": 0.0012945
+    },
+    {
+      "rendering_id": "C03-L2",
+      "rep": 1,
+      "level": "L2",
+      "cheap_correct": true,
+      "strong_correct": true,
+      "escalated": false,
+      "cheap_cost_usd": 0.00029929999999999996,
+      "strong_cost_usd": 0.001227
+    },
+    {
+      "rendering_id": "C03-L2",
+      "rep": 2,
+      "level": "L2",
+      "cheap_correct": true,
+      "strong_correct": true,
+      "escalated": false,
+      "cheap_cost_usd": 0.00029929999999999996,
+      "strong_cost_usd": 0.00158325
+    },
+    {
+      "rendering_id": "C03-L2",
+      "rep": 3,
+      "level": "L2",
+      "cheap_correct": true,
+      "strong_correct": true,
+      "escalated": false,
+      "cheap_cost_usd": 0.00029929999999999996,
+      "strong_cost_usd": 0.0011182499999999999
+    },
+    {
+      "rendering_id": "C03-L3",
+      "rep": 1,
+      "level": "L3",
+      "cheap_correct": true,
+      "strong_correct": true,
+      "escalated": false,
+      "cheap_cost_usd": 0.00030379999999999996,
+      "strong_cost_usd": 0.0012044999999999998
+    },
+    {
+      "rendering_id": "C03-L3",
+      "rep": 2,
+      "level": "L3",
+      "cheap_correct": true,
+      "strong_correct": true,
+      "escalated": false,
+      "cheap_cost_usd": 0.00030379999999999996,
+      "strong_cost_usd": 0.00123825
+    },
+    {
+      "rendering_id": "C03-L3",
+      "rep": 3,
+      "level": "L3",
+      "cheap_correct": true,
+      "strong_correct": true,
+      "escalated": false,
+      "cheap_cost_usd": 0.00030379999999999996,
+      "strong_cost_usd": 0.0013357500000000001
+    },
+    {
+      "rendering_id": "C04-L1",
+      "rep": 1,
+      "level": "L1",
+      "cheap_correct": true,
+      "strong_correct": true,
+      "escalated": false,
+      "cheap_cost_usd": 0.0003303,
+      "strong_cost_usd": 0.00143325
+    },
+    {
+      "rendering_id": "C04-L1",
+      "rep": 2,
+      "level": "L1",
+      "cheap_correct": true,
+      "strong_correct": true,
+      "escalated": false,
+      "cheap_cost_usd": 0.0003303,
+      "strong_cost_usd": 0.0012907499999999998
+    },
+    {
+      "rendering_id": "C04-L1",
+      "rep": 3,
+      "level": "L1",
+      "cheap_correct": true,
+      "strong_correct": true,
+      "escalated": false,
+      "cheap_cost_usd": 0.0003303,
+      "strong_cost_usd": 0.00123825
+    },
+    {
+      "rendering_id": "C04-L2",
+      "rep": 1,
+      "level": "L2",
+      "cheap_correct": true,
+      "strong_correct": true,
+      "escalated": false,
+      "cheap_cost_usd": 0.0003327,
+      "strong_cost_usd": 0.0012555
+    },
+    {
+      "rendering_id": "C04-L2",
+      "rep": 2,
+      "level": "L2",
+      "cheap_correct": true,
+      "strong_correct": true,
+      "escalated": false,
+      "cheap_cost_usd": 0.0003327,
+      "strong_cost_usd": 0.0011955
+    },
+    {
+      "rendering_id": "C04-L2",
+      "rep": 3,
+      "level": "L2",
+      "cheap_correct": true,
+      "strong_correct": true,
+      "escalated": false,
+      "cheap_cost_usd": 0.0003327,
+      "strong_cost_usd": 0.00131175
+    },
+    {
+      "rendering_id": "C04-L3",
+      "rep": 1,
+      "level": "L3",
+      "cheap_correct": true,
+      "strong_correct": true,
+      "escalated": false,
+      "cheap_cost_usd": 0.0007551000000000001,
+      "strong_cost_usd": 0.00152025
+    },
+    {
+      "rendering_id": "C04-L3",
+      "rep": 2,
+      "level": "L3",
+      "cheap_correct": true,
+      "strong_correct": true,
+      "escalated": false,
+      "cheap_cost_usd": 0.0003351,
+      "strong_cost_usd": 0.0015615
+    },
+    {
+      "rendering_id": "C04-L3",
+      "rep": 3,
+      "level": "L3",
+      "cheap_correct": true,
+      "strong_correct": true,
+      "escalated": false,
+      "cheap_cost_usd": 0.0003351,
+      "strong_cost_usd": 0.00136275
+    },
+    {
+      "rendering_id": "C05-L1",
+      "rep": 1,
+      "level": "L1",
+      "cheap_correct": true,
+      "strong_correct": true,
+      "escalated": false,
+      "cheap_cost_usd": 0.0003125,
+      "strong_cost_usd": 0.00129
+    },
+    {
+      "rendering_id": "C05-L1",
+      "rep": 2,
+      "level": "L1",
+      "cheap_correct": true,
+      "strong_correct": true,
+      "escalated": false,
+      "cheap_cost_usd": 0.0003125,
+      "strong_cost_usd": 0.0012225
+    },
+    {
+      "rendering_id": "C05-L1",
+      "rep": 3,
+      "level": "L1",
+      "cheap_correct": true,
+      "strong_correct": true,
+      "escalated": false,
+      "cheap_cost_usd": 0.0003125,
+      "strong_cost_usd": 0.00120375
+    },
+    {
+      "rendering_id": "C05-L2",
+      "rep": 1,
+      "level": "L2",
+      "cheap_correct": true,
+      "strong_correct": true,
+      "escalated": false,
+      "cheap_cost_usd": 0.0003143,
+      "strong_cost_usd": 0.0011895
+    },
+    {
+      "rendering_id": "C05-L2",
+      "rep": 2,
+      "level": "L2",
+      "cheap_correct": true,
+      "strong_correct": true,
+      "escalated": false,
+      "cheap_cost_usd": 0.0003143,
+      "strong_cost_usd": 0.00123825
+    },
+    {
+      "rendering_id": "C05-L2",
+      "rep": 3,
+      "level": "L2",
+      "cheap_correct": true,
+      "strong_correct": true,
+      "escalated": false,
+      "cheap_cost_usd": 0.0003143,
+      "strong_cost_usd": 0.001167
+    },
+    {
+      "rendering_id": "C05-L3",
+      "rep": 1,
+      "level": "L3",
+      "cheap_correct": true,
+      "strong_correct": true,
+      "escalated": false,
+      "cheap_cost_usd": 0.00031729999999999996,
+      "strong_cost_usd": 0.00134325
+    },
+    {
+      "rendering_id": "C05-L3",
+      "rep": 2,
+      "level": "L3",
+      "cheap_correct": true,
+      "strong_correct": true,
+      "escalated": false,
+      "cheap_cost_usd": 0.00031729999999999996,
+      "strong_cost_usd": 0.0012082500000000001
+    },
+    {
+      "rendering_id": "C05-L3",
+      "rep": 3,
+      "level": "L3",
+      "cheap_correct": true,
+      "strong_correct": true,
+      "escalated": false,
+      "cheap_cost_usd": 0.00031729999999999996,
+      "strong_cost_usd": 0.00135075
+    },
+    {
+      "rendering_id": "C06-L1",
+      "rep": 1,
+      "level": "L1",
+      "cheap_correct": true,
+      "strong_correct": true,
+      "escalated": false,
+      "cheap_cost_usd": 0.000705,
+      "strong_cost_usd": 0.00117375
+    },
+    {
+      "rendering_id": "C06-L1",
+      "rep": 2,
+      "level": "L1",
+      "cheap_correct": true,
+      "strong_correct": true,
+      "escalated": false,
+      "cheap_cost_usd": 0.0003225,
+      "strong_cost_usd": 0.00118125
+    },
+    {
+      "rendering_id": "C06-L1",
+      "rep": 3,
+      "level": "L1",
+      "cheap_correct": true,
+      "strong_correct": true,
+      "escalated": false,
+      "cheap_cost_usd": 0.0003225,
+      "strong_cost_usd": 0.0011925
+    },
+    {
+      "rendering_id": "C06-L2",
+      "rep": 1,
+      "level": "L2",
+      "cheap_correct": false,
+      "strong_correct": true,
+      "escalated": true,
+      "cheap_cost_usd": 0.0003143,
+      "strong_cost_usd": 0.0012195
+    },
+    {
+      "rendering_id": "C06-L2",
+      "rep": 2,
+      "level": "L2",
+      "cheap_correct": true,
+      "strong_correct": true,
+      "escalated": false,
+      "cheap_cost_usd": 0.00032429999999999997,
+      "strong_cost_usd": 0.001272
+    },
+    {
+      "rendering_id": "C06-L2",
+      "rep": 3,
+      "level": "L2",
+      "cheap_correct": false,
+      "strong_correct": true,
+      "escalated": true,
+      "cheap_cost_usd": 0.0003143,
+      "strong_cost_usd": 0.0012195
+    },
+    {
+      "rendering_id": "C06-L3",
+      "rep": 1,
+      "level": "L3",
+      "cheap_correct": true,
+      "strong_correct": true,
+      "escalated": false,
+      "cheap_cost_usd": 0.00032549999999999994,
+      "strong_cost_usd": 0.0013275000000000001
+    },
+    {
+      "rendering_id": "C06-L3",
+      "rep": 2,
+      "level": "L3",
+      "cheap_correct": true,
+      "strong_correct": true,
+      "escalated": false,
+      "cheap_cost_usd": 0.00032549999999999994,
+      "strong_cost_usd": 0.00133125
+    },
+    {
+      "rendering_id": "C06-L3",
+      "rep": 3,
+      "level": "L3",
+      "cheap_correct": true,
+      "strong_correct": true,
+      "escalated": false,
+      "cheap_cost_usd": 0.00032549999999999994,
+      "strong_cost_usd": 0.0015375
+    },
+    {
+      "rendering_id": "C07-L1",
+      "rep": 1,
+      "level": "L1",
+      "cheap_correct": true,
+      "strong_correct": true,
+      "escalated": false,
+      "cheap_cost_usd": 0.0005125,
+      "strong_cost_usd": 0.00123375
+    },
+    {
+      "rendering_id": "C07-L1",
+      "rep": 2,
+      "level": "L1",
+      "cheap_correct": true,
+      "strong_correct": true,
+      "escalated": false,
+      "cheap_cost_usd": 0.0003125,
+      "strong_cost_usd": 0.00114375
+    },
+    {
+      "rendering_id": "C07-L1",
+      "rep": 3,
+      "level": "L1",
+      "cheap_correct": true,
+      "strong_correct": true,
+      "escalated": false,
+      "cheap_cost_usd": 0.0006175,
+      "strong_cost_usd": 0.00123
+    },
+    {
+      "rendering_id": "C07-L2",
+      "rep": 1,
+      "level": "L2",
+      "cheap_correct": true,
+      "strong_correct": true,
+      "escalated": false,
+      "cheap_cost_usd": 0.00031400000000000004,
+      "strong_cost_usd": 0.00120375
+    },
+    {
+      "rendering_id": "C07-L2",
+      "rep": 2,
+      "level": "L2",
+      "cheap_correct": true,
+      "strong_correct": true,
+      "escalated": false,
+      "cheap_cost_usd": 0.00031400000000000004,
+      "strong_cost_usd": 0.00124875
+    },
+    {
+      "rendering_id": "C07-L2",
+      "rep": 3,
+      "level": "L2",
+      "cheap_correct": true,
+      "strong_correct": true,
+      "escalated": false,
+      "cheap_cost_usd": 0.00031400000000000004,
+      "strong_cost_usd": 0.0012075
+    },
+    {
+      "rendering_id": "C07-L3",
+      "rep": 1,
+      "level": "L3",
+      "cheap_correct": true,
+      "strong_correct": true,
+      "escalated": false,
+      "cheap_cost_usd": 0.0003161,
+      "strong_cost_usd": 0.0014265
+    },
+    {
+      "rendering_id": "C07-L3",
+      "rep": 2,
+      "level": "L3",
+      "cheap_correct": true,
+      "strong_correct": true,
+      "escalated": false,
+      "cheap_cost_usd": 0.0003161,
+      "strong_cost_usd": 0.00130275
+    },
+    {
+      "rendering_id": "C07-L3",
+      "rep": 3,
+      "level": "L3",
+      "cheap_correct": true,
+      "strong_correct": true,
+      "escalated": false,
+      "cheap_cost_usd": 0.0003161,
+      "strong_cost_usd": 0.001449
+    },
+    {
+      "rendering_id": "C08-L1",
+      "rep": 1,
+      "level": "L1",
+      "cheap_correct": true,
+      "strong_correct": true,
+      "escalated": false,
+      "cheap_cost_usd": 0.0003125,
+      "strong_cost_usd": 0.00114375
+    },
+    {
+      "rendering_id": "C08-L1",
+      "rep": 2,
+      "level": "L1",
+      "cheap_correct": true,
+      "strong_correct": true,
+      "escalated": false,
+      "cheap_cost_usd": 0.0003125,
+      "strong_cost_usd": 0.001155
+    },
+    {
+      "rendering_id": "C08-L1",
+      "rep": 3,
+      "level": "L1",
+      "cheap_correct": true,
+      "strong_correct": true,
+      "escalated": false,
+      "cheap_cost_usd": 0.0003125,
+      "strong_cost_usd": 0.00113625
+    },
+    {
+      "rendering_id": "C08-L2",
+      "rep": 1,
+      "level": "L2",
+      "cheap_correct": true,
+      "strong_correct": true,
+      "escalated": false,
+      "cheap_cost_usd": 0.00031400000000000004,
+      "strong_cost_usd": 0.001155
+    },
+    {
+      "rendering_id": "C08-L2",
+      "rep": 2,
+      "level": "L2",
+      "cheap_correct": true,
+      "strong_correct": true,
+      "escalated": false,
+      "cheap_cost_usd": 0.00031400000000000004,
+      "strong_cost_usd": 0.00115875
+    },
+    {
+      "rendering_id": "C08-L2",
+      "rep": 3,
+      "level": "L2",
+      "cheap_correct": true,
+      "strong_correct": true,
+      "escalated": false,
+      "cheap_cost_usd": 0.00031400000000000004,
+      "strong_cost_usd": 0.00121875
+    },
+    {
+      "rendering_id": "C08-L3",
+      "rep": 1,
+      "level": "L3",
+      "cheap_correct": true,
+      "strong_correct": true,
+      "escalated": false,
+      "cheap_cost_usd": 0.00031549999999999997,
+      "strong_cost_usd": 0.00118125
+    },
+    {
+      "rendering_id": "C08-L3",
+      "rep": 2,
+      "level": "L3",
+      "cheap_correct": true,
+      "strong_correct": true,
+      "escalated": false,
+      "cheap_cost_usd": 0.00031549999999999997,
+      "strong_cost_usd": 0.00123375
+    },
+    {
+      "rendering_id": "C08-L3",
+      "rep": 3,
+      "level": "L3",
+      "cheap_correct": true,
+      "strong_correct": true,
+      "escalated": false,
+      "cheap_cost_usd": 0.00031549999999999997,
+      "strong_cost_usd": 0.001155
+    },
+    {
+      "rendering_id": "C09-L1",
+      "rep": 1,
+      "level": "L1",
+      "cheap_correct": true,
+      "strong_correct": true,
+      "escalated": false,
+      "cheap_cost_usd": 0.000295,
+      "strong_cost_usd": 0.001155
+    },
+    {
+      "rendering_id": "C09-L1",
+      "rep": 2,
+      "level": "L1",
+      "cheap_correct": true,
+      "strong_correct": true,
+      "escalated": false,
+      "cheap_cost_usd": 0.000295,
+      "strong_cost_usd": 0.00112875
+    },
+    {
+      "rendering_id": "C09-L1",
+      "rep": 3,
+      "level": "L1",
+      "cheap_correct": true,
+      "strong_correct": true,
+      "escalated": false,
+      "cheap_cost_usd": 0.000295,
+      "strong_cost_usd": 0.0011475
+    },
+    {
+      "rendering_id": "C09-L2",
+      "rep": 1,
+      "level": "L2",
+      "cheap_correct": true,
+      "strong_correct": true,
+      "escalated": false,
+      "cheap_cost_usd": 0.0002965,
+      "strong_cost_usd": 0.0015037499999999999
+    },
+    {
+      "rendering_id": "C09-L2",
+      "rep": 2,
+      "level": "L2",
+      "cheap_correct": true,
+      "strong_correct": true,
+      "escalated": false,
+      "cheap_cost_usd": 0.0002965,
+      "strong_cost_usd": 0.00123375
+    },
+    {
+      "rendering_id": "C09-L2",
+      "rep": 3,
+      "level": "L2",
+      "cheap_correct": true,
+      "strong_correct": true,
+      "escalated": false,
+      "cheap_cost_usd": 0.0002965,
+      "strong_cost_usd": 0.00109875
+    },
+    {
+      "rendering_id": "C09-L3",
+      "rep": 1,
+      "level": "L3",
+      "cheap_correct": true,
+      "strong_correct": true,
+      "escalated": false,
+      "cheap_cost_usd": 0.00029679999999999995,
+      "strong_cost_usd": 0.0012082500000000001
+    },
+    {
+      "rendering_id": "C09-L3",
+      "rep": 2,
+      "level": "L3",
+      "cheap_correct": true,
+      "strong_correct": true,
+      "escalated": false,
+      "cheap_cost_usd": 0.00029679999999999995,
+      "strong_cost_usd": 0.0012195
+    },
+    {
+      "rendering_id": "C09-L3",
+      "rep": 3,
+      "level": "L3",
+      "cheap_correct": true,
+      "strong_correct": true,
+      "escalated": false,
+      "cheap_cost_usd": 0.00029679999999999995,
+      "strong_cost_usd": 0.00118575
+    },
+    {
+      "rendering_id": "C10-L1",
+      "rep": 1,
+      "level": "L1",
+      "cheap_correct": true,
+      "strong_correct": true,
+      "escalated": false,
+      "cheap_cost_usd": 0.000295,
+      "strong_cost_usd": 0.0012975
+    },
+    {
+      "rendering_id": "C10-L1",
+      "rep": 2,
+      "level": "L1",
+      "cheap_correct": true,
+      "strong_correct": true,
+      "escalated": false,
+      "cheap_cost_usd": 0.000295,
+      "strong_cost_usd": 0.00129
+    },
+    {
+      "rendering_id": "C10-L1",
+      "rep": 3,
+      "level": "L1",
+      "cheap_correct": true,
+      "strong_correct": true,
+      "escalated": false,
+      "cheap_cost_usd": 0.000295,
+      "strong_cost_usd": 0.00115875
+    },
+    {
+      "rendering_id": "C10-L2",
+      "rep": 1,
+      "level": "L2",
+      "cheap_correct": true,
+      "strong_correct": true,
+      "escalated": false,
+      "cheap_cost_usd": 0.0002965,
+      "strong_cost_usd": 0.0014025
+    },
+    {
+      "rendering_id": "C10-L2",
+      "rep": 2,
+      "level": "L2",
+      "cheap_correct": true,
+      "strong_correct": true,
+      "escalated": false,
+      "cheap_cost_usd": 0.0002965,
+      "strong_cost_usd": 0.00136125
+    },
+    {
+      "rendering_id": "C10-L2",
+      "rep": 3,
+      "level": "L2",
+      "cheap_correct": true,
+      "strong_correct": true,
+      "escalated": false,
+      "cheap_cost_usd": 0.0002965,
+      "strong_cost_usd": 0.00125625
+    },
+    {
+      "rendering_id": "C10-L3",
+      "rep": 1,
+      "level": "L3",
+      "cheap_correct": true,
+      "strong_correct": true,
+      "escalated": false,
+      "cheap_cost_usd": 0.00029739999999999996,
+      "strong_cost_usd": 0.0012285
+    },
+    {
+      "rendering_id": "C10-L3",
+      "rep": 2,
+      "level": "L3",
+      "cheap_correct": true,
+      "strong_correct": true,
+      "escalated": false,
+      "cheap_cost_usd": 0.00029739999999999996,
+      "strong_cost_usd": 0.0012135000000000002
+    },
+    {
+      "rendering_id": "C10-L3",
+      "rep": 3,
+      "level": "L3",
+      "cheap_correct": true,
+      "strong_correct": true,
+      "escalated": false,
+      "cheap_cost_usd": 0.00029739999999999996,
+      "strong_cost_usd": 0.0012322499999999998
+    },
+    {
+      "rendering_id": "C11-L1",
+      "rep": 1,
+      "level": "L1",
+      "cheap_correct": true,
+      "strong_correct": true,
+      "escalated": false,
+      "cheap_cost_usd": 0.00030000000000000003,
+      "strong_cost_usd": 0.001245
+    },
+    {
+      "rendering_id": "C11-L1",
+      "rep": 2,
+      "level": "L1",
+      "cheap_correct": true,
+      "strong_correct": true,
+      "escalated": false,
+      "cheap_cost_usd": 0.00030000000000000003,
+      "strong_cost_usd": 0.0012637500000000001
+    },
+    {
+      "rendering_id": "C11-L1",
+      "rep": 3,
+      "level": "L1",
+      "cheap_correct": true,
+      "strong_correct": true,
+      "escalated": false,
+      "cheap_cost_usd": 0.00030000000000000003,
+      "strong_cost_usd": 0.0012412500000000002
+    },
+    {
+      "rendering_id": "C11-L2",
+      "rep": 1,
+      "level": "L2",
+      "cheap_correct": true,
+      "strong_correct": true,
+      "escalated": false,
+      "cheap_cost_usd": 0.0003015,
+      "strong_cost_usd": 0.00133875
+    },
+    {
+      "rendering_id": "C11-L2",
+      "rep": 2,
+      "level": "L2",
+      "cheap_correct": true,
+      "strong_correct": true,
+      "escalated": false,
+      "cheap_cost_usd": 0.0003015,
+      "strong_cost_usd": 0.001275
+    },
+    {
+      "rendering_id": "C11-L2",
+      "rep": 3,
+      "level": "L2",
+      "cheap_correct": true,
+      "strong_correct": true,
+      "escalated": false,
+      "cheap_cost_usd": 0.0003015,
+      "strong_cost_usd": 0.00128625
+    },
+    {
+      "rendering_id": "C11-L3",
+      "rep": 1,
+      "level": "L3",
+      "cheap_correct": true,
+      "strong_correct": true,
+      "escalated": false,
+      "cheap_cost_usd": 0.00030209999999999997,
+      "strong_cost_usd": 0.0012802500000000001
+    },
+    {
+      "rendering_id": "C11-L3",
+      "rep": 2,
+      "level": "L3",
+      "cheap_correct": true,
+      "strong_correct": true,
+      "escalated": false,
+      "cheap_cost_usd": 0.00030209999999999997,
+      "strong_cost_usd": 0.00152025
+    },
+    {
+      "rendering_id": "C11-L3",
+      "rep": 3,
+      "level": "L3",
+      "cheap_correct": true,
+      "strong_correct": true,
+      "escalated": false,
+      "cheap_cost_usd": 0.00030209999999999997,
+      "strong_cost_usd": 0.0012052500000000002
+    },
+    {
+      "rendering_id": "C12-L1",
+      "rep": 1,
+      "level": "L1",
+      "cheap_correct": true,
+      "strong_correct": true,
+      "escalated": false,
+      "cheap_cost_usd": 0.00030000000000000003,
+      "strong_cost_usd": 0.0012375
+    },
+    {
+      "rendering_id": "C12-L1",
+      "rep": 2,
+      "level": "L1",
+      "cheap_correct": true,
+      "strong_correct": true,
+      "escalated": false,
+      "cheap_cost_usd": 0.00030000000000000003,
+      "strong_cost_usd": 0.00123375
+    },
+    {
+      "rendering_id": "C12-L1",
+      "rep": 3,
+      "level": "L1",
+      "cheap_correct": true,
+      "strong_correct": true,
+      "escalated": false,
+      "cheap_cost_usd": 0.00030000000000000003,
+      "strong_cost_usd": 0.0013425
+    },
+    {
+      "rendering_id": "C12-L2",
+      "rep": 1,
+      "level": "L2",
+      "cheap_correct": true,
+      "strong_correct": true,
+      "escalated": false,
+      "cheap_cost_usd": 0.0003015,
+      "strong_cost_usd": 0.001335
+    },
+    {
+      "rendering_id": "C12-L2",
+      "rep": 2,
+      "level": "L2",
+      "cheap_correct": true,
+      "strong_correct": true,
+      "escalated": false,
+      "cheap_cost_usd": 0.0003015,
+      "strong_cost_usd": 0.001335
+    },
+    {
+      "rendering_id": "C12-L2",
+      "rep": 3,
+      "level": "L2",
+      "cheap_correct": true,
+      "strong_correct": true,
+      "escalated": false,
+      "cheap_cost_usd": 0.0003015,
+      "strong_cost_usd": 0.00166125
+    },
+    {
+      "rendering_id": "C12-L3",
+      "rep": 1,
+      "level": "L3",
+      "cheap_correct": true,
+      "strong_correct": true,
+      "escalated": false,
+      "cheap_cost_usd": 0.0003036,
+      "strong_cost_usd": 0.001359
+    },
+    {
+      "rendering_id": "C12-L3",
+      "rep": 2,
+      "level": "L3",
+      "cheap_correct": true,
+      "strong_correct": true,
+      "escalated": false,
+      "cheap_cost_usd": 0.0003036,
+      "strong_cost_usd": 0.0011265
+    },
+    {
+      "rendering_id": "C12-L3",
+      "rep": 3,
+      "level": "L3",
+      "cheap_correct": true,
+      "strong_correct": true,
+      "escalated": false,
+      "cheap_cost_usd": 0.0003036,
+      "strong_cost_usd": 0.001359
+    },
+    {
+      "rendering_id": "C13-L1",
+      "rep": 1,
+      "level": "L1",
+      "cheap_correct": true,
+      "strong_correct": true,
+      "escalated": false,
+      "cheap_cost_usd": 0.0003003,
+      "strong_cost_usd": 0.00141825
+    },
+    {
+      "rendering_id": "C13-L1",
+      "rep": 2,
+      "level": "L1",
+      "cheap_correct": true,
+      "strong_correct": true,
+      "escalated": false,
+      "cheap_cost_usd": 0.0003003,
+      "strong_cost_usd": 0.0014145
+    },
+    {
+      "rendering_id": "C13-L1",
+      "rep": 3,
+      "level": "L1",
+      "cheap_correct": true,
+      "strong_correct": true,
+      "escalated": false,
+      "cheap_cost_usd": 0.0003003,
+      "strong_cost_usd": 0.00138075
+    },
+    {
+      "rendering_id": "C13-L2",
+      "rep": 1,
+      "level": "L2",
+      "cheap_correct": true,
+      "strong_correct": true,
+      "escalated": false,
+      "cheap_cost_usd": 0.00030179999999999996,
+      "strong_cost_usd": 0.0013432499999999998
+    },
+    {
+      "rendering_id": "C13-L2",
+      "rep": 2,
+      "level": "L2",
+      "cheap_correct": true,
+      "strong_correct": true,
+      "escalated": false,
+      "cheap_cost_usd": 0.00030179999999999996,
+      "strong_cost_usd": 0.0014595
+    },
+    {
+      "rendering_id": "C13-L2",
+      "rep": 3,
+      "level": "L2",
+      "cheap_correct": true,
+      "strong_correct": true,
+      "escalated": false,
+      "cheap_cost_usd": 0.00030179999999999996,
+      "strong_cost_usd": 0.001272
+    },
+    {
+      "rendering_id": "C13-L3",
+      "rep": 1,
+      "level": "L3",
+      "cheap_correct": true,
+      "strong_correct": true,
+      "escalated": false,
+      "cheap_cost_usd": 0.0003042,
+      "strong_cost_usd": 0.001323
+    },
+    {
+      "rendering_id": "C13-L3",
+      "rep": 2,
+      "level": "L3",
+      "cheap_correct": true,
+      "strong_correct": true,
+      "escalated": false,
+      "cheap_cost_usd": 0.0003042,
+      "strong_cost_usd": 0.0017767500000000001
+    },
+    {
+      "rendering_id": "C13-L3",
+      "rep": 3,
+      "level": "L3",
+      "cheap_correct": true,
+      "strong_correct": true,
+      "escalated": false,
+      "cheap_cost_usd": 0.0003042,
+      "strong_cost_usd": 0.00135675
+    },
+    {
+      "rendering_id": "C14-L1",
+      "rep": 1,
+      "level": "L1",
+      "cheap_correct": true,
+      "strong_correct": true,
+      "escalated": false,
+      "cheap_cost_usd": 0.0002978,
+      "strong_cost_usd": 0.001197
+    },
+    {
+      "rendering_id": "C14-L1",
+      "rep": 2,
+      "level": "L1",
+      "cheap_correct": true,
+      "strong_correct": true,
+      "escalated": false,
+      "cheap_cost_usd": 0.0002978,
+      "strong_cost_usd": 0.00109575
+    },
+    {
+      "rendering_id": "C14-L1",
+      "rep": 3,
+      "level": "L1",
+      "cheap_correct": true,
+      "strong_correct": true,
+      "escalated": false,
+      "cheap_cost_usd": 0.0002978,
+      "strong_cost_usd": 0.00108075
+    },
+    {
+      "rendering_id": "C14-L2",
+      "rep": 1,
+      "level": "L2",
+      "cheap_correct": true,
+      "strong_correct": true,
+      "escalated": false,
+      "cheap_cost_usd": 0.00029929999999999996,
+      "strong_cost_usd": 0.00112575
+    },
+    {
+      "rendering_id": "C14-L2",
+      "rep": 2,
+      "level": "L2",
+      "cheap_correct": true,
+      "strong_correct": true,
+      "escalated": false,
+      "cheap_cost_usd": 0.00029929999999999996,
+      "strong_cost_usd": 0.001167
+    },
+    {
+      "rendering_id": "C14-L2",
+      "rep": 3,
+      "level": "L2",
+      "cheap_correct": true,
+      "strong_correct": true,
+      "escalated": false,
+      "cheap_cost_usd": 0.00029929999999999996,
+      "strong_cost_usd": 0.00128325
+    },
+    {
+      "rendering_id": "C14-L3",
+      "rep": 1,
+      "level": "L3",
+      "cheap_correct": true,
+      "strong_correct": true,
+      "escalated": false,
+      "cheap_cost_usd": 0.0003017,
+      "strong_cost_usd": 0.0013717500000000001
+    },
+    {
+      "rendering_id": "C14-L3",
+      "rep": 2,
+      "level": "L3",
+      "cheap_correct": true,
+      "strong_correct": true,
+      "escalated": false,
+      "cheap_cost_usd": 0.0003017,
+      "strong_cost_usd": 0.001263
+    },
+    {
+      "rendering_id": "C14-L3",
+      "rep": 3,
+      "level": "L3",
+      "cheap_correct": true,
+      "strong_correct": true,
+      "escalated": false,
+      "cheap_cost_usd": 0.0003017,
+      "strong_cost_usd": 0.0013080000000000001
+    },
+    {
+      "rendering_id": "C15-L1",
+      "rep": 1,
+      "level": "L1",
+      "cheap_correct": true,
+      "strong_correct": true,
+      "escalated": false,
+      "cheap_cost_usd": 0.0003125,
+      "strong_cost_usd": 0.00110625
+    },
+    {
+      "rendering_id": "C15-L1",
+      "rep": 2,
+      "level": "L1",
+      "cheap_correct": true,
+      "strong_correct": true,
+      "escalated": false,
+      "cheap_cost_usd": 0.0003125,
+      "strong_cost_usd": 0.0011325
+    },
+    {
+      "rendering_id": "C15-L1",
+      "rep": 3,
+      "level": "L1",
+      "cheap_correct": true,
+      "strong_correct": true,
+      "escalated": false,
+      "cheap_cost_usd": 0.0003125,
+      "strong_cost_usd": 0.001245
+    },
+    {
+      "rendering_id": "C15-L2",
+      "rep": 1,
+      "level": "L2",
+      "cheap_correct": true,
+      "strong_correct": true,
+      "escalated": false,
+      "cheap_cost_usd": 0.00031400000000000004,
+      "strong_cost_usd": 0.00121875
+    },
+    {
+      "rendering_id": "C15-L2",
+      "rep": 2,
+      "level": "L2",
+      "cheap_correct": true,
+      "strong_correct": true,
+      "escalated": false,
+      "cheap_cost_usd": 0.00031400000000000004,
+      "strong_cost_usd": 0.00115875
+    },
+    {
+      "rendering_id": "C15-L2",
+      "rep": 3,
+      "level": "L2",
+      "cheap_correct": true,
+      "strong_correct": true,
+      "escalated": false,
+      "cheap_cost_usd": 0.00031400000000000004,
+      "strong_cost_usd": 0.00122625
+    },
+    {
+      "rendering_id": "C15-L3",
+      "rep": 1,
+      "level": "L3",
+      "cheap_correct": true,
+      "strong_correct": true,
+      "escalated": false,
+      "cheap_cost_usd": 0.00031729999999999996,
+      "strong_cost_usd": 0.001332
+    },
+    {
+      "rendering_id": "C15-L3",
+      "rep": 2,
+      "level": "L3",
+      "cheap_correct": true,
+      "strong_correct": true,
+      "escalated": false,
+      "cheap_cost_usd": 0.00031729999999999996,
+      "strong_cost_usd": 0.00115575
+    },
+    {
+      "rendering_id": "C15-L3",
+      "rep": 3,
+      "level": "L3",
+      "cheap_correct": true,
+      "strong_correct": true,
+      "escalated": false,
+      "cheap_cost_usd": 0.00031729999999999996,
+      "strong_cost_usd": 0.00115575
+    },
+    {
+      "rendering_id": "C16-L1",
+      "rep": 1,
+      "level": "L1",
+      "cheap_correct": true,
+      "strong_correct": true,
+      "escalated": false,
+      "cheap_cost_usd": 0.0003528,
+      "strong_cost_usd": 0.001527
+    },
+    {
+      "rendering_id": "C16-L1",
+      "rep": 2,
+      "level": "L1",
+      "cheap_correct": true,
+      "strong_correct": true,
+      "escalated": false,
+      "cheap_cost_usd": 0.0003528,
+      "strong_cost_usd": 0.00150825
+    },
+    {
+      "rendering_id": "C16-L1",
+      "rep": 3,
+      "level": "L1",
+      "cheap_correct": true,
+      "strong_correct": true,
+      "escalated": false,
+      "cheap_cost_usd": 0.0003528,
+      "strong_cost_usd": 0.0013245
+    },
+    {
+      "rendering_id": "C16-L2",
+      "rep": 1,
+      "level": "L2",
+      "cheap_correct": true,
+      "strong_correct": true,
+      "escalated": false,
+      "cheap_cost_usd": 0.00035549999999999997,
+      "strong_cost_usd": 0.0013912500000000001
+    },
+    {
+      "rendering_id": "C16-L2",
+      "rep": 2,
+      "level": "L2",
+      "cheap_correct": true,
+      "strong_correct": true,
+      "escalated": false,
+      "cheap_cost_usd": 0.00035549999999999997,
+      "strong_cost_usd": 0.0013575
+    },
+    {
+      "rendering_id": "C16-L2",
+      "rep": 3,
+      "level": "L2",
+      "cheap_correct": true,
+      "strong_correct": true,
+      "escalated": false,
+      "cheap_cost_usd": 0.00035549999999999997,
+      "strong_cost_usd": 0.0013237499999999998
+    },
+    {
+      "rendering_id": "C16-L3",
+      "rep": 1,
+      "level": "L3",
+      "cheap_correct": true,
+      "strong_correct": true,
+      "escalated": false,
+      "cheap_cost_usd": 0.0003561,
+      "strong_cost_usd": 0.0016177499999999998
+    },
+    {
+      "rendering_id": "C16-L3",
+      "rep": 2,
+      "level": "L3",
+      "cheap_correct": true,
+      "strong_correct": true,
+      "escalated": false,
+      "cheap_cost_usd": 0.0003561,
+      "strong_cost_usd": 0.001314
+    },
+    {
+      "rendering_id": "C16-L3",
+      "rep": 3,
+      "level": "L3",
+      "cheap_correct": true,
+      "strong_correct": true,
+      "escalated": false,
+      "cheap_cost_usd": 0.0003561,
+      "strong_cost_usd": 0.001629
+    },
+    {
+      "rendering_id": "C17-L1",
+      "rep": 1,
+      "level": "L1",
+      "cheap_correct": true,
+      "strong_correct": true,
+      "escalated": false,
+      "cheap_cost_usd": 0.0003606,
+      "strong_cost_usd": 0.001374
+    },
+    {
+      "rendering_id": "C17-L1",
+      "rep": 2,
+      "level": "L1",
+      "cheap_correct": true,
+      "strong_correct": true,
+      "escalated": false,
+      "cheap_cost_usd": 0.0003606,
+      "strong_cost_usd": 0.0014602500000000002
+    },
+    {
+      "rendering_id": "C17-L1",
+      "rep": 3,
+      "level": "L1",
+      "cheap_correct": true,
+      "strong_correct": true,
+      "escalated": false,
+      "cheap_cost_usd": 0.0003606,
+      "strong_cost_usd": 0.00134775
+    },
+    {
+      "rendering_id": "C17-L2",
+      "rep": 1,
+      "level": "L2",
+      "cheap_correct": true,
+      "strong_correct": true,
+      "escalated": false,
+      "cheap_cost_usd": 0.0003633,
+      "strong_cost_usd": 0.00137325
+    },
+    {
+      "rendering_id": "C17-L2",
+      "rep": 2,
+      "level": "L2",
+      "cheap_correct": true,
+      "strong_correct": true,
+      "escalated": false,
+      "cheap_cost_usd": 0.0003633,
+      "strong_cost_usd": 0.0013207499999999999
+    },
+    {
+      "rendering_id": "C17-L2",
+      "rep": 3,
+      "level": "L2",
+      "cheap_correct": true,
+      "strong_correct": true,
+      "escalated": false,
+      "cheap_cost_usd": 0.0003633,
+      "strong_cost_usd": 0.001437
+    },
+    {
+      "rendering_id": "C17-L3",
+      "rep": 1,
+      "level": "L3",
+      "cheap_correct": true,
+      "strong_correct": true,
+      "escalated": false,
+      "cheap_cost_usd": 0.0003636,
+      "strong_cost_usd": 0.0014677499999999999
+    },
+    {
+      "rendering_id": "C17-L3",
+      "rep": 2,
+      "level": "L3",
+      "cheap_correct": true,
+      "strong_correct": true,
+      "escalated": false,
+      "cheap_cost_usd": 0.0003636,
+      "strong_cost_usd": 0.0015465
+    },
+    {
+      "rendering_id": "C17-L3",
+      "rep": 3,
+      "level": "L3",
+      "cheap_correct": true,
+      "strong_correct": true,
+      "escalated": false,
+      "cheap_cost_usd": 0.0003636,
+      "strong_cost_usd": 0.00144525
+    },
+    {
+      "rendering_id": "C18-L1",
+      "rep": 1,
+      "level": "L1",
+      "cheap_correct": true,
+      "strong_correct": true,
+      "escalated": false,
+      "cheap_cost_usd": 0.0003428,
+      "strong_cost_usd": 0.001272
+    },
+    {
+      "rendering_id": "C18-L1",
+      "rep": 2,
+      "level": "L1",
+      "cheap_correct": true,
+      "strong_correct": true,
+      "escalated": false,
+      "cheap_cost_usd": 0.0003428,
+      "strong_cost_usd": 0.0012945
+    },
+    {
+      "rendering_id": "C18-L1",
+      "rep": 3,
+      "level": "L1",
+      "cheap_correct": true,
+      "strong_correct": true,
+      "escalated": false,
+      "cheap_cost_usd": 0.0003428,
+      "strong_cost_usd": 0.0012794999999999998
+    },
+    {
+      "rendering_id": "C18-L2",
+      "rep": 1,
+      "level": "L2",
+      "cheap_correct": true,
+      "strong_correct": true,
+      "escalated": false,
+      "cheap_cost_usd": 0.0003446,
+      "strong_cost_usd": 0.0013402499999999999
+    },
+    {
+      "rendering_id": "C18-L2",
+      "rep": 2,
+      "level": "L2",
+      "cheap_correct": true,
+      "strong_correct": true,
+      "escalated": false,
+      "cheap_cost_usd": 0.0003446,
+      "strong_cost_usd": 0.00137025
+    },
+    {
+      "rendering_id": "C18-L2",
+      "rep": 3,
+      "level": "L2",
+      "cheap_correct": true,
+      "strong_correct": true,
+      "escalated": false,
+      "cheap_cost_usd": 0.0003446,
+      "strong_cost_usd": 0.001284
+    },
+    {
+      "rendering_id": "C18-L3",
+      "rep": 1,
+      "level": "L3",
+      "cheap_correct": true,
+      "strong_correct": true,
+      "escalated": false,
+      "cheap_cost_usd": 0.0003461,
+      "strong_cost_usd": 0.0013514999999999998
+    },
+    {
+      "rendering_id": "C18-L3",
+      "rep": 2,
+      "level": "L3",
+      "cheap_correct": true,
+      "strong_correct": true,
+      "escalated": false,
+      "cheap_cost_usd": 0.0003461,
+      "strong_cost_usd": 0.0013402499999999999
+    },
+    {
+      "rendering_id": "C18-L3",
+      "rep": 3,
+      "level": "L3",
+      "cheap_correct": true,
+      "strong_correct": true,
+      "escalated": false,
+      "cheap_cost_usd": 0.0003461,
+      "strong_cost_usd": 0.00142275
+    },
+    {
+      "rendering_id": "C19-L1",
+      "rep": 1,
+      "level": "L1",
+      "cheap_correct": true,
+      "strong_correct": true,
+      "escalated": false,
+      "cheap_cost_usd": 0.00037810000000000003,
+      "strong_cost_usd": 0.0014602500000000002
+    },
+    {
+      "rendering_id": "C19-L1",
+      "rep": 2,
+      "level": "L1",
+      "cheap_correct": true,
+      "strong_correct": true,
+      "escalated": false,
+      "cheap_cost_usd": 0.00037810000000000003,
+      "strong_cost_usd": 0.00149025
+    },
+    {
+      "rendering_id": "C19-L1",
+      "rep": 3,
+      "level": "L1",
+      "cheap_correct": true,
+      "strong_correct": true,
+      "escalated": false,
+      "cheap_cost_usd": 0.00037810000000000003,
+      "strong_cost_usd": 0.001374
+    },
+    {
+      "rendering_id": "C19-L2",
+      "rep": 1,
+      "level": "L2",
+      "cheap_correct": true,
+      "strong_correct": true,
+      "escalated": false,
+      "cheap_cost_usd": 0.0003808,
+      "strong_cost_usd": 0.001392
+    },
+    {
+      "rendering_id": "C19-L2",
+      "rep": 2,
+      "level": "L2",
+      "cheap_correct": true,
+      "strong_correct": true,
+      "escalated": false,
+      "cheap_cost_usd": 0.0003808,
+      "strong_cost_usd": 0.0015045
+    },
+    {
+      "rendering_id": "C19-L2",
+      "rep": 3,
+      "level": "L2",
+      "cheap_correct": true,
+      "strong_correct": true,
+      "escalated": false,
+      "cheap_cost_usd": 0.0003808,
+      "strong_cost_usd": 0.0014482499999999999
+    },
+    {
+      "rendering_id": "C19-L3",
+      "rep": 1,
+      "level": "L3",
+      "cheap_correct": true,
+      "strong_correct": true,
+      "escalated": false,
+      "cheap_cost_usd": 0.0003832,
+      "strong_cost_usd": 0.0015555
+    },
+    {
+      "rendering_id": "C19-L3",
+      "rep": 2,
+      "level": "L3",
+      "cheap_correct": true,
+      "strong_correct": true,
+      "escalated": false,
+      "cheap_cost_usd": 0.0003832,
+      "strong_cost_usd": 0.0016905
+    },
+    {
+      "rendering_id": "C19-L3",
+      "rep": 3,
+      "level": "L3",
+      "cheap_correct": true,
+      "strong_correct": true,
+      "escalated": false,
+      "cheap_cost_usd": 0.0003832,
+      "strong_cost_usd": 0.001488
+    },
+    {
+      "rendering_id": "C20-L1",
+      "rep": 1,
+      "level": "L1",
+      "cheap_correct": false,
+      "strong_correct": true,
+      "escalated": true,
+      "cheap_cost_usd": 0.00038179999999999996,
+      "strong_cost_usd": 0.00153075
+    },
+    {
+      "rendering_id": "C20-L1",
+      "rep": 2,
+      "level": "L1",
+      "cheap_correct": false,
+      "strong_correct": true,
+      "escalated": true,
+      "cheap_cost_usd": 0.00038179999999999996,
+      "strong_cost_usd": 0.0016845
+    },
+    {
+      "rendering_id": "C20-L1",
+      "rep": 3,
+      "level": "L1",
+      "cheap_correct": false,
+      "strong_correct": true,
+      "escalated": true,
+      "cheap_cost_usd": 0.00038179999999999996,
+      "strong_cost_usd": 0.001677
+    },
+    {
+      "rendering_id": "C20-L2",
+      "rep": 1,
+      "level": "L2",
+      "cheap_correct": false,
+      "strong_correct": true,
+      "escalated": true,
+      "cheap_cost_usd": 0.00038449999999999997,
+      "strong_cost_usd": 0.0017850000000000001
+    },
+    {
+      "rendering_id": "C20-L2",
+      "rep": 2,
+      "level": "L2",
+      "cheap_correct": false,
+      "strong_correct": true,
+      "escalated": true,
+      "cheap_cost_usd": 0.00038449999999999997,
+      "strong_cost_usd": 0.0021225000000000003
+    },
+    {
+      "rendering_id": "C20-L2",
+      "rep": 3,
+      "level": "L2",
+      "cheap_correct": false,
+      "strong_correct": true,
+      "escalated": true,
+      "cheap_cost_usd": 0.00038449999999999997,
+      "strong_cost_usd": 0.0020025
+    },
+    {
+      "rendering_id": "C20-L3",
+      "rep": 1,
+      "level": "L3",
+      "cheap_correct": false,
+      "strong_correct": true,
+      "escalated": true,
+      "cheap_cost_usd": 0.00034849999999999996,
+      "strong_cost_usd": 0.00168
+    },
+    {
+      "rendering_id": "C20-L3",
+      "rep": 2,
+      "level": "L3",
+      "cheap_correct": true,
+      "strong_correct": true,
+      "escalated": false,
+      "cheap_cost_usd": 0.0011935,
+      "strong_cost_usd": 0.0018225000000000001
+    },
+    {
+      "rendering_id": "C20-L3",
+      "rep": 3,
+      "level": "L3",
+      "cheap_correct": false,
+      "strong_correct": true,
+      "escalated": true,
+      "cheap_cost_usd": 0.00034849999999999996,
+      "strong_cost_usd": 0.00169125
+    },
+    {
+      "rendering_id": "C21-L1",
+      "rep": 1,
+      "level": "L1",
+      "cheap_correct": false,
+      "strong_correct": true,
+      "escalated": true,
+      "cheap_cost_usd": 0.0003721,
+      "strong_cost_usd": 0.001794
+    },
+    {
+      "rendering_id": "C21-L1",
+      "rep": 2,
+      "level": "L1",
+      "cheap_correct": false,
+      "strong_correct": true,
+      "escalated": true,
+      "cheap_cost_usd": 0.0003721,
+      "strong_cost_usd": 0.00215025
+    },
+    {
+      "rendering_id": "C21-L1",
+      "rep": 3,
+      "level": "L1",
+      "cheap_correct": false,
+      "strong_correct": true,
+      "escalated": true,
+      "cheap_cost_usd": 0.0003721,
+      "strong_cost_usd": 0.001419
+    },
+    {
+      "rendering_id": "C21-L2",
+      "rep": 1,
+      "level": "L2",
+      "cheap_correct": false,
+      "strong_correct": true,
+      "escalated": true,
+      "cheap_cost_usd": 0.0003748,
+      "strong_cost_usd": 0.0018232499999999998
+    },
+    {
+      "rendering_id": "C21-L2",
+      "rep": 2,
+      "level": "L2",
+      "cheap_correct": false,
+      "strong_correct": true,
+      "escalated": true,
+      "cheap_cost_usd": 0.0003398,
+      "strong_cost_usd": 0.0025245000000000003
+    },
+    {
+      "rendering_id": "C21-L2",
+      "rep": 3,
+      "level": "L2",
+      "cheap_correct": false,
+      "strong_correct": true,
+      "escalated": true,
+      "cheap_cost_usd": 0.0003748,
+      "strong_cost_usd": 0.00183825
+    },
+    {
+      "rendering_id": "C21-L3",
+      "rep": 1,
+      "level": "L3",
+      "cheap_correct": false,
+      "strong_correct": true,
+      "escalated": true,
+      "cheap_cost_usd": 0.0003754,
+      "strong_cost_usd": 0.0016372500000000003
+    },
+    {
+      "rendering_id": "C21-L3",
+      "rep": 2,
+      "level": "L3",
+      "cheap_correct": false,
+      "strong_correct": true,
+      "escalated": true,
+      "cheap_cost_usd": 0.0003754,
+      "strong_cost_usd": 0.001731
+    },
+    {
+      "rendering_id": "C21-L3",
+      "rep": 3,
+      "level": "L3",
+      "cheap_correct": false,
+      "strong_correct": true,
+      "escalated": true,
+      "cheap_cost_usd": 0.0003754,
+      "strong_cost_usd": 0.001971
+    },
+    {
+      "rendering_id": "C22-L1",
+      "rep": 1,
+      "level": "L1",
+      "cheap_correct": false,
+      "strong_correct": true,
+      "escalated": true,
+      "cheap_cost_usd": 0.0003383,
+      "strong_cost_usd": 0.00155325
+    },
+    {
+      "rendering_id": "C22-L1",
+      "rep": 2,
+      "level": "L1",
+      "cheap_correct": false,
+      "strong_correct": true,
+      "escalated": true,
+      "cheap_cost_usd": 0.0003383,
+      "strong_cost_usd": 0.0018007499999999998
+    },
+    {
+      "rendering_id": "C22-L1",
+      "rep": 3,
+      "level": "L1",
+      "cheap_correct": false,
+      "strong_correct": true,
+      "escalated": true,
+      "cheap_cost_usd": 0.0003383,
+      "strong_cost_usd": 0.002232
+    },
+    {
+      "rendering_id": "C22-L2",
+      "rep": 1,
+      "level": "L2",
+      "cheap_correct": false,
+      "strong_correct": true,
+      "escalated": true,
+      "cheap_cost_usd": 0.00034099999999999994,
+      "strong_cost_usd": 0.002415
+    },
+    {
+      "rendering_id": "C22-L2",
+      "rep": 2,
+      "level": "L2",
+      "cheap_correct": false,
+      "strong_correct": true,
+      "escalated": true,
+      "cheap_cost_usd": 0.00034099999999999994,
+      "strong_cost_usd": 0.0017699999999999999
+    },
+    {
+      "rendering_id": "C22-L2",
+      "rep": 3,
+      "level": "L2",
+      "cheap_correct": false,
+      "strong_correct": true,
+      "escalated": true,
+      "cheap_cost_usd": 0.00034099999999999994,
+      "strong_cost_usd": 0.0024675
+    },
+    {
+      "rendering_id": "C22-L3",
+      "rep": 1,
+      "level": "L3",
+      "cheap_correct": false,
+      "strong_correct": true,
+      "escalated": true,
+      "cheap_cost_usd": 0.0003428,
+      "strong_cost_usd": 0.00161325
+    },
+    {
+      "rendering_id": "C22-L3",
+      "rep": 2,
+      "level": "L3",
+      "cheap_correct": false,
+      "strong_correct": true,
+      "escalated": true,
+      "cheap_cost_usd": 0.0003428,
+      "strong_cost_usd": 0.0015757500000000001
+    },
+    {
+      "rendering_id": "C22-L3",
+      "rep": 3,
+      "level": "L3",
+      "cheap_correct": false,
+      "strong_correct": true,
+      "escalated": true,
+      "cheap_cost_usd": 0.0003428,
+      "strong_cost_usd": 0.00189825
+    },
+    {
+      "rendering_id": "C23-L1",
+      "rep": 1,
+      "level": "L1",
+      "cheap_correct": true,
+      "strong_correct": true,
+      "escalated": false,
+      "cheap_cost_usd": 0.00042029999999999997,
+      "strong_cost_usd": 0.0009307499999999999
+    },
+    {
+      "rendering_id": "C23-L1",
+      "rep": 2,
+      "level": "L1",
+      "cheap_correct": true,
+      "strong_correct": true,
+      "escalated": false,
+      "cheap_cost_usd": 0.0002878,
+      "strong_cost_usd": 0.00098325
+    },
+    {
+      "rendering_id": "C23-L1",
+      "rep": 3,
+      "level": "L1",
+      "cheap_correct": true,
+      "strong_correct": true,
+      "escalated": false,
+      "cheap_cost_usd": 0.0005903,
+      "strong_cost_usd": 0.000972
+    },
+    {
+      "rendering_id": "C23-L2",
+      "rep": 1,
+      "level": "L2",
+      "cheap_correct": true,
+      "strong_correct": true,
+      "escalated": false,
+      "cheap_cost_usd": 0.000723,
+      "strong_cost_usd": 0.0009375
+    },
+    {
+      "rendering_id": "C23-L2",
+      "rep": 2,
+      "level": "L2",
+      "cheap_correct": true,
+      "strong_correct": true,
+      "escalated": false,
+      "cheap_cost_usd": 0.00029049999999999996,
+      "strong_cost_usd": 0.0009337499999999999
+    },
+    {
+      "rendering_id": "C23-L2",
+      "rep": 3,
+      "level": "L2",
+      "cheap_correct": true,
+      "strong_correct": true,
+      "escalated": false,
+      "cheap_cost_usd": 0.0006829999999999999,
+      "strong_cost_usd": 0.00108375
+    },
+    {
+      "rendering_id": "C23-L3",
+      "rep": 1,
+      "level": "L3",
+      "cheap_correct": true,
+      "strong_correct": true,
+      "escalated": false,
+      "cheap_cost_usd": 0.0002962,
+      "strong_cost_usd": 0.00114675
+    },
+    {
+      "rendering_id": "C23-L3",
+      "rep": 2,
+      "level": "L3",
+      "cheap_correct": true,
+      "strong_correct": true,
+      "escalated": false,
+      "cheap_cost_usd": 0.0004612,
+      "strong_cost_usd": 0.00110925
+    },
+    {
+      "rendering_id": "C23-L3",
+      "rep": 3,
+      "level": "L3",
+      "cheap_correct": true,
+      "strong_correct": true,
+      "escalated": false,
+      "cheap_cost_usd": 0.0004787,
+      "strong_cost_usd": 0.00113175
+    },
+    {
+      "rendering_id": "C24-L1",
+      "rep": 1,
+      "level": "L1",
+      "cheap_correct": true,
+      "strong_correct": true,
+      "escalated": false,
+      "cheap_cost_usd": 0.0005133,
+      "strong_cost_usd": 0.0010769999999999998
+    },
+    {
+      "rendering_id": "C24-L1",
+      "rep": 2,
+      "level": "L1",
+      "cheap_correct": true,
+      "strong_correct": true,
+      "escalated": false,
+      "cheap_cost_usd": 0.0006083,
+      "strong_cost_usd": 0.00098325
+    },
+    {
+      "rendering_id": "C24-L1",
+      "rep": 3,
+      "level": "L1",
+      "cheap_correct": true,
+      "strong_correct": true,
+      "escalated": false,
+      "cheap_cost_usd": 0.0007058,
+      "strong_cost_usd": 0.0010845
+    },
+    {
+      "rendering_id": "C24-L2",
+      "rep": 1,
+      "level": "L2",
+      "cheap_correct": true,
+      "strong_correct": true,
+      "escalated": false,
+      "cheap_cost_usd": 0.0002935,
+      "strong_cost_usd": 0.00099375
+    },
+    {
+      "rendering_id": "C24-L2",
+      "rep": 2,
+      "level": "L2",
+      "cheap_correct": true,
+      "strong_correct": true,
+      "escalated": false,
+      "cheap_cost_usd": 0.0006209999999999999,
+      "strong_cost_usd": 0.0010125
+    },
+    {
+      "rendering_id": "C24-L2",
+      "rep": 3,
+      "level": "L2",
+      "cheap_correct": true,
+      "strong_correct": true,
+      "escalated": false,
+      "cheap_cost_usd": 0.0002935,
+      "strong_cost_usd": 0.00121875
+    },
+    {
+      "rendering_id": "C24-L3",
+      "rep": 1,
+      "level": "L3",
+      "cheap_correct": true,
+      "strong_correct": true,
+      "escalated": false,
+      "cheap_cost_usd": 0.0002947,
+      "strong_cost_usd": 0.0013042499999999999
+    },
+    {
+      "rendering_id": "C24-L3",
+      "rep": 2,
+      "level": "L3",
+      "cheap_correct": true,
+      "strong_correct": true,
+      "escalated": false,
+      "cheap_cost_usd": 0.0004897,
+      "strong_cost_usd": 0.001353
+    },
+    {
+      "rendering_id": "C24-L3",
+      "rep": 3,
+      "level": "L3",
+      "cheap_correct": true,
+      "strong_correct": true,
+      "escalated": false,
+      "cheap_cost_usd": 0.0008247,
+      "strong_cost_usd": 0.00147675
+    },
+    {
+      "rendering_id": "C25-L1",
+      "rep": 1,
+      "level": "L1",
+      "cheap_correct": true,
+      "strong_correct": true,
+      "escalated": false,
+      "cheap_cost_usd": 0.000295,
+      "strong_cost_usd": 0.0011775000000000002
+    },
+    {
+      "rendering_id": "C25-L1",
+      "rep": 2,
+      "level": "L1",
+      "cheap_correct": true,
+      "strong_correct": true,
+      "escalated": false,
+      "cheap_cost_usd": 0.000295,
+      "strong_cost_usd": 0.001065
+    },
+    {
+      "rendering_id": "C25-L1",
+      "rep": 3,
+      "level": "L1",
+      "cheap_correct": true,
+      "strong_correct": true,
+      "escalated": false,
+      "cheap_cost_usd": 0.000295,
+      "strong_cost_usd": 0.0010987500000000001
+    },
+    {
+      "rendering_id": "C25-L2",
+      "rep": 1,
+      "level": "L2",
+      "cheap_correct": true,
+      "strong_correct": true,
+      "escalated": false,
+      "cheap_cost_usd": 0.00029679999999999995,
+      "strong_cost_usd": 0.001122
+    },
+    {
+      "rendering_id": "C25-L2",
+      "rep": 2,
+      "level": "L2",
+      "cheap_correct": true,
+      "strong_correct": true,
+      "escalated": false,
+      "cheap_cost_usd": 0.00029679999999999995,
+      "strong_cost_usd": 0.0011145
+    },
+    {
+      "rendering_id": "C25-L2",
+      "rep": 3,
+      "level": "L2",
+      "cheap_correct": true,
+      "strong_correct": true,
+      "escalated": false,
+      "cheap_cost_usd": 0.00029679999999999995,
+      "strong_cost_usd": 0.00123825
+    },
+    {
+      "rendering_id": "C25-L3",
+      "rep": 1,
+      "level": "L3",
+      "cheap_correct": true,
+      "strong_correct": true,
+      "escalated": false,
+      "cheap_cost_usd": 0.0003001,
+      "strong_cost_usd": 0.001179
+    },
+    {
+      "rendering_id": "C25-L3",
+      "rep": 2,
+      "level": "L3",
+      "cheap_correct": true,
+      "strong_correct": true,
+      "escalated": false,
+      "cheap_cost_usd": 0.0003001,
+      "strong_cost_usd": 0.0011865
+    },
+    {
+      "rendering_id": "C25-L3",
+      "rep": 3,
+      "level": "L3",
+      "cheap_correct": true,
+      "strong_correct": true,
+      "escalated": false,
+      "cheap_cost_usd": 0.0003001,
+      "strong_cost_usd": 0.00124275
+    },
+    {
+      "rendering_id": "C26-L1",
+      "rep": 1,
+      "level": "L1",
+      "cheap_correct": true,
+      "strong_correct": true,
+      "escalated": false,
+      "cheap_cost_usd": 0.000295,
+      "strong_cost_usd": 0.00121875
+    },
+    {
+      "rendering_id": "C26-L1",
+      "rep": 2,
+      "level": "L1",
+      "cheap_correct": true,
+      "strong_correct": true,
+      "escalated": false,
+      "cheap_cost_usd": 0.000295,
+      "strong_cost_usd": 0.00127125
+    },
+    {
+      "rendering_id": "C26-L1",
+      "rep": 3,
+      "level": "L1",
+      "cheap_correct": true,
+      "strong_correct": true,
+      "escalated": false,
+      "cheap_cost_usd": 0.000295,
+      "strong_cost_usd": 0.00122625
+    },
+    {
+      "rendering_id": "C26-L2",
+      "rep": 1,
+      "level": "L2",
+      "cheap_correct": true,
+      "strong_correct": true,
+      "escalated": false,
+      "cheap_cost_usd": 0.00029679999999999995,
+      "strong_cost_usd": 0.0012569999999999999
+    },
+    {
+      "rendering_id": "C26-L2",
+      "rep": 2,
+      "level": "L2",
+      "cheap_correct": true,
+      "strong_correct": true,
+      "escalated": false,
+      "cheap_cost_usd": 0.00029679999999999995,
+      "strong_cost_usd": 0.001197
+    },
+    {
+      "rendering_id": "C26-L2",
+      "rep": 3,
+      "level": "L2",
+      "cheap_correct": true,
+      "strong_correct": true,
+      "escalated": false,
+      "cheap_cost_usd": 0.00029679999999999995,
+      "strong_cost_usd": 0.001122
+    },
+    {
+      "rendering_id": "C26-L3",
+      "rep": 1,
+      "level": "L3",
+      "cheap_correct": true,
+      "strong_correct": true,
+      "escalated": false,
+      "cheap_cost_usd": 0.0002986,
+      "strong_cost_usd": 0.00129525
+    },
+    {
+      "rendering_id": "C26-L3",
+      "rep": 2,
+      "level": "L3",
+      "cheap_correct": true,
+      "strong_correct": true,
+      "escalated": false,
+      "cheap_cost_usd": 0.0002986,
+      "strong_cost_usd": 0.00122775
+    },
+    {
+      "rendering_id": "C26-L3",
+      "rep": 3,
+      "level": "L3",
+      "cheap_correct": true,
+      "strong_correct": true,
+      "escalated": false,
+      "cheap_cost_usd": 0.0002986,
+      "strong_cost_usd": 0.00128025
+    },
+    {
+      "rendering_id": "C27-L1",
+      "rep": 1,
+      "level": "L1",
+      "cheap_correct": true,
+      "strong_correct": true,
+      "escalated": false,
+      "cheap_cost_usd": 0.00031929999999999995,
+      "strong_cost_usd": 0.00127575
+    },
+    {
+      "rendering_id": "C27-L1",
+      "rep": 2,
+      "level": "L1",
+      "cheap_correct": true,
+      "strong_correct": true,
+      "escalated": false,
+      "cheap_cost_usd": 0.00031929999999999995,
+      "strong_cost_usd": 0.00137325
+    },
+    {
+      "rendering_id": "C27-L1",
+      "rep": 3,
+      "level": "L1",
+      "cheap_correct": true,
+      "strong_correct": true,
+      "escalated": false,
+      "cheap_cost_usd": 0.00031929999999999995,
+      "strong_cost_usd": 0.00139575
+    },
+    {
+      "rendering_id": "C27-L2",
+      "rep": 1,
+      "level": "L2",
+      "cheap_correct": true,
+      "strong_correct": true,
+      "escalated": false,
+      "cheap_cost_usd": 0.0008460999999999999,
+      "strong_cost_usd": 0.0015539999999999998
+    },
+    {
+      "rendering_id": "C27-L2",
+      "rep": 2,
+      "level": "L2",
+      "cheap_correct": false,
+      "strong_correct": true,
+      "escalated": true,
+      "cheap_cost_usd": 0.0003036,
+      "strong_cost_usd": 0.0014039999999999999
+    },
+    {
+      "rendering_id": "C27-L2",
+      "rep": 3,
+      "level": "L2",
+      "cheap_correct": true,
+      "strong_correct": true,
+      "escalated": false,
+      "cheap_cost_usd": 0.0003211,
+      "strong_cost_usd": 0.00152025
+    },
+    {
+      "rendering_id": "C27-L3",
+      "rep": 1,
+      "level": "L3",
+      "cheap_correct": false,
+      "strong_correct": true,
+      "escalated": true,
+      "cheap_cost_usd": 0.0003096,
+      "strong_cost_usd": 0.001629
+    },
+    {
+      "rendering_id": "C27-L3",
+      "rep": 2,
+      "level": "L3",
+      "cheap_correct": false,
+      "strong_correct": true,
+      "escalated": true,
+      "cheap_cost_usd": 0.0003096,
+      "strong_cost_usd": 0.00158025
+    },
+    {
+      "rendering_id": "C27-L3",
+      "rep": 3,
+      "level": "L3",
+      "cheap_correct": true,
+      "strong_correct": true,
+      "escalated": false,
+      "cheap_cost_usd": 0.0013621,
+      "strong_cost_usd": 0.00157275
+    },
+    {
+      "rendering_id": "C28-L1",
+      "rep": 1,
+      "level": "L1",
+      "cheap_correct": true,
+      "strong_correct": true,
+      "escalated": false,
+      "cheap_cost_usd": 0.0003371,
+      "strong_cost_usd": 0.0016965
+    },
+    {
+      "rendering_id": "C28-L1",
+      "rep": 2,
+      "level": "L1",
+      "cheap_correct": true,
+      "strong_correct": true,
+      "escalated": false,
+      "cheap_cost_usd": 0.0003371,
+      "strong_cost_usd": 0.0013402499999999999
+    },
+    {
+      "rendering_id": "C28-L1",
+      "rep": 3,
+      "level": "L1",
+      "cheap_correct": true,
+      "strong_correct": true,
+      "escalated": false,
+      "cheap_cost_usd": 0.0003371,
+      "strong_cost_usd": 0.00134775
+    },
+    {
+      "rendering_id": "C28-L2",
+      "rep": 1,
+      "level": "L2",
+      "cheap_correct": true,
+      "strong_correct": true,
+      "escalated": false,
+      "cheap_cost_usd": 0.00033949999999999996,
+      "strong_cost_usd": 0.0014550000000000001
+    },
+    {
+      "rendering_id": "C28-L2",
+      "rep": 2,
+      "level": "L2",
+      "cheap_correct": true,
+      "strong_correct": true,
+      "escalated": false,
+      "cheap_cost_usd": 0.00033949999999999996,
+      "strong_cost_usd": 0.00148125
+    },
+    {
+      "rendering_id": "C28-L2",
+      "rep": 3,
+      "level": "L2",
+      "cheap_correct": true,
+      "strong_correct": true,
+      "escalated": false,
+      "cheap_cost_usd": 0.00033949999999999996,
+      "strong_cost_usd": 0.00164625
+    },
+    {
+      "rendering_id": "C28-L3",
+      "rep": 1,
+      "level": "L3",
+      "cheap_correct": true,
+      "strong_correct": true,
+      "escalated": false,
+      "cheap_cost_usd": 0.0009604,
+      "strong_cost_usd": 0.0018509999999999998
+    },
+    {
+      "rendering_id": "C28-L3",
+      "rep": 2,
+      "level": "L3",
+      "cheap_correct": true,
+      "strong_correct": true,
+      "escalated": false,
+      "cheap_cost_usd": 0.00034040000000000003,
+      "strong_cost_usd": 0.002061
+    },
+    {
+      "rendering_id": "C28-L3",
+      "rep": 3,
+      "level": "L3",
+      "cheap_correct": true,
+      "strong_correct": true,
+      "escalated": false,
+      "cheap_cost_usd": 0.00034040000000000003,
+      "strong_cost_usd": 0.0016710000000000002
+    },
+    {
+      "rendering_id": "C29-L1",
+      "rep": 1,
+      "level": "L1",
+      "cheap_correct": true,
+      "strong_correct": true,
+      "escalated": false,
+      "cheap_cost_usd": 0.000329,
+      "strong_cost_usd": 0.0015
+    },
+    {
+      "rendering_id": "C29-L1",
+      "rep": 2,
+      "level": "L1",
+      "cheap_correct": true,
+      "strong_correct": true,
+      "escalated": false,
+      "cheap_cost_usd": 0.000329,
+      "strong_cost_usd": 0.0013725
+    },
+    {
+      "rendering_id": "C29-L1",
+      "rep": 3,
+      "level": "L1",
+      "cheap_correct": true,
+      "strong_correct": true,
+      "escalated": false,
+      "cheap_cost_usd": 0.000329,
+      "strong_cost_usd": 0.0012975
+    },
+    {
+      "rendering_id": "C29-L2",
+      "rep": 1,
+      "level": "L2",
+      "cheap_correct": true,
+      "strong_correct": true,
+      "escalated": false,
+      "cheap_cost_usd": 0.00033079999999999996,
+      "strong_cost_usd": 0.001557
+    },
+    {
+      "rendering_id": "C29-L2",
+      "rep": 2,
+      "level": "L2",
+      "cheap_correct": true,
+      "strong_correct": true,
+      "escalated": false,
+      "cheap_cost_usd": 0.00033079999999999996,
+      "strong_cost_usd": 0.001647
+    },
+    {
+      "rendering_id": "C29-L2",
+      "rep": 3,
+      "level": "L2",
+      "cheap_correct": true,
+      "strong_correct": true,
+      "escalated": false,
+      "cheap_cost_usd": 0.00033079999999999996,
+      "strong_cost_usd": 0.0015795
+    },
+    {
+      "rendering_id": "C29-L3",
+      "rep": 1,
+      "level": "L3",
+      "cheap_correct": false,
+      "strong_correct": true,
+      "escalated": true,
+      "cheap_cost_usd": 0.00034920000000000003,
+      "strong_cost_usd": 0.0017954999999999998
+    },
+    {
+      "rendering_id": "C29-L3",
+      "rep": 2,
+      "level": "L3",
+      "cheap_correct": false,
+      "strong_correct": true,
+      "escalated": true,
+      "cheap_cost_usd": 0.00034920000000000003,
+      "strong_cost_usd": 0.0020805
+    },
+    {
+      "rendering_id": "C29-L3",
+      "rep": 3,
+      "level": "L3",
+      "cheap_correct": false,
+      "strong_correct": true,
+      "escalated": true,
+      "cheap_cost_usd": 0.00034920000000000003,
+      "strong_cost_usd": 0.00158175
+    },
+    {
+      "rendering_id": "C30-L1",
+      "rep": 1,
+      "level": "L1",
+      "cheap_correct": true,
+      "strong_correct": true,
+      "escalated": false,
+      "cheap_cost_usd": 0.0003205,
+      "strong_cost_usd": 0.001305
+    },
+    {
+      "rendering_id": "C30-L1",
+      "rep": 2,
+      "level": "L1",
+      "cheap_correct": true,
+      "strong_correct": true,
+      "escalated": false,
+      "cheap_cost_usd": 0.0003205,
+      "strong_cost_usd": 0.0015300000000000001
+    },
+    {
+      "rendering_id": "C30-L1",
+      "rep": 3,
+      "level": "L1",
+      "cheap_correct": true,
+      "strong_correct": true,
+      "escalated": false,
+      "cheap_cost_usd": 0.0003205,
+      "strong_cost_usd": 0.0016125
+    },
+    {
+      "rendering_id": "C30-L2",
+      "rep": 1,
+      "level": "L2",
+      "cheap_correct": true,
+      "strong_correct": true,
+      "escalated": false,
+      "cheap_cost_usd": 0.00032199999999999997,
+      "strong_cost_usd": 0.00174
+    },
+    {
+      "rendering_id": "C30-L2",
+      "rep": 2,
+      "level": "L2",
+      "cheap_correct": true,
+      "strong_correct": true,
+      "escalated": false,
+      "cheap_cost_usd": 0.0008044999999999999,
+      "strong_cost_usd": 0.0014550000000000001
+    },
+    {
+      "rendering_id": "C30-L2",
+      "rep": 3,
+      "level": "L2",
+      "cheap_correct": true,
+      "strong_correct": true,
+      "escalated": false,
+      "cheap_cost_usd": 0.00032199999999999997,
+      "strong_cost_usd": 0.0013762499999999999
+    },
+    {
+      "rendering_id": "C30-L3",
+      "rep": 1,
+      "level": "L3",
+      "cheap_correct": true,
+      "strong_correct": true,
+      "escalated": false,
+      "cheap_cost_usd": 0.00032409999999999996,
+      "strong_cost_usd": 0.001869
+    },
+    {
+      "rendering_id": "C30-L3",
+      "rep": 2,
+      "level": "L3",
+      "cheap_correct": true,
+      "strong_correct": true,
+      "escalated": false,
+      "cheap_cost_usd": 0.00032409999999999996,
+      "strong_cost_usd": 0.0018390000000000001
+    },
+    {
+      "rendering_id": "C30-L3",
+      "rep": 3,
+      "level": "L3",
+      "cheap_correct": true,
+      "strong_correct": true,
+      "escalated": false,
+      "cheap_cost_usd": 0.00032409999999999996,
+      "strong_cost_usd": 0.001779
+    }
+  ]
+}

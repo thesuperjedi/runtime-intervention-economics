@@ -1,0 +1,39 @@
+{
+  "experiment": "E1",
+  "execution_config_version": "1.0-pilot",
+  "models": {
+    "cheap": {
+      "provider": "google",
+      "model": "gemini-3.5-flash-lite"
+    },
+    "strong": {
+      "provider": "google",
+      "model": "gemini-3.8-flash"
+    }
+  },
+  "artifacts": {
+    "policy": "config/policies/e1_policy_v1.txt",
+    "canonical_cases": "data/e1/canonical_cases.json",
+    "renderings": "data/e1/renderings_v1.json"
+  },
+  "allowed_controls": [
+    "STANDARD_FINANCIAL_APPROVAL",
+    "ENHANCED_FINANCIAL_APPROVAL",
+    "SENIOR_FINANCIAL_APPROVAL",
+    "SUPPLIER_DUE_DILIGENCE",
+    "SECURITY_REVIEW",
+    "ENHANCED_SECURITY_REVIEW",
+    "CONTRACT_REVIEW",
+    "PROHIBITED"
+  ],
+  "output_contract": {
+    "format": "structured_json",
+    "field": "controls",
+    "comparison": "set_exact_match"
+  },
+  "inference": {
+    "temperature": 0,
+    "thinking_level": "low"
+  },
+  "automatic_retry": false
+}

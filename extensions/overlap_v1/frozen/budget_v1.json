@@ -1,0 +1,42 @@
+{
+  "currency": "USD",
+  "basis": "frozen E1 normalized token-price convention; not invoice charges",
+  "role_statistics": {
+    "cheap": {
+      "records": 270,
+      "mean_usd": 0.00035212185185185186,
+      "historical_max_usd": 0.0013621,
+      "guard_allowance_usd": 0.0068105
+    },
+    "strong": {
+      "records": 270,
+      "mean_usd": 0.0013697166666666667,
+      "historical_max_usd": 0.0025245,
+      "guard_allowance_usd": 0.012622499999999998
+    },
+    "cheap_validator": {
+      "records": 810,
+      "mean_usd": 0.0006187002469135803,
+      "historical_max_usd": 0.0022959,
+      "guard_allowance_usd": 0.0114795
+    },
+    "strong_validator": {
+      "records": 810,
+      "mean_usd": 0.0015044620370370369,
+      "historical_max_usd": 0.0035685,
+      "guard_allowance_usd": 0.0178425
+    }
+  },
+  "planned_attempts": 720,
+  "mean_projection_usd": 0.6921001444444445,
+  "historical_max_projection_usd": 1.75518,
+  "five_times_max_projection_usd": 8.7759,
+  "anticipated_allowance_usd": 10.0,
+  "guaranteed_billing_ceiling": false,
+  "prospective_prices_verified": false,
+  "limitations": [
+    "New challenges can use more tokens; historical maxima are not bounds.",
+    "One call can exceed allowance; missing usage is not zero cost.",
+    "No invoice FX reconciliation; prospective price/model availability require confirmation."
+  ]
+}

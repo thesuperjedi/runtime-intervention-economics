@@ -1,0 +1,6 @@
+{
+  "verified_python": "3.13.5",
+  "runtime_dependencies": [],
+  "test_dependencies": "requirements-test.txt",
+  "historical_sdk": "google-genai2.25.0; not required or included"
+}

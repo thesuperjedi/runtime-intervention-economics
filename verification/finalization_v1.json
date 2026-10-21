@@ -1,0 +1,16 @@
+{
+  "status": "PASS",
+  "files_including_manifest": 2996,
+  "observations": 2880,
+  "projection_schema_validated": true,
+  "tests_passed": 108,
+  "tests_failed": 0,
+  "full_robustness_reproduced": true,
+  "original_protected_files_unchanged": 3149,
+  "publication_ready": false,
+  "blockers": [
+    "licence and ownership decisions",
+    "provider redistribution review",
+    "final owner publication approval"
+  ]
+}

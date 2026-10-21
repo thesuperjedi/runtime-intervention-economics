@@ -1,0 +1,42 @@
+{
+  "experiment": "E2",
+  "execution_config_version": "1.0-pilot",
+  "validators": {
+    "cheap_validator": {
+      "provider": "google",
+      "model": "gemini-3.5-flash-lite"
+    },
+    "strong_validator": {
+      "provider": "google",
+      "model": "gemini-3.8-flash"
+    }
+  },
+  "artifacts": {
+    "policy": "config/policies/e1_policy_v1.txt",
+    "renderings": "data/e1/renderings_v1.json",
+    "e1_raw_dir": "data/raw/e1"
+  },
+  "allowed_controls": [
+    "STANDARD_FINANCIAL_APPROVAL",
+    "ENHANCED_FINANCIAL_APPROVAL",
+    "SENIOR_FINANCIAL_APPROVAL",
+    "SUPPLIER_DUE_DILIGENCE",
+    "SECURITY_REVIEW",
+    "ENHANCED_SECURITY_REVIEW",
+    "CONTRACT_REVIEW",
+    "PROHIBITED"
+  ],
+  "output_contract": {
+    "format": "structured_json",
+    "field": "verdict",
+    "allowed_values": [
+      "PASS",
+      "FAIL"
+    ]
+  },
+  "inference": {
+    "temperature": 0,
+    "thinking_level": "low"
+  },
+  "automatic_retry": false
+}

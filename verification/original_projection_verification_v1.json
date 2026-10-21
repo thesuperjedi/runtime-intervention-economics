@@ -1,0 +1,9 @@
+{
+  "status": "PASS",
+  "original_raw_hashes": 2880,
+  "all_retained_fields_equal": true,
+  "original_source_report_hashes_verified": 72,
+  "protected_files_unchanged": 3149,
+  "configured_credential_matches": 0,
+  "scope": "Local verification against private originals; not external authenticity, complete security clearance or legal approval."
+}

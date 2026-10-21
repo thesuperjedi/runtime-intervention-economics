@@ -1,0 +1,6 @@
+{
+  "checked_combinations": 3840,
+  "disagreements": 0,
+  "method": "independently encoded declarative decision table vs unchanged E1 oracle",
+  "limitation": "Shared interpretation risk remains; not independent human policy adjudication."
+}

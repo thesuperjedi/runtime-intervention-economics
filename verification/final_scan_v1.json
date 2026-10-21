@@ -1,0 +1,6 @@
+{
+  "status": "PASS_BOUNDED_SCAN",
+  "files_scanned": 2992,
+  "findings": [],
+  "scope": "Text regex, observation-field and file-type allowlist checks; not security clearance or legal approval."
+}

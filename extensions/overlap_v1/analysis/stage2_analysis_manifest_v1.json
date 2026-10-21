@@ -1,0 +1,9 @@
+{
+  "files_sha256": {
+    "stage2_v1.py": "1cfc5cd8a260f429ebe5795be03040b362d694bd77b4ed330c788f3ab21e6222",
+    "verify_stage2_v1.py": "658b06dba47063ab5411491dbbf9b457500ae65892b9ae00a60e9cf77e991d20",
+    "test_stage2_v1.py": "2a7080bd196e1af118dd6102a3563664cd27fcc986e3e92d0e35ea4ed20efa32",
+    "stage2_results_v1.json": "0243318f4bf3086bb238acf8868581b18b22974baac311e54869ab2b9f0a53ae"
+  },
+  "basis": "public package derivative"
+}
