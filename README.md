@@ -1,66 +1,145 @@
 # Runtime intervention economics
 
-**First Release Publication v1.0**
+Controlled experiments on when an additional AI call is worth its cost: weak and strong solvers, AI validators, escalation, hypothetical human review, and the economic consequences of errors.
 
-Prepared by **Jaidev, Independent Researcher**. Jaidev is the complete public citation name; see [attribution](ATTRIBUTION.md). No surname or optional identifiers have been inferred. No institutional affiliation is asserted. MIT applies to original author-controlled software/tests; CC BY4.0 applies to original documentation, synthetic policies and eligible data, with explicit exclusions for Gemini responses and provider telemetry. See [licence scope](LICENSE_SCOPE.md).
+By **Jaidev, Independent Researcher**. No institutional affiliation is asserted. See [ATTRIBUTION.md](ATTRIBUTION.md).
 
-This repository supports a bounded study of weak/strong solvers, validators, hypothetical human review and the economics of an agent's next action. The evidence projections contain real experimental outputs, not demonstration results.
+Companion article: **"When Is Another AI Call Worth It?"** (Medium) — https://aiadvances.org/when-more-ai-calls-dont-pay-off-3d4c40d00969?source=friends_link&sk=f11a10c1199695a38582e39d700cfc34
 
-## Five-minute quick-start
+## The question
 
-Use a local copy of this directory and Python3.13.5, the verified interpreter. No installation, Gemini SDK, API key or credential setup is needed. From the repository root:
+When does an extra AI intervention (validate, retry, escalate to a stronger model, involve a human) improve an outcome enough to justify its cost and consequences?
 
-```text
+This repository studies one narrow part of that question, which I call **WORTH**: whether an action's expected benefit exceeds its execution cost and the cost of errors. It does not study **ALLOWED**: whether an action is permitted or required by governance rules. Both matter for agentic systems, but this work does not implement or validate a runtime governance architecture or control plane.
+
+## Study design
+
+- **Task:** given a synthetic procurement policy and a scenario, return the exact set of applicable controls.
+- **Ground truth:** a frozen policy specification and a deterministic executable oracle. An answer is correct only if its control set exactly matches the oracle's, ignoring order.
+- **Models:** a weaker solver (Gemini 3.5 Flash-Lite) and a stronger solver (Gemini 3.8 Flash), each also used as a validator. "Weaker" and "stronger" describe roles and observed performance here, not general rankings.
+- **Real API calls** with frozen prompts and settings, recorded responses and token usage, and preserved failures.
+- **Strategies compared:** weak-only, strong-only, cheap-validator cascade, strong-validator cascade.
+- **Important:** the model and validator calls were collected independently. The cascade strategies were **reconstructed afterwards** from saved responses, validator decisions and token usage. They were not run as live agent workflows.
+
+| Stage | What it did |
+|---|---|
+| E0 | Instrumentation and evidence retention |
+| E1 | 30 cases × 3 renderings × 3 repetitions per model, scored against the oracle |
+| E2 | 1,620 real validator judgments (810 per validator role) |
+| E3 | Mathematical simulation of human review (**no human participants**) |
+| EX1 | 60 new cases × 3 renderings across six constructed policy structures |
+
+## Key findings
+
+All findings apply only to this synthetic task and these models.
+
+**Solver accuracy**
+
+| | Weaker solver | Stronger solver |
+|---|---:|---:|
+| E1 (270 observations) | 236 correct | 270 correct |
+| EX1 (180 observations) | 131 correct | 180 correct |
+
+The weaker solver's EX1 errors were concentrated in specific rule structures: scoped exceptions (25 errors in 30 presentations) and combined rule interactions (14 in 30).
+
+**Validators make errors too.** In E2, the cheaper validator produced 25 false accepts and 6 false rejects; the stronger validator produced none. In EX1, the cheaper validator falsely accepted 24 of the 49 incorrect weak-solver answers.
+
+**Strategy comparison** (EX1, 58 cases / 174 presentations with complete data for all four roles; costs are token-derived estimates at list prices, not invoices):
+
+| Strategy | Correct / 174 | API cost per result | API cost per correct result |
+|---|---:|---:|---:|
+| Weak-only | 125 | $0.000380 | $0.000529 |
+| Strong-only | 174 | $0.001466 | $0.001466 |
+| Cheap-validator cascade | 150 | $0.001279 | $0.001483 |
+| Strong-validator cascade | 174 | $0.002437 | $0.002437 |
+
+**Economics under an assumed error loss.** Modeled cost per result = API cost per result + (observed error proportion × assumed loss per error).
+
+- Below an assumed loss of about **$0.00385 per error**, weak-only has the lowest modeled cost. Above it, strong-only does.
+- At an illustrative loss of $0.10 per error, strong-only is clearly preferable.
+- Neither reconstructed cascade had the lowest modeled cost at any nonnegative uniform loss.
+
+**Interpretation.** In this setup, validation improved the weak solver's accuracy but did not pay for itself. This does not show that validation or cascades are uneconomic in general. Other models, prices, validators, error structures and routing designs could change the result.
+
+Full denominators and caveats: [docs/findings.md](docs/findings.md).
+
+## What this is not
+
+- Not a validated agentic control plane or governance system.
+- Not evidence of general model capability or failure rates. The cases are synthetic and chosen to expose particular policy structures.
+- Not proof that a model has zero error probability. Perfect scores on bounded synthetic cases are observations, not guarantees.
+- Not an empirical study of human reviewers. E3 uses hypothetical parameters.
+- Not a turnkey evaluation platform. Adapting it takes real work (see below).
+- Not a claim of novelty relative to the cascading, routing and learning-to-defer literature.
+
+## Quick start
+
+Use a local copy of this directory and Python 3.13.5 (the verified interpreter). No installation, Gemini SDK, API key or credentials are needed. From the repository root:
+
+```
 python -I -S -B run_tests.py
 python -I -S -B reproduce.py --full-robustness
 python -I -S -B verify_package.py
 ```
 
-These checks normally take less than five minutes on the preparation machine; elapsed time varies. Python's isolated mode and disabled site-packages keep the workflow independent of the private research workspace. Network connections are blocked by the scientific entry points. Do not add optimization flags: original tests use assertions.
-
 Expected output:
+
 - Tests finish with `OK` and `PUBLIC_TEST_COUNTS ... failures 0 errors 0`.
-- Reproduction prints JSON with `"status": "PASS"`, E1 weak236/270 and strong270/270, and `"full_robustness_reproduced": true`.
+- Reproduction prints JSON with `"status": "PASS"`, E1 weak 236/270 and strong 270/270, and `"full_robustness_reproduced": true`.
 - Package verification prints `"status": "PASS"`, `"observation_projections": 2880` and a bounded scan with `"findings": []`.
 
-The exact current test count and command logs are in [RC verification](verification/final_rc_commands.json). A failure is a reason to investigate, not to bypass the check. The commands print results and do not overwrite evidence or reference reports. The standard library is sufficient; optional pinned pytest dependencies are not needed.
+Do not add Python optimization flags, because the tests use assertions. The standard library is sufficient. The commands print results and do not overwrite evidence. Network connections are blocked by the scientific entry points. Command logs are in [verification/final_rc_commands.json](verification/final_rc_commands.json).
 
-## Start with the findings
-
-- [Major findings and denominators](docs/findings.md): what was observed, reconstructed and assumed.
-- [Methodology](docs/methodology.md): bounded actions, exact-set scoring and study populations.
-- [Reproduction contract](docs/reproduction.md): what a successful run establishes.
-- [Evidence provenance](docs/provenance.md): private originals versus public projections and hashes.
-- [Limitations](docs/limitations.md): dependence, missing judgments, hypothetical humans and cost uncertainty.
-- [Adaptation guide with worked example](docs/adapting-a-domain.md).
-- [Final publication review](FINAL_PUBLICATION_REVIEW_v1_2_rc1.md), [approved licences](LICENSE.md) and [citation metadata](CITATION.cff).
-
-At the reference assumed error loss US$0.10, strong-only has the lowest reconstructed expected cost among the measured automated routes in E2 and EX1. This does not mean it has the lowest simple API cost per correct answer, or that it will always be correct. Validation improved weak-answer accuracy but did not automatically provide an economic advantage.
-
-## Three different meanings of reproduction
+## Three meanings of "reproduction"
 
 | Activity | What this package supports | What it does not establish |
 |---|---|---|
 | Scientific-calculation reproduction | Recompute scoring, joins, confusion matrices, route costs, profiles and boundaries from public evidence | Invoice accuracy or deployment validity |
-| Historical raw-record authenticity | Inspect original/public SHA mappings and verify current public bytes | Independently authenticate unavailable original raw records or prove their acquisition history |
-| Fresh model execution | Read frozen prompts/settings as methodological documentation | Run models: no paid executor, SDK, credentials or authorization is included; fresh outputs would be new observations |
+| Historical raw-record authenticity | Inspect original-to-public SHA mappings and verify current public bytes | Independent authentication of unavailable original raw records or their acquisition history |
+| Fresh model execution | Read frozen prompts and settings as methodological documentation | Running models: no paid executor, SDK or credentials are included, and fresh outputs would be new observations |
 
-Do not describe projected-record reproduction as an untouched HTTP/raw-record audit. Original and public fingerprints are separate. Fresh model calls, if developed separately later, cannot guarantee identical historical outputs.
+Projected-record reproduction is not an untouched raw-record audit. Fresh model calls cannot guarantee identical historical outputs.
 
 ## Repository map
 
-- src/: frozen oracle/scoring and supported E1/E2 analytical implementations.
-- e3_phase1/: exact-set human expectations, thresholds and strong-error sensitivity.
-- extensions/overlap_v1/: model-blind EX1 selection, frozen inputs and Stage1–3 analysis/verifiers.
-- data/raw/: **public projections**, despite compatibility path names:540 E1,1620 E2,720 EX1.
-- evidence/: compact E0 evidence; its module-level paid-call script is omitted.
-- provenance/: allowlist, transformations, original/public inventories and complete package inventory.
-- verification/: original preparation results and separately versioned RC checks.
+- `src/`: frozen oracle, scoring, and E1/E2 analysis code
+- `e3_phase1/`: exact-set human-review expectations, thresholds, strong-error sensitivity
+- `extensions/overlap_v1/`: model-blind EX1 selection, frozen inputs, Stage 1–3 analysis and verifiers
+- `data/raw/`: public projections of recorded observations (despite the path name): 540 E1, 1,620 E2, 720 EX1
+- `evidence/`: compact E0 evidence (its paid-call script is omitted)
+- `provenance/`: allowlist, transformations, original and public inventories, package inventory
+- `verification/`: verification results and command logs
+- `docs/`: findings, methodology, reproduction, provenance, limitations, adaptation guide
 
-EX1 retains two terminal503 failures with unknown charges. E1/E2 and EX1 are different populations and are not pooled. Renderings/repetitions are dependent. Human competence and error losses are hypothetical; costs are frozen list-price estimates, not invoices.
+## Documentation
 
-See [rights status](RIGHTS_AND_RELEASE_STATUS.md). No authorization for this preparation agent to publish is implied. The standard grants for covered material remain as stated; legal or security clearance is not claimed.
+- [Findings and denominators](docs/findings.md): what was observed, reconstructed and assumed
+- [Methodology](docs/methodology.md): bounded actions, exact-set scoring, study populations
+- [Reproduction contract](docs/reproduction.md): what a successful run establishes
+- [Evidence provenance](docs/provenance.md): private originals versus public projections and hashes
+- [Limitations](docs/limitations.md)
+- [Adapting to another domain](docs/adapting-a-domain.md), with a worked example
 
-## Original material and generated evidence
+## Limitations
 
-AI-assisted development, verification and documentation are acknowledged in ATTRIBUTION.md. Gemini-generated responses are experimental evidence, not claimed as exclusive human authorship and not automatically under the author CC BY grant. Provider provenance and factual telemetry remain identifiable. Read [evidence redistribution limitations](EVIDENCE_REDISTRIBUTION_NOTICE.md) and the per-file rights inventory before downstream redistribution. Licence approval does not itself authorize publication or clear provider/third-party rights.
+- Renderings and repetitions of the same case are statistically dependent. The number of independent cases is much smaller than the number of observations.
+- E1/E2 and EX1 are different populations and are not pooled.
+- EX1 has two terminal HTTP 503 failures (stronger-validator calls) with unknown charges. They were preserved, and the main comparison uses the common complete population.
+- Human-review competence and error losses are hypothetical.
+- Costs are frozen list-price estimates, not invoice-reconciled amounts.
+- Validator and solver errors may be correlated, since they come from related models and share policy structures.
+- Only one model family, one synthetic domain and one validator design were tested.
+
+## Adapting the method
+
+To reuse this approach, you would need to define your own bounded decision problem, build representative boundary, exception and interaction cases, establish trustworthy expected answers (for example with a deterministic oracle), choose your own models, prompts, validators and interventions, record real usage and failures, model the consequences of errors in your domain, replace hypothetical human-review assumptions with defensible estimates, and verify the modified experiment before interpreting results. See [docs/adapting-a-domain.md](docs/adapting-a-domain.md).
+
+One possible application is measuring how reliably models interpret selected requirements of an organizational policy over a deliberately constructed case set. That would evaluate AI-assisted interpretation, not certify the policy or establish regulatory compliance.
+
+## Licence, attribution and citation
+
+- Original software and tests: **MIT**. Original documentation, synthetic policies and eligible data: **CC BY 4.0**. Gemini-generated responses and provider telemetry are excluded from these grants. See [LICENSE.md](LICENSE.md) and [LICENSE_SCOPE.md](LICENSE_SCOPE.md).
+- Gemini responses are experimental evidence, not claimed as exclusive human authorship. Read the [evidence redistribution notice](EVIDENCE_REDISTRIBUTION_NOTICE.md) and [rights status](RIGHTS_AND_RELEASE_STATUS.md) before redistributing data.
+- AI-assisted development, verification and documentation are acknowledged in [ATTRIBUTION.md](ATTRIBUTION.md).
+- Legal or security clearance is not claimed.
+- To cite this work, see [CITATION.cff](CITATION.cff).
