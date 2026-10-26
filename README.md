@@ -1,6 +1,6 @@
 # Runtime intervention economics
 
-**Release candidate1.2.0-rc.1 — local publication review only.**
+**First Release Publication v1.0**
 
 Prepared by **Jaidev, Independent Researcher**. Jaidev is the complete public citation name; see [attribution](ATTRIBUTION.md). No surname or optional identifiers have been inferred. No institutional affiliation is asserted. MIT applies to original author-controlled software/tests; CC BY4.0 applies to original documentation, synthetic policies and eligible data, with explicit exclusions for Gemini responses and provider telemetry. See [licence scope](LICENSE_SCOPE.md).
 
