@@ -1,0 +1,813 @@
+{
+  "schema": "PUBLIC_PROJECTION_MAP_1",
+  "sources": [
+    {
+      "label": "EX2 gemini outcome records",
+      "sha256": "738cddcba236877ad716cc0d2be16752f500089a6a809085c8de4ecae438a2e5"
+    },
+    {
+      "label": "EX2 claude outcome records",
+      "sha256": "5fc301a66f70b7104fbd1ac4a2b255dae87db4a7c3e58e5f703464fa120cdbb6"
+    },
+    {
+      "label": "EX2 gemini sealed audit",
+      "sha256": "7ed668b6e7d89642edc59f66ee82a55f4fd1f8074f3bab2c14293db9ee29b841"
+    },
+    {
+      "label": "EX2 claude sealed audit",
+      "sha256": "149b8e2dde1bff299b69da580882633846a4e63ca28f7e13887106d02d5f67ac"
+    },
+    {
+      "label": "EX2-R outcome records",
+      "sha256": "f82af3b14ee112cdd74c8da7b210dcf788e59ce3f08d0224f3e82a8c3d8a6ce2"
+    },
+    {
+      "label": "EX2-R sealed audit",
+      "sha256": "a212aaf3ceaac33ca3f3506726023622f50ae6602092baf87d6b98dda76b182f"
+    },
+    {
+      "label": "EX2-R execution summary",
+      "sha256": "85c8703c97bf94de99b4a10bd5c1af45858628fb54561d810e924f16e777d919"
+    },
+    {
+      "label": "EX2-R financial reconciliation",
+      "sha256": "b2ee78423b2872f04ef00d4a2b2a3e7717177c3aa872f497e304d4e6b102550d"
+    },
+    {
+      "label": "EX2-R token missingness",
+      "sha256": "c912d4c3047eebcc9dd869906c18b36b8368af8a8645efb1e9915e9d62479dd0"
+    },
+    {
+      "label": "EX2 resource reference tables",
+      "sha256": "64f85ebf29f73c036132c680ac47c03c5a15492b404e70aeba7e3b696b66591e"
+    },
+    {
+      "label": "EX2 matched reference outcomes",
+      "sha256": "25366d9a06eef14be7ccce8d19b88c4326dddb347791bc537ebec6f24e2f7685"
+    },
+    {
+      "label": "EX2 signed protocol content",
+      "sha256": "22fbfa586a299ddcd1b207ea2130bbf21155ba72b4336a44f328ecef2b8f52a2"
+    },
+    {
+      "label": "EX2 frozen model conditions",
+      "sha256": "d772ade0bf823460ad71d1aaac9df8cd7a221bcbaebdad0ef9494af0e1e55e69"
+    },
+    {
+      "label": "EX2 scenario predicates",
+      "sha256": "bf1411eff76e726d5d9fdca270f39a354cbc99ad605e7bbae2442c7c4fa98464"
+    }
+  ],
+  "source_authentication": "Author-attested hash commitments only; raw private sources unavailable; not independent authentication.",
+  "projection": "Explicit field allowlist; public aliases replace episode/run identities. No request bodies, raw responses, proposal parameters, execution records, paths or signatures.",
+  "rights": "MIT applies only to 22 eligible software files; CC BY 4.0 only to original expression in eight documentation files, as listed in LICENSE_SCOPE.md. Ten JSON files have approved disclosure without an additional blanket reuse licence. Facts and excluded provider/third-party rights are not claimed.",
+  "omissions": [
+    "Original model request materializer/provider integrations and original prompt text",
+    "Raw journals, provider payloads, execution authorities and historical capabilities",
+    "Whole frozen archive/reviewer material; only four synthetic fixture conditions selected"
+  ],
+  "study_separation": "216 EX2 primary observations and 12 EX2-R observations remain separate.",
+  "field_contracts": {
+    "EX2_episode": [
+      "action_attempts",
+      "arm",
+      "decisions",
+      "effect_provenance",
+      "effects",
+      "evaluated_attempts",
+      "explicit_policy_response",
+      "finalized",
+      "goal",
+      "interface_refusal",
+      "key",
+      "model",
+      "ordinal",
+      "permitted",
+      "qualified",
+      "recovery_success",
+      "repetition",
+      "safe_refusal",
+      "scenario",
+      "stop",
+      "unpermitted_effects"
+    ],
+    "EX2R_episode": [
+      "compliant_recovery",
+      "condition",
+      "denial_type",
+      "duplicate_submission",
+      "finalized",
+      "goal_achieved",
+      "key",
+      "model",
+      "model_generations",
+      "model_policy_evaluations",
+      "model_proposals",
+      "ordinal",
+      "published_effects",
+      "repetition",
+      "seed_verified",
+      "sequence_categories",
+      "stop",
+      "unpermitted_effects"
+    ],
+    "call": [
+      "cached",
+      "call",
+      "count_status",
+      "episode_key",
+      "generated",
+      "generation_status",
+      "input",
+      "model",
+      "reservation_usd",
+      "thinking"
+    ]
+  },
+  "per_file_rights_and_disclosure": {
+    "README.md": {
+      "lineage": "DOCUMENTATION_OR_INTEGRITY_METADATA",
+      "publication": "NOT_AUTHORIZED",
+      "software_licence": "CC-BY-4.0_ORIGINAL_EXPRESSION_ONLY",
+      "provider_material_grant": null,
+      "disclosure": "NO_REAL_CREDENTIAL_OR_HISTORICAL_AUTHORITY_INSTANCE_INCLUDED",
+      "licence_grant_applied": true,
+      "disclosure_scope_approved": true
+    },
+    "LIMITATIONS_AND_PROVENANCE.md": {
+      "lineage": "DOCUMENTATION_OR_INTEGRITY_METADATA",
+      "publication": "NOT_AUTHORIZED",
+      "software_licence": "CC-BY-4.0_ORIGINAL_EXPRESSION_ONLY",
+      "provider_material_grant": null,
+      "disclosure": "NO_REAL_CREDENTIAL_OR_HISTORICAL_AUTHORITY_INSTANCE_INCLUDED",
+      "licence_grant_applied": true,
+      "disclosure_scope_approved": true
+    },
+    "LICENSE_SCOPE.md": {
+      "lineage": "DOCUMENTATION_OR_INTEGRITY_METADATA",
+      "publication": "NOT_AUTHORIZED",
+      "software_licence": "CC-BY-4.0_ORIGINAL_EXPRESSION_ONLY",
+      "provider_material_grant": null,
+      "disclosure": "NO_REAL_CREDENTIAL_OR_HISTORICAL_AUTHORITY_INSTANCE_INCLUDED",
+      "licence_grant_applied": true,
+      "disclosure_scope_approved": true
+    },
+    "shared/model_conditions.json": {
+      "lineage": "DOCUMENTATION_OR_INTEGRITY_METADATA",
+      "publication": "NOT_AUTHORIZED",
+      "software_licence": "NO_ADDITIONAL_REUSE_LICENCE",
+      "provider_material_grant": null,
+      "disclosure": "NO_REAL_CREDENTIAL_OR_HISTORICAL_AUTHORITY_INSTANCE_INCLUDED",
+      "licence_grant_applied": false,
+      "disclosure_scope_approved": true
+    },
+    "shared/pap_0_5/POLICY.md": {
+      "lineage": "DOCUMENTATION_OR_INTEGRITY_METADATA",
+      "publication": "NOT_AUTHORIZED",
+      "software_licence": "CC-BY-4.0_ORIGINAL_EXPRESSION_ONLY",
+      "provider_material_grant": null,
+      "disclosure": "NO_REAL_CREDENTIAL_OR_HISTORICAL_AUTHORITY_INSTANCE_INCLUDED",
+      "licence_grant_applied": true,
+      "disclosure_scope_approved": true
+    },
+    "studies/ex2/PROTOCOL.md": {
+      "lineage": "DOCUMENTATION_OR_INTEGRITY_METADATA",
+      "publication": "NOT_AUTHORIZED",
+      "software_licence": "CC-BY-4.0_ORIGINAL_EXPRESSION_ONLY",
+      "provider_material_grant": null,
+      "disclosure": "NO_REAL_CREDENTIAL_OR_HISTORICAL_AUTHORITY_INSTANCE_INCLUDED",
+      "licence_grant_applied": true,
+      "disclosure_scope_approved": true
+    },
+    "studies/ex2/evidence.json": {
+      "lineage": "DERIVED_HISTORICAL_NUMERICAL_CATEGORICAL_PROJECTION",
+      "publication": "NOT_AUTHORIZED",
+      "software_licence": "NO_ADDITIONAL_REUSE_LICENCE",
+      "provider_material_grant": null,
+      "disclosure": "NO_REAL_CREDENTIAL_OR_HISTORICAL_AUTHORITY_INSTANCE_INCLUDED",
+      "licence_grant_applied": false,
+      "disclosure_scope_approved": true
+    },
+    "studies/ex2/scenarios.json": {
+      "lineage": "DOCUMENTATION_OR_INTEGRITY_METADATA",
+      "publication": "NOT_AUTHORIZED",
+      "software_licence": "NO_ADDITIONAL_REUSE_LICENCE",
+      "provider_material_grant": null,
+      "disclosure": "NO_REAL_CREDENTIAL_OR_HISTORICAL_AUTHORITY_INSTANCE_INCLUDED",
+      "licence_grant_applied": false,
+      "disclosure_scope_approved": true
+    },
+    "studies/ex2_r/PROTOCOL.md": {
+      "lineage": "DOCUMENTATION_OR_INTEGRITY_METADATA",
+      "publication": "NOT_AUTHORIZED",
+      "software_licence": "CC-BY-4.0_ORIGINAL_EXPRESSION_ONLY",
+      "provider_material_grant": null,
+      "disclosure": "NO_REAL_CREDENTIAL_OR_HISTORICAL_AUTHORITY_INSTANCE_INCLUDED",
+      "licence_grant_applied": true,
+      "disclosure_scope_approved": true
+    },
+    "studies/ex2_r/evidence.json": {
+      "lineage": "DERIVED_HISTORICAL_NUMERICAL_CATEGORICAL_PROJECTION",
+      "publication": "NOT_AUTHORIZED",
+      "software_licence": "NO_ADDITIONAL_REUSE_LICENCE",
+      "provider_material_grant": null,
+      "disclosure": "NO_REAL_CREDENTIAL_OR_HISTORICAL_AUTHORITY_INSTANCE_INCLUDED",
+      "licence_grant_applied": false,
+      "disclosure_scope_approved": true
+    },
+    "studies/ex2_r/scenarios.json": {
+      "lineage": "DOCUMENTATION_OR_INTEGRITY_METADATA",
+      "publication": "NOT_AUTHORIZED",
+      "software_licence": "NO_ADDITIONAL_REUSE_LICENCE",
+      "provider_material_grant": null,
+      "disclosure": "NO_REAL_CREDENTIAL_OR_HISTORICAL_AUTHORITY_INSTANCE_INCLUDED",
+      "licence_grant_applied": false,
+      "disclosure_scope_approved": true
+    },
+    "reproduce.py": {
+      "lineage": "AI_ASSISTED_PUBLICATION_OR_OFFLINE_GLUE_CODE",
+      "publication": "NOT_AUTHORIZED",
+      "software_licence": "MIT",
+      "provider_material_grant": null,
+      "disclosure": "NO_REAL_CREDENTIAL_OR_HISTORICAL_AUTHORITY_INSTANCE_INCLUDED",
+      "licence_grant_applied": true,
+      "disclosure_scope_approved": true
+    },
+    "analysis/reference.json": {
+      "lineage": "DERIVED_HISTORICAL_NUMERICAL_CATEGORICAL_PROJECTION",
+      "publication": "NOT_AUTHORIZED",
+      "software_licence": "NO_ADDITIONAL_REUSE_LICENCE",
+      "provider_material_grant": null,
+      "disclosure": "NO_REAL_CREDENTIAL_OR_HISTORICAL_AUTHORITY_INSTANCE_INCLUDED",
+      "licence_grant_applied": false,
+      "disclosure_scope_approved": true
+    },
+    "verify_package.py": {
+      "lineage": "AI_ASSISTED_PUBLICATION_OR_OFFLINE_GLUE_CODE",
+      "publication": "NOT_AUTHORIZED",
+      "software_licence": "MIT",
+      "provider_material_grant": null,
+      "disclosure": "NO_REAL_CREDENTIAL_OR_HISTORICAL_AUTHORITY_INSTANCE_INCLUDED",
+      "licence_grant_applied": true,
+      "disclosure_scope_approved": true
+    },
+    "run_tests.py": {
+      "lineage": "AI_ASSISTED_PUBLICATION_OR_OFFLINE_GLUE_CODE",
+      "publication": "NOT_AUTHORIZED",
+      "software_licence": "MIT",
+      "provider_material_grant": null,
+      "disclosure": "NO_REAL_CREDENTIAL_OR_HISTORICAL_AUTHORITY_INSTANCE_INCLUDED",
+      "licence_grant_applied": true,
+      "disclosure_scope_approved": true
+    },
+    "tests/test_release.py": {
+      "lineage": "AI_ASSISTED_PUBLICATION_OR_OFFLINE_GLUE_CODE",
+      "publication": "NOT_AUTHORIZED",
+      "software_licence": "MIT",
+      "provider_material_grant": null,
+      "disclosure": "NO_REAL_CREDENTIAL_OR_HISTORICAL_AUTHORITY_INSTANCE_INCLUDED",
+      "licence_grant_applied": true,
+      "disclosure_scope_approved": true
+    },
+    "mechanism/__init__.py": {
+      "lineage": "AI_ASSISTED_PUBLICATION_OR_OFFLINE_GLUE_CODE",
+      "publication": "NOT_AUTHORIZED",
+      "software_licence": "MIT",
+      "provider_material_grant": null,
+      "disclosure": "NO_REAL_CREDENTIAL_OR_HISTORICAL_AUTHORITY_INSTANCE_INCLUDED",
+      "licence_grant_applied": true,
+      "disclosure_scope_approved": true
+    },
+    "mechanism/pap/__init__.py": {
+      "lineage": "ORIGINAL_PAP_CORE_BYTE_IDENTICAL",
+      "publication": "NOT_AUTHORIZED",
+      "software_licence": "MIT",
+      "provider_material_grant": null,
+      "disclosure": "NO_REAL_CREDENTIAL_OR_HISTORICAL_AUTHORITY_INSTANCE_INCLUDED",
+      "licence_grant_applied": true,
+      "disclosure_scope_approved": true
+    },
+    "mechanism/pap/contracts.py": {
+      "lineage": "ORIGINAL_PAP_CORE_BYTE_IDENTICAL",
+      "publication": "NOT_AUTHORIZED",
+      "software_licence": "MIT",
+      "provider_material_grant": null,
+      "disclosure": "NO_REAL_CREDENTIAL_OR_HISTORICAL_AUTHORITY_INSTANCE_INCLUDED",
+      "licence_grant_applied": true,
+      "disclosure_scope_approved": true
+    },
+    "mechanism/pap/serialization.py": {
+      "lineage": "ORIGINAL_PAP_CORE_BYTE_IDENTICAL",
+      "publication": "NOT_AUTHORIZED",
+      "software_licence": "MIT",
+      "provider_material_grant": null,
+      "disclosure": "NO_REAL_CREDENTIAL_OR_HISTORICAL_AUTHORITY_INSTANCE_INCLUDED",
+      "licence_grant_applied": true,
+      "disclosure_scope_approved": true
+    },
+    "mechanism/pap/chain_validation.py": {
+      "lineage": "ORIGINAL_PAP_CORE_BYTE_IDENTICAL",
+      "publication": "NOT_AUTHORIZED",
+      "software_licence": "MIT",
+      "provider_material_grant": null,
+      "disclosure": "NO_REAL_CREDENTIAL_OR_HISTORICAL_AUTHORITY_INSTANCE_INCLUDED",
+      "licence_grant_applied": true,
+      "disclosure_scope_approved": true
+    },
+    "mechanism/pap/evaluator.py": {
+      "lineage": "ORIGINAL_PAP_CORE_BYTE_IDENTICAL",
+      "publication": "NOT_AUTHORIZED",
+      "software_licence": "MIT",
+      "provider_material_grant": null,
+      "disclosure": "NO_REAL_CREDENTIAL_OR_HISTORICAL_AUTHORITY_INSTANCE_INCLUDED",
+      "licence_grant_applied": true,
+      "disclosure_scope_approved": true
+    },
+    "mechanism/pap/execution/__init__.py": {
+      "lineage": "ORIGINAL_PAP_CORE_BYTE_IDENTICAL",
+      "publication": "NOT_AUTHORIZED",
+      "software_licence": "MIT",
+      "provider_material_grant": null,
+      "disclosure": "NO_REAL_CREDENTIAL_OR_HISTORICAL_AUTHORITY_INSTANCE_INCLUDED",
+      "licence_grant_applied": true,
+      "disclosure_scope_approved": true
+    },
+    "mechanism/pap/execution/run.py": {
+      "lineage": "ORIGINAL_PAP_CORE_BYTE_IDENTICAL",
+      "publication": "NOT_AUTHORIZED",
+      "software_licence": "MIT",
+      "provider_material_grant": null,
+      "disclosure": "NO_REAL_CREDENTIAL_OR_HISTORICAL_AUTHORITY_INSTANCE_INCLUDED",
+      "licence_grant_applied": true,
+      "disclosure_scope_approved": true
+    },
+    "mechanism/pap/execution/tools.py": {
+      "lineage": "ORIGINAL_PAP_CORE_BYTE_IDENTICAL",
+      "publication": "NOT_AUTHORIZED",
+      "software_licence": "MIT",
+      "provider_material_grant": null,
+      "disclosure": "NO_REAL_CREDENTIAL_OR_HISTORICAL_AUTHORITY_INSTANCE_INCLUDED",
+      "licence_grant_applied": true,
+      "disclosure_scope_approved": true
+    },
+    "mechanism/fixtures.py": {
+      "lineage": "ORIGINAL_SUPPORT_PORTED_IMPORTS_AND_TEST_PORTABILITY",
+      "publication": "NOT_AUTHORIZED",
+      "software_licence": "MIT",
+      "provider_material_grant": null,
+      "disclosure": "NO_REAL_CREDENTIAL_OR_HISTORICAL_AUTHORITY_INSTANCE_INCLUDED",
+      "licence_grant_applied": true,
+      "disclosure_scope_approved": true
+    },
+    "mechanism/drivers.py": {
+      "lineage": "ORIGINAL_SUPPORT_PORTED_IMPORTS_AND_TEST_PORTABILITY",
+      "publication": "NOT_AUTHORIZED",
+      "software_licence": "MIT",
+      "provider_material_grant": null,
+      "disclosure": "NO_REAL_CREDENTIAL_OR_HISTORICAL_AUTHORITY_INSTANCE_INCLUDED",
+      "licence_grant_applied": true,
+      "disclosure_scope_approved": true
+    },
+    "mechanism/scoring.py": {
+      "lineage": "ORIGINAL_SUPPORT_PORTED_IMPORTS_AND_TEST_PORTABILITY",
+      "publication": "NOT_AUTHORIZED",
+      "software_licence": "MIT",
+      "provider_material_grant": null,
+      "disclosure": "NO_REAL_CREDENTIAL_OR_HISTORICAL_AUTHORITY_INSTANCE_INCLUDED",
+      "licence_grant_applied": true,
+      "disclosure_scope_approved": true
+    },
+    "mechanism/business_simulator.py": {
+      "lineage": "ORIGINAL_SUPPORT_PORTED_IMPORTS_AND_TEST_PORTABILITY",
+      "publication": "NOT_AUTHORIZED",
+      "software_licence": "MIT",
+      "provider_material_grant": null,
+      "disclosure": "NO_REAL_CREDENTIAL_OR_HISTORICAL_AUTHORITY_INSTANCE_INCLUDED",
+      "licence_grant_applied": true,
+      "disclosure_scope_approved": true
+    },
+    "mechanism/output_contract.py": {
+      "lineage": "ORIGINAL_SUPPORT_PORTED_IMPORTS_AND_TEST_PORTABILITY",
+      "publication": "NOT_AUTHORIZED",
+      "software_licence": "MIT",
+      "provider_material_grant": null,
+      "disclosure": "NO_REAL_CREDENTIAL_OR_HISTORICAL_AUTHORITY_INSTANCE_INCLUDED",
+      "licence_grant_applied": true,
+      "disclosure_scope_approved": true
+    },
+    "mechanism/fixtures.json": {
+      "lineage": "PREEXPERIMENT_SYNTHETIC_STATE_PREDICATES_ALLOWLIST; TEST_ONLY",
+      "publication": "NOT_AUTHORIZED",
+      "software_licence": "NO_ADDITIONAL_REUSE_LICENCE",
+      "provider_material_grant": null,
+      "disclosure": "NO_REAL_CREDENTIAL_OR_HISTORICAL_AUTHORITY_INSTANCE_INCLUDED",
+      "licence_grant_applied": false,
+      "disclosure_scope_approved": true
+    },
+    "mechanism/PROPOSED_MIT_NOTICE.md": {
+      "lineage": "DOCUMENTATION_OR_INTEGRITY_METADATA",
+      "publication": "NOT_AUTHORIZED",
+      "software_licence": "CC-BY-4.0_ORIGINAL_EXPRESSION_ONLY",
+      "provider_material_grant": null,
+      "disclosure": "NO_REAL_CREDENTIAL_OR_HISTORICAL_AUTHORITY_INSTANCE_INCLUDED",
+      "licence_grant_applied": true,
+      "disclosure_scope_approved": true
+    },
+    "mechanism/offline_guard.py": {
+      "lineage": "AI_ASSISTED_PUBLICATION_OR_OFFLINE_GLUE_CODE",
+      "publication": "NOT_AUTHORIZED",
+      "software_licence": "MIT",
+      "provider_material_grant": null,
+      "disclosure": "NO_REAL_CREDENTIAL_OR_HISTORICAL_AUTHORITY_INSTANCE_INCLUDED",
+      "licence_grant_applied": true,
+      "disclosure_scope_approved": true
+    },
+    "mechanism/recovery.py": {
+      "lineage": "AI_ASSISTED_PUBLICATION_OR_OFFLINE_GLUE_CODE",
+      "publication": "NOT_AUTHORIZED",
+      "software_licence": "MIT",
+      "provider_material_grant": null,
+      "disclosure": "NO_REAL_CREDENTIAL_OR_HISTORICAL_AUTHORITY_INSTANCE_INCLUDED",
+      "licence_grant_applied": true,
+      "disclosure_scope_approved": true
+    },
+    "demonstrate.py": {
+      "lineage": "AI_ASSISTED_PUBLICATION_OR_OFFLINE_GLUE_CODE",
+      "publication": "NOT_AUTHORIZED",
+      "software_licence": "MIT",
+      "provider_material_grant": null,
+      "disclosure": "NO_REAL_CREDENTIAL_OR_HISTORICAL_AUTHORITY_INSTANCE_INCLUDED",
+      "licence_grant_applied": true,
+      "disclosure_scope_approved": true
+    },
+    "tests/test_mechanism.py": {
+      "lineage": "AI_ASSISTED_PUBLICATION_OR_OFFLINE_GLUE_CODE",
+      "publication": "NOT_AUTHORIZED",
+      "software_licence": "MIT",
+      "provider_material_grant": null,
+      "disclosure": "NO_REAL_CREDENTIAL_OR_HISTORICAL_AUTHORITY_INSTANCE_INCLUDED",
+      "licence_grant_applied": true,
+      "disclosure_scope_approved": true
+    },
+    "provenance/SOURCE_TRANSFORMATIONS.json": {
+      "lineage": "DOCUMENTATION_OR_INTEGRITY_METADATA",
+      "publication": "NOT_AUTHORIZED",
+      "software_licence": "NO_ADDITIONAL_REUSE_LICENCE",
+      "provider_material_grant": null,
+      "disclosure": "NO_REAL_CREDENTIAL_OR_HISTORICAL_AUTHORITY_INSTANCE_INCLUDED",
+      "licence_grant_applied": false,
+      "disclosure_scope_approved": true
+    },
+    "provenance/PROJECTION_AND_SOURCE_MAP.json": {
+      "lineage": "DOCUMENTATION_OR_INTEGRITY_METADATA",
+      "publication": "NOT_AUTHORIZED",
+      "software_licence": "NO_ADDITIONAL_REUSE_LICENCE",
+      "provider_material_grant": null,
+      "disclosure": "NO_REAL_CREDENTIAL_OR_HISTORICAL_AUTHORITY_INSTANCE_INCLUDED",
+      "licence_grant_applied": false,
+      "disclosure_scope_approved": true
+    },
+    "provenance/SHA256_MANIFEST.json": {
+      "lineage": "DOCUMENTATION_OR_INTEGRITY_METADATA",
+      "publication": "NOT_AUTHORIZED",
+      "software_licence": "NO_ADDITIONAL_REUSE_LICENCE",
+      "provider_material_grant": null,
+      "disclosure": "NO_REAL_CREDENTIAL_OR_HISTORICAL_AUTHORITY_INSTANCE_INCLUDED",
+      "licence_grant_applied": false,
+      "disclosure_scope_approved": true
+    },
+    "docs/domain_adaptation.md": {
+      "lineage": "DOCUMENTATION_OR_INTEGRITY_METADATA",
+      "publication": "NOT_AUTHORIZED",
+      "software_licence": "CC-BY-4.0_ORIGINAL_EXPRESSION_ONLY",
+      "provider_material_grant": null,
+      "disclosure": "NO_REAL_CREDENTIAL_OR_HISTORICAL_AUTHORITY_INSTANCE_INCLUDED",
+      "licence_grant_applied": true,
+      "disclosure_scope_approved": true
+    }
+  },
+  "release_status": "PRIVATE_LICENSED_CANDIDATE; DISCLOSURE_SCOPE_APPROVED; PUBLICATION_AND_GIT_ACTIONS_NOT_AUTHORIZED",
+  "mechanism_scope": "Local original policy/commit/driver/oracle plus source-mapped deterministic controlled-recovery adapter; no empirical provider/accounting/disk-journal runtime.",
+  "per_file_licence_and_disclosure_schedule": {
+    "LICENSE_SCOPE.md": {
+      "source_category": "ORIGINAL_DOCUMENTATION_OR_LICENSING_DESCRIPTION",
+      "proposed_terms": "CC_BY_4_0_ELIGIBLE_ORIGINAL_EXPRESSION_ONLY",
+      "licence_decision": "APPLIED_CC_BY_4_0_ELIGIBLE_ORIGINAL_EXPRESSION_ONLY",
+      "disclosure_decision": "APPROVED_REVIEWED_SCOPE; PUBLICATION_NOT_AUTHORIZED",
+      "remaining_rights_questions": "Owner-declared independent AI-assisted provenance and bounded source review; no universal originality certification or third-party override. No additional rights are granted in JSON expression, facts or provider material.",
+      "author_licence": "CC-BY-4.0"
+    },
+    "LIMITATIONS_AND_PROVENANCE.md": {
+      "source_category": "ORIGINAL_DOCUMENTATION_OR_LICENSING_DESCRIPTION",
+      "proposed_terms": "CC_BY_4_0_ELIGIBLE_ORIGINAL_EXPRESSION_ONLY",
+      "licence_decision": "APPLIED_CC_BY_4_0_ELIGIBLE_ORIGINAL_EXPRESSION_ONLY",
+      "disclosure_decision": "APPROVED_REVIEWED_SCOPE; PUBLICATION_NOT_AUTHORIZED",
+      "remaining_rights_questions": "Owner-declared independent AI-assisted provenance and bounded source review; no universal originality certification or third-party override. No additional rights are granted in JSON expression, facts or provider material.",
+      "author_licence": "CC-BY-4.0"
+    },
+    "README.md": {
+      "source_category": "ORIGINAL_DOCUMENTATION_OR_LICENSING_DESCRIPTION",
+      "proposed_terms": "CC_BY_4_0_ELIGIBLE_ORIGINAL_EXPRESSION_ONLY",
+      "licence_decision": "APPLIED_CC_BY_4_0_ELIGIBLE_ORIGINAL_EXPRESSION_ONLY",
+      "disclosure_decision": "APPROVED_REVIEWED_SCOPE; PUBLICATION_NOT_AUTHORIZED",
+      "remaining_rights_questions": "Owner-declared independent AI-assisted provenance and bounded source review; no universal originality certification or third-party override. No additional rights are granted in JSON expression, facts or provider material.",
+      "author_licence": "CC-BY-4.0"
+    },
+    "analysis/reference.json": {
+      "source_category": "PROVIDER_DERIVED_FACTUAL_PROJECTION_AND_ORIGINAL_WRAPPER",
+      "proposed_terms": "NO_ADDITIONAL_REUSE_LICENCE; NO_EXCLUSIVE_RIGHTS_IN_FACTS; THIRD_PARTY_RIGHTS_EXCLUDED",
+      "licence_decision": "DISCLOSURE_APPROVED_NO_ADDITIONAL_REUSE_LICENCE",
+      "disclosure_decision": "APPROVED_REVIEWED_SCOPE; PUBLICATION_NOT_AUTHORIZED",
+      "remaining_rights_questions": "Owner-declared independent AI-assisted provenance and bounded source review; no universal originality certification or third-party override. No additional rights are granted in JSON expression, facts or provider material.",
+      "author_licence": null
+    },
+    "demonstrate.py": {
+      "source_category": "ELIGIBLE_AUTHOR_CONTROLLED_SOFTWARE",
+      "proposed_terms": "MIT",
+      "licence_decision": "APPLIED_MIT_AUTHOR_CONTROLLED_RIGHTS_ONLY",
+      "disclosure_decision": "APPROVED_REVIEWED_SCOPE; PUBLICATION_NOT_AUTHORIZED",
+      "remaining_rights_questions": "Owner-declared independent AI-assisted provenance and bounded source review; no universal originality certification or third-party override. No additional rights are granted in JSON expression, facts or provider material.",
+      "author_licence": "MIT"
+    },
+    "docs/domain_adaptation.md": {
+      "source_category": "ORIGINAL_DOCUMENTATION_OR_LICENSING_DESCRIPTION",
+      "proposed_terms": "CC_BY_4_0_ELIGIBLE_ORIGINAL_EXPRESSION_ONLY",
+      "licence_decision": "APPLIED_CC_BY_4_0_ELIGIBLE_ORIGINAL_EXPRESSION_ONLY",
+      "disclosure_decision": "APPROVED_REVIEWED_SCOPE; PUBLICATION_NOT_AUTHORIZED",
+      "remaining_rights_questions": "Owner-declared independent AI-assisted provenance and bounded source review; no universal originality certification or third-party override. No additional rights are granted in JSON expression, facts or provider material.",
+      "author_licence": "CC-BY-4.0"
+    },
+    "mechanism/PROPOSED_MIT_NOTICE.md": {
+      "source_category": "ORIGINAL_DOCUMENTATION_OR_LICENSING_DESCRIPTION",
+      "proposed_terms": "CC_BY_4_0_ELIGIBLE_ORIGINAL_EXPRESSION_ONLY",
+      "licence_decision": "APPLIED_CC_BY_4_0_ELIGIBLE_ORIGINAL_EXPRESSION_ONLY",
+      "disclosure_decision": "APPROVED_REVIEWED_SCOPE; PUBLICATION_NOT_AUTHORIZED",
+      "remaining_rights_questions": "Owner-declared independent AI-assisted provenance and bounded source review; no universal originality certification or third-party override. No additional rights are granted in JSON expression, facts or provider material.",
+      "author_licence": "CC-BY-4.0"
+    },
+    "mechanism/__init__.py": {
+      "source_category": "ELIGIBLE_AUTHOR_CONTROLLED_SOFTWARE",
+      "proposed_terms": "MIT",
+      "licence_decision": "APPLIED_MIT_AUTHOR_CONTROLLED_RIGHTS_ONLY",
+      "disclosure_decision": "APPROVED_REVIEWED_SCOPE; PUBLICATION_NOT_AUTHORIZED",
+      "remaining_rights_questions": "Owner-declared independent AI-assisted provenance and bounded source review; no universal originality certification or third-party override. No additional rights are granted in JSON expression, facts or provider material.",
+      "author_licence": "MIT"
+    },
+    "mechanism/business_simulator.py": {
+      "source_category": "ELIGIBLE_AUTHOR_CONTROLLED_SOFTWARE",
+      "proposed_terms": "MIT",
+      "licence_decision": "APPLIED_MIT_AUTHOR_CONTROLLED_RIGHTS_ONLY",
+      "disclosure_decision": "APPROVED_REVIEWED_SCOPE; PUBLICATION_NOT_AUTHORIZED",
+      "remaining_rights_questions": "Owner-declared independent AI-assisted provenance and bounded source review; no universal originality certification or third-party override. No additional rights are granted in JSON expression, facts or provider material.",
+      "author_licence": "MIT"
+    },
+    "mechanism/drivers.py": {
+      "source_category": "ELIGIBLE_AUTHOR_CONTROLLED_SOFTWARE",
+      "proposed_terms": "MIT",
+      "licence_decision": "APPLIED_MIT_AUTHOR_CONTROLLED_RIGHTS_ONLY",
+      "disclosure_decision": "APPROVED_REVIEWED_SCOPE; PUBLICATION_NOT_AUTHORIZED",
+      "remaining_rights_questions": "Owner-declared independent AI-assisted provenance and bounded source review; no universal originality certification or third-party override. No additional rights are granted in JSON expression, facts or provider material.",
+      "author_licence": "MIT"
+    },
+    "mechanism/fixtures.json": {
+      "source_category": "SYNTHETIC_STATE_AND_ORACLE_EXPRESSION",
+      "proposed_terms": "NO_ADDITIONAL_REUSE_LICENCE; NO_EXCLUSIVE_RIGHTS_IN_FACTS; THIRD_PARTY_RIGHTS_EXCLUDED",
+      "licence_decision": "DISCLOSURE_APPROVED_NO_ADDITIONAL_REUSE_LICENCE",
+      "disclosure_decision": "APPROVED_REVIEWED_SCOPE; PUBLICATION_NOT_AUTHORIZED",
+      "remaining_rights_questions": "Owner-declared independent AI-assisted provenance and bounded source review; no universal originality certification or third-party override. No additional rights are granted in JSON expression, facts or provider material.",
+      "author_licence": null
+    },
+    "mechanism/fixtures.py": {
+      "source_category": "ELIGIBLE_AUTHOR_CONTROLLED_SOFTWARE",
+      "proposed_terms": "MIT",
+      "licence_decision": "APPLIED_MIT_AUTHOR_CONTROLLED_RIGHTS_ONLY",
+      "disclosure_decision": "APPROVED_REVIEWED_SCOPE; PUBLICATION_NOT_AUTHORIZED",
+      "remaining_rights_questions": "Owner-declared independent AI-assisted provenance and bounded source review; no universal originality certification or third-party override. No additional rights are granted in JSON expression, facts or provider material.",
+      "author_licence": "MIT"
+    },
+    "mechanism/offline_guard.py": {
+      "source_category": "ELIGIBLE_AUTHOR_CONTROLLED_SOFTWARE",
+      "proposed_terms": "MIT",
+      "licence_decision": "APPLIED_MIT_AUTHOR_CONTROLLED_RIGHTS_ONLY",
+      "disclosure_decision": "APPROVED_REVIEWED_SCOPE; PUBLICATION_NOT_AUTHORIZED",
+      "remaining_rights_questions": "Owner-declared independent AI-assisted provenance and bounded source review; no universal originality certification or third-party override. No additional rights are granted in JSON expression, facts or provider material.",
+      "author_licence": "MIT"
+    },
+    "mechanism/output_contract.py": {
+      "source_category": "ELIGIBLE_AUTHOR_CONTROLLED_SOFTWARE",
+      "proposed_terms": "MIT",
+      "licence_decision": "APPLIED_MIT_AUTHOR_CONTROLLED_RIGHTS_ONLY",
+      "disclosure_decision": "APPROVED_REVIEWED_SCOPE; PUBLICATION_NOT_AUTHORIZED",
+      "remaining_rights_questions": "Owner-declared independent AI-assisted provenance and bounded source review; no universal originality certification or third-party override. No additional rights are granted in JSON expression, facts or provider material.",
+      "author_licence": "MIT"
+    },
+    "mechanism/pap/__init__.py": {
+      "source_category": "ELIGIBLE_AUTHOR_CONTROLLED_SOFTWARE",
+      "proposed_terms": "MIT",
+      "licence_decision": "APPLIED_MIT_AUTHOR_CONTROLLED_RIGHTS_ONLY",
+      "disclosure_decision": "APPROVED_REVIEWED_SCOPE; PUBLICATION_NOT_AUTHORIZED",
+      "remaining_rights_questions": "Owner-declared independent AI-assisted provenance and bounded source review; no universal originality certification or third-party override. No additional rights are granted in JSON expression, facts or provider material.",
+      "author_licence": "MIT"
+    },
+    "mechanism/pap/chain_validation.py": {
+      "source_category": "ELIGIBLE_AUTHOR_CONTROLLED_SOFTWARE",
+      "proposed_terms": "MIT",
+      "licence_decision": "APPLIED_MIT_AUTHOR_CONTROLLED_RIGHTS_ONLY",
+      "disclosure_decision": "APPROVED_REVIEWED_SCOPE; PUBLICATION_NOT_AUTHORIZED",
+      "remaining_rights_questions": "Owner-declared independent AI-assisted provenance and bounded source review; no universal originality certification or third-party override. No additional rights are granted in JSON expression, facts or provider material.",
+      "author_licence": "MIT"
+    },
+    "mechanism/pap/contracts.py": {
+      "source_category": "ELIGIBLE_AUTHOR_CONTROLLED_SOFTWARE",
+      "proposed_terms": "MIT",
+      "licence_decision": "APPLIED_MIT_AUTHOR_CONTROLLED_RIGHTS_ONLY",
+      "disclosure_decision": "APPROVED_REVIEWED_SCOPE; PUBLICATION_NOT_AUTHORIZED",
+      "remaining_rights_questions": "Owner-declared independent AI-assisted provenance and bounded source review; no universal originality certification or third-party override. No additional rights are granted in JSON expression, facts or provider material.",
+      "author_licence": "MIT"
+    },
+    "mechanism/pap/evaluator.py": {
+      "source_category": "ELIGIBLE_AUTHOR_CONTROLLED_SOFTWARE",
+      "proposed_terms": "MIT",
+      "licence_decision": "APPLIED_MIT_AUTHOR_CONTROLLED_RIGHTS_ONLY",
+      "disclosure_decision": "APPROVED_REVIEWED_SCOPE; PUBLICATION_NOT_AUTHORIZED",
+      "remaining_rights_questions": "Owner-declared independent AI-assisted provenance and bounded source review; no universal originality certification or third-party override. No additional rights are granted in JSON expression, facts or provider material.",
+      "author_licence": "MIT"
+    },
+    "mechanism/pap/execution/__init__.py": {
+      "source_category": "ELIGIBLE_AUTHOR_CONTROLLED_SOFTWARE",
+      "proposed_terms": "MIT",
+      "licence_decision": "APPLIED_MIT_AUTHOR_CONTROLLED_RIGHTS_ONLY",
+      "disclosure_decision": "APPROVED_REVIEWED_SCOPE; PUBLICATION_NOT_AUTHORIZED",
+      "remaining_rights_questions": "Owner-declared independent AI-assisted provenance and bounded source review; no universal originality certification or third-party override. No additional rights are granted in JSON expression, facts or provider material.",
+      "author_licence": "MIT"
+    },
+    "mechanism/pap/execution/run.py": {
+      "source_category": "ELIGIBLE_AUTHOR_CONTROLLED_SOFTWARE",
+      "proposed_terms": "MIT",
+      "licence_decision": "APPLIED_MIT_AUTHOR_CONTROLLED_RIGHTS_ONLY",
+      "disclosure_decision": "APPROVED_REVIEWED_SCOPE; PUBLICATION_NOT_AUTHORIZED",
+      "remaining_rights_questions": "Owner-declared independent AI-assisted provenance and bounded source review; no universal originality certification or third-party override. No additional rights are granted in JSON expression, facts or provider material.",
+      "author_licence": "MIT"
+    },
+    "mechanism/pap/execution/tools.py": {
+      "source_category": "ELIGIBLE_AUTHOR_CONTROLLED_SOFTWARE",
+      "proposed_terms": "MIT",
+      "licence_decision": "APPLIED_MIT_AUTHOR_CONTROLLED_RIGHTS_ONLY",
+      "disclosure_decision": "APPROVED_REVIEWED_SCOPE; PUBLICATION_NOT_AUTHORIZED",
+      "remaining_rights_questions": "Owner-declared independent AI-assisted provenance and bounded source review; no universal originality certification or third-party override. No additional rights are granted in JSON expression, facts or provider material.",
+      "author_licence": "MIT"
+    },
+    "mechanism/pap/serialization.py": {
+      "source_category": "ELIGIBLE_AUTHOR_CONTROLLED_SOFTWARE",
+      "proposed_terms": "MIT",
+      "licence_decision": "APPLIED_MIT_AUTHOR_CONTROLLED_RIGHTS_ONLY",
+      "disclosure_decision": "APPROVED_REVIEWED_SCOPE; PUBLICATION_NOT_AUTHORIZED",
+      "remaining_rights_questions": "Owner-declared independent AI-assisted provenance and bounded source review; no universal originality certification or third-party override. No additional rights are granted in JSON expression, facts or provider material.",
+      "author_licence": "MIT"
+    },
+    "mechanism/recovery.py": {
+      "source_category": "ELIGIBLE_AUTHOR_CONTROLLED_SOFTWARE",
+      "proposed_terms": "MIT",
+      "licence_decision": "APPLIED_MIT_AUTHOR_CONTROLLED_RIGHTS_ONLY",
+      "disclosure_decision": "APPROVED_REVIEWED_SCOPE; PUBLICATION_NOT_AUTHORIZED",
+      "remaining_rights_questions": "Owner-declared independent AI-assisted provenance and bounded source review; no universal originality certification or third-party override. No additional rights are granted in JSON expression, facts or provider material.",
+      "author_licence": "MIT"
+    },
+    "mechanism/scoring.py": {
+      "source_category": "ELIGIBLE_AUTHOR_CONTROLLED_SOFTWARE",
+      "proposed_terms": "MIT",
+      "licence_decision": "APPLIED_MIT_AUTHOR_CONTROLLED_RIGHTS_ONLY",
+      "disclosure_decision": "APPROVED_REVIEWED_SCOPE; PUBLICATION_NOT_AUTHORIZED",
+      "remaining_rights_questions": "Owner-declared independent AI-assisted provenance and bounded source review; no universal originality certification or third-party override. No additional rights are granted in JSON expression, facts or provider material.",
+      "author_licence": "MIT"
+    },
+    "provenance/PROJECTION_AND_SOURCE_MAP.json": {
+      "source_category": "PROVENANCE_AND_INTEGRITY_METADATA",
+      "proposed_terms": "NO_ADDITIONAL_REUSE_LICENCE; NO_EXCLUSIVE_RIGHTS_IN_FACTS; THIRD_PARTY_RIGHTS_EXCLUDED",
+      "licence_decision": "DISCLOSURE_APPROVED_NO_ADDITIONAL_REUSE_LICENCE",
+      "disclosure_decision": "APPROVED_REVIEWED_SCOPE; PUBLICATION_NOT_AUTHORIZED",
+      "remaining_rights_questions": "Owner-declared independent AI-assisted provenance and bounded source review; no universal originality certification or third-party override. No additional rights are granted in JSON expression, facts or provider material.",
+      "author_licence": null
+    },
+    "provenance/SHA256_MANIFEST.json": {
+      "source_category": "PROVENANCE_AND_INTEGRITY_METADATA",
+      "proposed_terms": "NO_ADDITIONAL_REUSE_LICENCE; NO_EXCLUSIVE_RIGHTS_IN_FACTS; THIRD_PARTY_RIGHTS_EXCLUDED",
+      "licence_decision": "DISCLOSURE_APPROVED_NO_ADDITIONAL_REUSE_LICENCE",
+      "disclosure_decision": "APPROVED_REVIEWED_SCOPE; PUBLICATION_NOT_AUTHORIZED",
+      "remaining_rights_questions": "Owner-declared independent AI-assisted provenance and bounded source review; no universal originality certification or third-party override. No additional rights are granted in JSON expression, facts or provider material.",
+      "author_licence": null
+    },
+    "provenance/SOURCE_TRANSFORMATIONS.json": {
+      "source_category": "PROVENANCE_AND_INTEGRITY_METADATA",
+      "proposed_terms": "NO_ADDITIONAL_REUSE_LICENCE; NO_EXCLUSIVE_RIGHTS_IN_FACTS; THIRD_PARTY_RIGHTS_EXCLUDED",
+      "licence_decision": "DISCLOSURE_APPROVED_NO_ADDITIONAL_REUSE_LICENCE",
+      "disclosure_decision": "APPROVED_REVIEWED_SCOPE; PUBLICATION_NOT_AUTHORIZED",
+      "remaining_rights_questions": "Owner-declared independent AI-assisted provenance and bounded source review; no universal originality certification or third-party override. No additional rights are granted in JSON expression, facts or provider material.",
+      "author_licence": null
+    },
+    "reproduce.py": {
+      "source_category": "ELIGIBLE_AUTHOR_CONTROLLED_SOFTWARE",
+      "proposed_terms": "MIT",
+      "licence_decision": "APPLIED_MIT_AUTHOR_CONTROLLED_RIGHTS_ONLY",
+      "disclosure_decision": "APPROVED_REVIEWED_SCOPE; PUBLICATION_NOT_AUTHORIZED",
+      "remaining_rights_questions": "Owner-declared independent AI-assisted provenance and bounded source review; no universal originality certification or third-party override. No additional rights are granted in JSON expression, facts or provider material.",
+      "author_licence": "MIT"
+    },
+    "run_tests.py": {
+      "source_category": "ELIGIBLE_AUTHOR_CONTROLLED_SOFTWARE",
+      "proposed_terms": "MIT",
+      "licence_decision": "APPLIED_MIT_AUTHOR_CONTROLLED_RIGHTS_ONLY",
+      "disclosure_decision": "APPROVED_REVIEWED_SCOPE; PUBLICATION_NOT_AUTHORIZED",
+      "remaining_rights_questions": "Owner-declared independent AI-assisted provenance and bounded source review; no universal originality certification or third-party override. No additional rights are granted in JSON expression, facts or provider material.",
+      "author_licence": "MIT"
+    },
+    "shared/model_conditions.json": {
+      "source_category": "DOCUMENTARY_MODEL_AND_SCENARIO_FACTS",
+      "proposed_terms": "NO_ADDITIONAL_REUSE_LICENCE; NO_EXCLUSIVE_RIGHTS_IN_FACTS; THIRD_PARTY_RIGHTS_EXCLUDED",
+      "licence_decision": "DISCLOSURE_APPROVED_NO_ADDITIONAL_REUSE_LICENCE",
+      "disclosure_decision": "APPROVED_REVIEWED_SCOPE; PUBLICATION_NOT_AUTHORIZED",
+      "remaining_rights_questions": "Owner-declared independent AI-assisted provenance and bounded source review; no universal originality certification or third-party override. No additional rights are granted in JSON expression, facts or provider material.",
+      "author_licence": null
+    },
+    "shared/pap_0_5/POLICY.md": {
+      "source_category": "ORIGINAL_DOCUMENTATION_OR_LICENSING_DESCRIPTION",
+      "proposed_terms": "CC_BY_4_0_ELIGIBLE_ORIGINAL_EXPRESSION_ONLY",
+      "licence_decision": "APPLIED_CC_BY_4_0_ELIGIBLE_ORIGINAL_EXPRESSION_ONLY",
+      "disclosure_decision": "APPROVED_REVIEWED_SCOPE; PUBLICATION_NOT_AUTHORIZED",
+      "remaining_rights_questions": "Owner-declared independent AI-assisted provenance and bounded source review; no universal originality certification or third-party override. No additional rights are granted in JSON expression, facts or provider material.",
+      "author_licence": "CC-BY-4.0"
+    },
+    "studies/ex2/PROTOCOL.md": {
+      "source_category": "ORIGINAL_DOCUMENTATION_OR_LICENSING_DESCRIPTION",
+      "proposed_terms": "CC_BY_4_0_ELIGIBLE_ORIGINAL_EXPRESSION_ONLY",
+      "licence_decision": "APPLIED_CC_BY_4_0_ELIGIBLE_ORIGINAL_EXPRESSION_ONLY",
+      "disclosure_decision": "APPROVED_REVIEWED_SCOPE; PUBLICATION_NOT_AUTHORIZED",
+      "remaining_rights_questions": "Owner-declared independent AI-assisted provenance and bounded source review; no universal originality certification or third-party override. No additional rights are granted in JSON expression, facts or provider material.",
+      "author_licence": "CC-BY-4.0"
+    },
+    "studies/ex2/evidence.json": {
+      "source_category": "PROVIDER_DERIVED_FACTUAL_PROJECTION_AND_ORIGINAL_WRAPPER",
+      "proposed_terms": "NO_ADDITIONAL_REUSE_LICENCE; NO_EXCLUSIVE_RIGHTS_IN_FACTS; THIRD_PARTY_RIGHTS_EXCLUDED",
+      "licence_decision": "DISCLOSURE_APPROVED_NO_ADDITIONAL_REUSE_LICENCE",
+      "disclosure_decision": "APPROVED_REVIEWED_SCOPE; PUBLICATION_NOT_AUTHORIZED",
+      "remaining_rights_questions": "Owner-declared independent AI-assisted provenance and bounded source review; no universal originality certification or third-party override. No additional rights are granted in JSON expression, facts or provider material.",
+      "author_licence": null
+    },
+    "studies/ex2/scenarios.json": {
+      "source_category": "DOCUMENTARY_MODEL_AND_SCENARIO_FACTS",
+      "proposed_terms": "NO_ADDITIONAL_REUSE_LICENCE; NO_EXCLUSIVE_RIGHTS_IN_FACTS; THIRD_PARTY_RIGHTS_EXCLUDED",
+      "licence_decision": "DISCLOSURE_APPROVED_NO_ADDITIONAL_REUSE_LICENCE",
+      "disclosure_decision": "APPROVED_REVIEWED_SCOPE; PUBLICATION_NOT_AUTHORIZED",
+      "remaining_rights_questions": "Owner-declared independent AI-assisted provenance and bounded source review; no universal originality certification or third-party override. No additional rights are granted in JSON expression, facts or provider material.",
+      "author_licence": null
+    },
+    "studies/ex2_r/PROTOCOL.md": {
+      "source_category": "ORIGINAL_DOCUMENTATION_OR_LICENSING_DESCRIPTION",
+      "proposed_terms": "CC_BY_4_0_ELIGIBLE_ORIGINAL_EXPRESSION_ONLY",
+      "licence_decision": "APPLIED_CC_BY_4_0_ELIGIBLE_ORIGINAL_EXPRESSION_ONLY",
+      "disclosure_decision": "APPROVED_REVIEWED_SCOPE; PUBLICATION_NOT_AUTHORIZED",
+      "remaining_rights_questions": "Owner-declared independent AI-assisted provenance and bounded source review; no universal originality certification or third-party override. No additional rights are granted in JSON expression, facts or provider material.",
+      "author_licence": "CC-BY-4.0"
+    },
+    "studies/ex2_r/evidence.json": {
+      "source_category": "PROVIDER_DERIVED_FACTUAL_PROJECTION_AND_ORIGINAL_WRAPPER",
+      "proposed_terms": "NO_ADDITIONAL_REUSE_LICENCE; NO_EXCLUSIVE_RIGHTS_IN_FACTS; THIRD_PARTY_RIGHTS_EXCLUDED",
+      "licence_decision": "DISCLOSURE_APPROVED_NO_ADDITIONAL_REUSE_LICENCE",
+      "disclosure_decision": "APPROVED_REVIEWED_SCOPE; PUBLICATION_NOT_AUTHORIZED",
+      "remaining_rights_questions": "Owner-declared independent AI-assisted provenance and bounded source review; no universal originality certification or third-party override. No additional rights are granted in JSON expression, facts or provider material.",
+      "author_licence": null
+    },
+    "studies/ex2_r/scenarios.json": {
+      "source_category": "DOCUMENTARY_MODEL_AND_SCENARIO_FACTS",
+      "proposed_terms": "NO_ADDITIONAL_REUSE_LICENCE; NO_EXCLUSIVE_RIGHTS_IN_FACTS; THIRD_PARTY_RIGHTS_EXCLUDED",
+      "licence_decision": "DISCLOSURE_APPROVED_NO_ADDITIONAL_REUSE_LICENCE",
+      "disclosure_decision": "APPROVED_REVIEWED_SCOPE; PUBLICATION_NOT_AUTHORIZED",
+      "remaining_rights_questions": "Owner-declared independent AI-assisted provenance and bounded source review; no universal originality certification or third-party override. No additional rights are granted in JSON expression, facts or provider material.",
+      "author_licence": null
+    },
+    "tests/test_mechanism.py": {
+      "source_category": "ELIGIBLE_AUTHOR_CONTROLLED_SOFTWARE",
+      "proposed_terms": "MIT",
+      "licence_decision": "APPLIED_MIT_AUTHOR_CONTROLLED_RIGHTS_ONLY",
+      "disclosure_decision": "APPROVED_REVIEWED_SCOPE; PUBLICATION_NOT_AUTHORIZED",
+      "remaining_rights_questions": "Owner-declared independent AI-assisted provenance and bounded source review; no universal originality certification or third-party override. No additional rights are granted in JSON expression, facts or provider material.",
+      "author_licence": "MIT"
+    },
+    "tests/test_release.py": {
+      "source_category": "ELIGIBLE_AUTHOR_CONTROLLED_SOFTWARE",
+      "proposed_terms": "MIT",
+      "licence_decision": "APPLIED_MIT_AUTHOR_CONTROLLED_RIGHTS_ONLY",
+      "disclosure_decision": "APPROVED_REVIEWED_SCOPE; PUBLICATION_NOT_AUTHORIZED",
+      "remaining_rights_questions": "Owner-declared independent AI-assisted provenance and bounded source review; no universal originality certification or third-party override. No additional rights are granted in JSON expression, facts or provider material.",
+      "author_licence": "MIT"
+    },
+    "verify_package.py": {
+      "source_category": "ELIGIBLE_AUTHOR_CONTROLLED_SOFTWARE",
+      "proposed_terms": "MIT",
+      "licence_decision": "APPLIED_MIT_AUTHOR_CONTROLLED_RIGHTS_ONLY",
+      "disclosure_decision": "APPROVED_REVIEWED_SCOPE; PUBLICATION_NOT_AUTHORIZED",
+      "remaining_rights_questions": "Owner-declared independent AI-assisted provenance and bounded source review; no universal originality certification or third-party override. No additional rights are granted in JSON expression, facts or provider material.",
+      "author_licence": "MIT"
+    }
+  }
+}

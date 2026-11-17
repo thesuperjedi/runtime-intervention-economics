@@ -1,0 +1,21 @@
+{
+  "schema": "RECOVERY_SCENARIO_FACT_SUMMARY_1",
+  "conditions": [
+    {
+      "id": "S07",
+      "rule": "R5",
+      "denial": "VENDOR_BLOCKED",
+      "reachable_alternative": "approved vendor with delegated centre"
+    },
+    {
+      "id": "S08",
+      "rule": "R5",
+      "denial": "CC_NOT_DELEGATED",
+      "reachable_alternative": "delegated centre with approved vendor"
+    }
+  ],
+  "seed": "Harness-generated evaluator denial; no token, effect or trusted-state mutation.",
+  "oracle": "Authenticated final purchase effect and correct PR/ledger state; submission alone fails.",
+  "proposal_budget": 2,
+  "exact_fixture_and_oracle_implementation": "Selected original synthetic states, independent completion scorer and source-mapped local seed/recovery adapter are in mechanism/. No provider or empirical operator is included."
+}

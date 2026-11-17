@@ -1,5 +1,10 @@
 # Runtime intervention economics
 
+This repository has two separate research streams:
+- **Runtime Intervention Economics:** E0-E3 and EX1; existing documentation and reproduction commands below remain unchanged.
+- **Runtime Authorization and Recovery:** EX2 and EX2-R; see the self-contained [authorization extension](extensions/runtime_authorization/README.md). The authorization extension reconstructs historical scientific calculations and runs local synthetic authorization/recovery demonstrations; it contains no provider or live empirical runtime.
+
+
 Controlled experiments on when an additional AI call is worth its cost: weak and strong solvers, AI validators, escalation, hypothetical human review, and the economic consequences of errors.
 
 By **Jaidev, Independent Researcher**. No institutional affiliation is asserted. See [ATTRIBUTION.md](ATTRIBUTION.md).

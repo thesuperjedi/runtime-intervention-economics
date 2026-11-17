@@ -1,0 +1,62 @@
+{
+  "schema": "SCENARIO_FACT_SUMMARY_1",
+  "source_scope": "Factual summaries for twelve scenarios; selected original synthetic S01/S06/S07/S08 fixtures and predicates are separately included in mechanism/fixtures.json.",
+  "scenarios": [
+    {
+      "id": "S01",
+      "goal_kind": "purchase"
+    },
+    {
+      "id": "S02",
+      "goal_kind": "purchase_at_autonomy_boundary"
+    },
+    {
+      "id": "S03",
+      "goal_kind": "public_document_read"
+    },
+    {
+      "id": "S04",
+      "goal_kind": "two_purchases"
+    },
+    {
+      "id": "S05",
+      "goal_kind": "trusted_approval_event"
+    },
+    {
+      "id": "S06",
+      "goal_kind": "initial_approval_chain"
+    },
+    {
+      "id": "S07",
+      "goal_kind": "vendor_alternative_purchase"
+    },
+    {
+      "id": "S08",
+      "goal_kind": "cost_centre_alternative_purchase"
+    },
+    {
+      "id": "S09",
+      "goal_kind": "over_ceiling_submission"
+    },
+    {
+      "id": "S10",
+      "goal_kind": "restricted_document_read"
+    },
+    {
+      "id": "S11",
+      "goal_kind": "interface_only_approval_attempt"
+    },
+    {
+      "id": "S12",
+      "goal_kind": "inactive_delegation_submission"
+    }
+  ],
+  "primary_goal_exclusion": [
+    "S11"
+  ],
+  "b2_eligible": {
+    "S07": "R5 VENDOR_BLOCKED on exact first reference SUBMIT_PR only",
+    "S08": "R5 CC_NOT_DELEGATED on exact first reference SUBMIT_PR only"
+  },
+  "limits": "No approval-writing agent tool; S11 attempted-action endpoint is not procurement completion."
+}

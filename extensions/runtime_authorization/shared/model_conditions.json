@@ -1,0 +1,46 @@
+{
+  "schema": "DOCUMENTARY_MODEL_SETTINGS_1",
+  "ex2": {
+    "gemini": {
+      "model": "gemini-2.5-flash-lite",
+      "temperature": 0,
+      "candidate_count": 1,
+      "response_mime_type": "application/json",
+      "native_json_schema": false,
+      "thinking_budget": 0,
+      "include_thoughts": false,
+      "tools": false
+    },
+    "claude": {
+      "model": "claude-haiku-5-5",
+      "thinking": "disabled",
+      "effort": "low",
+      "temperature": "omitted",
+      "stream": false,
+      "service_tier": "standard_only",
+      "native_json_schema": false,
+      "tools": false
+    }
+  },
+  "environment": {
+    "python": "3.13.5",
+    "google_genai": "2.25.0",
+    "anthropic": "2.5.0",
+    "sdk_http_timeout_seconds": 60,
+    "no_independent_episode_wall_deadline": true,
+    "no_wall_clock_or_no_billing_guarantee": true
+  },
+  "output_requirement": "A whole-response single JSON action proposal or terminal response; no extraction, repair or retry.",
+  "exact_prompt_and_schema": "Original model prompt text remains documentary/withheld; unchanged executable action/terminal schema is in mechanism/output_contract.py. No model request builder is included.",
+  "ex2r_difference": "Verified harness seed P001; at most P002/P003 model proposals and M01/M02 generations; no worked solution.",
+  "admission": {
+    "estimated_cap": 6000,
+    "headroom_min": 64,
+    "headroom_fraction": "0.10",
+    "packed_ascii_bytes": 12000,
+    "generated_cap": 768,
+    "count_per_generation": 1,
+    "automatic_retries": 0
+  },
+  "purpose": "Documentary only; no provider client, execution authority or request builder."
+}

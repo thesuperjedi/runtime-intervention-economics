@@ -1,0 +1,150 @@
+{
+  "schema": "PUBLIC_OFFLINE_DERIVATIVE_TRANSFORMATIONS_1",
+  "scope": "Selected source-mapped private derivative; MIT applies only to eligible software, CC BY 4.0 only to eligible documentation; JSON disclosure approved without additional reuse licence; publication not authorized",
+  "sources": [
+    {
+      "public": "mechanism/pap/__init__.py",
+      "source_label": "PAP core __init__.py",
+      "source_sha256": "550583059eba29e69340cd0d3ef37af5a6be4c370a16b9e6275a02676eced895",
+      "transform": "BYTE_IDENTICAL",
+      "substantive_logic_changed": false
+    },
+    {
+      "public": "mechanism/pap/contracts.py",
+      "source_label": "PAP core contracts.py",
+      "source_sha256": "56ccb52bce1357920a6fd4471e2a3771e5239b9601aabaf4b7c7b46aaae99440",
+      "transform": "BYTE_IDENTICAL",
+      "substantive_logic_changed": false
+    },
+    {
+      "public": "mechanism/pap/serialization.py",
+      "source_label": "PAP core serialization.py",
+      "source_sha256": "10cedf59319fbcf79b3591565b1de0573463713b6c61081d6fa9026db324f6ab",
+      "transform": "BYTE_IDENTICAL",
+      "substantive_logic_changed": false
+    },
+    {
+      "public": "mechanism/pap/chain_validation.py",
+      "source_label": "PAP core chain_validation.py",
+      "source_sha256": "bd2972917d1a202c9c9bbc59002f714df2b374d984c8b86cd1e1c491d63bf00b",
+      "transform": "BYTE_IDENTICAL",
+      "substantive_logic_changed": false
+    },
+    {
+      "public": "mechanism/pap/evaluator.py",
+      "source_label": "PAP core evaluator.py",
+      "source_sha256": "63f75ebeea80d30071ff24b625cab4fba5c35cb1baf93a5688b198ef7dbb40df",
+      "transform": "BYTE_IDENTICAL",
+      "substantive_logic_changed": false
+    },
+    {
+      "public": "mechanism/pap/execution/__init__.py",
+      "source_label": "PAP core execution/__init__.py",
+      "source_sha256": "e6a164cd59bd61c21b2d7daff5bbea01a3400f056dbf8758891252e92c9fcd10",
+      "transform": "BYTE_IDENTICAL",
+      "substantive_logic_changed": false
+    },
+    {
+      "public": "mechanism/pap/execution/run.py",
+      "source_label": "PAP core execution/run.py",
+      "source_sha256": "d1e1616650365965b78118fdbda12051518bb38bcd0bbaa8a00aa7152e37f0db",
+      "transform": "BYTE_IDENTICAL",
+      "substantive_logic_changed": false
+    },
+    {
+      "public": "mechanism/pap/execution/tools.py",
+      "source_label": "PAP core execution/tools.py",
+      "source_sha256": "896ccc4a2fa9fc2cbabcb73929672ca3b4ed094751cd51975f8830f9dc2a1b64",
+      "transform": "BYTE_IDENTICAL",
+      "substantive_logic_changed": false
+    },
+    {
+      "public": "mechanism/fixtures.py",
+      "source_label": "Original fixtures.py",
+      "source_sha256": "e98a669b1e2eeaaaca5fcf818cf26054f19bd7a6706a4d1605e96e48d4437885",
+      "transform": "IMPORT_NAMESPACE_AND_DOCUMENTED_PORTABILITY_OR_TEST_IDENTITIES",
+      "normalized_ast_equal": true,
+      "substantive_logic_changed": false
+    },
+    {
+      "public": "mechanism/drivers.py",
+      "source_label": "Original drivers.py",
+      "source_sha256": "ac1dc4b6e51f4d3ff27b439024ba04d88b4956b6391037e13d3a6758c062333a",
+      "transform": "IMPORT_NAMESPACE_AND_DOCUMENTED_PORTABILITY_OR_TEST_IDENTITIES",
+      "normalized_ast_equal": true,
+      "substantive_logic_changed": false
+    },
+    {
+      "public": "mechanism/scoring.py",
+      "source_label": "Original scoring.py",
+      "source_sha256": "224abf438b3b2957fdacf83d9206af7d011028b99d3041184847a1aac6baf50b",
+      "transform": "IMPORT_NAMESPACE_ONLY",
+      "normalized_ast_equal": true,
+      "substantive_logic_changed": false
+    },
+    {
+      "public": "mechanism/business_simulator.py",
+      "source_label": "Original business_simulator.py",
+      "source_sha256": "d5d0a65b84635d2c50967c78624f846d25afc05028bcbec17234792cf231dc86",
+      "transform": "IMPORT_NAMESPACE_ONLY",
+      "normalized_ast_equal": true,
+      "substantive_logic_changed": false
+    },
+    {
+      "public": "mechanism/output_contract.py",
+      "source_label": "Original output_contract.py",
+      "source_sha256": "aed236bb135c7b74209fb157b67e115312167c2c76849e3549d5bb1f21931bba",
+      "transform": "IMPORT_NAMESPACE_ONLY",
+      "normalized_ast_equal": true,
+      "substantive_logic_changed": false
+    },
+    {
+      "public": "mechanism/fixtures.json",
+      "source_label": "Original synthetic scenario contract",
+      "source_sha256": "9dff7b0993d1cadb9df4ab0f7c3e1062cc489e6774c4c47d68dcfeafcbc53919",
+      "transform": "FIELD_ALLOWLIST_FOUR_SCENARIOS; FRESH_TEST_ONLY_APPROVAL_INSTANCE_HASHES",
+      "selected_scenarios": [
+        "S01",
+        "S06",
+        "S07",
+        "S08"
+      ],
+      "scenario_fields": [
+        "id",
+        "tc_overrides",
+        "reference_initial_tc",
+        "reference_action_templates",
+        "goal_predicate",
+        "compliance_predicates",
+        "goal_effect_patterns",
+        "permitted_auxiliary",
+        "prohibited_effects"
+      ],
+      "historical_execution_records_included": false
+    },
+    {
+      "public": "mechanism/recovery.py",
+      "source_label": "Accepted controlled-start recovery semantics (selected functions only)",
+      "source_sha256": "9aa38aba23507812744eb356fd5ede3995ce03749c069a0a3a69c098c530b9cb",
+      "source_functions": [
+        "_seed_valid",
+        "RecoveryEpisode.establish",
+        "RecoveryEpisode.result",
+        "RecoveryStudy.step"
+      ],
+      "transform": "NEW_OFFLINE_GLUE_USING_ORIGINAL_DRIVER_AND_SCORER; seed decision/state checks and final oracle preserved; native disk reference, provider/accounting/authority machinery excluded",
+      "not_claimed": "Not the full empirical operator, financial or disk-journal integrity implementation"
+    }
+  ],
+  "core_semantics": "Eight PAP core files byte-identical; supporting AST equality after explicit import/fixture/test-ID normalization",
+  "excluded": [
+    "All provider, authority, scheduler and accounting implementations",
+    "Historical execution/journal material",
+    "Whole policy archive and reviewer material"
+  ],
+  "limitations": [
+    "P5-12 OPEN / NOT_SPECIFIED",
+    "Original overall conformance PARTIAL",
+    "In-process synthetic isolation only; no hostile-process or crash-durability guarantee"
+  ]
+}
